@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "created": "2025-10-25",
+    "description": "Data structure for Vietnamese text processing and BM25 search results",
+    "version": "1.0"
+  },
+  "structure": {
+    "processing": {
+      "description": "Vietnamese text preprocessing results",
+      "files": [
+        "all_contents_processing_results.json",
+        "contents_processing_summary.json",
+        "processing_results.txt"
+      ]
+    },
+    "search": {
+      "description": "BM25 search related files",
+      "files": [
+        "processed_sequences_bm25.json",
+        "bm25_search_test_results.json"
+      ]
+    },
+    "testing": {
+      "description": "System testing results",
+      "files": [
+        "test_results.json",
+        "detailed_test_results.json",
+        "pipeline_test_results.json",
+        "preprocessing_variations_test.json"
+      ]
+    },
+    "reports": {
+      "description": "Comprehensive reports and documentation",
+      "files": [
+        "TESTING_REPORT.md",
+        "FINAL_COMPLETION_REPORT.md"
+      ]
+    }
+  },
+  "usage": {
+    "bm25_search": "Use src/data/results/search/processed_sequences_bm25.json",
+    "analysis": "Use src/data/results/processing/all_contents_processing_results.json",
+    "testing": "Check files in src/data/results/testing/",
+    "reports": "Read files in src/data/results/reports/"
+  }
+}

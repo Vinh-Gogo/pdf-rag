@@ -1,0 +1,286 @@
+import torch
+import sys
+from pathlib import Path
+from sentence_transformers import SentenceTransformer
+import numpy as np
+
+# Thêm project root vào sys.path
+script_dir = Path(__file__).resolve().parent
+project_root = script_dir.parent.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+from src.utils.helpers import cosine_similarity
+
+
+class AITeamVNEmbedding:
+    """Lớp để tạo embeddings sử dụng AITeamVN/Vietnamese_Embedding model cho tiếng Việt"""
+    
+    def __init__(self, model_name="AITeamVN/Vietnamese_Embedding", max_seq_length=2048):
+        print(f"Đang tải {model_name} model...")
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.model = SentenceTransformer(
+            model_name,
+            device=str(self.device),
+            trust_remote_code=True,
+            model_kwargs={"torch_dtype": torch.bfloat16} if torch.cuda.is_available() else {}
+        )
+        # Set max sequence length theo tài liệu của AITeamVN
+        self.model.max_seq_length = max_seq_length
+        print(f"✓ Model {model_name} đã tải xong trên {self.device}")
+        print(f"✓ Max sequence length: {self.model.max_seq_length}")
+    
+    def get_embedding(self, text):
+        """
+        Tạo embedding cho văn bản
+        
+        Args:
+            text (str): Văn bản cần tạo embedding
+            
+        Returns:
+            numpy.ndarray: Vector embedding
+        """
+        if not text or len(text.strip()) == 0:
+            return None
+        
+        with torch.autocast(device_type=str(self.device).split(':')[0], dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32):
+            embedding = self.model.encode(text, convert_to_numpy=True)
+        return embedding
+    
+    def get_embedding_array(self, texts):
+        """
+        Tạo ma trận embedding cho danh sách văn bản
+        
+        Args:
+            texts (list[str]): Danh sách văn bản
+            
+        Returns:
+            numpy.ndarray: Ma trận embedding (n_texts, embedding_dim)
+        """
+        if not texts or len(texts) == 0:
+            return np.array([])
+        
+        with torch.autocast(device_type=str(self.device).split(':')[0], dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32):
+            embeddings = self.model.encode(texts, convert_to_numpy=True)
+        return embeddings
+    
+    def calculate_similarity(self, text1, text2) -> float:
+        """
+        Tính độ tương đồng cosine giữa 2 văn bản
+        
+        Args:
+            text1 (str): Văn bản thứ nhất
+            text2 (str): Văn bản thứ hai
+            
+        Returns:
+            float: Độ tương đồng cosine (0-1)
+        """
+        if not text1 or not text2:
+            return 0.0
+        
+        emb1 = self.get_embedding(text1)
+        emb2 = self.get_embedding(text2)
+        
+        if emb1 is None or emb2 is None:
+            return 0.0
+        
+        return float(cosine_similarity(emb1, emb2))
+    
+    def similarity_matrix(self, query_embedding, doc_embeddings):
+        """
+        Tính ma trận độ tương đồng giữa query và documents
+        
+        Args:
+            query_embedding (numpy.ndarray): Embedding của query (1D hoặc 2D)
+            doc_embeddings (numpy.ndarray): Embeddings của documents (2D)
+            
+        Returns:
+            numpy.ndarray: Ma trận độ tương đồng
+        """
+        # Đảm bảo query_embedding có shape (1, dim) hoặc (n, dim)
+        if query_embedding.ndim == 1:
+            query_embedding = query_embedding.reshape(1, -1)
+        
+        # Sử dụng @ operator như trong tài liệu AITeamVN
+        similarities = query_embedding @ doc_embeddings.T
+        
+        return similarities
+    
+    def rank_documents(self, query, documents):
+        """
+        Xếp hạng documents theo độ liên quan với query
+        
+        Args:
+            query (str): Câu truy vấn
+            documents (list[str]): Danh sách documents
+            
+        Returns:
+            tuple: (sorted_docs, sorted_scores, sorted_indices)
+                - sorted_docs: Documents đã sắp xếp theo độ liên quan
+                - sorted_scores: Điểm tương đồng tương ứng
+                - sorted_indices: Chỉ số gốc của documents
+        """
+        if not query or not documents:
+            return [], [], []
+        
+        # Encode query và documents
+        query_embedding = self.get_embedding(query)
+        doc_embeddings = self.get_embedding_array(documents)
+        
+        if query_embedding is None or len(doc_embeddings) == 0:
+            return [], [], []
+        
+        # Tính similarity
+        similarities = self.similarity_matrix(query_embedding, doc_embeddings).flatten()
+        
+        # Sort documents by cosine similarity
+        sorted_indices = np.argsort(similarities)[::-1]  # Descending order
+        sorted_docs = [documents[idx] for idx in sorted_indices]
+        sorted_scores = [similarities[idx] for idx in sorted_indices]
+        
+        return sorted_docs, sorted_scores, sorted_indices
+    
+    def find_most_similar(self, query, documents, top_k=5):
+        """
+        Tìm top-k documents tương tự nhất với query
+        
+        Args:
+            query (str): Câu truy vấn
+            documents (list[str]): Danh sách documents
+            top_k (int): Số lượng kết quả trả về
+            
+        Returns:
+            list[tuple]: Danh sách (document, score, index) được sắp xếp
+        """
+        sorted_docs, sorted_scores, sorted_indices = self.rank_documents(query, documents)
+        
+        # Lấy top-k kết quả
+        top_k = min(top_k, len(sorted_docs))
+        results = [
+            (sorted_docs[i], float(sorted_scores[i]), int(sorted_indices[i]))
+            for i in range(top_k)
+        ]
+        
+        return results
+    
+    def batch_similarity(self, queries, documents):
+        """
+        Tính ma trận similarity cho nhiều queries và documents
+        
+        Args:
+            queries (list[str]): Danh sách queries
+            documents (list[str]): Danh sách documents
+            
+        Returns:
+            numpy.ndarray: Ma trận similarity (n_queries, n_documents)
+        """
+        if not queries or not documents:
+            return np.array([])
+        
+        query_embeddings = self.get_embedding_array(queries)
+        doc_embeddings = self.get_embedding_array(documents)
+        
+        if len(query_embeddings) == 0 or len(doc_embeddings) == 0:
+            return np.array([])
+        
+        # Tính similarity matrix: queries @ documents.T
+        similarity_matrix = query_embeddings @ doc_embeddings.T
+        
+        return similarity_matrix
+
+
+# Ví dụ sử dụng
+if __name__ == "__main__":
+    # Khởi tạo model
+    embedding = AITeamVNEmbedding()
+    
+    print("=" * 70)
+    print("Ví dụ 1: Tạo embeddings cho câu văn")
+    print("=" * 70)
+    
+    sentences = [
+        "Hà Nội là thủ đô của Việt Nam",
+        "Đà Nẵng là thành phố du lịch"
+    ]
+    
+    embeddings = embedding.get_embedding_array(sentences)
+    print(f"\nĐã tạo embeddings cho {len(sentences)} câu:")
+    for idx, (sentence, emb) in enumerate(zip(sentences, embeddings)):
+        print(f"  [{idx}] '{sentence}'")
+        print(f"      Shape: {emb.shape}, First 5 values: {emb[:5]}")
+    
+    print("\n" + "=" * 70)
+    print("Ví dụ 2: Tính similarity giữa các câu văn")
+    print("=" * 70)
+    
+    text1 = "Hà Nội là thủ đô của Việt Nam"
+    text2 = "Thủ đô Việt Nam là Hà Nội"
+    text3 = "Đà Nẵng là thành phố du lịch"
+    
+    sim_12 = embedding.calculate_similarity(text1, text2)
+    sim_13 = embedding.calculate_similarity(text1, text3)
+    sim_23 = embedding.calculate_similarity(text2, text3)
+    
+    print(f"\nSimilarity('{text1}', '{text2}'): {sim_12:.4f}")
+    print(f"Similarity('{text1}', '{text3}'): {sim_13:.4f}")
+    print(f"Similarity('{text2}', '{text3}'): {sim_23:.4f}")
+    
+    print("\n" + "=" * 70)
+    print("Ví dụ 3: Batch similarity như trong tài liệu AITeamVN")
+    print("=" * 70)
+    
+    sentences_1 = ["Trí tuệ nhân tạo là gì", "Lợi ích của giấc ngủ"]
+    sentences_2 = [
+        "Trí tuệ nhân tạo là công nghệ giúp máy móc suy nghĩ và học hỏi như con người. Nó hoạt động bằng cách thu thập dữ liệu, nhận diện mẫu và đưa ra quyết định.",
+        "Giấc ngủ giúp cơ thể và não bộ nghỉ ngơi, hồi phục năng lượng và cải thiện trí nhớ. Ngủ đủ giấc giúp tinh thần tỉnh táo và làm việc hiệu quả hơn."
+    ]
+    
+    print("Queries:")
+    for i, q in enumerate(sentences_1):
+        print(f"  [{i}] {q}")
+    
+    print("\nDocuments:")
+    for i, d in enumerate(sentences_2):
+        print(f"  [{i}] {d[:50]}...")
+    
+    similarity_matrix = embedding.batch_similarity(sentences_1, sentences_2)
+    
+    print("\nSimilarity Matrix:")
+    print(similarity_matrix)
+    print(f"\nShape: {similarity_matrix.shape}")
+    
+    print("\n" + "=" * 70)
+    print("Ví dụ 4: Tìm documents liên quan đến query")
+    print("=" * 70)
+    
+    query = "Thủ đô Việt Nam"
+    docs = [
+        "Hà Nội là thủ đô của Việt Nam từ năm 1010",
+        "TP. Hồ Chí Minh là thành phố lớn nhất Việt Nam",
+        "Đà Nẵng nằm ở miền Trung Việt Nam",
+        "Thăng Long là tên cũ của Hà Nội",
+        "Sài Gòn là tên cũ của TP. Hồ Chí Minh"
+    ]
+    
+    print(f"Query: {query}\n")
+    
+    # Tìm top-3 documents
+    top_results = embedding.find_most_similar(query, docs, top_k=3)
+    
+    for rank, (doc, score, idx) in enumerate(top_results, 1):
+        print(f"\nTop {rank}:")
+        print(f"  Index: {idx}")
+        print(f"  Score: {score:.4f}")
+        print(f"  Document: {doc}")
+    
+    print("\n" + "=" * 70)
+    print("Ví dụ 5: Xếp hạng tất cả documents")
+    print("=" * 70)
+    
+    query2 = "Thành phố du lịch"
+    print(f"Query: {query2}\n")
+    
+    sorted_docs, sorted_scores, sorted_indices = embedding.rank_documents(query2, docs)
+    
+    for doc, score, idx in zip(sorted_docs, sorted_scores, sorted_indices):
+        print(f"[{idx}] Score: {score:.4f} - {doc}")

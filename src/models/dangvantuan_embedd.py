@@ -10,7 +10,7 @@ project_root = script_dir.parent.parent
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
-from src.helppers.helpers import cosine_similarity
+from src.models.helpers import cosine_similarity
 
 
 class DangVanTuanEmbedding:

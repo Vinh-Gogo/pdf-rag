@@ -28,7 +28,6 @@ from src.models.dangvantuan_embedd import DangVanTuanEmbedding
 from src.helpers.init_qdrant import qdrant_client
 from qdrant_client.models import PointStruct, VectorParams, Distance
 
-
 @dataclass
 class PDFPage:
     """Cấu trúc dữ liệu cho một trang PDF"""
@@ -446,10 +445,10 @@ def main():
     project_root = script_dir.parent.parent
 
     # Thư mục input (PDF files)
-    pdf_input_dir = project_root / "data" / "pdfs"  # Thư mục chứa PDF files
+    pdf_input_dir = project_root / "src" / "data" / "pdfs"  # Thư mục chứa PDF files
 
     # File output
-    results_file = project_root / "data" / "pipeline_results.json"
+    results_file = project_root / "src" / "data" / "pipeline_results.json"
 
     # Khởi tạo pipeline
     pipeline = PDFVectorStorePipeline(

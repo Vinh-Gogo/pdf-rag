@@ -7,6 +7,10 @@ from langchain_qdrant import QdrantVectorStore
 from pydantic import SecretStr
 import json
 import uuid
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Add project root to path
 script_dir = Path(__file__).resolve().parent
@@ -14,7 +18,7 @@ project_root = script_dir.parent.parent
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
-from init_qdrant import create_vectorstore_from_texts
+from src.helpers.init_qdrant import qdrant_client
 
 def read_pages_from_directory(input_dir: str) -> List[Dict[str, str]]:
     """
@@ -29,18 +33,26 @@ def read_pages_from_directory(input_dir: str) -> List[Dict[str, str]]:
     input_path = Path(input_dir)
     pages = []
 
-    # Lấy tất cả file .txt
-    txt_files = sorted(input_path.glob("page_*.txt"))
+    # Lấy tất cả file .txt có định dạng page_NUMBER.txt
+    txt_files = list(input_path.glob("page_*.txt"))
+    
     # Sắp xếp pages theo số thứ tự từ tên file
-    txt_files = sorted(txt_files, key=lambda x: int(x.stem.split('_')[1]) if len(x.stem.split('_')) > 1 else 0)
+    def extract_page_num(file_path):
+        try:
+            return int(file_path.stem.split('_')[1])
+        except (IndexError, ValueError):
+            return 0
+    
+    txt_files = sorted(txt_files, key=extract_page_num)
 
     print(f"📂 Tìm thấy {len(txt_files)} file txt trong {input_dir}")
 
-    index_page = 1
-    
     for file_path in txt_files:
         file_name = file_path.name
-        print(f"📄 Đang đọc: {file_name}")
+        page_num = extract_page_num(file_path)
+        
+        if page_num % 20 == 0 or page_num == 1:
+            print(f"📄 Đang đọc: {file_name}")
 
         try:
             # Đọc toàn bộ nội dung file như một page
@@ -48,19 +60,21 @@ def read_pages_from_directory(input_dir: str) -> List[Dict[str, str]]:
                 content = f.read().strip()
 
             if content:  # Chỉ thêm nếu có nội dung
+                # Đếm số paragraphs (tách bởi \n\n)
+                paragraphs = [p.strip() for p in content.split("\n\n") if p.strip()]
+                
                 page = {
-                    'page_index': index_page,
-                    'seq': len(content.split("\n\n")),
+                    'page_index': page_num,
+                    'seq': len(paragraphs),
                     'content': content,
                     'word_count': len(content.split())
                 }
-                index_page += 1
                 pages.append(page)
-                print(f"   ✅ Page loaded: {len(content)} chars, {len(content.split())} words")
 
         except Exception as e:
             print(f"   ❌ Lỗi đọc file {file_name}: {e}")
 
+    print(f"✅ Đã đọc thành công {len(pages)} pages")
     return pages
 
 def save_pages_to_json(pages: List[Dict[str, str]], output_file: str):
@@ -88,7 +102,6 @@ def store_pages_in_qdrant_direct(pages: List[Dict[str, str]], collection_name: s
         QdrantVectorStore: Vector store đã tạo
     """
     from qdrant_client.models import PointStruct, VectorParams, Distance
-    from init_qdrant import qdrant_client
 
     print(f"🔧 Đang tạo vector store trực tiếp cho {len(pages)} pages...")
 
@@ -185,8 +198,6 @@ def retrieve_similar_pages(query: str, vectorstore, top_k: int = 5):
     Returns:
         List[Dict]: Danh sách kết quả với id, content, và score
     """
-    from init_qdrant import qdrant_client
-
     print(f"🔍 Đang tìm kiếm cho query: '{query}'")
 
     # Khởi tạo embeddings

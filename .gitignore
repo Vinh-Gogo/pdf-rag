@@ -28,3 +28,4 @@ src/data/grammar/*
 src/data/results/*
 src/data/reports/*
 src/data/exports/*
+src/data/contents/*

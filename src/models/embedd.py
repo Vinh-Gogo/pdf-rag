@@ -3,7 +3,7 @@ import torch
 from pathlib import Path
 from sentence_transformers import SentenceTransformer
 import numpy as np
-from src.helppers.helpers import cosine_similarity
+from src.models.helpers import cosine_similarity
 
 class QwenEmbedding:
     """Lớp để tạo embeddings sử dụng Qwen/Qwen3-Embedding-0.6B multilingual model"""

@@ -22,8 +22,8 @@ torch.backends.cudnn.benchmark = True
 
 # 🔧 Tải model/tokenizer một lần duy nhất
 # model_name = "Qwen/Qwen3-4B-Instruct-2507"
-# model_name = "Qwen/Qwen2.5-1.5B-Instruct"
-model_name = "Qwen/Qwen2.5-0.5B-Instruct"
+model_name = "Qwen/Qwen2.5-1.5B-Instruct"
+# model_name = "Qwen/Qwen2.5-0.5B-Instruct"
 # model_name = "Qwen/Qwen3-0.6B"
 # model_name = "Gensyn/Qwen2.5-0.5B-Instruct"
 
@@ -37,6 +37,44 @@ def read_all_txt_list(folder: str) -> dict[int, str]:
                    key=lambda x: int(x.split('_')[1].split('.')[0]))
     return {int(f.split('_')[1].split('.')[0]): open(os.path.join(folder, f), encoding="utf-8").read() 
             for f in files}
+
+import os
+import re
+from typing import List
+
+def extract_unique_words(raw_folder: str) -> List[str]:
+    """
+    Đọc tất cả file .txt trong folder và trích xuất tập hợp các từ duy nhất.
+    
+    Args:
+        raw_folder (str): Đường dẫn đến folder chứa các file .txt
+        
+    Returns:
+        Set[str]: Tập hợp các từ duy nhất (chỉ chứa chữ cái tiếng Việt)
+    """
+    char_counter = set()
+    
+    for filename in sorted(os.listdir(raw_folder)):
+        if filename.endswith('.txt'):
+            file_path = os.path.join(raw_folder, filename)
+            
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            words = content.split()
+            
+            # Loại bỏ ký tự không phải chữ cái
+            words = [re.sub(r'[^a-zA-ZÀ-ỹà-ỹ0-9]', '', word) for word in words]
+            
+            # Loại bỏ ký tự đặc biệt và số, chỉ giữ từ chứa chữ cái
+            words = [word for word in words if word.isalpha() and not word.isdigit()]
+            
+            # Thêm vào tập hợp
+            char_counter = char_counter.union(set(words))
+    
+    return list(char_counter)
+
+unique_words = extract_unique_words("../data/raw")
 
 def tokenize_words(text: str) -> list:
     """Tách văn bản thành danh sách các từ (loại bỏ dấu câu và ký tự đặc biệt)"""
@@ -356,7 +394,7 @@ def compare_texts(original: str, corrected: str) -> dict:
 # helpers = Helpers()
 script_dir = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.dirname(os.path.dirname(script_dir))
-input_folder = os.path.join(project_root, "src", "data", "raw")
+input_folder = os.path.join(project_root, "src", "data", "contents")
 output_folder = os.path.join(project_root, "src", "data", "grammar")
 
 # Note: We now read files directly in the main loop, so no need for pages dictionary

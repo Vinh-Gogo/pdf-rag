@@ -1,0 +1,63 @@
+Command return code: 0
+=== STDOUT ===
+(empty)
+
+=== STDERR ===
+
+Recognizing Layout:   0%|          | 0/1 [00:00<?, ?it/s]
+Recognizing Layout: 100%|##########| 1/1 [00:15<00:00, 15.49s/it]
+Recognizing Layout: 100%|##########| 1/1 [00:15<00:00, 15.50s/it]
+
+Running OCR Error Detection:   0%|          | 0/1 [00:00<?, ?it/s]
+Running OCR Error Detection: 100%|##########| 1/1 [00:00<00:00,  8.26it/s]
+Running OCR Error Detection: 100%|##########| 1/1 [00:00<00:00,  8.26it/s]
+
+Detecting bboxes:   0%|          | 0/1 [00:00<?, ?it/s]
+Detecting bboxes: 100%|##########| 1/1 [00:00<00:00,  1.35it/s]
+Detecting bboxes: 100%|##########| 1/1 [00:00<00:00,  1.35it/s]
+
+Recognizing Text:   0%|          | 0/18 [00:00<?, ?it/s]
+Recognizing Text:   6%|5         | 1/18 [00:01<00:19,  1.17s/it]
+Recognizing Text:  11%|#1        | 2/18 [00:01<00:10,  1.59it/s]
+Recognizing Text:  17%|#6        | 3/18 [00:01<00:06,  2.35it/s]
+Recognizing Text:  39%|###8      | 7/18 [00:01<00:01,  7.16it/s]
+Recognizing Text:  50%|#####     | 9/18 [00:02<00:02,  4.50it/s]
+Recognizing Text:  61%|######1   | 11/18 [00:02<00:01,  5.31it/s]
+Recognizing Text:  72%|#######2  | 13/18 [00:02<00:00,  6.02it/s]
+Recognizing Text:  78%|#######7  | 14/18 [00:03<00:00,  5.25it/s]
+Recognizing Text:  89%|########8 | 16/18 [00:03<00:00,  6.40it/s]
+Recognizing Text:  94%|#########4| 17/18 [00:03<00:00,  5.06it/s]
+Recognizing Text: 100%|##########| 18/18 [00:25<00:00,  5.01s/it]
+Recognizing Text: 100%|##########| 18/18 [00:25<00:00,  1.43s/it]
+
+Recognizing tables:   0%|          | 0/1 [00:00<?, ?it/s]
+Recognizing tables: 100%|##########| 1/1 [00:00<00:00,  1.89it/s]
+Recognizing tables: 100%|##########| 1/1 [00:00<00:00,  1.89it/s]
+
+Detecting bboxes:   0%|          | 0/1 [00:00<?, ?it/s]
+Detecting bboxes: 100%|##########| 1/1 [00:00<00:00,  5.07it/s]
+Detecting bboxes: 100%|##########| 1/1 [00:00<00:00,  5.07it/s]
+
+Recognizing Text:   0%|          | 0/122 [00:00<?, ?it/s]
+Recognizing Text:   1%|          | 1/122 [00:01<03:21,  1.67s/it]
+Recognizing Text:   3%|3         | 4/122 [00:05<02:36,  1.32s/it]
+Recognizing Text:  15%|#4        | 18/122 [00:09<00:44,  2.35it/s]
+Recognizing Text:  30%|##9       | 36/122 [00:09<00:15,  5.73it/s]
+Recognizing Text:  34%|###3      | 41/122 [00:10<00:16,  4.86it/s]
+Recognizing Text:  36%|###6      | 44/122 [00:12<00:19,  3.91it/s]
+Recognizing Text:  45%|####5     | 55/122 [00:12<00:10,  6.41it/s]
+Recognizing Text:  48%|####7     | 58/122 [00:16<00:18,  3.38it/s]
+Recognizing Text:  61%|######    | 74/122 [00:16<00:07,  6.67it/s]
+Recognizing Text:  64%|######3   | 78/122 [00:19<00:11,  3.80it/s]
+Recognizing Text:  80%|#######9  | 97/122 [00:21<00:04,  5.65it/s]
+Recognizing Text:  81%|########1 | 99/122 [00:23<00:05,  4.38it/s]
+Recognizing Text:  84%|########3 | 102/122 [00:28<00:08,  2.38it/s]
+Recognizing Text:  86%|########6 | 105/122 [00:30<00:07,  2.27it/s]
+Recognizing Text:  87%|########6 | 106/122 [00:31<00:08,  1.90it/s]
+Recognizing Text:  94%|#########4| 115/122 [00:33<00:02,  2.75it/s]
+Recognizing Text:  96%|#########5| 117/122 [00:36<00:02,  1.87it/s]
+Recognizing Text:  99%|#########9| 121/122 [00:38<00:00,  1.96it/s]
+Recognizing Text: 100%|##########| 122/122 [00:44<00:00,  1.04it/s]
+Recognizing Text: 100%|##########| 122/122 [00:44<00:00,  2.76it/s]
+2025-11-12 14:01:00,715 [INFO] marker: Saved markdown to src\data\markdown\page_26
+2025-11-12 14:01:00,718 [INFO] marker: Total time: 92.65411758422852

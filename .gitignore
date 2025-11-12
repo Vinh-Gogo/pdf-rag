@@ -29,3 +29,6 @@ src/data/results/*
 src/data/reports/*
 src/data/exports/*
 src/data/contents/*
+src/data/images/*
+src/data/markdown/page_*
+src/data/json/page_*

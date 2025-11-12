@@ -4,7 +4,7 @@ A complete pipeline for extracting text from PDF files, splitting into pages and
 
 ## 🎯 Features
 
-- **PDF Processing with PyMuPDF**: Extract text from PDF files with high accuracy
+- **PDF Scan**: Extract text from PDF files with high accuracy
 - **Dual-Level Indexing**:
   - **Pages**: Store entire page content for broad context
   - **Sequences**: Store individual paragraphs for precise retrieval
@@ -52,6 +52,21 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirments.txt
+```
+
+### 1.1. Pre-Process scan PDFs (if needed)
+
+```ps
+# PDF >> markdown ( pip install marker-pdf )
+(.venv) PS D:\rag> marker_single path\page_6.pdf --output_dir path\pages
+Recognizing Layout: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:12<00:00, 12.58s/it]
+Running OCR Error Detection: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  6.59it/s]
+Detecting bboxes: 0it [00:00, ?it/s]
+Detecting bboxes: 0it [00:00, ?it/s]
+2025-11-12 09:48:35,050 [INFO] marker: Saved markdown to path\pages\page_6
+2025-11-12 09:48:35,050 [INFO] marker: Total time: 15.751145124435425
+
+# python -m src.helpers.pdfs_to_markdown --input_dir src/data/pdfs/pages --output_dir src/data/pdfs/markdown --pattern "page_1.pdf" --overwrite
 ```
 
 ### 2. Environment Setup

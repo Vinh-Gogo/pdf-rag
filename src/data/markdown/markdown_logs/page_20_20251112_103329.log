@@ -1,0 +1,20 @@
+Command return code: 0
+=== STDOUT ===
+(empty)
+
+=== STDERR ===
+
+Recognizing Layout:   0%|          | 0/1 [00:00<?, ?it/s]
+Recognizing Layout: 100%|##########| 1/1 [00:14<00:00, 14.36s/it]
+Recognizing Layout: 100%|##########| 1/1 [00:14<00:00, 14.36s/it]
+
+Running OCR Error Detection:   0%|          | 0/1 [00:00<?, ?it/s]
+Running OCR Error Detection: 100%|##########| 1/1 [00:00<00:00, 10.41it/s]
+
+Detecting bboxes: 0it [00:00, ?it/s]
+Detecting bboxes: 0it [00:00, ?it/s]
+
+Detecting bboxes: 0it [00:00, ?it/s]
+Detecting bboxes: 0it [00:00, ?it/s]
+2025-11-12 10:33:28,189 [INFO] marker: Saved markdown to src\data\markdown\page_20
+2025-11-12 10:33:28,189 [INFO] marker: Total time: 14.782678604125977

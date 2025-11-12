@@ -1,0 +1,9 @@
+Command return code: 2
+=== STDOUT ===
+(empty)
+
+=== STDERR ===
+Usage: marker_single [OPTIONS] FPATH
+Try 'marker_single --help' for help.
+
+Error: No such option: --device Did you mean --llm_service?

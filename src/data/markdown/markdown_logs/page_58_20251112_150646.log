@@ -1,0 +1,42 @@
+Command return code: 0
+=== STDOUT ===
+(empty)
+
+=== STDERR ===
+
+Recognizing Layout:   0%|          | 0/1 [00:00<?, ?it/s]
+Recognizing Layout: 100%|##########| 1/1 [00:03<00:00,  3.04s/it]
+Recognizing Layout: 100%|##########| 1/1 [00:03<00:00,  3.04s/it]
+
+Running OCR Error Detection:   0%|          | 0/1 [00:00<?, ?it/s]
+Running OCR Error Detection: 100%|##########| 1/1 [00:00<00:00,  7.38it/s]
+Running OCR Error Detection: 100%|##########| 1/1 [00:00<00:00,  7.32it/s]
+
+Detecting bboxes:   0%|          | 0/1 [00:00<?, ?it/s]
+Detecting bboxes: 100%|##########| 1/1 [00:00<00:00,  1.91it/s]
+Detecting bboxes: 100%|##########| 1/1 [00:00<00:00,  1.90it/s]
+
+Recognizing Text:   0%|          | 0/19 [00:00<?, ?it/s]
+Recognizing Text:   5%|5         | 1/19 [00:01<00:18,  1.04s/it]
+Recognizing Text:  11%|#         | 2/19 [00:02<00:17,  1.04s/it]
+Recognizing Text:  16%|#5        | 3/19 [00:02<00:13,  1.15it/s]
+Recognizing Text:  26%|##6       | 5/19 [00:02<00:05,  2.40it/s]
+Recognizing Text:  32%|###1      | 6/19 [00:03<00:04,  2.61it/s]
+Recognizing Text:  37%|###6      | 7/19 [00:03<00:04,  2.81it/s]
+Recognizing Text:  42%|####2     | 8/19 [00:04<00:05,  2.19it/s]
+Recognizing Text:  47%|####7     | 9/19 [00:04<00:03,  2.73it/s]
+Recognizing Text:  53%|#####2    | 10/19 [00:04<00:02,  3.30it/s]
+Recognizing Text:  58%|#####7    | 11/19 [00:04<00:02,  3.54it/s]
+Recognizing Text:  63%|######3   | 12/19 [00:05<00:03,  1.85it/s]
+Recognizing Text:  74%|#######3  | 14/19 [00:06<00:02,  2.42it/s]
+Recognizing Text:  79%|#######8  | 15/19 [00:06<00:01,  2.73it/s]
+Recognizing Text:  84%|########4 | 16/19 [00:07<00:01,  2.14it/s]
+Recognizing Text:  89%|########9 | 17/19 [00:08<00:01,  1.62it/s]
+Recognizing Text:  95%|#########4| 18/19 [00:09<00:00,  1.29it/s]
+Recognizing Text: 100%|##########| 19/19 [00:09<00:00,  1.50it/s]
+Recognizing Text: 100%|##########| 19/19 [00:09<00:00,  1.91it/s]
+
+Detecting bboxes: 0it [00:00, ?it/s]
+Detecting bboxes: 0it [00:00, ?it/s]
+2025-11-12 15:06:44,501 [INFO] marker: Saved markdown to src\data\markdown\page_58
+2025-11-12 15:06:44,501 [INFO] marker: Total time: 14.43618631362915

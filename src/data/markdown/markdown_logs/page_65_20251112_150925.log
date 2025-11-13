@@ -1,0 +1,36 @@
+Command return code: 0
+=== STDOUT ===
+(empty)
+
+=== STDERR ===
+
+Recognizing Layout:   0%|          | 0/1 [00:00<?, ?it/s]
+Recognizing Layout: 100%|##########| 1/1 [00:01<00:00,  1.36s/it]
+Recognizing Layout: 100%|##########| 1/1 [00:01<00:00,  1.36s/it]
+
+Running OCR Error Detection:   0%|          | 0/1 [00:00<?, ?it/s]
+Running OCR Error Detection: 100%|##########| 1/1 [00:00<00:00, 24.39it/s]
+
+Detecting bboxes:   0%|          | 0/1 [00:00<?, ?it/s]
+Detecting bboxes: 100%|##########| 1/1 [00:00<00:00,  4.64it/s]
+Detecting bboxes: 100%|##########| 1/1 [00:00<00:00,  4.62it/s]
+
+Recognizing Text:   0%|          | 0/15 [00:00<?, ?it/s]
+Recognizing Text:   7%|6         | 1/15 [00:02<00:35,  2.53s/it]
+Recognizing Text:  13%|#3        | 2/15 [00:02<00:15,  1.16s/it]
+Recognizing Text:  20%|##        | 3/15 [00:02<00:08,  1.45it/s]
+Recognizing Text:  40%|####      | 6/15 [00:03<00:03,  2.59it/s]
+Recognizing Text:  47%|####6     | 7/15 [00:04<00:03,  2.40it/s]
+Recognizing Text:  53%|#####3    | 8/15 [00:04<00:03,  2.26it/s]
+Recognizing Text:  60%|######    | 9/15 [00:04<00:02,  2.34it/s]
+Recognizing Text:  67%|######6   | 10/15 [00:20<00:23,  4.64s/it]
+Recognizing Text:  73%|#######3  | 11/15 [00:21<00:13,  3.48s/it]
+Recognizing Text:  87%|########6 | 13/15 [00:22<00:04,  2.14s/it]
+Recognizing Text:  93%|#########3| 14/15 [00:28<00:03,  3.20s/it]
+Recognizing Text: 100%|##########| 15/15 [00:48<00:00,  7.42s/it]
+Recognizing Text: 100%|##########| 15/15 [00:48<00:00,  3.22s/it]
+
+Detecting bboxes: 0it [00:00, ?it/s]
+Detecting bboxes: 0it [00:00, ?it/s]
+2025-11-12 15:09:24,721 [INFO] marker: Saved markdown to src\data\markdown\page_65
+2025-11-12 15:09:24,721 [INFO] marker: Total time: 50.57575750350952

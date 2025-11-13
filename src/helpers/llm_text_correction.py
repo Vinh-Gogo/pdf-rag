@@ -74,7 +74,7 @@ def extract_unique_words(raw_folder: str) -> List[str]:
     
     return list(char_counter)
 
-unique_words = extract_unique_words("../data/raw")
+unique_words = extract_unique_words(r"src\data\raw")
 
 def tokenize_words(text: str) -> list:
     """Tách văn bản thành danh sách các từ (loại bỏ dấu câu và ký tự đặc biệt)"""
@@ -408,7 +408,7 @@ os.makedirs(output_folder, exist_ok=True)
 project_root = Path(__file__).resolve().parent.parent.parent
 
 # Thư mục chứa file contents
-contents_dir = project_root / "src" / "data" / "raw"
+contents_dir = project_root / "src" / "data" / "contents"
 
 # Thư mục output
 output_folder = project_root / "src" / "data" / "grammar"
@@ -536,7 +536,7 @@ def correct_vietnamese(text: str, repeat_reminder: int, model, tokenizer, use_en
     print(f"Total input tokens: {total_len}")
     print(f"📝 Using {'enhanced' if use_enhanced_prompt else 'basic'} prompt")
 
-    max_new_tokens = 4096
+    max_new_tokens = 2048
         
     inp = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
     inputs = tokenizer([inp], return_tensors="pt").to(model.device)
@@ -554,15 +554,24 @@ def correct_vietnamese(text: str, repeat_reminder: int, model, tokenizer, use_en
     return result
 
 def extract_page_number(filename):
-    """Trích xuất số trang từ tên file (ví dụ: page_1 -> 1)"""
-    parts = filename.split('_')
-    if len(parts) >= 2:
-        return int(parts[1])
+    """Trích xuất số trang từ tên file.
+
+    Hỗ trợ các dạng:
+    - "page_1" -> 1
+    - "page_cleared_2" -> 2
+    - Bất kỳ tên nào kết thúc bằng số -> lấy nhóm số cuối cùng
+    """
+    m = re.search(r"(\d+)$", filename)
+    if m:
+        try:
+            return int(m.group(1))
+        except ValueError:
+            return None
     return None
 
 # Thu thập tất cả file text từ contents (không có suffix _ocr)
 content_files = {}
-for content_file in contents_dir.glob("page_*.txt"):
+for content_file in contents_dir.glob("page_cleared_*.txt"):
     # Bỏ qua các file có suffix _ocr
     if "_ocr" not in content_file.stem:
         page_num = extract_page_number(content_file.stem)
@@ -571,7 +580,7 @@ for content_file in contents_dir.glob("page_*.txt"):
 
 # Thu thập tất cả file từ output_folder (grammar)
 grammar_files = {}
-for grammar_file in output_folder.glob("page_*.txt"):
+for grammar_file in output_folder.glob("page_cleared_*.txt"):
     page_num = extract_page_number(grammar_file.stem)
     if page_num is not None and page_num >= START_PAGE:
         grammar_files[page_num] = grammar_file
@@ -602,7 +611,8 @@ for page_num in sorted(content_files.keys()):
     
     # Ensure grammar_path exists
     if grammar_path is None:
-        grammar_path = output_folder / f"page_{page_num}.txt"
+        # Đồng bộ với pattern đọc "page_cleared_*.txt"
+        grammar_path = output_folder / f"page_cleared_{page_num}.txt"
     
     print(f"\n{'='*70}")
     print(f"📄 Page {page_num}:")
@@ -634,11 +644,11 @@ for page_num in sorted(content_files.keys()):
     # Kiểm tra từ điển
     vocab_check = check_vocabulary_match(page_content, corrected_text)
     
-    # ĐIỀU KIỆN RETRY: similarity < 0.97 HOẶC có nhiều từ mới (> 5 từ)
+    # ĐIỀU KIỆN RETRY: similarity < 0.95 HOẶC có nhiều từ mới (> 5 từ)
     max_retry = 1  # Chỉ retry 1 lần với enhanced prompt
     retry_count = 0
     
-    if (similarity < 0.97 or vocab_check['new_words_count'] > 5) and retry_count < max_retry:
+    if (similarity < 0.95 or vocab_check['new_words_count'] > 5) and retry_count < max_retry:
         print(f"\n🔄 RETRY với enhanced prompt (similarity={similarity:.3f}, new_words={vocab_check['new_words_count']})")
         retry_count += 1
         

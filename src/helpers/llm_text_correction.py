@@ -21,9 +21,10 @@ torch.backends.cudnn.allow_tf32 = True
 torch.backends.cudnn.benchmark = True
 
 # 🔧 Tải model/tokenizer một lần duy nhất
-# model_name = "Qwen/Qwen3-4B-Instruct-2507"
-model_name = "Qwen/Qwen2.5-1.5B-Instruct"
-# model_name = "Qwen/Qwen2.5-0.5B-Instruct"
+model_name = "Qwen/Qwen3-4B-Instruct-2507"
+# model_name = "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
+# model_name = "Qwen/Qwen2.5-1.5B-Instruct"
+model_name = "Qwen/Qwen3-1.7B"
 # model_name = "Qwen/Qwen3-0.6B"
 # model_name = "Gensyn/Qwen2.5-0.5B-Instruct"
 
@@ -414,7 +415,7 @@ contents_dir = project_root / "src" / "data" / "contents"
 output_folder = project_root / "src" / "data" / "grammar"
 
 # VỊ TRÍ BẮT ĐẦU XỬ LÝ
-START_PAGE = 1  # Thay đổi số này để bắt đầu từ trang khác
+START_PAGE = 25 # Thay đổi số này để bắt đầu từ trang khác
 
 print(model_name)
 try:
@@ -423,7 +424,7 @@ try:
         dtype=torch.bfloat16,          # Sử dụng bfloat16 để tăng tốc và tiết kiệm VRAM
         device_map="auto",
         trust_remote_code=True,
-        # attn_implementation="flash_attention_2",  # ⚡️ Tăng tốc attention
+        attn_implementation="flash_attention_2",  # ⚡️ Tăng tốc attention
     ).eval()                                 # Chỉ dùng cho inference
     model = torch.compile(model, mode="reduce-overhead")             # Tăng tốc nếu PyTorch >= 2.0
     tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
@@ -439,7 +440,16 @@ except Exception as e:
     tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
 
 # 🧠 Hàm hiệu đính chính tả
-def correct_vietnamese(text: str, repeat_reminder: int, model, tokenizer, use_enhanced_prompt: bool = False, memory_examples: list | None = None) -> str:
+def correct_vietnamese(
+    text: str,
+    repeat_reminder: int,
+    model,
+    tokenizer,
+    use_enhanced_prompt: bool = False,
+    memory_examples: list | None = None,
+    prev_similarity: float | None = None,
+    prev_note: str | None = None,
+) -> str:
     """
     Hiệu đính chính tả tiếng Việt với khả năng học từ các ví dụ trước đó
     
@@ -454,56 +464,70 @@ def correct_vietnamese(text: str, repeat_reminder: int, model, tokenizer, use_en
     Returns:
         str: Văn bản đã được hiệu đính
     """
-    prompt = f"\n\n{text}"
+    prompt = f"\n\n{text.strip()}"
     
     # Prompt cơ bản - đơn giản, ít ràng buộc
-    basic_prompt = """You are an **intelligent Vietnamese spelling and grammar corrector and formatter**.
+    basic_prompt = """# You are a smart Vietnamese spelling and grammar checker.
 
-**Your tasks**:
+## **Your task:**
 
-* Check and **correct all Vietnamese spelling, punctuation, and grammar errors** with perfect linguistic accuracy.
-* **Preserve the original meaning, structure, and formatting** — do **not** summarize, interpret, or add/remove content.
-* If the text contains **multiple semantic blocks**, separate them using the delimiter `\\n\\n`.
-* If the text includes **table-like or list-like data**, present it clearly as a **flat ordered list**, in this format:
-  Item 1: [Tên] – [Mô tả + dữ liệu chính]
-  Item 2: [Tên] – [Mô tả + dữ liệu chính]
-* If the text includes **labels, headers, or hierarchical sections** (ví dụ: "Đặc biệt trọng yếu", "Rất trọng yếu", "Trọng yếu", ...), **preserve them exactly as input** and keep their associated items grouped below.
-* If the text describes a **chart, process, or workflow**, express it as a **logical sequence** using arrows (>>) between steps.
-* Maintain correct **Vietnamese capitalization, punctuation, spacing, and diacritics**.
-* Preserve all **proper nouns, abbreviations, organizational names, and references** exactly (e.g. E.S.G, CP, CT, ESG, CK, BIWASE, ...).
-* Ensure **consistent line breaks and spacing** as in the input, especially for headings, sections, and chapter titles.
-* **No English response**, **Just Vietnamese**.
+* Check and correct all Vietnamese spelling, punctuation and grammar errors.
 
-**Output requirements:**
+* Keep the original meaning, **number of characters** and formatting - **do not** add, remove or summarize the content.
 
-* Output **only the corrected text**, with the same formatting, line breaks, and structure as the input.
-* Do **not** include explanations, comments, or any extra symbols (no markdown, no bullets unless already in text).
-* The output must look like a polished, publication-ready Vietnamese document while retaining the original structure and flow.
+* Capitalize, punctuate and space** correctly in Vietnamese.
+
+* Do not change proper nouns, organization names or abbreviations (e.g. E.S.G, CP, CT, ESG, CK, ...).
+* Do not delete the characters **'#'**
+* **Do not answer in English**, **Only answer in Vietnamese**.
+
+## **Output requirements:**
+
+* **Keep the original section:** ## **TITLE**
+* **Keep the same layout as the input** (including title, list, chapter table and hierarchy).
 """
     
     # Prompt nâng cao - chi tiết hơn, định dạng rõ ràng
-    enhanced_prompt = """You are an **intelligent Vietnamese spelling and grammar corrector**.
+    enhanced_prompt = """# You are a smart Vietnamese spelling and grammar checker.
 
-**Your tasks**:
+## **Your task:**
 
-* Check and **correct all Vietnamese spelling, punctuation, and grammar errors**.
-* **Preserve the original meaning, character count, and formatting** — do not add, remove, or summarize content.
-* If the text contains **multiple semantic blocks**, separate them using the delimiter `\\n\\n`.
-* If the text includes **table-like or list-like data**, present it clearly as a **flat ordered list** (không chia cột, không nhóm).
-  Ví dụ:
+* Check and correct all Vietnamese spelling, punctuation and grammar errors.
 
-  1. [Tên chủ đề] – [Mô tả/ngữ cảnh nếu có]
-  2. [Tên chủ đề] – [Mô tả/ngữ cảnh nếu có]
-* If the text includes **labels or axes** (ví dụ: "Rất trọng yếu", "Trọng yếu", ...), hãy giữ nguyên chúng như tiêu đề dòng, không sắp xếp lại.
-* If the text describes a **chart, process, or workflow**, trình bày lại thành **trình tự logic** bằng mũi tên (>>) giữa các bước.
-* Maintain correct **Vietnamese capitalization, punctuation, and spacing**.
-* Do not change proper nouns, organizational names, or abbreviations (ví dụ: E.S.G, CP, CT, ESG, CK, ...).
-* **No English response**, **Just Vietnamese**.
+* Keep the original meaning, **number of characters** and formatting - **do not** add, remove or summarize the content.
 
-**Output requirements:**
+* Capitalize, punctuate and space** correctly in Vietnamese.
 
-* Chỉ xuất ra **văn bản đã được chỉnh chính tả và ngữ pháp**, không có giải thích, không thêm ký hiệu định dạng.
-* **Giữ nguyên bố cục như đầu vào** (bao gồm tiêu đề, danh sách, mục lục chương, và cấu trúc phân cấp).
+* Do not change proper nouns, organization names or abbreviations (e.g. E.S.G, CP, CT, ESG, CK, ...).
+* Do not delete the characters **'#'**
+* **Do not answer in English**, **Only answer in Vietnamese**.
+
+## **Output requirements:**
+
+* **Keep the original section:** ## **TITLE**
+* **Keep the same layout as the input** (including title, list, chapter table and hierarchy).
+
+## **Example**:
+
+```text
+[architecture: description]
+
+# Title chính
+
+* Title phụ
+    * Content 1
+    * Content 2
+
+[table (if any): description]
+
+| STT | Nội dung | Số lượng cổ phần | | |
+|--|--|--|--|--|
+| | | Đang lưu hành | BWE nắm giữ | Chiếm Tỷ lệ |
+| A | CÔNG TY CON | 88.307.800 | 74.873.495 | |
+| 1 | CTCP Xây Lắp - Điện BIWASE | 20.000.000 | 10.400.000 | 52,00% |
+| 2 | CTCP nước BIWASE - Long An | 64.400.000 | 60.880.740 | 94,54% |
+| 3 | CT TNHH MTV Tư Vấn BIWASE | Vốn điều lệ: 10.000.000.000 | | 100,00% |
+```
 """
     
     # Chọn prompt phù hợp
@@ -529,6 +553,16 @@ def correct_vietnamese(text: str, repeat_reminder: int, model, tokenizer, use_en
                 "content": corrected_text
             })
     
+    # Nếu có thông tin attempt trước, đưa vào để model điều chỉnh tốt hơn
+    if prev_similarity is not None:
+        feedback_msg = (
+            f"Kết quả attempt trước: Similarity với bản gốc = {prev_similarity:.4f}.\n"
+            f"Hãy hiệu đính lại để đạt Similarity ≥ 0.95, không thêm từ mới, giữ nguyên bố cục."
+        )
+        if prev_note:
+            feedback_msg += f"\nGhi chú: {prev_note}"
+        messages.append({"role": "user", "content": feedback_msg})
+
     # Thêm văn bản hiện tại cần xử lý
     messages.append({"role": "user", "content": prompt})
 
@@ -536,9 +570,9 @@ def correct_vietnamese(text: str, repeat_reminder: int, model, tokenizer, use_en
     print(f"Total input tokens: {total_len}")
     print(f"📝 Using {'enhanced' if use_enhanced_prompt else 'basic'} prompt")
 
-    max_new_tokens = 2048
+    max_new_tokens = 32768
         
-    inp = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    inp = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True, enable_thinking=False)
     inputs = tokenizer([inp], return_tensors="pt").to(model.device)
 
     with torch.inference_mode():
@@ -604,114 +638,125 @@ array_word_changes = []
 # 💾 BỘ NHỚ: Lưu 2 phản hồi tốt nhất để model tham khảo
 best_examples = []  # List of (original, corrected, similarity) tuples
 
-# So khớp các file theo page number
+SIMILARITY_TARGET = 0.94
+MAX_RETRIES = 5  # Tổng số lần thử tối đa (bao gồm lần đầu)
+
+# So khớp các file theo page number với vòng lặp đảm bảo similarity >= 0.95
 for page_num in sorted(content_files.keys()):
     content_path = content_files[page_num]
     grammar_path = grammar_files.get(page_num)
-    
-    # Ensure grammar_path exists
     if grammar_path is None:
-        # Đồng bộ với pattern đọc "page_cleared_*.txt"
         grammar_path = output_folder / f"page_cleared_{page_num}.txt"
-    
+
     print(f"\n{'='*70}")
     print(f"📄 Page {page_num}:")
     print(f"{'='*70}")
     print(f"  Content: {content_path}")
     print(f"  Grammar: {grammar_path}")
-    
-    # Read content from the actual file
+
     with open(content_path, 'r', encoding='utf-8') as f:
         page_content = f.read()
-    
-    # LẦN 1: Thử với basic prompt (+ memory nếu có)
-    corrected_text = correct_vietnamese(
-        page_content, 
-        page_num, 
-        model, 
-        tokenizer, 
-        use_enhanced_prompt=False,
-        memory_examples=best_examples  # Truyền bộ nhớ vào
-    )
-    similarity = embedding.calculate_similarity(page_content, corrected_text)
-    
-    if similarity < 0.8 and len(page_content.split()) < 20:
-        print(f"⚠️ Trang {page_num}: Similarity thấp ({similarity:.3f}) và văn bản ngắn (<20 từ). Bỏ qua trang này.")
-        with open(grammar_path, 'w', encoding='utf-8') as f:
-            f.write(page_content)
-        continue
 
-    # Kiểm tra từ điển
-    vocab_check = check_vocabulary_match(page_content, corrected_text)
-    
-    # ĐIỀU KIỆN RETRY: similarity < 0.95 HOẶC có nhiều từ mới (> 5 từ)
-    max_retry = 1  # Chỉ retry 1 lần với enhanced prompt
-    retry_count = 0
-    
-    if (similarity < 0.95 or vocab_check['new_words_count'] > 5) and retry_count < max_retry:
-        print(f"\n🔄 RETRY với enhanced prompt (similarity={similarity:.3f}, new_words={vocab_check['new_words_count']})")
-        retry_count += 1
-        
-        # LẦN 2: Thử với enhanced prompt (+ memory)
+    attempt = 0
+    best_similarity = -1.0
+    best_text = page_content  # fallback nếu không đạt
+    last_vocab_check = None
+    improved = False
+    prev_similarity_for_prompt: float | None = None
+
+    while attempt < MAX_RETRIES:
+        use_enhanced = attempt > 0  # lần đầu basic prompt, sau đó enhanced
+        label = "ENH" if use_enhanced else "BASIC"
+        prev_info = f" (prev={prev_similarity_for_prompt:.4f})" if prev_similarity_for_prompt is not None else ""
+        print(f"\n🔁 Attempt {attempt+1}/{MAX_RETRIES} [{label}]{prev_info} …")
+
         corrected_text = correct_vietnamese(
-            page_content, 
-            page_num, 
-            model, 
-            tokenizer, 
-            use_enhanced_prompt=True,
-            memory_examples=best_examples  # Truyền bộ nhớ vào
+            page_content,
+            page_num,
+            model,
+            tokenizer,
+            use_enhanced_prompt=use_enhanced,
+            memory_examples=best_examples,
+            prev_similarity=prev_similarity_for_prompt,
+            prev_note=None,
         )
         similarity = embedding.calculate_similarity(page_content, corrected_text)
         vocab_check = check_vocabulary_match(page_content, corrected_text)
-        
-        print(f"✅ Sau retry: similarity={similarity:.3f}, new_words={vocab_check['new_words_count']}")
-    
-    # 💾 CẬP NHẬT BỘ NHỚ: Lưu các ví dụ tốt nhất
-    # Chỉ lưu nếu similarity >= 0.95 và ít từ mới
-    if similarity >= 0.95 and vocab_check['new_words_count'] <= 3:
-        best_examples.append((page_content, corrected_text, similarity))
-        # Sắp xếp theo similarity giảm dần và chỉ giữ 2 ví dụ tốt nhất
+        last_vocab_check = vocab_check
+
+        print(f"  → Similarity: {similarity:.4f} | New words: {vocab_check['new_words_count']}")
+
+        # Nếu văn bản quá ngắn và similarity thấp, bỏ qua sớm
+        if similarity < 0.8 and len(page_content.split()) < 20:
+            print(f"  ⚠️ Ngắn & similarity thấp ({similarity:.3f}) → giữ nguyên gốc.")
+            best_text = page_content
+            best_similarity = 1.0  # coi như đạt để không retry tiếp
+            break
+
+        # Cập nhật best nếu cải thiện
+        if similarity > best_similarity:
+            best_similarity = similarity
+            best_text = corrected_text
+            improved = True
+            # Ghi đè mỗi lần tốt hơn (yêu cầu người dùng)
+            with open(grammar_path, 'w', encoding='utf-8') as f:
+                f.write(best_text)
+            print(f"  💾 Saved improved attempt (similarity={best_similarity:.4f})")
+        else:
+            print("  ↪️ Không cải thiện, giữ phiên bản tốt nhất trước đó.")
+
+        # Điều kiện dừng: đạt target & số từ mới chấp nhận được
+        if best_similarity >= SIMILARITY_TARGET and vocab_check['new_words_count'] <= 3:
+            print("  ✅ Đạt ngưỡng mục tiêu. Dừng retry.")
+            break
+
+        attempt += 1
+        prev_similarity_for_prompt = similarity
+
+    # Sau vòng lặp: đánh giá kết quả (bắt buộc phục hồi gốc nếu không đạt)
+    if best_similarity < SIMILARITY_TARGET:
+        print(f"  ❌ Không đạt similarity ≥ {SIMILARITY_TARGET} sau {attempt} attempts (best={best_similarity:.4f}). Phục hồi nội dung gốc.")
+        with open(grammar_path, 'w', encoding='utf-8') as f:
+            f.write(page_content)
+        best_text = page_content
+        best_similarity = 1.0  # coi như bản gốc là chuẩn để tránh lưu vào memory
+    else:
+        print(f"  🎯 Final similarity: {best_similarity:.4f} (attempts used: {attempt+1})")
+
+    # Bộ nhớ ví dụ tốt (chỉ khi thật sự đạt target và ít từ mới)
+    if best_similarity >= SIMILARITY_TARGET and last_vocab_check and last_vocab_check['new_words_count'] <= 3:
+        best_examples.append((page_content, best_text, best_similarity))
         best_examples.sort(key=lambda x: x[2], reverse=True)
         best_examples = best_examples[:2]
-        print(f"  💾 Đã lưu vào bộ nhớ (tổng: {len(best_examples)} ví dụ, similarity: {similarity:.3f})")
-    
-    # So sánh chi tiết
-    comparison = compare_texts(page_content, corrected_text)
-    
+        print(f"  🧠 Memory updated (total={len(best_examples)})")
+
+    comparison = compare_texts(page_content, best_text)
     print(f"\n📊 Kết quả cuối cùng:")
-    print(f"  - Similarity: {similarity:.4f}")
+    print(f"  - Best Similarity: {best_similarity:.4f}")
     print(f"  - Số từ gốc: {comparison['total_words_original']}")
     print(f"  - Số từ đã sửa: {comparison['total_words_corrected']}")
     print(f"  - Số từ khác nhau: {comparison['different_words_count']}")
-    print(f"  - Từ mới (chữ cái): {vocab_check['new_words_count']} từ")
-    
-    if vocab_check['new_words_count'] > 0:
-        print(f"  - Các từ mới: {', '.join(vocab_check['new_words'][:10])}")
-    
-    if vocab_check['english_words']:
-        print(f"  - ⚠️ Phát hiện {len(vocab_check['english_words'])} từ tiếng Anh: {', '.join(vocab_check['english_words'][:5])}")
-    
+    if last_vocab_check:
+        print(f"  - Từ mới (chữ cái): {last_vocab_check['new_words_count']}")
+        if last_vocab_check['new_words_count'] > 0:
+            print(f"    • {', '.join(last_vocab_check['new_words'][:10])}")
+        if last_vocab_check['english_words']:
+            print(f"  - ⚠️ Phát hiện {len(last_vocab_check['english_words'])} từ tiếng Anh: {', '.join(last_vocab_check['english_words'][:5])}")
+
     if comparison['different_words_count'] > 0:
-        print(f"\n📝 Chi tiết thay đổi:")
+        print(f"\n📝 Chi tiết thay đổi (tối đa 10):")
         for diff in comparison['differences'][:10]:
             print(f"    • {diff}")
-    
-    # Lưu kết quả
-    with open(grammar_path, 'w', encoding='utf-8') as f:
-        f.write(corrected_text)
-    
-    print(f"\n✅ Đã lưu kết quả vào: {grammar_path}")
-    
+
     array_similarity.append({
         'page': page_num,
-        'similarity': similarity,
-        'retry_count': retry_count
+        'similarity': best_similarity,
+        'retry_count': attempt
     })
-    
     array_word_changes.append({
         'page': page_num,
         'word_diff': comparison['different_words_count'],
-        'new_words': vocab_check['new_words_count']
+        'new_words': (last_vocab_check['new_words_count'] if last_vocab_check else 0)
     })
 
 # Tổng kết

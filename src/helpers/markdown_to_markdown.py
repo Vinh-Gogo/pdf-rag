@@ -79,6 +79,8 @@ def clean_content(text: str, to_text: bool = False) -> str:
 		step1 = step1.replace("  ", " ")
 	while "** " in step1:
 		step1 = step1.replace("** ", "**\n")
+	while "---" in step1:
+		step1 = step1.replace("---", "-")
 		
 	return step1
 

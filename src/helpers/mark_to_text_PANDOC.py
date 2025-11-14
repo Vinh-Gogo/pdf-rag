@@ -8,14 +8,16 @@ Requirements:
   - pandoc must be installed and available on PATH.
 
 Usage:
-  python -m src.helpers.md_to_text \
-    --base_dir src/data/markdown \
-    --out_dir src/data/contents \
-    --pattern "page_*" \
-    --overwrite
+    python -m src.helpers.md_to_text \
+        --base_dir src/data/markdown \
+        --out_dir src/data/contents \
+        --pattern "page_*" \
+        --overwrite \
+        --preserve_pipes
 
 Options:
-  --dry_run   Show actions without writing files.
+    --dry_run         Show actions without writing files.
+    --preserve_pipes  Bypass pandoc; directly copy markdown (after image strip) to txt to retain table '|' characters exactly.
 """
 
 from __future__ import annotations
@@ -60,24 +62,24 @@ IMAGE_INLINE_MD_RE = re.compile(r"!\[[^\]]*\]\([^)]*\)")
 IMAGE_LINE_MD_RE = re.compile(r"^\s*!\[[^\]]*\]\([^)]*\)\s*$")
 IMAGE_TAG_HTML_RE = re.compile(r"<img\b[^>]*>", re.IGNORECASE)
 
+# Regex kết hợp (dùng | để match tất cả)
+IMAGE_COMBINED_RE = re.compile(
+    r"!\[[^\]]*\]\([^)]*\)|^\s*!\[[^\]]*\]\([^)]*\)\s*$|<img\b[^>]*>",
+    re.IGNORECASE
+)
 
 def strip_image_links_from_text(text: str) -> str:
-    """Remove Markdown/HTML image links from text.
-
-    - Removes standalone image lines (e.g., `![alt](url)`)
-    - Removes inline image occurrences within a line
-    - Removes HTML <img ...> tags
-    - Collapses repeated blank lines introduced by removals
-    """
     lines = []
     for line in text.splitlines():
         # Skip lines that are just an image
         if IMAGE_LINE_MD_RE.match(line):
             continue
+
         # Remove inline images and HTML <img> tags
         cleaned = IMAGE_INLINE_MD_RE.sub("", line)
         cleaned = IMAGE_TAG_HTML_RE.sub("", cleaned)
-        lines.append(cleaned)
+
+        lines.append(cleaned.rstrip())
 
     # Collapse multiple consecutive blank lines
     collapsed: list[str] = []
@@ -94,14 +96,24 @@ def strip_image_links_from_text(text: str) -> str:
     return "\n".join(collapsed).rstrip() + "\n"
 
 
-def convert_one(md_path: Path, txt_path: Path, dry_run: bool = False) -> bool:
+def convert_one(md_path: Path, txt_path: Path, dry_run: bool = False, preserve_pipes: bool = False) -> bool:
     txt_path.parent.mkdir(parents=True, exist_ok=True)
     if dry_run:
-        print(f"[DRY RUN] pandoc -s {md_path} -o {txt_path}")
+        action = "direct copy (preserve pipes)" if preserve_pipes else "pandoc -s"
+        print(f"[DRY RUN] {action} {md_path} -> {txt_path}")
         return True
+    if preserve_pipes:
+        try:
+            raw = md_path.read_text(encoding="utf-8", errors="ignore")
+            cleaned = strip_image_links_from_text(raw)
+            txt_path.write_text(cleaned, encoding="utf-8")
+            return True
+        except Exception as e:
+            print(f"✗ direct copy failed for {md_path}: {e}")
+            return False
     try:
         # Follow the provided example command. pandoc chooses writer by output extension.
-        result = subprocess.run(["pandoc", "-s", str(md_path), "-o", str(txt_path)], check=True)
+        result = subprocess.run(["pandoc", "-s", str(md_path), "-o", str(txt_path)], check=False)
 
         # Post-process to strip any remaining image links that might have been
         # preserved by upstream tools or input peculiarities.
@@ -119,7 +131,7 @@ def convert_one(md_path: Path, txt_path: Path, dry_run: bool = False) -> bool:
         return False
 
 
-def run(base_dir: Path, out_dir: Path, pattern: str, overwrite: bool, dry_run: bool) -> None:
+def run(base_dir: Path, out_dir: Path, pattern: str, overwrite: bool, dry_run: bool, preserve_pipes: bool) -> None:
     check_pandoc()
 
     if not base_dir.exists():
@@ -144,7 +156,7 @@ def run(base_dir: Path, out_dir: Path, pattern: str, overwrite: bool, dry_run: b
             skipped += 1
             continue
 
-        ok = convert_one(md_path, txt_path, dry_run=dry_run)
+        ok = convert_one(md_path, txt_path, dry_run=dry_run, preserve_pipes=preserve_pipes)
         if ok:
             print(f"[page {md_path}] -> {txt_path}")
             changed += 1
@@ -162,12 +174,13 @@ def parse_args(argv=None):
     p.add_argument("--pattern", default="page_*", help="Glob pattern for page folders")
     p.add_argument("--overwrite", action="store_true", help="Overwrite existing .txt files")
     p.add_argument("--dry_run", action="store_true", help="List actions without writing files")
+    p.add_argument("--preserve_pipes", action="store_true", help="Retain '|' characters by skipping pandoc and copying markdown content (minus images)")
     return p.parse_args(argv)
 
 
 def main(argv=None):
     args = parse_args(argv)
-    run(Path(args.base_dir), Path(args.out_dir), args.pattern, overwrite=args.overwrite, dry_run=args.dry_run)
+    run(Path(args.base_dir), Path(args.out_dir), args.pattern, overwrite=args.overwrite, dry_run=args.dry_run, preserve_pipes=args.preserve_pipes)
 
 
 if __name__ == "__main__":

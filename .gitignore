@@ -32,3 +32,4 @@ src/data/contents/*
 src/data/images/*
 src/data/markdown/page_*
 src/data/json/page_*
+src/data/output/*

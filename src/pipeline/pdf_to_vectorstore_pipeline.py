@@ -20,7 +20,7 @@ if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
 from src.helpers.PDFText import PDFTextExtractor
-from src.helpers.pages_to_vec_store import (
+from helpers.vectorstore_from_pages import (
     read_pages_from_directory,
     save_pages_to_json,
     store_pages_in_qdrant_direct,
@@ -150,12 +150,12 @@ def run_complete_pipeline(
             return False
         
         # Filter pages by range
-        pages = [p for p in pages if start_page <= p['page_index'] <= end_page]
+        pages = [p for p in pages if start_page <= int(p['page_index']) <= end_page]
         
         print(f"✅ Đã đọc {len(pages)} pages")
         
         # Display statistics
-        total_words = sum(p['word_count'] for p in pages)
+        total_words = sum(int(p['word_count']) for p in pages)
         print(f"\n📊 THỐNG KÊ:")
         print(f"   Tổng pages: {len(pages)}")
         print(f"   Tổng từ: {total_words:,}")

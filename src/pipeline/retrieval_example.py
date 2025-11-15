@@ -20,11 +20,11 @@ project_root = script_dir.parent.parent
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
-from src.helpers.sequences_to_vectorstore import (
+from src.helpers.vectorstore_from_sequences import (
     retrieve_similar_sequences,
     display_retrieval_results as display_sequences_results
 )
-from src.helpers.pages_to_vec_store import (
+from src.helpers.vectorstore_from_pages import (
     retrieve_similar_pages,
     display_page_retrieval_results
 )
@@ -142,7 +142,7 @@ def main():
         "Thể dục thể thao sức khỏe dồi dào, siêng năng mà luyện tập",
         "doanh thu của doanh nghiệp trong năm 2024",
         "Biện pháp phòng chống tham nhũng",
-        "ESG được đặt tại vị trí nào",
+        "Hệ thống quản lý môi trường của công ty",
     ]
 
     print(f"\n🧪 TEST RETRIEVAL VỚI {len(test_queries)} CÂU HỎI")
@@ -155,22 +155,21 @@ def main():
         # Thực hiện retrieval trên cả 2 collections
         pages_results, sequences_results = retrieve_both(
             query,
-            top_k_pages=3,
-            top_k_sequences=5
+            top_k_pages=10,
+            top_k_sequences=10
         )
         
         # Hiển thị kết quả chi tiết
-        if pages_results:
-            print(f"\n{'='*80}")
-            print("📄 CHI TIẾT KẾT QUẢ PAGES:")
-            print("="*80)
-            display_page_retrieval_results(pages_results)
+        # if pages_results:
+        #     print(f"\n{'='*80}")
+        #     print("📄 CHI TIẾT KẾT QUẢ PAGES:")
+        #     display_page_retrieval_results(pages_results)
         
-        if sequences_results:
-            print(f"\n{'='*80}")
-            print("📝 CHI TIẾT KẾT QUẢ SEQUENCES:")
-            print("="*80)
-            display_sequences_results(sequences_results)
+        # if sequences_results:
+        #     print(f"\n{'='*80}")
+        #     print("📝 CHI TIẾT KẾT QUẢ SEQUENCES:")
+        #     print("="*80)
+        #     display_sequences_results(sequences_results)
         
         # Hiển thị tóm tắt
         display_summary(pages_results, sequences_results)

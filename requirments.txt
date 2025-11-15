@@ -55,6 +55,7 @@ qdrant-client>=1.10.1,<2.0.0
 langchain-qdrant==0.1.4
 cohere>=5.0.0
 pandas>=1.5.0
+rank_bm25
 
 # Web & API
 # gradio==5.23.3

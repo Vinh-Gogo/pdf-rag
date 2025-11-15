@@ -415,7 +415,7 @@ contents_dir = project_root / "src" / "data" / "contents"
 output_folder = project_root / "src" / "data" / "grammar"
 
 # VỊ TRÍ BẮT ĐẦU XỬ LÝ
-START_PAGE = 25 # Thay đổi số này để bắt đầu từ trang khác
+START_PAGE = 164 # Thay đổi số này để bắt đầu từ trang khác
 
 print(model_name)
 try:

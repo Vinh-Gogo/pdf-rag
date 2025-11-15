@@ -34,12 +34,12 @@ def read_pages_from_directory(input_dir: str) -> List[Dict[str, str]]:
     pages = []
 
     # Lấy tất cả file .txt có định dạng page_NUMBER.txt
-    txt_files = list(input_path.glob("page_*.txt"))
+    txt_files = list(input_path.glob("page_cleared_*.txt"))
     
     # Sắp xếp pages theo số thứ tự từ tên file
     def extract_page_num(file_path):
         try:
-            return int(file_path.stem.split('_')[1])
+            return int(file_path.stem.split('_')[2])
         except (IndexError, ValueError):
             return 0
     
@@ -263,8 +263,8 @@ if __name__ == "__main__":
     # Cấu hình đường dẫn
     script_dir = Path(__file__).resolve().parent
     project_root = script_dir.parent.parent
-    input_dir = project_root / "src" / "data" / "results" / "grammar"
-    output_dir = project_root / "src" / "store" / "data_to_push"
+    input_dir = project_root / "src" / "data" / "grammar"
+    output_dir = project_root / "src" / "data" / "push"
     output_dir.mkdir(parents=True, exist_ok=True)
 
     print("🚀 BẮT ĐẦU XỬ LÝ PAGES")

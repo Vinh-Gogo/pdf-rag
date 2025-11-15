@@ -153,7 +153,7 @@ def parse_args(argv=None):
     p.add_argument("--pattern", default=DEFAULT_PATTERN, help="Glob pattern to match PDF files (default *.pdf)")
     p.add_argument("--overwrite", action="store_true", help="Overwrite existing markdown files")
     p.add_argument("--log_dir", default="src/data/markdown/markdown_logs", help="Directory to write conversion logs")
-    p.add_argument("--start_index", type=int, default=103, help="1-based index of the first file to process after sorting")
+    p.add_argument("--start_index", type=int, default=163, help="1-based index of the first file to process after sorting")
     return p.parse_args(argv)
 
 

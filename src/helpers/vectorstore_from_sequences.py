@@ -39,7 +39,7 @@ def extract_page_number(filename: str) -> int:
         int: Số trang
     """
     try:
-        match = re.search(r'page_(\d+)', filename)
+        match = re.search(r'page_cleared_(\d+)', filename)
         if match:
             return int(match.group(1))
         return 0
@@ -62,7 +62,7 @@ def read_sequences_from_directory(input_dir: str, min_words: int = 10) -> List[D
     all_sequences = []
     
     # Lấy tất cả file .txt có định dạng page_NUMBER.txt
-    txt_files = list(input_path.glob("page_*.txt"))
+    txt_files = list(input_path.glob("page_cleared_*.txt"))
     
     # Sắp xếp theo số trang
     txt_files = sorted(txt_files, key=lambda x: extract_page_number(x.name))
@@ -491,8 +491,8 @@ if __name__ == "__main__":
     load_dotenv()
     
     # Cấu hình
-    INPUT_DIR = project_root / "src" / "data" / "raw"
-    OUTPUT_JSON = project_root / "src" / "data" / "push" / "sequences_data.json"
+    INPUT_DIR = project_root / "src" / "data" / "grammar"
+    OUTPUT_JSON = project_root / "src" / "data" / "reports" / "merged_sequences.json"
     COLLECTION_NAME = "esg_sequences"
     MIN_WORDS = 10  # Số từ tối thiểu cho một sequence
     BATCH_SIZE = 50  # Số sequences mỗi batch khi upload

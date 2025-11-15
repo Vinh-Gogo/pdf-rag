@@ -79,9 +79,9 @@ QDRANT_API_KEY=your_qdrant_api_key
 QDRANT_URL=your_qdrant_url
 
 # Local Embedding Model (via Docker)
-OPENAI_API_MODEL_NAME_EMBED=Qwen/Qwen3-Embedding-0.6B
-OPENAI_BASE_URL_EMBED=http://localhost:8080/v1
-OPENAI_API_KEY_EMBED=text
+OPENAI_API_MODEL_NAME_EMBED=
+OPENAI_BASE_URL_EMBED=
+OPENAI_API_KEY_EMBED=
 ```
 
 ### 3. Run Complete Pipeline

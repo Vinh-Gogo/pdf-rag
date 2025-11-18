@@ -35,7 +35,12 @@ rag/
 ### 1. Installation
 
 ```bash
-abc
+python src/api/rag_service.py
+```
+
+```bash
+lea26@home-6-8-2025 MINGW64 /d/WETEC/rag (main)
+$ export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm use node && cd src/app && npm run dev
 ```
 
 ### 1.1. Pre-Process scan PDFs (if needed)

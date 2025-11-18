@@ -327,6 +327,7 @@ export default function ChatWindow() {
               onChange={handleFileSelect}
               accept=".pdf"
               className="hidden"
+              aria-label="Upload PDF file"
             />
 
             {/* Upload Button */}

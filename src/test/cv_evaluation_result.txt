@@ -1,0 +1,31 @@
+1. Summary  
+Le Quang Vinh is a software engineer with a background in computer science and experience in AI and machine learning. He is currently working as a backend contractor and has developed a Vietnamese multi-agent system using RAG and AI models. He has also worked on image depth estimation using CNNs and has a strong interest in AI-driven projects.
+
+2. Strengths  
+- Strong technical background in AI, machine learning, and computer science.  
+- Experience in developing AI systems using Python, OpenAI, LangChain, and other tools.  
+- Developed a Vietnamese multi-agent system with RAG and AI models.
+- Demonstrated expertise in image depth estimation using CNNs and deep learning techniques.  
+- Strong communication and problem-solving skills.  
+- Active participation in tech-sharing and collaborative projects.
+
+3. Weaknesses  
+- Limited experience in real-world AI-driven projects beyond the mentioned ones.  
+- Not provided with specific examples of how the AI systems were implemented or scaled.  
+- No mention of experience in full-stack development or other relevant technologies.  
+- No information on how the AI systems were integrated into larger projects or workflows.
+
+4. Role Fit Score (1–4)  
+4  
+Le Quang Vinh has a strong fit for the role of AI Engineer or Prompt Engineer. His technical background and experience in AI development make him a suitable candidate. However, he lacks experience in real-world AI-driven projects beyond the mentioned ones, which could be a minor gap.
+
+5. Recommended Roles  
+- AI Engineer  
+- Prompt Engineer  
+- Software Engineer (AI-focused)
+
+6. Actionable Suggestions  
+- Gain more experience in real-world AI-driven projects, particularly in integration and scalability.  
+- Expand knowledge in full-stack development and other relevant technologies.  
+- Develop a portfolio or case studies that demonstrate the implementation and impact of AI systems.  
+- Improve communication and collaboration skills to better fit the role of AI Engineer or Prompt Engineer.<|im_end|>

@@ -2,8 +2,8 @@
 Sequences to Vector Store Pipeline
 
 Quy trình:
-1. Đọc tất cả file text từ src/data/raw
-2. Tách mỗi file thành các sequences (đoạn văn)
+1. Đọc tất cả file text từ source data
+2. Tách mỗi file thành các sequences (đoạn văn) (Lượt bỏ các đoạn quá ngắn)
 3. Lưu tất cả sequences vào Qdrant Vector Store với metadata
 4. Test retrieval
 """
@@ -18,6 +18,7 @@ from pydantic import SecretStr
 import json
 import uuid
 import re
+from rank_bm25 import BM25Okapi
 
 # Add project root to path
 script_dir = Path(__file__).resolve().parent
@@ -26,6 +27,44 @@ if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
 from src.helpers.init_qdrant import qdrant_client
+
+
+# ============================================================================
+# BM25 SUPPORT (sparse lexical search)
+# ============================================================================
+
+_bm25_index: Optional[BM25Okapi] = None
+_bm25_tokens_corpus: Optional[List[List[str]]] = None
+_bm25_sequences: Optional[List[Dict]] = None  # keep same objects as input
+
+
+def _simple_tokenize(text: str) -> List[str]:
+    # Basic unicode-aware tokenization; good enough for VN and EN
+    return re.findall(r"\w+", text.lower(), flags=re.UNICODE)
+
+
+def build_bm25_index(sequences: List[Dict]) -> None:
+    """
+    Build a BM25 index from sequences' content for lexical retrieval.
+
+    Args:
+        sequences (List[Dict]): sequences as produced by read_sequences_from_directory
+    """
+    global _bm25_index, _bm25_tokens_corpus, _bm25_sequences
+    _bm25_sequences = sequences
+    _bm25_tokens_corpus = [_simple_tokenize(s.get("content", "")) for s in sequences]
+    _bm25_index = BM25Okapi(_bm25_tokens_corpus)
+
+
+def ensure_bm25_index_initialized(sequences: Optional[List[Dict]] = None) -> None:
+    """
+    Ensure BM25 is ready. If not, and sequences provided, build it.
+    """
+    global _bm25_index
+    if _bm25_index is None:
+        if sequences is None:
+            raise RuntimeError("BM25 index is not initialized. Call build_bm25_index(sequences) first or run the pipeline.")
+        build_bm25_index(sequences)
 
 
 def extract_page_number(filename: str) -> int:
@@ -84,7 +123,7 @@ def read_sequences_from_directory(input_dir: str, min_words: int = 10) -> List[D
                 continue
             
             # Tách thành sequences bằng \n\n (double newline)
-            raw_sequences = content.split('\n\n')
+            raw_sequences = [seq for seq in content.split('#') if seq]
             
             # Filter và clean sequences
             page_sequences = []
@@ -301,7 +340,134 @@ def retrieve_similar_sequences(
     return results
 
 
-def display_retrieval_results(results: List[Dict]):
+def retrieve_bm25_sequences(
+    query: str,
+    top_k: int = 5,
+    sequences: Optional[List[Dict]] = None
+) -> List[Dict]:
+    """
+    Retrieve similar sequences using BM25 lexical search over in-memory corpus.
+
+    Args:
+        query (str): query text
+        top_k (int): number of results
+        sequences (Optional[List[Dict]]): if provided, (re)builds the BM25 index from this list
+
+    Returns:
+        List[Dict]: results formatted similarly to embedding retrieval
+    """
+    ensure_bm25_index_initialized(sequences)
+
+    assert _bm25_index is not None and _bm25_sequences is not None
+    query_tokens = _simple_tokenize(query)
+    scores = _bm25_index.get_scores(query_tokens)
+
+    # Get top_k indices
+    ranked_indices = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)[:top_k]
+
+    results = []
+    for i in ranked_indices:
+        seq = _bm25_sequences[i]
+        results.append({
+            'seq_id': seq.get('seq_id', 'N/A'),
+            'page_index': seq.get('page_index', 'N/A'),
+            'seq_index': seq.get('seq_index', 'N/A'),
+            'content': seq.get('content', ''),
+            'word_count': seq.get('word_count', 'N/A'),
+            'similarity_score': float(scores[i]),  # keep key for display compatibility
+            'bm25_score': float(scores[i])
+        })
+
+    return results
+
+
+def _min_max_norm(scores: Dict[str, float]) -> Dict[str, float]:
+    if not scores:
+        return {}
+    vals = list(scores.values())
+    mn, mx = min(vals), max(vals)
+    if mx - mn == 0:
+        return {k: 0.0 for k in scores}
+    return {k: (v - mn) / (mx - mn) for k, v in scores.items()}
+
+
+def retrieve_hybrid_sequences(
+    query: str,
+    collection_name: str = "esg_sequences",
+    top_k: int = 5,
+    alpha: float = 0.5,
+    sequences: Optional[List[Dict]] = None
+) -> List[Dict]:
+    """
+    Hybrid retrieval by combining dense (Qdrant embedding) and sparse (BM25) signals.
+
+    combined_score = alpha * dense_norm + (1 - alpha) * bm25_norm
+
+    Args:
+        query (str): query text
+        collection_name (str): qdrant collection for dense search
+        top_k (int): number of final results
+        alpha (float): weight for dense score in [0,1]
+        sequences (Optional[List[Dict]]): optional corpus to (re)build BM25 index
+    """
+    # Ensure BM25
+    ensure_bm25_index_initialized(sequences)
+
+    # Dense results
+    dense_results = retrieve_similar_sequences(query, collection_name=collection_name, top_k=max(top_k, 10))
+    dense_scores = {r['seq_id']: float(r['similarity_score']) for r in dense_results}
+
+    # BM25 results over the whole corpus
+    bm25_results = retrieve_bm25_sequences(query, top_k=max(top_k, 50))
+    bm25_scores = {r['seq_id']: float(r['bm25_score']) for r in bm25_results}
+
+    # Union candidate set
+    candidate_ids = set(dense_scores) | set(bm25_scores)
+
+    # Normalize
+    dense_norm = _min_max_norm({k: dense_scores.get(k, 0.0) for k in candidate_ids})
+    bm25_norm = _min_max_norm({k: bm25_scores.get(k, 0.0) for k in candidate_ids})
+
+    combined = {k: alpha * dense_norm.get(k, 0.0) + (1 - alpha) * bm25_norm.get(k, 0.0) for k in candidate_ids}
+
+    # Build lookup map for sequence details (prefer from BM25 corpus, fallback to dense payloads)
+    seq_lookup: Dict[str, Dict] = {}
+    if _bm25_sequences is not None:
+        for s in _bm25_sequences:
+            seq_lookup[s.get('seq_id', '')] = s
+
+    # Also enrich from dense results payload if needed
+    for r in dense_results:
+        seq_id = r.get('seq_id')
+        if seq_id and seq_id not in seq_lookup:
+            seq_lookup[seq_id] = {
+                'seq_id': seq_id,
+                'page_index': r.get('page_index'),
+                'seq_index': r.get('seq_index'),
+                'content': r.get('content'),
+                'word_count': r.get('word_count'),
+            }
+
+    # Rank and format
+    ranked_ids = sorted(candidate_ids, key=lambda k: combined[k], reverse=True)[:top_k]
+    out: List[Dict] = []
+    for sid in ranked_ids:
+        s = seq_lookup.get(sid, {})
+        out.append({
+            'seq_id': sid,
+            'page_index': s.get('page_index', 'N/A'),
+            'seq_index': s.get('seq_index', 'N/A'),
+            'content': s.get('content', ''),
+            'word_count': s.get('word_count', 'N/A'),
+            'similarity_score': float(combined[sid]),
+            'embedding_score': float(dense_scores.get(sid, 0.0)),
+            'bm25_score': float(bm25_scores.get(sid, 0.0)),
+        })
+
+    return out
+
+
+def display_sequences_results(results: List[Dict]):
     """
     Hiển thị kết quả retrieval
     
@@ -314,7 +480,18 @@ def display_retrieval_results(results: List[Dict]):
     for i, result in enumerate(results, 1):
         print(f"\n{i}. [{result['seq_id']}]")
         print(f"   📄 Page: {result['page_index']} | Sequence: {result['seq_index']}")
-        print(f"   📊 Words: {result['word_count']} | Score: {result['similarity_score']:.4f}")
+        base = f"   📊 Words: {result['word_count']} | Score: {result['similarity_score']:.4f}"
+        # Show optional component scores if present
+        emb = result.get('embedding_score')
+        bm25 = result.get('bm25_score')
+        if emb is not None or bm25 is not None:
+            parts = []
+            if emb is not None:
+                parts.append(f"emb={emb:.4f}")
+            if bm25 is not None:
+                parts.append(f"bm25={bm25:.4f}")
+            base += " (" + ", ".join(parts) + ")"
+        print(base)
         print(f"   📝 Content:")
         
         # Hiển thị content với wrap
@@ -415,6 +592,13 @@ def run_sequences_pipeline(
     
     # Hiển thị thống kê
     display_statistics(sequences)
+
+    # Xây dựng chỉ mục BM25 cho tìm kiếm lexical
+    try:
+        build_bm25_index(sequences)
+        print(f"\n🔎 BM25: đã xây dựng chỉ mục lexical cho {len(sequences):,} sequences")
+    except Exception as e:
+        print(f"❌ Lỗi khi xây dựng BM25 index: {e}")
     
     # Step 2: Lưu JSON
     if not skip_json:
@@ -452,12 +636,28 @@ def run_sequences_pipeline(
             ]
             
             for query in test_queries:
-                results = retrieve_similar_sequences(
-                    query, 
+                print(f"\n--- Query: {query} ---")
+
+                print("\n[Dense Embedding - Qdrant]")
+                dense_results = retrieve_similar_sequences(
+                    query,
                     collection_name=collection_name,
                     top_k=3
                 )
-                display_retrieval_results(results)
+                display_sequences_results(dense_results)
+
+                print("\n[BM25 - Lexical]")
+                bm25_results = retrieve_bm25_sequences(query, top_k=3)
+                display_sequences_results(bm25_results)
+
+                print("\n[Hybrid - Combined]")
+                hybrid_results = retrieve_hybrid_sequences(
+                    query,
+                    collection_name=collection_name,
+                    top_k=3,
+                    alpha=0.6  # favor embeddings slightly
+                )
+                display_sequences_results(hybrid_results)
             
         except Exception as e:
             print(f"❌ Lỗi khi lưu vào vector store: {e}")
@@ -491,11 +691,11 @@ if __name__ == "__main__":
     load_dotenv()
     
     # Cấu hình
-    INPUT_DIR = project_root / "src" / "data" / "grammar"
-    OUTPUT_JSON = project_root / "src" / "data" / "reports" / "merged_sequences.json"
+    INPUT_DIR = project_root / "src" / "data" / "md_to_plain_text"
+    OUTPUT_JSON = project_root / "src" / "data" / "push" / "sequences_data.json"
     COLLECTION_NAME = "esg_sequences"
-    MIN_WORDS = 10  # Số từ tối thiểu cho một sequence
-    BATCH_SIZE = 50  # Số sequences mỗi batch khi upload
+    MIN_WORDS = 2  # Số từ tối thiểu cho một sequence
+    BATCH_SIZE = 10  # Số sequences mỗi batch khi upload
     
     # Flags
     SKIP_JSON = False  # True nếu không cần lưu JSON

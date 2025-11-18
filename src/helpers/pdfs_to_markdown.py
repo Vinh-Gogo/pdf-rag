@@ -1,23 +1,12 @@
 """Batch convert PDFs to Markdown using marker_single.
 
-Prerequisites:
-    - marker_single command available in current virtual environment (e.g. `pip install pdf-marker` or the appropriate package providing marker_single).
-    - Activate venv before running.
-
 Usage (from project root):
     python -m src.helpers.pdfs_to_markdown \
         --input_dir src/data/pdfs/pages \
-        --output_dir src/data/pdfs/markdown \
+        --output_dir src/data/markdown \
         --pattern page_*.pdf \
-        --overwrite \
-        --start_index 1
+        --start_index 93
 
-Notes:
-    - Creates output_dir if missing.
-    - Skips files already converted unless --overwrite specified.
-    - Captures stderr/stdout per file to a log folder.
-    - Files are sorted numerically by trailing digits (e.g., page_2 before page_10).
-    - Use --start_index (1-based) to resume from a specific file in the sorted list.
 """
 from __future__ import annotations
 import argparse
@@ -27,7 +16,7 @@ from pathlib import Path
 import os
 from datetime import datetime
 
-DEFAULT_PATTERN = "*.pdf"
+DEFAULT_PATTERN = "page_*.pdf"
 
 def run_marker(pdf_path: Path, output_dir: Path, use_gpu: bool = False, gpu_id: int = 0) -> subprocess.CompletedProcess:
     """Run marker_single on a single PDF and return the CompletedProcess.
@@ -139,21 +128,24 @@ def convert_batch(input_dir: Path, output_dir: Path, pattern: str, overwrite: bo
             lf.write("\n=== STDERR ===\n")
             lf.write(proc.stderr or "(empty)\n")
 
-        print(f"[{idx}/{total}] {pdf_path} -> {status}")
+        print(f"[{idx}/{total}] {pdf_path} -> {status} at: {expected_md}")
 
     print("Conversion batch finished.")
 
 
 def parse_args(argv=None):
+    # --input_dir src/data/pdfs/pages \
+    # --output_dir src/data/markdown \
+    # --pattern page_*.pdf \
+    # --overwrite \
+    # --start_index 1
     p = argparse.ArgumentParser(description="Batch convert PDFs to Markdown using marker_single.")
-    p.add_argument("--gpu", action="store_true", help="Attempt to use CUDA (adds --device cuda if supported; falls back to CPU if not)")
-    p.add_argument("--gpu_id", type=int, default=0, help="GPU id to expose via CUDA_VISIBLE_DEVICES when --gpu is set")
     p.add_argument("--input_dir", default="src/data/pdfs/pages", help="Directory containing PDF files")
     p.add_argument("--output_dir", default="src/data/markdown", help="Directory to write markdown files")
     p.add_argument("--pattern", default=DEFAULT_PATTERN, help="Glob pattern to match PDF files (default *.pdf)")
-    p.add_argument("--overwrite", action="store_true", help="Overwrite existing markdown files")
+    p.add_argument("--overwrite", help="Overwrite existing markdown files")
     p.add_argument("--log_dir", default="src/data/markdown/markdown_logs", help="Directory to write conversion logs")
-    p.add_argument("--start_index", type=int, default=163, help="1-based index of the first file to process after sorting")
+    p.add_argument("--start_index", type=int, default=94, help="1-based index of the first file to process after sorting") # Default to 93 for resuming large batches
     return p.parse_args(argv)
 
 
@@ -174,8 +166,6 @@ def main(argv=None):
         args.overwrite,
         log_dir,
         start_index=args.start_index,
-        use_gpu=args.gpu,
-        gpu_id=args.gpu_id,
     )
 
 

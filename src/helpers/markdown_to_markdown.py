@@ -75,6 +75,11 @@ def clean_content(text: str, to_text: bool = False) -> str:
 	- If to_text=True, convert to plain text; otherwise keep Markdown as-is.
 	"""
 	step1 = text.replace("<br>", " ")
+	step1 = step1.replace("<ul><li>", "- ")
+	step1 = step1.replace("</li><li>", " - ")
+	step1 = step1.replace("</li></ul>", "")
+ 
+ 
 	while "  " in step1:
 		step1 = step1.replace("  ", " ")
 	while "** " in step1:
@@ -108,7 +113,7 @@ def run(base_dir: Path, pattern: str, overwrite: bool, dry_run: bool, to_text: b
 	changed = 0
 	skipped = 0
 	for idx, md_path in pages:
-		dst = md_path.parent / f"page_cleared_{idx}.md"
+		dst = md_path.parent / f"file_{idx}.md"
 		wrote = process_file(md_path, dst, overwrite=overwrite, dry_run=dry_run, to_text=to_text)
 		if wrote:
 			print(f"[page {idx}] -> {'(dry-run)' if dry_run else dst}")
@@ -121,8 +126,8 @@ def run(base_dir: Path, pattern: str, overwrite: bool, dry_run: bool, to_text: b
 
 def parse_args(argv=None):
 	p = argparse.ArgumentParser(description="Clean markdown pages: replace <br> with space; optional Markdown→text.")
-	p.add_argument("--base_dir", default="src/data/markdown", help="Base directory containing page_<n> folders")
-	p.add_argument("--pattern", default="page_*", help="Glob pattern for page folders")
+	p.add_argument("--base_dir", default="src/data/pdfs", help="Base directory containing page_<n> folders")
+	p.add_argument("--pattern", default="file_2.md", help="Glob pattern for page folders")
 	p.add_argument("--overwrite", action="store_true", help="Overwrite existing cleaned files")
 	p.add_argument("--dry_run", action="store_true", help="Show actions without writing files")
 	p.add_argument("--to_text", action="store_true", help="After replacing <br>, convert Markdown to plain text (tables will be flattened)")

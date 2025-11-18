@@ -1,13 +1,15 @@
 import os
 import sys
 from pathlib import Path
-from typing import List, Dict
+from typing import List, Dict, Optional
 from langchain_openai import OpenAIEmbeddings
 from langchain_qdrant import QdrantVectorStore
 from pydantic import SecretStr
 import json
 import uuid
 from dotenv import load_dotenv
+import re
+from rank_bm25 import BM25Okapi
 
 # Load environment variables
 load_dotenv()
@@ -19,6 +21,34 @@ if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
 from src.helpers.init_qdrant import qdrant_client
+
+
+# ============================================================================
+# BM25 SUPPORT for Pages (sparse lexical search)
+# ============================================================================
+
+_bm25_pages_index: Optional[BM25Okapi] = None
+_bm25_pages_tokens_corpus: Optional[List[List[str]]] = None
+_bm25_pages: Optional[List[Dict]] = None
+
+
+def _simple_tokenize(text: str) -> List[str]:
+    return re.findall(r"\w+", text.lower(), flags=re.UNICODE)
+
+
+def build_bm25_pages_index(pages: List[Dict]) -> None:
+    global _bm25_pages_index, _bm25_pages_tokens_corpus, _bm25_pages
+    _bm25_pages = pages
+    _bm25_pages_tokens_corpus = [_simple_tokenize(p.get("content", "")) for p in pages]
+    _bm25_pages_index = BM25Okapi(_bm25_pages_tokens_corpus)
+
+
+def ensure_bm25_pages_index_initialized(pages: Optional[List[Dict]] = None) -> None:
+    global _bm25_pages_index
+    if _bm25_pages_index is None:
+        if pages is None:
+            raise RuntimeError("BM25 pages index is not initialized. Call build_bm25_pages_index(pages) first or run the pipeline.")
+        build_bm25_pages_index(pages)
 
 def read_pages_from_directory(input_dir: str) -> List[Dict[str, str]]:
     """
@@ -60,8 +90,8 @@ def read_pages_from_directory(input_dir: str) -> List[Dict[str, str]]:
                 content = f.read().strip()
 
             if content:  # Chỉ thêm nếu có nội dung
-                # Đếm số paragraphs (tách bởi \n\n)
-                paragraphs = [p.strip() for p in content.split("\n\n") if p.strip()]
+                # Đếm số paragraphs (tách bởi #)
+                paragraphs = [p.strip() for p in content.split("#") if p.strip()]
                 
                 page = {
                     'page_index': page_num,
@@ -148,6 +178,7 @@ def store_pages_in_qdrant_direct(pages: List[Dict[str, str]], collection_name: s
 
         # Tạo payload với tất cả metadata
         payload = {
+            'page_id': f"page_{page['page_index']}",
             'page_index': page['page_index'],
             'content': page['content'],
             'seq': page['seq'],
@@ -164,7 +195,7 @@ def store_pages_in_qdrant_direct(pages: List[Dict[str, str]], collection_name: s
         points.append(point)
 
     # Upload points theo batch
-    batch_size = 50  # Batch nhỏ hơn vì mỗi page có thể lớn
+    batch_size = 20  # Batch nhỏ hơn vì mỗi page có thể lớn
     for i in range(0, len(points), batch_size):
         batch = points[i:i+batch_size]
         qdrant_client.upsert(
@@ -186,7 +217,7 @@ def store_pages_in_qdrant_direct(pages: List[Dict[str, str]], collection_name: s
 
     return vectorstore
 
-def retrieve_similar_pages(query: str, vectorstore, top_k: int = 5):
+def retrieve_similar_pages(query: str, vectorstore=None, top_k: int = 5, collection_name: str = "esg_pages"):
     """
     Từ câu hỏi, retrieval các pages có nội dung tương đồng nhất
 
@@ -217,7 +248,7 @@ def retrieve_similar_pages(query: str, vectorstore, top_k: int = 5):
 
     # Tìm kiếm trực tiếp từ Qdrant
     search_results = qdrant_client.search(
-        collection_name="esg_pages",
+        collection_name=collection_name,
         query_vector=query_vector,
         limit=top_k,
         with_payload=True,
@@ -229,6 +260,7 @@ def retrieve_similar_pages(query: str, vectorstore, top_k: int = 5):
     for result in search_results:
         payload = result.payload or {}
         formatted_results.append({
+            'page_id': payload.get('page_id', f"page_{payload.get('page_index', 'N/A')}") or f"page_{payload.get('page_index', 'N/A')}",
             'page_index': payload.get('page_index', 'N/A'),
             'content': payload.get('content', ''),
             'seq': payload.get('seq', 'N/A'),
@@ -238,7 +270,7 @@ def retrieve_similar_pages(query: str, vectorstore, top_k: int = 5):
 
     return formatted_results
 
-def display_page_retrieval_results(results: List[Dict]):
+def display_page_results(results: List[Dict]):
     """
     Hiển thị kết quả retrieval cho pages
 
@@ -251,9 +283,104 @@ def display_page_retrieval_results(results: List[Dict]):
     for i, result in enumerate(results, 1):
         print(f"\n{i}. [SEARCH] Ở Page: {result['page_index']}")
         print(f"   Sequences: {result['seq']}")
-        print(f"   Words: {result['word_count']}")
-        print(f"   Similarity Score: {result['similarity_score']:.4f}")
+        base = f"   Words: {result['word_count']} | Score: {result['similarity_score']:.4f}"
+        emb = result.get('embedding_score')
+        bm25 = result.get('bm25_score')
+        if emb is not None or bm25 is not None:
+            parts = []
+            if emb is not None:
+                parts.append(f"emb={emb:.4f}")
+            if bm25 is not None:
+                parts.append(f"bm25={bm25:.4f}")
+            base += " (" + ", ".join(parts) + ")"
+        print(base)
         print(f"   Content: \n{result['content'][:200]}{'...' if len(result['content']) > 200 else ''}")
+        
+def retrieve_bm25_pages(query: str, top_k: int = 5, pages: Optional[List[Dict]] = None) -> List[Dict]:
+    """
+    Retrieve top-k pages using BM25 lexical search.
+    """
+    ensure_bm25_pages_index_initialized(pages)
+    assert _bm25_pages_index is not None and _bm25_pages is not None
+
+    query_tokens = _simple_tokenize(query)
+    scores = _bm25_pages_index.get_scores(query_tokens)
+    ranked_indices = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)[:top_k]
+
+    results: List[Dict] = []
+    for i in ranked_indices:
+        page = _bm25_pages[i]
+        results.append({
+            'page_id': f"page_{page.get('page_index', 'N/A')}",
+            'page_index': page.get('page_index', 'N/A'),
+            'content': page.get('content', ''),
+            'seq': page.get('seq', 'N/A'),
+            'word_count': page.get('word_count', 'N/A'),
+            'similarity_score': float(scores[i]),
+            'bm25_score': float(scores[i])
+        })
+    return results
+
+
+def _min_max_norm(scores: Dict[str, float]) -> Dict[str, float]:
+    if not scores:
+        return {}
+    vals = list(scores.values())
+    mn, mx = min(vals), max(vals)
+    if mx - mn == 0:
+        return {k: 0.0 for k in scores}
+    return {k: (v - mn) / (mx - mn) for k, v in scores.items()}
+
+
+def retrieve_hybrid_pages(
+    query: str,
+    top_k: int = 5,
+    alpha: float = 0.5,
+    pages: Optional[List[Dict]] = None,
+    collection_name: str = "esg_pages"
+) -> List[Dict]:
+    """
+    Hybrid retrieval combining dense (Qdrant) and sparse (BM25) for pages.
+
+    combined = alpha * dense_norm + (1 - alpha) * bm25_norm
+    """
+    ensure_bm25_pages_index_initialized(pages)
+
+    # Dense top candidates
+    dense_results = retrieve_similar_pages(query, vectorstore=None, top_k=max(top_k, 10), collection_name=collection_name)
+    dense_scores = {r.get('page_id'): float(r['similarity_score']) for r in dense_results}
+
+    # BM25 broader set
+    bm25_results = retrieve_bm25_pages(query, top_k=max(top_k, 50))
+    bm25_scores = {r.get('page_id'): float(r['bm25_score']) for r in bm25_results}
+
+    candidate_ids = set(dense_scores) | set(bm25_scores)
+    dense_norm = _min_max_norm({k: dense_scores.get(k, 0.0) for k in candidate_ids})
+    bm25_norm = _min_max_norm({k: bm25_scores.get(k, 0.0) for k in candidate_ids})
+
+    combined = {k: alpha * dense_norm.get(k, 0.0) + (1 - alpha) * bm25_norm.get(k, 0.0) for k in candidate_ids}
+
+    # Build lookup map from pages corpus
+    page_lookup: Dict[str, Dict] = {}
+    if _bm25_pages is not None:
+        for p in _bm25_pages:
+            page_lookup[f"page_{p.get('page_index', 'N/A')}"] = p
+
+    ranked_ids = sorted(candidate_ids, key=lambda k: combined[k], reverse=True)[:top_k]
+    out: List[Dict] = []
+    for pid in ranked_ids:
+        p = page_lookup.get(pid, {})
+        out.append({
+            'page_id': pid,
+            'page_index': p.get('page_index', 'N/A'),
+            'content': p.get('content', ''),
+            'seq': p.get('seq', 'N/A'),
+            'word_count': p.get('word_count', 'N/A'),
+            'similarity_score': float(combined[pid]),
+            'embedding_score': float(dense_scores.get(pid, 0.0)),
+            'bm25_score': float(bm25_scores.get(pid, 0.0)),
+        })
+    return out
 
     print("\n" + "=" * 80)
 
@@ -263,7 +390,7 @@ if __name__ == "__main__":
     # Cấu hình đường dẫn
     script_dir = Path(__file__).resolve().parent
     project_root = script_dir.parent.parent
-    input_dir = project_root / "src" / "data" / "grammar"
+    input_dir = project_root / "src" / "data" / "md_to_plain_text"
     output_dir = project_root / "src" / "data" / "push"
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -289,6 +416,13 @@ if __name__ == "__main__":
     output_file = output_dir / "pages_data.json"
     save_pages_to_json(pages, str(output_file))
 
+    # Xây dựng chỉ mục BM25 cho pages
+    try:
+        build_bm25_pages_index(pages)
+        print(f"\n🔎 BM25: đã xây dựng chỉ mục lexical cho {len(pages):,} pages")
+    except Exception as e:
+        print(f"❌ Lỗi khi xây dựng BM25 index cho pages: {e}")
+
     # Lưu vào Qdrant
     try:
         vectorstore = store_pages_in_qdrant_direct(pages, "esg_pages")
@@ -304,8 +438,16 @@ if __name__ == "__main__":
         ]
 
         for query in test_queries:
-            results = retrieve_similar_pages(query, vectorstore, top_k=3)
-            display_page_retrieval_results(results)
+            results = retrieve_similar_pages(query, vectorstore, top_k=3, collection_name="esg_pages")
+            display_page_results(results)
+
+            print("\n[BM25 - Lexical]")
+            bm25_results = retrieve_bm25_pages(query, top_k=3, pages=pages)
+            display_page_results(bm25_results)
+
+            print("\n[Hybrid - Combined]")
+            hybrid_results = retrieve_hybrid_pages(query, top_k=3, alpha=0.6, pages=pages, collection_name="esg_pages")
+            display_page_results(hybrid_results)
             print("\n" + "-"*50)
 
     except Exception as e:

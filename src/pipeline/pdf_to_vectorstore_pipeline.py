@@ -25,7 +25,7 @@ from helpers.vectorstore_from_pages import (
     save_pages_to_json,
     store_pages_in_qdrant_direct,
     retrieve_similar_pages,
-    display_page_retrieval_results
+    display_page_results
 )
 
 

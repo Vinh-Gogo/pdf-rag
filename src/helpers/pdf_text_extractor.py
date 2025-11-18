@@ -273,7 +273,7 @@ def main():
     print("VÍ DỤ 1: TRÍCH XUẤT 1 TRANG")
     print("="*100)
     
-    for i in range(0, 168):
+    for i in range(92, 168):
         text = extractor.extract_text_from_pdf(
             pdf_path=r"src\data\pdfs\file_2.pdf",
             page_number=i,

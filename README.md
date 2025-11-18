@@ -2,6 +2,9 @@
 
 A complete pipeline for extracting text from PDF files, splitting into pages and sequences, and storing in Qdrant vector database for semantic search and retrieval.
 
+## Website Chat Interface
+![alt text](public\image.png "PDF RAG Chat Interface")
+
 ## 🎯 Features
 
 - **PDF Scan**: Extract text from PDF files with high accuracy
@@ -16,25 +19,15 @@ A complete pipeline for extracting text from PDF files, splitting into pages and
 
 ```
 rag/
-├── src/
-│   ├── data/
-│   │   ├── pdfs/              # Input PDF files
-│   │   │   └── pages/         # Split PDF pages
-│   │   ├── contents/          # Extracted text from pages
-│   │   ├── raw/               # Raw text files
-│   │   └── push/              # JSON data for vector store
-│   ├── helpers/
-│   │   ├── PDFText.py         # PDF text extraction using PyMuPDF
-│   │   ├── init_qdrant.py     # Qdrant client initialization
-│   │   ├── pages_to_vec_store.py      # Pages to vector store
-│   │   └── sequences_to_vectorstore.py # Sequences to vector store
-│   └── pipeline/
-│       ├── pdf_to_vectorstore_pipeline.py  # Complete pipeline
-│       └── retrieval_example.py            # Retrieval examples
-├── .env                       # Environment variables
-├── .gitignore
-├── requirments.txt
-└── README.md
+...src/
+  api/                     # FastAPI backend for RAG service
+  app/                     # Next.js frontend chat interface
+  data/                    # Sample PDFs and processed content
+  helpers/                 # Utility scripts for PDF processing and vector store
+  pipeline/                # Complete pipelines for PDF to vector store
+  tests/                   # Unit tests for various components
+...README.md               # This file
+...CHAT_README.md          # Chat interface documentation
 ```
 
 ## 🚀 Quick Start
@@ -42,47 +35,19 @@ rag/
 ### 1. Installation
 
 ```bash
-# Clone repository
-git clone https://github.com/Vinh-Gogo/pdf-rag.git
-cd pdf-rag
-
-# Create virtual environment
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirments.txt
+abc
 ```
 
 ### 1.1. Pre-Process scan PDFs (if needed)
 
 ```ps
-# PDF >> markdown ( pip install marker-pdf )
-(.venv) PS D:\rag> marker_single path\page_6.pdf --output_dir path\pages
-Recognizing Layout: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:12<00:00, 12.58s/it]
-Running OCR Error Detection: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  6.59it/s]
-Detecting bboxes: 0it [00:00, ?it/s]
-Detecting bboxes: 0it [00:00, ?it/s]
-2025-11-12 09:48:35,050 [INFO] marker: Saved markdown to path\pages\page_6
-2025-11-12 09:48:35,050 [INFO] marker: Total time: 15.751145124435425
-
-# python -m src.helpers.pdfs_to_markdown --input_dir src/data/pdfs/pages --output_dir src/data/pdfs/markdown --pattern "page_1.pdf" --overwrite
+# for debugging: process specific PDF files
+python -m src.helpers.pdfs_to_markdown --input_dir src/data/pdfs/pages --output_dir src/data/pdfs/markdown --pattern "page_1.pdf" --overwrite
 ```
 
 ### 2. Environment Setup
 
 Create `.env` file:
-
-```env
-# Qdrant Configuration
-QDRANT_API_KEY=your_qdrant_api_key
-QDRANT_URL=your_qdrant_url
-
-# Local Embedding Model (via Docker)
-OPENAI_API_MODEL_NAME_EMBED=
-OPENAI_BASE_URL_EMBED=
-OPENAI_API_KEY_EMBED=
-```
 
 ### 3. Run Complete Pipeline
 
@@ -102,24 +67,6 @@ python src/pipeline/retrieval_example.py
 ```
 
 ## 📚 Usage Examples
-
-### Extract Text from PDF
-
-```python
-from src.helpers.PDFText import PDFTextExtractor
-
-# Initialize extractor
-extractor = PDFTextExtractor(
-    pdf_path="src/data/pdfs/file.pdf",
-    output_dir="src/data/contents"
-)
-
-# Split PDF into individual pages
-extractor.split_pdf_into_pages(start_page=1, end_page=168)
-
-# Extract text from all pages
-extractor.extract_all_pages(start_page=1, end_page=168)
-```
 
 ### Store Pages in Vector Store
 
@@ -236,4 +183,3 @@ Vinh-Gogo
 
 - [GitHub Repository](https://github.com/Vinh-Gogo/pdf-rag)
 - [Qdrant Documentation](https://qdrant.tech/documentation/)
-- [PyMuPDF Documentation](https://pymupdf.readthedocs.io/)

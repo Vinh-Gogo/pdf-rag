@@ -16,7 +16,6 @@ dill>=0.3.8,<1
 torch --index-url https://download.pytorch.org/whl/cu130
 torchvision --index-url https://download.pytorch.org/whl/cu130
 transformers==4.52.4
-qwen_vl_utils==0.0.10
 accelerate
 huggingface_hub[hf_xet]
 timm>=0.9.0

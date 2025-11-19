@@ -415,7 +415,7 @@ contents_dir = project_root / "src" / "data" / "contents" / "drop"
 output_folder = project_root / "src" / "data" / "md_to_plain_text"
 
 # VỊ TRÍ BẮT ĐẦU XỬ LÝ
-START_PAGE = 93 # Thay đổi số này để bắt đầu từ trang khác
+START_PAGE = 115 # Thay đổi số này để bắt đầu từ trang khác
 
 print(model_name)
 try:

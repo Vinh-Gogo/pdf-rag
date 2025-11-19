@@ -28,7 +28,6 @@ if str(project_root) not in sys.path:
 
 from src.helpers.init_qdrant import qdrant_client
 
-
 # ============================================================================
 # BM25 SUPPORT (sparse lexical search)
 # ============================================================================
@@ -691,11 +690,11 @@ if __name__ == "__main__":
     load_dotenv()
     
     # Cấu hình
-    INPUT_DIR = project_root / "src" / "data" / "md_to_plain_text"
-    OUTPUT_JSON = project_root / "src" / "data" / "push" / "sequences_data.json"
+    INPUT_DIR = project_root / "src" / "data" / "contents" / "drop"
+    OUTPUT_JSON = project_root / "src" / "data" / "push" / "sequences" / "sequences.json"
     COLLECTION_NAME = "esg_sequences"
     MIN_WORDS = 2  # Số từ tối thiểu cho một sequence
-    BATCH_SIZE = 10  # Số sequences mỗi batch khi upload
+    BATCH_SIZE = 5  # Số sequences mỗi batch khi upload
     
     # Flags
     SKIP_JSON = False  # True nếu không cần lưu JSON

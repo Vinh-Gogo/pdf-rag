@@ -1,26 +1,91 @@
-# PDF RAG Chat Interface
+# PDF RAG Chat Interface v1.0
 
-A modern chat interface for testing the PDF RAG system, built with Next.js and integrated with a Python FastAPI backend.
+A comprehensive, modern chat interface for testing the PDF RAG system, featuring advanced UI/UX, beautiful Vietnamese typography, dual-query search, and seamless document interaction.
 
 ## Architecture
 
 ```
-Frontend (Next.js) <--> API Bridge <--> Python RAG Service <--> Qdrant Vector DB
-- Streaming chat UI
-- Server-sent events (SSE)
-- Custom embeddings (Qwen)
-- OpenAI GPT generation
+Frontend (Next.js 14 + TypeScript) <--> API Bridge <--> Python RAG Service <--> Qdrant Vector DB
+├── Stunning UI with Vietnamese typography
+├── Streaming chat with Server-sent events (SSE)
+├── Dual-query search (Page + Sequence level)
+├── Real-time content rendering with Markdown
+├── Chat history persistence (localStorage)
+├── PDF upload and processing
+├── Resizable results panel
+└── Custom embeddings (Qwen) + OpenAI GPT generation
 ```
 
-## Features
+## ✨ New Features & Improvements
 
-- **Two Search Modes**:
-  - **Page-level search** (`/api/query`): Direct semantic search on complete pages
-  - **Sequence-level search** (`/api/query_seq`): Chunk-based search returning all chunks from similar pages
-- **Streaming Response**: Real-time display of retrieved content
-- **Source Display**: Shows retrieved content with similarity scores and rankings
-- **Page Attribution**: Each result shows which page it came from
-- **Responsive UI**: Modern chat interface with text input and results panel
+### 🎨 **Beautiful Vietnamese UI/UX**
+- **Vietnamese Typography**: Professional fonts specifically for Vietnamese text with diacritical marks (á, é, ì, ó, ú, ỳ, ả, ẻ, ỉ, ỏ, ủ, ỷ, etc.)
+- **Stunning Welcome Screen**: Diffuse color animated background with floating icons, gradient text, and feature highlights
+- **Responsive Design**: Mobile-first approach with smooth animations and transitions
+- **Auto-scroll Intelligence**: Scrolls on message send (immediate feedback) and on response arrival (show results)
+- **Resizable Results Panel**: Drag-to-resize sources display with constraints (256px-800px)
+
+### 📝 **Advanced Markdown Rendering**
+- **Header Support**: `## Beautiful Vietnamese Headers` with styled typography
+- **Professional Tables**: Automatic HTML table rendering from markdown `|` syntax
+- **Bold Text Formatting**: `**highlighted text**` processing
+- **Content Deduplication**: Prevents repetition when consolidating page sources
+- **Clean Display**: Removes raw markdown syntax from user interface
+
+### 🚀 **Enhanced Chat Experience**
+- **Dual-Query System**:
+  - **Page-level Search**: Direct semantic search returning complete pages
+  - **Sequence-level Search**: High-precision chunks from top-retrieved pages
+  - **Cross-Filtered Results**: Sequence chunks only from top-k page results (>15 words, sorted by score)
+- **Smart PDF Upload**: Direct UI upload (20MB limit) with processing pipeline integration
+- **Chat History Persistence**: Automatic localStorage saving/loading with timestamps
+- **Streaming Responses**: Real-time token-by-token display without blocking UI
+- **Loading States**: Beautiful animated indicators and progress feedback
+
+### ⚡ **Technical Enhancements**
+- **TypeScript**: Full type safety with interfaces for Message, Source, and API responses
+- **Error Handling**: Comprehensive error boundaries and user-friendly error messages
+- **Performance**: Optimized rendering with useEffect, useRef, and memoization
+- **Accessibility**: ARIA labels, keyboard navigation, and screen reader support
+- **Memory Management**: Efficient state management and cleanup
+
+### 🎯 **User Experience Features**
+- **Input Box Positioning**: Fixed overlapping issues (proper spacing from messages)
+- **Smooth Animations**: Bouncing icons, fade transitions, and hover effects
+- **Visual Feedback**: Immediate response on button click/press Enter
+- **Clear History**: One-click conversation reset with localStorage clearance
+- **Session Management**: Unique session IDs for tracking conversations
+
+## Core Features
+
+### 🎯 **Advanced Search & Retrieval**
+- **Dual-Query Architecture**:
+  - **Page-Level Search** (`/api/query`): Direct semantic search returning complete pages from `esg_pages` collection
+  - **Sequence-Level Search** (`/api/query_seq`): High-precision chunks from top-retrieved pages using `esg_sequences` collection
+  - **Cross-Filtered Results**: Sequence chunks only from top-k page results (≥15 words, sorted by similarity score)
+- **Smart Result Classification**: Page-level vs sequence-level results with distinct visual markers
+- **Relevance Filtering**: Top-5 most relevant sequences from the most relevant pages
+
+### 💬 **Interactive Chat Interface**
+- **Real-time Streaming**: Server-sent events for token-by-token response display
+- **Auto-Scroll Intelligence**:
+  - Immediate scroll on message send (visual feedback)
+  - Delayed scroll on response arrival (show results)
+- **Chat History**: LocalStorage persistence with timestamps and session management
+- **PDF Upload**: Direct UI upload (20MB limit) with pipeline integration
+
+### 🎨 **Beautiful Visualization**
+- **Vietnamese Typography**: Custom `.vietnamese-header` class for perfect accent rendering
+- **Advanced Markdown Rendering**: Headers (`##`), bold (`**`), tables (`|`), with syntax cleanup
+- **Welcome Screen**: Animated diffuse colors, floating icons, gradient text, feature cards
+- **Responsive Design**: Mobile-first with smooth animations and transitions
+- **Resizable Sources Panel**: Drag-to-resize with smooth UI feedback
+
+### ⚡ **Technical Excellence**
+- **TypeScript**: Full type safety with comprehensive interfaces
+- **Performance Optimized**: Efficient state management, memoization, and cleanup
+- **Error Resilient**: Comprehensive error handling with user-friendly messages
+- **Memory Efficient**: Optimized content deduplication and streaming
 
 ## Setup Instructions
 

@@ -390,8 +390,8 @@ if __name__ == "__main__":
     # Cấu hình đường dẫn
     script_dir = Path(__file__).resolve().parent
     project_root = script_dir.parent.parent
-    input_dir = project_root / "src" / "data" / "md_to_plain_text"
-    output_dir = project_root / "src" / "data" / "push"
+    input_dir = project_root / "src" / "data" / "contents" / "drop"
+    output_dir = project_root / "src" / "data" / "push" / "pages"
     output_dir.mkdir(parents=True, exist_ok=True)
 
     print("🚀 BẮT ĐẦU XỬ LÝ PAGES")

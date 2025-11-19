@@ -3,6 +3,7 @@
 A complete pipeline for extracting text from PDF files, splitting into pages and sequences, and storing in Qdrant vector database for semantic search and retrieval.
 
 ## Website Chat Interface
+
 ![alt text](public/image.png "PDF RAG Chat Interface")
 
 ## 🎯 Features

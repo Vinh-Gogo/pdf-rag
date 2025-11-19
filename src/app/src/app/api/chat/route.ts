@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {
   try {
-    const { message, sessionId } = await request.json();
+    const { message, sessionId, endpoint } = await request.json();
 
     if (!message || !message.trim()) {
       return NextResponse.json({ error: 'message is required' }, { status: 400 });
@@ -11,8 +11,11 @@ export async function POST(request: NextRequest) {
     // Get Python API URL from environment or default
     const pythonApiUrl = process.env.PYTHON_API_URL || 'http://localhost:8000';
 
+    // Determine which endpoint to call based on request parameter
+    const apiEndpoint = endpoint === 'query_seq' ? '/api/query_seq' : '/api/query';
+
     // Call Python RAG API
-    const response = await fetch(`${pythonApiUrl}/api/query`, {
+    const response = await fetch(`${pythonApiUrl}${apiEndpoint}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

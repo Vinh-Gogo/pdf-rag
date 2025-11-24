@@ -34,3 +34,8 @@ src/data/markdown/page_*
 src/data/json/page_*
 src/data/output/*
 src/data/md_to_plain_text/*
+
+src/data/cleaned_source.md
+src/data/cleaned_file_2.md
+src/data/cleaned_source.txt
+*.txt

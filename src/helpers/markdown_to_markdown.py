@@ -1,31 +1,3 @@
-"""Clean markdown files with a simple, safe pipeline.
-
-Default behavior (table-safe):
-	- Replace every occurrence of the literal string "<br>" with a single space " ".
-	- Preserve the original Markdown formatting (tables intact).
-
-Optional text mode (--to_text):
-	- After replacing "<br>", convert Markdown → HTML → plain text using markdown-it
-	  + BeautifulSoup and remove code/pre blocks. This may flatten tables.
-
-Input structure:
-	src/data/markdown/page_<n>/page_<n>.md
-Output written as:
-	src/data/markdown/page_<n>/page_cleared_<n>.md
-
-Usage:
-	python -m src.helpers.markdown_to_markdown \
-	--base_dir src/data/markdown \
-	--pattern page_* \
-	--overwrite
-
-Options:
-	--dry_run    Show planned actions without writing files.
-
-Exit codes:
-	0 success
-	1 base directory missing
-"""
 from __future__ import annotations
 import argparse
 from pathlib import Path
@@ -46,26 +18,58 @@ def find_markdown_pages(base_dir: Path, pattern: str) -> Iterable[tuple[int, Pat
 		if md_file.exists():
 			yield idx, md_file
 
+import re
+from markdown_it import MarkdownIt
+from bs4 import BeautifulSoup
 
 def markdown_to_clean_text(md_text: str) -> str:
-	"""Convert Markdown to clean plain text using markdown-it and BeautifulSoup.
+    """Keep lines starting with # (headings), remove code blocks, clean the rest."""
+    # Precompile heading pattern: 1-6 # followed by space/tab
+    HEADING_PATTERN = re.compile(r"^#{1,6}[\s]")
 
-	- Parses Markdown with the "commonmark" preset.
-	- Renders to HTML, then strips tags to text.
-	- Removes code/pre blocks for cleaner output.
-	"""
-	from markdown_it import MarkdownIt
-	from markdown_it.presets import commonmark  # noqa: F401 (preset enabled by name)
-	from bs4 import BeautifulSoup
+    # Bước 1: Loại bỏ code blocks (``` ... ```)
+    md_no_code = re.sub(r"```[\s\S]*?```", "", md_text)
 
-	md = MarkdownIt("commonmark")
-	html = md.render(md_text)
-	soup = BeautifulSoup(html, "html.parser")
+    # Bước 2: Tách thành dòng
+    lines = md_no_code.splitlines()
+    output_lines = []
 
-	for code in soup.find_all(["code", "pre"]):
-		code.decompose()
+    for line in lines:
+        stripped = line.strip()
+        # Kiểm tra heading hợp lệ: #, ##, ..., ###### + space/tab
+        if HEADING_PATTERN.match(stripped):
+            output_lines.append(stripped)
+        else:
+            output_lines.append(line)
 
-	return soup.get_text(separator=" ", strip=True)
+    # Bước 3: Xử lý xen kẽ heading và nội dung
+    result = []
+    buffer = []
+
+    for line in output_lines:
+        stripped = line.strip()
+        if HEADING_PATTERN.match(stripped):
+            # Gửi buffer đi xử lý (nếu có)
+            if buffer:
+                md_part = "\n".join(buffer)
+                html = MarkdownIt("commonmark").render(md_part)
+                text = BeautifulSoup(html, "html.parser").get_text(separator=" ", strip=True)
+                if text:
+                    result.append(text)
+                buffer = []
+            result.append(stripped)
+        else:
+            buffer.append(line)
+
+    # Xử lý phần cuối
+    if buffer:
+        md_part = "\n".join(buffer)
+        html = MarkdownIt("commonmark").render(md_part)
+        text = BeautifulSoup(html, "html.parser").get_text(separator=" ", strip=True)
+        if text:
+            result.append(text)
+
+    return "\n".join(result)
 
 
 def clean_content(text: str, to_text: bool = False) -> str:
@@ -89,15 +93,12 @@ def clean_content(text: str, to_text: bool = False) -> str:
 		
 	return step1
 
-def process_file(src: Path, dst: Path, overwrite: bool, dry_run: bool, to_text: bool) -> bool:
-	# if dst.exists() and not overwrite:
-	# 	return False
-	# if dry_run:
-	# 	return True
+def process_file(src: Path, dst: Path, overwrite: bool, dry_run: bool, to_text: bool) -> str:
+
 	content = src.read_text(encoding="utf-8")
 	cleaned = clean_content(content, to_text=to_text)
-	dst.write_text(cleaned, encoding="utf-8")
-	return True
+	# dst.write_text(cleaned, encoding="utf-8")
+	return cleaned
 
 
 def run(base_dir: Path, pattern: str, overwrite: bool, dry_run: bool, to_text: bool) -> None:
@@ -122,7 +123,6 @@ def run(base_dir: Path, pattern: str, overwrite: bool, dry_run: bool, to_text: b
 			print(f"[page {idx}] skip (exists, no overwrite)")
 			skipped += 1
 	print(f"Done. Changed: {changed}, Skipped: {skipped}, Dry-run: {dry_run}")
-
 
 def parse_args(argv=None):
 	p = argparse.ArgumentParser(description="Clean markdown pages: replace <br> with space; optional Markdown→text.")

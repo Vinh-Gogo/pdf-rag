@@ -492,8 +492,14 @@ export default function ChatWindow() {
         };
       });
 
+      // Filter page-level results to only include pages with >= 25 words for quality
+      const filteredPageSources = consolidatedPageSources.filter(source => {
+        const wordCount = source.content.split(' ').length;
+        return wordCount >= 25;
+      });
+
       // Add type markers to distinguish results
-      const markedPageSources = consolidatedPageSources.map(source => ({
+      const markedPageSources = filteredPageSources.map(source => ({
         ...source,
         resultType: 'page-level' as const,
         marker: '📄 PAGE LEVEL'

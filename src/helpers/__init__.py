@@ -1,9 +1,3 @@
-# from marker.converters.ocr import OCRConverter
-# from marker.models import create_model_dict
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 
-# converter = OCRConverter(
-#     artifact_dict=create_model_dict(),
-# )
-# rendered = converter(r"src/data/images/page_13.png")
-
-# print(rendered)
+# python -c "import torch; print(torch.cuda.is_available()); print(torch.version.cuda)"

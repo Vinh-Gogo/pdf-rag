@@ -35,7 +35,6 @@ IMAGE_TAG_HTML_RE = re.compile(r"<img\b[^>]*>", re.IGNORECASE)
 
 TABLE_ROW_RE = re.compile(r"^\|.*\|\s*$")
 
-
 def find_markdown_pages(base_dir: Path, pattern: str) -> Iterable[Tuple[int, Path]]:
 	for sub in base_dir.glob(pattern):
 		if not sub.is_dir():
@@ -178,12 +177,11 @@ def run(base_dir: Path, out_dir: Path, pattern: str, overwrite: bool, dry_run: b
 def parse_args(argv=None):
 	p = argparse.ArgumentParser(description="Manual markdown to text (preserve tables, remove images)")
 	p.add_argument("--base_dir", default="src/data/markdown", help="Base directory with page_<n> folders")
-	p.add_argument("--out_dir", default="src/data/contents", help="Output directory for .txt files")
+	p.add_argument("--out_dir", default="src/data/markdown_clean", help="Output directory for .txt files")
 	p.add_argument("--pattern", default="page_*", help="Glob pattern for page folders")
 	p.add_argument("--overwrite", action="store_true", help="Overwrite existing .txt files")
 	p.add_argument("--dry_run", action="store_true", help="List actions without writing files")
 	return p.parse_args(argv)
-
 
 def main(argv=None):
 	args = parse_args(argv)

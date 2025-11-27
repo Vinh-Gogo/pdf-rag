@@ -1,6 +1,0 @@
-Command return code: 1
-=== STDOUT ===
-(empty)
-
-=== STDERR ===
-C:\Program Files\Python312\python.exe: No module named marker_single

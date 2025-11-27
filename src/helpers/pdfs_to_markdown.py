@@ -5,7 +5,7 @@ Usage (from project root):
         --input_dir src/data/pdfs/pages \
         --output_dir src/data/markdown \
         --pattern page_*.pdf \
-        --start_index 93
+        --start_index 1
 
 """
 from __future__ import annotations
@@ -65,6 +65,7 @@ def run_marker(pdf_path: Path, output_dir: Path, use_gpu: bool = False, gpu_id: 
             str(pdf_path),
             "--output_dir",
             str(output_dir),
+            "--disable_image_extraction"
         ]
         proc2 = subprocess.run(
             module_cmd,
@@ -145,7 +146,7 @@ def parse_args(argv=None):
     p.add_argument("--pattern", default=DEFAULT_PATTERN, help="Glob pattern to match PDF files (default *.pdf)")
     p.add_argument("--overwrite", help="Overwrite existing markdown files")
     p.add_argument("--log_dir", default="src/data/markdown/markdown_logs", help="Directory to write conversion logs")
-    p.add_argument("--start_index", type=int, default=94, help="1-based index of the first file to process after sorting") # Default to 93 for resuming large batches
+    p.add_argument("--start_index", type=int, default=116, help="1-based index of the first file to process after sorting") # Default to 93 for resuming large batches
     return p.parse_args(argv)
 
 
@@ -167,7 +168,6 @@ def main(argv=None):
         log_dir,
         start_index=args.start_index,
     )
-
 
 if __name__ == "__main__":
     main()

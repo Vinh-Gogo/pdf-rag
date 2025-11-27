@@ -20,6 +20,8 @@ __pycache__
 */*/__pycache__/
 */*/*/__pycache__/
 
+src/data/*
+src/data/markdown/*
 src/data/ground_struct/*
 src/data/pdfs/*
 src/data/raw/*
@@ -39,3 +41,6 @@ src/data/cleaned_source.md
 src/data/cleaned_file_2.md
 src/data/cleaned_source.txt
 *.txt
+*.log
+
+src/data/markdown

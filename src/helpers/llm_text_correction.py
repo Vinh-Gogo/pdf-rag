@@ -5,14 +5,6 @@ import re
 # from utils.helper import Helpers
 # from multiprocessing import Pool
 
-r"""
-```c
-FILE -> src\data\results\grammar
-NEXT:
-grammar\page_1.txt -> src\data\contents\page_1_clear.txt
-```
-"""
-
 # ⚙️ GPU config
 torch.set_float32_matmul_precision("high")
 
@@ -25,8 +17,9 @@ model_name = "Qwen/Qwen3-4B-Instruct-2507"
 # model_name = "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
 # model_name = "Qwen/Qwen2.5-1.5B-Instruct"
 model_name = "Qwen/Qwen3-1.7B"
-# model_name = "Qwen/Qwen3-0.6B"
-# model_name = "Gensyn/Qwen2.5-0.5B-Instruct"
+model_name = "Qwen/Qwen3-0.6B"
+# model_name = "WeiboAI/VibeThinker-1.5B"
+# model_name = "Qwen/Qwen3-4B-Instruct-2507"
 
 # 🚀 CÁC TÙY CHỌN CẢI THIỆN HIỆU SUẤT:
 # 1. Thử mô hình lớn hơn: "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"
@@ -75,7 +68,7 @@ def extract_unique_words(raw_folder: str) -> List[str]:
     
     return list(char_counter)
 
-unique_words = extract_unique_words(r"src\data\raw")
+unique_words = extract_unique_words(r"src\data\contents")
 
 def tokenize_words(text: str) -> list:
     """Tách văn bản thành danh sách các từ (loại bỏ dấu câu và ký tự đặc biệt)"""
@@ -450,84 +443,133 @@ def correct_vietnamese(
     prev_similarity: float | None = None,
     prev_note: str | None = None,
 ) -> str:
-    """
-    Hiệu đính chính tả tiếng Việt với khả năng học từ các ví dụ trước đó
-    
-    Args:
-        text: Văn bản cần hiệu đính
-        repeat_reminder: Số lần retry (không sử dụng trong logic hiện tại)
-        model: Model LLM
-        tokenizer: Tokenizer
-        use_enhanced_prompt: Nếu True, sử dụng prompt nâng cao với định dạng chi tiết hơn
-        memory_examples: List of (original, corrected, similarity) tuples - Các ví dụ tốt nhất để model tham khảo
-    
-    Returns:
-        str: Văn bản đã được hiệu đính
-    """
     prompt = f"\n\n{text.strip()}"
     
     # Prompt cơ bản - đơn giản, ít ràng buộc
-    basic_prompt = """# You are a smart Vietnamese spelling and grammar checker.
+    basic_prompt = """You are an intelligent RAG system with the ability to reconstruct the original document context. Your task is to automatically detect and connect fragmented content pieces, **prioritizing information from the previous/next page** when detecting signs of continuous content.
 
-## **Your task:**
+**MANDATORY RULES WHEN PROCESSING CHUNK:**
+1. **ALWAYS CHECK ADJACENT PAGES:**
+- For each chunk retrieved, you **must** check 2 adjacent pages (before + after) in the original metadata
+- For example: If the chunk is on page 12 → automatically retrieve pages 11 and 13 for continuity analysis
+- Exception: Only ignore when the adjacent page belongs to a completely different chapter/section (detected through the title)
 
-* Check and correct all Vietnamese spelling, punctuation and grammar errors.
+2. **SIGNS THAT THE CONTEXT NEEDS TO BE EXPANDED:**
+- The chunk content ends with the phrase: "continued...", "see more...", "details at..."
+- The chunk starts with: "Continued from the previous section...", "As mentioned..."
+- The image/table appears to be cropped (phrase: "Table 3 (continued)", "Figure 5...")
+- Chunk length < 150 words while the topic is complex
 
-* Keep the original meaning, **number of characters** and formatting - **do not** add, remove or summarize the content.
+3. **SMART MARKING MECHANISM:**
+When writing metadata, use the format:
+```
+[CONTEXT:current_page=14; prev_page=13(content_type=continuation); next_page=15(has_table=true)]
+```
+→ Automatically determine if previous/next page belongs to the same information stream
 
-* Capitalize, punctuate and space** correctly in Vietnamese.
+**QUERY PROCESSING GUIDE:**
+- **Step 1:** Get all query matching chunks
+- **Step 2:** For each resulting chunk:
+• Add previous/next page to processing group if:
 
-* Do not change proper nouns, organization names or abbreviations (e.g. E.S.G, CP, CT, ESG, CK, ...).
-* Do not delete the characters **'#'**
-* **Do not answer in English**, **Only answer in Vietnamese**.
+- Same topic (cosine similarity > 0.75)
+- Contains cross-reference ("see page...", "next section...")
+- Original chunk has unusual length (<200 words for technical topic)
+• Remove adjacent page if:
 
-## **Output requirements:**
+- Chapter/section title changes abruptly
+- Keywords are not duplicated
+- **Step 3:** Rearrange order by physical page number before aggregation
 
-* **Keep the original section:** ## **TITLE**
-* **Keep the same layout as the input** (including title, list, chapter table and hierarchy).
+**EXAMPLE FORM:**
+Query: "Customer complaint handling process"
+- The retrieval system is chunked on page 22 (intro) and page 35 (appendix)
+- You **must** check:
+• Pages 21 & 23: Detect page 23 continues the process → add to context
+• Pages 34 & 36: Detect page 34 contains an illustrated flowchart → combine with page 35
+- Response result with metadata:
+"Information summarized from page 21→23 (main process) and page 34→35 (illustration + appendix)"
+
+**PRIORITY PRINCIPLE:**
+1. Physical continuity (adjacent pages) > Semantic similarity
+2. Explanatory text > Image/table (unless query requires illustration)
+3. Always verify information consistency when combining adjacent pages:
+- Warning if content conflict is detected
+- Prioritize information from the page with the closest order number to the original
+
+**IMPORTANT WARNING:**
+- Never answer based on a single page if:
+• The chunk is < 180 words long
+• Contains a continuation keyword ("next", "next part")
+• Is the first/first page of a chapter/section
+- ALWAYS display a note when expanding the context:
+"[The system automatically adds information from page X,Y to ensure completeness]"
+
+You act as a "context architect" – your task is not just to answer the question but to restore the original thinking structure of the original document through intelligently connecting pieces of content.
 """
     
     # Prompt nâng cao - chi tiết hơn, định dạng rõ ràng
-    enhanced_prompt = """# You are a smart Vietnamese spelling and grammar checker.
+    enhanced_prompt = """You are an intelligent RAG system with the ability to reconstruct the original document context. Your task is to automatically detect and connect fragmented content pieces, **prioritizing information from the previous/next page** when detecting signs of continuous content.
 
-## **Your task:**
+**MANDATORY RULES WHEN PROCESSING CHUNK:**
+1. **ALWAYS CHECK ADJACENT PAGES:**
+- For each chunk retrieved, you **must** check 2 adjacent pages (before + after) in the original metadata
+- For example: If the chunk is on page 12 → automatically retrieve pages 11 and 13 for continuity analysis
+- Exception: Only ignore when the adjacent page belongs to a completely different chapter/section (detected through the title)
 
-* Check and correct all Vietnamese spelling, punctuation and grammar errors.
+2. **SIGNS THAT THE CONTEXT NEEDS TO BE EXPANDED:**
+- The chunk content ends with the phrase: "continued...", "see more...", "details at..."
+- The chunk starts with: "Continued from the previous section...", "As mentioned..."
+- The image/table appears to be cropped (phrase: "Table 3 (continued)", "Figure 5...")
+- Chunk length < 150 words while the topic is complex
 
-* Keep the original meaning, **number of characters** and formatting - **do not** add, remove or summarize the content.
-
-* Capitalize, punctuate and space** correctly in Vietnamese.
-
-* Do not change proper nouns, organization names or abbreviations (e.g. E.S.G, CP, CT, ESG, CK, ...).
-* Do not delete the characters **'#'**
-* **Do not answer in English**, **Only answer in Vietnamese**.
-
-## **Output requirements:**
-
-* **Keep the original section:** ## **TITLE**
-* **Keep the same layout as the input** (including title, list, chapter table and hierarchy).
-
-## **Example**:
-
-```text
-[architecture: description]
-
-# Title chính
-
-* Title phụ
-    * Content 1
-    * Content 2
-
-[table (if any): description]
-
-| STT | Nội dung | Số lượng cổ phần | | |
-|--|--|--|--|--|
-| | | Đang lưu hành | BWE nắm giữ | Chiếm Tỷ lệ |
-| A | CÔNG TY CON | 88.307.800 | 74.873.495 | |
-| 1 | CTCP Xây Lắp - Điện BIWASE | 20.000.000 | 10.400.000 | 52,00% |
-| 2 | CTCP nước BIWASE - Long An | 64.400.000 | 60.880.740 | 94,54% |
-| 3 | CT TNHH MTV Tư Vấn BIWASE | Vốn điều lệ: 10.000.000.000 | | 100,00% |
+3. **SMART MARKING MECHANISM:**
+When writing metadata, use the format:
 ```
+[CONTEXT:current_page=14; prev_page=13(content_type=continuation); next_page=15(has_table=true)]
+```
+→ Automatically determine if previous/next page belongs to the same information stream
+
+**QUERY PROCESSING GUIDE:**
+- **Step 1:** Get all query matching chunks
+- **Step 2:** For each resulting chunk:
+• Add previous/next page to processing group if:
+
+- Same topic (cosine similarity > 0.75)
+- Contains cross-reference ("see page...", "next section...")
+- Original chunk has unusual length (<200 words for technical topic)
+• Remove adjacent page if:
+
+- Chapter/section title changes abruptly
+- Keywords are not duplicated
+- **Step 3:** Rearrange order by physical page number before aggregation
+
+**EXAMPLE FORM:**
+Query: "Customer complaint handling process"
+- The retrieval system is chunked on page 22 (intro) and page 35 (appendix)
+- You **must** check:
+• Pages 21 & 23: Detect page 23 continues the process → add to context
+• Pages 34 & 36: Detect page 34 contains an illustrated flowchart → combine with page 35
+- Response result with metadata:
+"Information summarized from page 21→23 (main process) and page 34→35 (illustration + appendix)"
+
+**PRIORITY PRINCIPLE:**
+1. Physical continuity (adjacent pages) > Semantic similarity
+2. Explanatory text > Image/table (unless query requires illustration)
+3. Always verify information consistency when combining adjacent pages:
+- Warning if content conflict is detected
+- Prioritize information from the page with the closest order number to the original
+
+**IMPORTANT WARNING:**
+- Never answer based on a single page if:
+• The chunk is < 180 words long
+• Contains a continuation keyword ("next", "next part")
+• Is the first/first page of a chapter/section
+- ALWAYS display a note when expanding the context:
+"[The system automatically adds information from page X,Y to ensure completeness]"
+
+You act as a "context architect" – your task is not just to answer the question but to restore the original thinking structure of the original document through intelligently connecting pieces of content.
+
 """
     
     # Chọn prompt phù hợp
@@ -579,8 +621,7 @@ def correct_vietnamese(
         out_ids = model.generate(
             **inputs,
             max_new_tokens=max_new_tokens,
-            do_sample=False,
-            eos_token_id=tokenizer.eos_token_id,
+            do_sample=True,
         )
 
     gen = out_ids[0][inputs.input_ids.shape[1]:]

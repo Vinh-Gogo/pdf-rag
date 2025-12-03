@@ -44,3 +44,6 @@ src/data/cleaned_source.txt
 *.log
 
 src/data/markdown
+
+neo4j/data
+neo4j/logs

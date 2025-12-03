@@ -1,0 +1,64 @@
+services:
+  neo4j:
+    image: neo4j:5.26.8 # LTS version
+    container_name: neo4j_db
+    volumes:
+        - ./neo4j/logs:/logs
+        - ./neo4j/config:/config
+        - ./neo4j/data:/data
+        - ./neo4j/plugins:/plugins
+        - ./src/data/csv:/var/lib/neo4j/import # <-- new
+    ports:
+      - 7473:7473
+      - 7474:7474
+      - 7687:7687
+    environment:
+        - NEO4J_AUTH=${NEO4J_USER}/${NEO4J_PASSWORD} # user/password
+        # Install APOC and GDS plugins
+        - NEO4J_PLUGINS=["apoc", "graph-data-science"]
+        # Allow APOC & GDS procedures
+        - NEO4J_dbms_security_procedures_unrestricted=apoc.*,gds.*
+        - NEO4J_dbms_security_procedures_allowlist=apoc.*,gds.*
+
+        # Enable APOC file import/export
+        - NEO4J_apoc_import_file_enabled=true
+        - NEO4J_apoc_export_file_enabled=true
+        - NEO4J_apoc_import_file_use__neo4j__config=true
+
+        # Optional: Enable memory limits if needed
+        - NEO4J_server_memory_heap_initial__size=256m
+        - NEO4J_server_memory_heap_max__size=512m
+        - NEO4J_server_memory_pagecache_size=768m
+    restart: unless-stopped
+        
+    # restart: unless-stopped
+  graph_rag_mcp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: graph_rag_mcp
+    env_file:
+      - .env
+    environment: # overrides .env inside container context
+        # Neo4j is running as a service in the same docker-compose network,
+        # so containers must use the service name "neo4j" instead of localhost.
+        - NEO4J_URI=bolt://neo4j:7687
+
+        # # Embedding service runs on the HOST (not in this compose).
+        # # Containers must use "host.docker.internal" to reach host:8080.
+        - OPENAI_BASE_URL_EMBED=http://host.docker.internal:8080/v1
+
+        # # Reranker service also runs on the HOST (not in this compose).
+        # # Containers must use "host.docker.internal" to reach host:8081.
+        - OPENAI_BASE_URL_RERANK=http://host.docker.internal:8081/v1
+    ports:
+      - "8000:8000"   # MCP server
+    depends_on:
+      - neo4j
+    # extra_hosts:
+    #   # Linux-only: map host.docker.internal -> host gateway
+    #   - "host.docker.internal:host-gateway"
+    # # restart: unless-stopped
+
+volumes:
+  neo4j_data:

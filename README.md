@@ -12,19 +12,23 @@ A complete pipeline for extracting text from PDF files, splitting into pages and
 - **Embeddings**: Using local Qwen3-Embedding-0.6B model
 - **Retrieval System**: Search across both pages and sequences simultaneously
 
-## 📁 Project Structure
+## .env config
 
 ```
-rag/
-...src/
-  api/                     # FastAPI backend for RAG service
-  app/                     # Next.js frontend chat interface
-  data/                    # Sample PDFs and processed content
-  helpers/                 # Utility scripts for PDF processing and vector store
-  pipeline/                # Complete pipelines for PDF to vector store
-  tests/                   # Unit tests for various components
-...README.md               # This file
-...CHAT_README.md          # Chat interface documentation
+# Hugging Face Token
+HF_TOKEN=your_huggingface_token_here
+
+# Qdrant Configuration
+QDRANT_API_KEY=your_qdrant_api_key_here
+QDRANT_URL=your_qdrant_url_here
+
+# OpenAI Configuration
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Local Embedding Model Configuration
+OPENAI_API_MODEL_NAME_EMBED=
+OPENAI_BASE_URL_EMBED=
+OPENAI_API_KEY_EMBED=
 ```
 
 ## 🚀 Quick Start

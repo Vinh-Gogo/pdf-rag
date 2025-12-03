@@ -14,6 +14,7 @@ from pathlib import Path
 
 # Lines to remove
 UNWANTED_LINES = [
+    "Thông tin về"
     "Thông tin về BIWASE",
     "Nền tảng phát triển bền vững",
     "Găn kết các bên liên quan",
@@ -24,7 +25,6 @@ UNWANTED_LINES = [
     "Lan tỏa giá trị cộng đồng và xã hội",
     "**CHƯƠNG 1 CHƯƠNG 2 CHƯƠNG 3 CHƯƠNG 4 CHƯƠNG 5 CHƯƠNG 6 CHƯƠNG 7 CHƯƠNG 8**",
     "Lan tỏa giá trị cộng đồng và xã hội",
-    
     "Kinh tế tuần hoàn"
 ]
 

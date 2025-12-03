@@ -136,8 +136,8 @@ def main():
     project_root = Path(__file__).parent.parent.parent
     contents_dir = project_root / "src" / "data" / "contents"
     grammar_dir = project_root / "src" / "data" / "results" / "grammar"
-    output_dir = project_root / "src" / "exports"
-    output_file = output_dir / "text_comparison.jsonl"
+    output_dir = project_root / "src" / "data" / "push"
+    output_file = output_dir / "text_comparison.json"
     
     # Verify directories exist
     if not contents_dir.exists():

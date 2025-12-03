@@ -1,10 +1,6 @@
-# PDF RAG - PDF Retrieval-Augmented Generation
+# PDF-RAG
 
 A complete pipeline for extracting text from PDF files, splitting into pages and sequences, and storing in Qdrant vector database for semantic search and retrieval.
-
-## Website Chat Interface
-
-![alt text](public/image.png "PDF RAG Chat Interface")
 
 ## 🎯 Features
 
@@ -41,7 +37,7 @@ python src/api/rag_service.py
 
 ```bash
 lea26@home-6-8-2025 MINGW64 /d/WETEC/rag (main)
-$ export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm use node && cd src/app && npm run dev
+export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm use node && cd src/app && npm run dev
 ```
 
 ### 1.1. Pre-Process scan PDFs (if needed)

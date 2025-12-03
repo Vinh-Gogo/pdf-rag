@@ -22,7 +22,6 @@ if str(project_root) not in sys.path:
 
 from src.helpers.init_qdrant import qdrant_client
 
-
 # ============================================================================
 # BM25 SUPPORT for Pages (sparse lexical search)
 # ============================================================================
@@ -50,49 +49,43 @@ def ensure_bm25_pages_index_initialized(pages: Optional[List[Dict]] = None) -> N
             raise RuntimeError("BM25 pages index is not initialized. Call build_bm25_pages_index(pages) first or run the pipeline.")
         build_bm25_pages_index(pages)
 
-def read_pages_from_directory(input_dir: str) -> List[Dict[str, str]]:
+def read_pages_from_file(input_file: str) -> List[Dict[str, str]]:
     """
-    Đọc tất cả file txt trong thư mục và tạo list pages (mỗi file là một page)
+    Đọc file txt chứa tất cả pages và tạo list pages
 
     Args:
-        input_dir (str): Đường dẫn đến thư mục chứa file txt
+        input_file (str): Đường dẫn đến file txt chứa tất cả pages
 
     Returns:
         List[Dict[str, str]]: List các pages với metadata
     """
-    input_path = Path(input_dir)
+    input_path = Path(input_file)
     pages = []
 
-    # Lấy tất cả file .txt có định dạng page_NUMBER.txt
-    txt_files = list(input_path.glob("page_cleared_*.txt"))
-    
-    # Sắp xếp pages theo số thứ tự từ tên file
-    def extract_page_num(file_path):
-        try:
-            return int(file_path.stem.split('_')[2])
-        except (IndexError, ValueError):
-            return 0
-    
-    txt_files = sorted(txt_files, key=extract_page_num)
+    print(f"📂 Đang đọc file: {input_file}")
 
-    print(f"📂 Tìm thấy {len(txt_files)} file txt trong {input_dir}")
+    try:
+        # Đọc toàn bộ nội dung file
+        with open(input_path, 'r', encoding='utf-8') as f:
+            full_content = f.read()
 
-    for file_path in txt_files:
-        file_name = file_path.name
-        page_num = extract_page_num(file_path)
-        
-        if page_num % 20 == 0 or page_num == 1:
-            print(f"📄 Đang đọc: {file_name}")
+        # Tách pages theo pattern [Page X]
+        page_pattern = r"\[Page (\d+)\]"
+        page_splits = re.split(page_pattern, full_content)
 
-        try:
-            # Đọc toàn bộ nội dung file như một page
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read().strip()
+        # Xử lý từng page
+        for i in range(1, len(page_splits), 2):  # Bắt đầu từ index 1, bước 2
+            page_num = int(page_splits[i])
+            content = page_splits[i + 1].strip()
+
+            # Làm sạch content (loại bỏ dấu nháy đơn bao quanh nếu có)
+            if content.startswith("'") and content.endswith("'"):
+                content = content[1:-1].strip()
 
             if content:  # Chỉ thêm nếu có nội dung
-                # Đếm số paragraphs (tách bởi #)
-                paragraphs = [p.strip() for p in content.split("#") if p.strip()]
-                
+                # Đếm số paragraphs (tách bởi dòng trống hoặc #)
+                paragraphs = [p.strip() for p in re.split(r'[#\n\s]{2,}', content) if p.strip()]
+
                 page = {
                     'page_index': page_num,
                     'seq': len(paragraphs),
@@ -101,11 +94,15 @@ def read_pages_from_directory(input_dir: str) -> List[Dict[str, str]]:
                 }
                 pages.append(page)
 
-        except Exception as e:
-            print(f"   ❌ Lỗi đọc file {file_name}: {e}")
+                if page_num % 20 == 0 or page_num == 1:
+                    print(f"📄 Đã xử lý page {page_num}")
 
-    print(f"✅ Đã đọc thành công {len(pages)} pages")
-    return pages
+        print(f"✅ Đã đọc thành công {len(pages)} pages từ file {input_file}")
+        return pages
+
+    except Exception as e:
+        print(f"❌ Lỗi đọc file {input_file}: {e}")
+        return []
 
 def save_pages_to_json(pages: List[Dict[str, str]], output_file: str):
     """
@@ -207,12 +204,10 @@ def store_pages_in_qdrant_direct(pages: List[Dict[str, str]], collection_name: s
     print(f"✅ Đã tạo vector store '{collection_name}' với {len(points)} pages")
 
     # Tạo QdrantVectorStore wrapper để sử dụng với LangChain
-    vectorstore = QdrantVectorStore.from_existing_collection(
-        embedding=embeddings,
+    vectorstore = QdrantVectorStore(
+        client=qdrant_client,
         collection_name=collection_name,
-        url=os.getenv("QDRANT_URL"),
-        api_key=os.getenv("QDRANT_API_KEY"),
-        prefer_grpc=True
+        embedding=embeddings
     )
 
     return vectorstore
@@ -223,7 +218,7 @@ def retrieve_similar_pages(query: str, vectorstore=None, top_k: int = 5, collect
 
     Args:
         query (str): Câu hỏi cần tìm
-        vectorstore: QdrantVectorStore đã được tạo
+        vectorstore: QdrantVectorStore đã được tạo (optional)
         top_k (int): Số lượng kết quả trả về
 
     Returns:
@@ -231,7 +226,7 @@ def retrieve_similar_pages(query: str, vectorstore=None, top_k: int = 5, collect
     """
     print(f"🔍 Đang tìm kiếm cho query: '{query}'")
 
-    # Khởi tạo embeddings
+    # Khởi tạo embeddings để tạo query vector
     model = str(os.getenv("OPENAI_API_MODEL_NAME_EMBED"))
     base_url = os.getenv("OPENAI_BASE_URL_EMBED")
     api_key = str(os.getenv("OPENAI_API_KEY_EMBED"))
@@ -246,26 +241,26 @@ def retrieve_similar_pages(query: str, vectorstore=None, top_k: int = 5, collect
     # Tạo embedding cho query
     query_vector = embeddings.embed_query(query)
 
-    # Tìm kiếm trực tiếp từ Qdrant
-    search_results = qdrant_client.search(
+    # Tìm kiếm trực tiếp từ Qdrant với payload
+    search_results = qdrant_client.query_points(
         collection_name=collection_name,
-        query_vector=query_vector,
+        query=query_vector,
         limit=top_k,
         with_payload=True,
         with_vectors=False
     )
 
-    # Format kết quả
+    # Format kết quả từ payload
     formatted_results = []
-    for result in search_results:
-        payload = result.payload or {}
+    for point in search_results.points:
+        payload = point.payload or {}
         formatted_results.append({
             'page_id': payload.get('page_id', f"page_{payload.get('page_index', 'N/A')}") or f"page_{payload.get('page_index', 'N/A')}",
             'page_index': payload.get('page_index', 'N/A'),
             'content': payload.get('content', ''),
             'seq': payload.get('seq', 'N/A'),
             'word_count': payload.get('word_count', 'N/A'),
-            'similarity_score': float(result.score)
+            'similarity_score': float(point.score)
         })
 
     return formatted_results
@@ -390,16 +385,16 @@ if __name__ == "__main__":
     # Cấu hình đường dẫn
     script_dir = Path(__file__).resolve().parent
     project_root = script_dir.parent.parent
-    input_dir = project_root / "src" / "data" / "contents" / "drop"
+    input_file = project_root / "src" / "data" / "push" / "all_plaintext_final.txt"
     output_dir = project_root / "src" / "data" / "push" / "pages"
     output_dir.mkdir(parents=True, exist_ok=True)
 
     print("🚀 BẮT ĐẦU XỬ LÝ PAGES")
-    print(f"📂 Input:  {input_dir}")
+    print(f"📂 Input:  {input_file}")
     print(f"📂 Output: {output_dir}")
 
     # Đọc và xử lý pages
-    pages = read_pages_from_directory(str(input_dir))
+    pages = read_pages_from_file(str(input_file))
 
     # Hiển thị thống kê
     print(f"\n📊 THỐNG KÊ:")
@@ -462,4 +457,4 @@ if __name__ == "__main__":
         print(f"   Sequences: {page['seq']}")
         print(f"   Content: \n{page['content'][:150]}{'...' if len(page['content']) > 150 else ''}")
 
-    print(f"\n✅ HOÀN THÀNH! Đã xử lý {len(pages)} pages từ thư mục {input_dir}")
+    print(f"\n✅ HOÀN THÀNH! Đã xử lý {len(pages)} pages từ file {input_file}")

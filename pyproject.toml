@@ -3,7 +3,7 @@ name = "graph-rag"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.13"
 dependencies = [
     "cohere==5.18.0",
     "fastapi>=0.118.0",
@@ -23,9 +23,11 @@ dependencies = [
     "safetensors==0.6.2",
     "sentence-transformers>=5.1.1",
     "tabulate>=0.9.0",
-    "torch==2.8.0",
+    "torch>=2.5.0",
+    "torchvision>=0.20.0",
     "transformers==4.56.2",
-    "underthesea>=8.3.0",
+    "marker-pdf[full]",
+    "opencv-python>=4.8.0",
 ]
 
 [dependency-groups]

@@ -4,19 +4,17 @@ from pathlib import Path
 from typing import Iterable
 
 
-def find_markdown_pages(base_dir: Path, pattern: str) -> Iterable[tuple[int, Path]]:
-	"""Yield (page_index, md_path) for matching markdown files."""
+def find_markdown_pages(base_dir: Path, pattern: str) -> Iterable[tuple[str, Path]]:
+	"""Yield (dir_name, md_path) for matching markdown files."""
 	import re
 	for sub in base_dir.glob(pattern):
 		if not sub.is_dir():
 			continue
-		m = re.search(r"(\d+)$", sub.name)
-		if not m:
-			continue
-		idx = int(m.group(1))
-		md_file = sub / f"page_{idx}.md"
-		if md_file.exists():
-			yield idx, md_file
+		# Look for .md files directly in the directory
+		md_files = list(sub.glob("*.md"))
+		if md_files:
+			md_file = md_files[0]  # Take the first .md file found
+			yield sub.name, md_file
 
 import re
 from markdown_it import MarkdownIt
@@ -86,10 +84,6 @@ def clean_content(text: str, to_text: bool = False) -> str:
  
 	while "  " in step1:
 		step1 = step1.replace("  ", " ")
-	while "** " in step1:
-		step1 = step1.replace("** ", "**\n")
-	while "---" in step1:
-		step1 = step1.replace("---", "-")
 		
 	return step1
 
@@ -126,8 +120,8 @@ def run(base_dir: Path, pattern: str, overwrite: bool, dry_run: bool, to_text: b
 
 def parse_args(argv=None):
 	p = argparse.ArgumentParser(description="Clean markdown pages: replace <br> with space; optional Markdown→text.")
-	p.add_argument("--base_dir", default="src/data/markdown", help="Base directory containing page_<n> folders")
-	p.add_argument("--pattern", default=".md", help="Glob pattern for page folders")
+	p.add_argument("--base_dir", default="src/data/pdfs/outputs", help="Base directory containing markdown folders")
+	p.add_argument("--pattern", default="*", help="Glob pattern for folders")
 	p.add_argument("--overwrite", action="store_true", help="Overwrite existing cleaned files")
 	p.add_argument("--dry_run", action="store_true", help="Show actions without writing files")
 	p.add_argument("--to_text", action="store_true", help="After replacing <br>, convert Markdown to plain text (tables will be flattened)")
@@ -141,4 +135,3 @@ def main(argv=None):
 
 if __name__ == "__main__":
 	main()
-

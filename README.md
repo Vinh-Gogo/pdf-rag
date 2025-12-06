@@ -44,6 +44,17 @@ lea26@home-6-8-2025 MINGW64 /d/WETEC/rag (main)
 export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm use node && cd src/app && npm run dev
 ```
 
+### 1.0. Convert PDF to markdown with cuda
+
+```bash
+uv lock --upgrade
+uv sync
+uv pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+```
+```bash
+python src/helpers/pdfs_to_markdown.py --use_gpu
+```
+
 ### 1.1. Pre-Process scan PDFs (if needed)
 
 ```ps

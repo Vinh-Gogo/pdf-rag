@@ -4,7 +4,6 @@ Usage (from project root):
     python -m src.helpers.pdfs_to_markdown \
         --input_dir src/data/pdfs/pages \
         --output_dir src/data/markdown \
-        --pattern page_*.pdf \
         --start_index 1
 
 """
@@ -15,8 +14,6 @@ import sys
 from pathlib import Path
 import os
 from datetime import datetime
-
-DEFAULT_PATTERN = "page_*.pdf"
 
 def run_marker(pdf_path: Path, output_dir: Path, use_gpu: bool = False, gpu_id: int = 0) -> subprocess.CompletedProcess:
     """Run marker_single on a single PDF and return the CompletedProcess.
@@ -65,7 +62,8 @@ def run_marker(pdf_path: Path, output_dir: Path, use_gpu: bool = False, gpu_id: 
             str(pdf_path),
             "--output_dir",
             str(output_dir),
-            "--disable_image_extraction"
+            "--force_ocr",
+            # "--use_gpu"
         ]
         proc2 = subprocess.run(
             module_cmd,
@@ -76,7 +74,7 @@ def run_marker(pdf_path: Path, output_dir: Path, use_gpu: bool = False, gpu_id: 
         )
         return proc2
 
-def convert_batch(input_dir: Path, output_dir: Path, pattern: str, overwrite: bool, log_dir: Path, start_index: int = 1, use_gpu: bool = False, gpu_id: int = 0) -> None:
+def convert_batch(input_dir: Path, output_dir: Path, overwrite: bool, log_dir: Path, start_index: int = 1, use_gpu: bool = False, gpu_id: int = 0) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     log_dir.mkdir(parents=True, exist_ok=True)
 
@@ -88,13 +86,14 @@ def convert_batch(input_dir: Path, output_dir: Path, pattern: str, overwrite: bo
         m = re.search(r'(\d+)$', stem)
         if m:
             try:
-                return int(m.group(1))
+                num = int(m.group(1))
+                return (0, num)  # Numeric files first, then by number
             except ValueError:
-                return stem
-        return stem
-    pdf_files = sorted(input_dir.glob(pattern), key=numeric_key)
+                return (1, stem)  # Non-numeric after numeric
+        return (1, stem)  # Non-numeric files
+    pdf_files = sorted(input_dir.glob("*.pdf"), key=numeric_key)
     if not pdf_files:
-        print(f"No PDF files found matching pattern '{pattern}' in {input_dir}")
+        print(f"No PDF files found in {input_dir}")
         return
 
     total = len(pdf_files)
@@ -135,18 +134,13 @@ def convert_batch(input_dir: Path, output_dir: Path, pattern: str, overwrite: bo
 
 
 def parse_args(argv=None):
-    # --input_dir src/data/pdfs/pages \
-    # --output_dir src/data/markdown \
-    # --pattern page_*.pdf \
-    # --overwrite \
-    # --start_index 1
     p = argparse.ArgumentParser(description="Batch convert PDFs to Markdown using marker_single.")
-    p.add_argument("--input_dir", default="src/data/pdfs/pages", help="Directory containing PDF files")
-    p.add_argument("--output_dir", default="src/data/markdown", help="Directory to write markdown files")
-    p.add_argument("--pattern", default=DEFAULT_PATTERN, help="Glob pattern to match PDF files (default *.pdf)")
+    p.add_argument("--input_dir", default="src/data/pdfs/inputs", help="Directory containing PDF files")
+    p.add_argument("--output_dir", default="src/data/pdfs/outputs", help="Directory to write markdown files")
     p.add_argument("--overwrite", help="Overwrite existing markdown files")
     p.add_argument("--log_dir", default="src/data/markdown/markdown_logs", help="Directory to write conversion logs")
-    p.add_argument("--start_index", type=int, default=116, help="1-based index of the first file to process after sorting") # Default to 93 for resuming large batches
+    p.add_argument("--start_index", type=int, default=1, help="1-based index of the first file to process after sorting") # Default to 93 for resuming large batches
+    p.add_argument("--use_gpu", action="store_true", help="Use GPU for processing if available")
     return p.parse_args(argv)
 
 
@@ -163,10 +157,10 @@ def main(argv=None):
     convert_batch(
         input_dir,
         output_dir,
-        args.pattern,
         args.overwrite,
         log_dir,
         start_index=args.start_index,
+        use_gpu=args.use_gpu,
     )
 
 if __name__ == "__main__":

@@ -1,0 +1,54 @@
+ CÔNG TY CP - TỔNG CÔNG TY NƯỚC - MÔI TRƯỜNG BÌNH DƯƠNG (BIWASE) BINH DUONG WATER - ENVIRONMENT CORPORATION - JOINT STOCK COMPANY
+
+ **BẢN TIN BIWASE THÁNG 9 NĂM 2024** (Mã CK: BWE)
+
+**TỔNG HỢP KẾT QUẢ HOẠT ĐỘNG SẢN XUẤT KINH DOANH 9 THÁNG NĂM 2024 CỦA BIWASE**
+
+| STT | NỘI DUNG | ĐVT | THỰC HIỆN 9 THÁNG NĂM 2024 | THỰC HIỆN 9 THÁNG NĂM 2023 | SO VỚI CÙNG KỲ NĂM 2023 | KẾ HOẠCH NĂM 2024 | SO VỚI KẾ HOẠCH NĂM 2024 |
+|-|-|-|-|-|-|-|-|
+| 1 | Tổng công suất cấp nước (hiện có) | m³/ngđ | 822.000 | | | 822.000 | 100% |
+| 2 | Sản lượng nước tiêu thụ | Triệu m³ | 149.166.588 | 137.093.877 | 109% | 192.700.000 | 77,4% |
+| 3 | Tỉ lệ thất thoát nước | % | 5% | 5% | 96% | 5% | 96% |
+| 4 | Tổng doanh thu | Tỉ-VNĐ | 2.901 | 2.612 | 111% | 4.100 | 70,8% |
+| 5 | Lợi nhuận sau thuế | Tỉ-VNĐ | 468 | 493 | 95% | 700 | 66,9% |
+
+** Đến tháng 9/2024, doanh thu chưa ghi nhận 238,75 tỉ đồng từ lĩnh vực xử lý chất thải và xử lý nước thải. Nếu cộng thực hiện, tổng doanh thu sẽ 3.138 tỷ đồng, đạt 76% kế hoạch 2024(4.100 tỷ đồng)*
+
+
+* Tổng công suất chưa tính các nhà máy nước ngoài tỉnh Bình Dương*
+
+ **HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
+
+
+**Ngày 11/9, ông Trần Chiến Công, Tổng Giám đốc Công ty CP - Tổng Công ty Nước – Môi trường Bình Dương (BIWASE)** đã có văn bản gửi Hội Cấp Thoát Nước Việt Nam (VWSA) đề nghị được chia sẻ khó khăn với người dân các tỉnh miền Bắc chịu ảnh hưởng của cơn bão số 3 vừa qua. Hưởng ứng lời kêu gọi của Tổng Bí thư, Chủ tịch nước Cộng hòa Xã hội Chủ nghĩa Việt Nam và Ủy ban Trung ương MTTQ Việt Nam về việc ủng hộ đồng bào các tỉnh miền Bắc bị thiệt hại do bão số 3 gây ra; thể hiện truyền thống "Tương thân Tương ái" và "Tình dân tộc - Nghĩa đồng bào", Tổng Công ty BIWASE đã đi đầu hưởng ứng, ủng hộ nạn nhân các tỉnh miền Bắc bị ảnh hưởng cơn bão số 3, mỗi tỉnh 100 triệu đồng, gồm các tỉnh: Lào Cai, Yên Bái, Sơn La, Hoà Bình, Hà Giang, Bắc Kạn, Thái Nguyên, Bắc Giang, Lạng Sơn, Cao Bằng, Phú Thọ. Thông qua VWSA, nhờ công ty cấp thoát nước các tỉnh hỗ trợ mua lương thực, thực phẩm, nhu yếu phẩm cần thiết, kịp thời hỗ trợ bà con, đồng bào các tỉnh thành mình. Ngoài ra BIWASE còn chuyển tiền ủng hộ qua UBMTTQ Việt Nam tỉnh Bình Dương 500 triệu đồng cứu trợ nạn nhân lũ lụt.
+
+**Ban Thường trực UBMTTQ Việt Nam tỉnh Yên Bái, Hòa Bình, Bắc Kạn, Hà Giang và UBND huyện Xí Mần – tỉnh Hà Giang;** Chi hội Cấp Thoát Nước miền Bắc; các công ty cấp thoát nước – xây dựng 10 tỉnh, thành phố bị ảnh hưởng cơn bão số 3 (YAGI) đã gửi thư cảm ơn Lãnh đạo Tổng Công ty BIWASE kịp thời chia sẻ khó khăn, ủng hộ (100 triệu đồng mỗi tỉnh) chính quyền mua nhu yếu phẩm thiết yếu cứu trợ đồng bào bị thiệt hại vượt qua khó khăn, sớm ổn định lại cuộc sống.
+
+**Bà Bùi Thị Thơm - Phó Chủ tịch Trung ương Hội Nông dân Việt Nam, cùng ông Đỗ Ngọc Huy – Uỷ viên Ban Chấp hành Trung ương Hội Nông dân Việt Nam - Chủ tịch Hội Nông dân tỉnh Bình Dương** và bà Nguyễn Thị Thanh Huyền - Tổng Biên tập Tạp chí Nông thôn mới vừa có chuyến thăm, làm việc tại Khu Liên hợp Xử lý chất thải Bình Dương. Ông Nguyễn Văn Thiền - Chủ tịch HĐQT Công ty CP - Tổng công ty Nước - Môi trường Bình Dương (BIWASE), cùng ông Nguyễn Hoàng Lân - Phó Giám đốc Công ty BIWASE E.T.S; lãnh đạo Chi nhánh Thương Mại Con Voi Bình Dương đã tiếp và giới thiệu những tiến bộ trong công nghệ xử lý chất thải; những sản phẩm tái chế hữu ích của công ty với đoàn và hướng dẫn tham quan các hệ thống xử lý chất thải tiên tiến tại khu liên hợp: dây chuyền xử lý chất thải hiện đại, lò đốt rác phát điện 5MW, nhà máy sản xuất phân bón Con Voi Bình Dương, các đại biểu đã bày tỏ sự ấn tượng với công nghệ và quy trình vận hành của khu liên hợp, đánh giá cao nỗ lực của BIWASE trong việc giảm thiểu ô nhiễm môi trường. Bà Bùi Thị Thơm nhận xét: "BIWASE đã tiên phong trong công nghệ xử lý chất thải và còn là đối tác tin cậy trong việc phát triển nông nghiệp bền vững tại Việt Nam".
+
+**Ngày 03/10/2024 tại Hà Nội, thạc sĩ Ngô Chí Thắng, Giám đốc Công ty TNHH Một thành viên Liên hợp Khoa học – Công nghệ – Môi trường BIWASE (BIWASE E.T.S)** vinh dự nhận giải thưởng "Nhà khoa học của Nhà nông" và Cuộc thi "Sáng tạo kỹ thuật nhà nông" năm 2024 với công trình nghiên cứu khoa học "Chế tạo thiết bị sản xuất phân Compost tại Việt Nam" và "Xây dựng hệ thống phân phối sản phẩm phân compost".
+
+Giải thưởng "Nhà khoa học của Nhà nông" do Trung ương Hội Nông dân Việt Nam chủ trì phối hợp với Bộ Khoa học và Công nghệ, Liên hiệp các Hội Khoa học và Kỹ thuật Việt Nam, Bộ Nông nghiệp và Phát triển Nông thôn thực hiện. Danh hiệu "Nhà khoa học của nhà nông" năm nay vinh danh 56 cá nhân tiêu biểu. Theo Hội đồng giải thưởng, tiêu chí xét chọn dựa trên đóng góp công trình nghiên cứu, giải pháp sáng tạo, sản phẩm công nghệ được ứng dụng rộng rãi, mang lại hiệu quả kinh tế cao, giá trị cho cộng đồng.
+
+
+**Đại diện Ngân hàng MayBank (Malaysia) và các đơn vị liên quan vừa có chuyến thăm, làm việc, tìm hiểu cơ hội hợp tác đầu tư tại Tổng Công ty BIWASE.** Với thế mạnh về tài chính và các lĩnh vực liên quan, MayBank đã giới thiệu các nguồn vốn ưu đãi dài hạn lãi suất cạnh tranh, các quỹ tín dụng và tư vấn phát hành cổ phiếu, trái phiếu để BIWASE lựa chọn, hợp tác. Sau buổi làm việc đoàn đã có chuyến khảo sát thực tế hoạt động tại hai nhà máy thuộc Công ty CP Nước BIWASE Long An.
+
+ **BIWASE Long An tặng 40 suất quà cho học sinh khó khăn**
+
+Thực hiện chương trình "Tiếp sức đến trường" do Đoàn Thanh niên khối Cơ quan – Doanh nghiệp tỉnh Long An phát động, nhằm hỗ trợ, động viên tinh thần các em học sinh có hoàn cảnh khó khăn có thêm niềm tin, nghị lực, không bỏ học vì thiếu tình cảm, sự quan tâm của cộng đồng. Công ty cổ phần Nước BIWASE Long An đã dành 40 phần quà gồm: nhu yếu phẩm, tập vở, đồ dùng, dụng cụ học tập trị giá 20 triệu đồng và phối hợp Đoàn Thanh Niên khối Cơ quan - Doanh nghiệp, Đoàn Thanh niên Sở Công thương tỉnh Long An đến thăm, tặng các em học sinh trường Tiểu học Phú Nhơn và Trung học cơ sở Phường 5, TP. Tân An tỉnh Long An. Tiếp tục quan tâm, chăm lo các em học sinh có hoàn cảnh khó khăn, đại diện Công ty CP Nước BIWASE Long An đã đến trường Tiểu học và Trung học cơ sở Nhị Thành thăm, tặng quà, động viên tinh thần các em học sinh khắc phục khó khăn tiếp tục học tập.
+
+**Sử dụng phân bón Con Voi Bình Dương – Sầu Riêng đạt giải Nhất Trái Cây Ngon.** Vườn sầu riêng 1 ha của gia đình anh Lê Trọng Minh, thôn Tân Đông, xã Ea Kênh, huyện Krông Pắc, tỉnh Đăk Lăk sử dụng phân bón hữu cơ Con Voi Bình Dương từ tháng 06/2022 đến năm nay đã cho trái đẹp, chất lượng, năng suất cao. Tại Lễ hội Sầu Riêng Krông Pắc lần thứ II năm 2024 và Hội thi Nông dân sản xuất sầu riêng giỏi, trái sầu riêng sử dụng phân bón Con Voi Bình Dương của gia đình anh Lê Trọng Minh đã xuất sắc vượt lên giành giải Nhất hội thi. Ngoài ra các giải Ba, giải Khuyến Khích tại hội thi đều sử dụng phân bón Con Voi Bình Dương. Phân bón Hữu cơ Con Voi Bình Dương đã được Cục Bảo vệ thực vật – Bộ Nông nghiệp và Phát triển Nông thôn cấp phép lưu hành toàn quốc với 15 loại chuyên dùng phù hợp với tất cả các loại cây trồng theo từng giai đoạn giúp cây tăng trưởng, ra hoa, kết trái, năng suất – chất lượng cao và bền vững.
+
+
+ **HOẠT ĐỘNG KHÁC**
+
+**Đoàn viên thanh niên Tổng công ty BIWASE và Ngày hội hiến máu tình nguyện lần thứ 41.** Ngày 04/10/2024 Ban Chấp hành Công Đoàn và Đoàn Thanh Niên cơ sở Công ty CP - Tổng công ty Nước - Môi trường Bình Dương (BIWASE) tổ chức Ngày hội hiến máu tình nguyện lần thứ 41. Có trên 200 đơn vị máu do đoàn viên công đoàn, đoàn thanh niên, người lao động Tổng công ty BIWASE hiến tặng. Trong số này có rất nhiều người từng có số lần hiến máu ấn tượng từ 10 lần đến trên 15 lần và đã được nhận giấy khen của Hội Chữ Thập Đỏ tỉnh, trong đó có lãnh đạo tổng công ty đến lãnh đạo các chi nhánh. Được biết mỗi năm 2 lần Trung tâm truyền máu Bệnh viện Chợ Rẫy phối hợp Hội Chữ Thập Đỏ tỉnh Bình Dương tổ chức Ngày hội hiến máu tình nguyện tại Tổng công ty BIWASE. Đây là ngày hội lần thứ 41. Với tinh thần "Hiến máu cứu người"; "Giọt máu cho đi - Mạng người ở lại". Đoàn Thanh Niên Tổng công ty BIWASE đã thành lập "Ngân hàng máu sống" gồm những người thuộc nhóm máu hiếm sẵn sàng cho máu cứu người khi có yêu cầu.
+
+**Chi nhánh thương mại Con Voi Bình Dương tặng bò giống cho nông dân:** Tại xã biên giới Bình Phú, huyện Tân Hồng, tỉnh Đồng Tháp, đại diện Chi nhánh Thương mại Con Voi Bình Dương đã cùng chính quyền địa phương trao tặng 5 con bò giống (bò cái sinh sản), mỗi con 15 triệu đồng, tổng giá trị 75 triệu đồng, nhằm tạo sinh kế cho nông dân có điều kiện tăng gia sản xuất, tận dụng thời gian và nguồn thức ăn sẵn có tại chỗ để tăng thu nhập cho gia đình. Được biết bò cái giống có sức đề kháng tốt, thích nghi với thời tiết, mắn đẻ sẽ giúp nông dân có thêm nguồn thu nhập sau thời gian ngắn chăn nuôi.
+
+ **PHƯƠNG HƯỚNG SẢN XUẤT KINH DOANH THÁNG 10 NĂM 2024**
+
+- Tập trung chỉ đạo thực hiện tốt nghị quyết, mục tiêu năm 2024.
+- Đại hội và triển khai xây dựng nhà máy Cần Thơ 3 mới M&A công suất 50.000m3 /ngày đêm.
+- Hoàn thiện và đẩy nhanh thu hồi nợ từ các hoạt động dịch vụ xử lý nước thải, rác thải.
+- Chuẩn bị kế hoạch năm 2025.

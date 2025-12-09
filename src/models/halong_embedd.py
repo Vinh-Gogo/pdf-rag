@@ -15,13 +15,13 @@ from src.models.helpers import cosine_similarity
 class HalongEmbedding:
     """Lớp để tạo embeddings sử dụng hiieu/halong_embedding model cho tiếng Việt"""
     
-    def __init__(self, model_name="hiieu/halong_embedding"):
+    def __init__(self, model_name="dangvantuan/vietnamese-embedding"):
         print(f"Đang tải {model_name} model...")
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.model = SentenceTransformer(
             model_name,
             device=str(self.device),
-            model_kwargs={"torch_dtype": torch.bfloat16} if torch.cuda.is_available() else {}
+            # model_kwargs={"torch_dtype": torch.bfloat16} if torch.cuda.is_available() else {}
         )
         print(f"✓ Model {model_name} đã tải xong trên {self.device}")
     

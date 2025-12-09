@@ -1,0 +1,50 @@
+ CÔNG TY CP - TỔNG CÔNG TY NƯỚC - MÔI TRƯỜNG BÌNH DƯƠNG (BIWASE) BINH DUONG WATER - ENVIRONMENT CORPORATION - JOINT STOCK COMPANY
+
+**BẢN TIN BIWASE THÁNG 6 NĂM 2024** (Mã CK: BWE)
+
+**TỔNG HỢP KẾT QUẢ HOẠT ĐỘNG SẢN XUẤT KINH DOANH 6 THÁNG NĂM 2024 CỦA BIWASE**
+
+| STT | NỘI DUNG | ĐVT | THỰC HIỆN 6 THÁNG NĂM 2024 | THỰC HIỆN 6 THÁNG NĂM 2023 | SO VỚI CÙNG KỲ NĂM 2023 | KẾ HOẠCH NĂM 2024 | SO VỚI KẾ HOẠCH NĂM 2024 |
+|-|-|-|-|-|-|-|-|
+| 1 | Tổng công suất cấp nước (hiện có) | m³/ngđ | 822.000 | | | 822.000 | 100% |
+| 2 | Sản lượng nước tiêu thụ | Triệu m³ | 99.173.173 | 90.631.001 | 109% | 192.700.000 | 51% |
+| 3 | Tỷ lệ thất thoát nước | % | 5 | 5 | 5 | 5 | 100% |
+| 4 | Tổng doanh thu | Tỷ-VNĐ | 1.874 | 1.736 | 108% | 4.100 | 46% |
+| 5 | Lợi nhuận sau thuế | Tỷ-VNĐ | 302 | 332 | 91% | 700 | 43% |
+
+*Đến tháng 06/2024, Doanh thu chưa ghi nhận tại lĩnh vực xử lý rác và xử lý nước thải với tổng giá trị 213,87 tỷ đồng, chi phí tương ứng 155,44 tỷ đồng. Nếu cộng thực hiện, tổng doanh thu sẽ đạt 2.087 tỷ đồng, đạt 51% kế hoạch 2024, lợi nhuận trước thuế sẽ là 389 tỷ đồng, tăng 106% so với cùng kỳ năm 2023.*
+*Tổng công suất chưa tính các nhà máy nước ngoài tỉnh Bình Dương*
+
+**HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
+
+**Hội nghị thượng đỉnh Nước – Môi trường Singapore 2024** là sự kiện mang tính toàn cầu do Cơ quan Quản lý Nguồn nước Quốc gia Singapore (PUB) tổ chức với sự có mặt của nhiều nhà lãnh đạo, đại diện chính phủ các nước cùng tìm giải pháp "Cùng nhau hành động vì khí hậu toàn cầu", diễn ra từ ngày 18 đến 22/6/2024 gồm: Hội nghị Môi trường sạch (CESG) 2024 và Tuần lễ nước quốc tế Singapore (SIWW) 2024. Nhiều vấn đề mới được đưa ra thảo luận và tìm giải pháp khai thác, khắc phục các mối đe dọa khí hậu từ nước thải khu công nghiệp, nước đô thị, lũ lụt và nước ven biển, nước biển dâng do tác động của biến đổi khí hậu. Bên cạnh đó "Diễn đàn Kinh tế Việt Nam" (trong khuôn khổ Hội nghị thượng đỉnh Nước – Môi trường Sigapore 2024) gồm 11 hội viên hàng đầu Hội Cấp Thoát Nước Việt Nam (VWSA) như Sawaco, Biwase, TienPhong Plastic, Bwaco, Ree Water… đã tham gia giới thiệu các thành tựu, công nghệ ngành nước – môi trường, biến rác thải thành tài nguyên tuần hoàn, quản lý và chống thất thoát nước. Diễn đàn Kinh tế Việt Nam đã thu hút sự tham gia của trên 300 đoàn khách, doanh nghiệp; ký kết nhiều văn kiện hợp tác.
+
+- **Bộ Nội vụ Cộng hoà Indonesia (MOHA) và chính quyền tỉnh Nam Sumatra đã mời lãnh đạo VWSA cùng các hội viên tiêu biểu tham quan các nhà máy cấp nước, xử lý nước thải**; nghe đại diện Hội Cấp Thoát Nước Indonesia (PERPAMSI) giới thiệu thực trạng và mong muốn hợp tác với VWSA nâng cao năng lực ngành Cấp Thoát Nước Indonesia; ký kết biên bản ghi nhớ nhằm hiện thực hoá các mong muốn hiện đại hoá của ngành nước Indonesia. Ông Nguyễn Văn Thiền – Chủ tịch HĐQT BIWASE đã giới thiệu quá trình làm chủ công nghệ, kiểm soát thất thoát nước dưới 5%, hướng đến sản xuất tuần hoàn… Indonesia rất tâm đắc và mong muốn thông qua VWSA để mời BIWASE đến chia sẻ kinh nghiệm làm giảm thất thoát nước và tham gia các dự án, gói thầu của chính phủ nhằm nâng cao năng lực ngành Cấp Thoát Nước – Môi trường của nước này.
+
+- **Ngày 7-6, ông Võ Văn Phi – Phó chủ tịch UBND tỉnh Đồng Nai dẫn đầu đoàn công tác UBND tỉnh đến làm việc và trao đổi kinh nghiệm tại Khu liên hợp xử lý chất thải Bình Dương (BIWASE).** Ông Nguyễn Văn Thiền, Chủ tịch HĐQT Công ty CP - Tổng công ty Nước - môi trường Bình Dương (BIWASE), giới thiệu về Khu liên hợp xử lý chất thải Bình Dương và quy trình công nghệ hiện đại bậc nhất Việt Nam hiện nay. Rác thải, nước rỉ rác được xử lý khép kín theo hướng tuần hoàn, sản xuất phân bón hữu cơ; thu hồi khí biogas, nhiệt lò đốt rác để phát điện; tro xỉ lò đốt, cặn lắng nước thải làm nguyên liệu sản xuất gạch và vật liệu xây dựng… Nhờ đó nhiều năm qua Bình Dương được Chính phủ công nhận Top đầu về thu hút đầu tư, phát triển công nghiệp và bảo đảm môi trường.
+
+Phó chủ tịch UBND tỉnh Võ Văn Phi đánh giá cao hoạt động của BIWASE. Chỉ với 1 khu xử lý BIWASE đã bảo đảm môi trường cho Bình Dương và sản xuất ra nhiều sản phẩm có giá trị.
+
+Lãnh đạo UBND tỉnh mong muốn BIWASE phối hợp với Đồng Nai thực hiện các dự án môi trường, nhất là dự án xử lý nước thải, rác thải sinh hoạt đô thị của tỉnh.
+
+**Ngày 24-6, ông Mai Hùng Dũng, Ủy viên Ban thường vụ Tỉnh ủy, Phó Chủ tịch Thường trực UBND tỉnh Bình Dương** đã chủ trì họp trực tuyến với bà Maija Seppala, Tham tán chính sách phát triển, Đại sứ quán Phần Lan tại Hà Nội về việc chuẩn bị dự án xử lý nước thải sinh hoạt khu vực Bến Cát.
+
+Dự án thoát nước và xử lý nước thải khu vực Bến Cát đã được Bộ ngoại giao Phần Lan chấp thuận theo chương trình tín dụng đầu tư công (PIF) của Chính phủ Phần Lan với tổng mức đầu tư dự kiến khoảng 70 triệu Euro, trong đó vốn hỗ trợ phát triển chính thức (ODA) từ PIF là gần 30 triệu Euro. Tỉnh Bình Dương đã hoàn thiện hồ sơ, trình Bộ Kế hoạch và Đầu tư, Bộ Tài chính trong tháng 7-2024 để các bộ, ngành trình Thủ tướng Chính phủ phê duyệt. Phát biểu tại phiên họp, ông Mai Hùng Dũng mong muốn hai bên tiếp tục có những buổi làm việc để kịp thời nắm bắt tiến độ cũng như tháo gỡ các khó khăn nhằm sớm triển khai dự án.
+
+**Nông dân trồng lúa vùng đồng bằng sông Cửu Long (ĐBSCL) sử dụng phân bón hữu cơ Con Voi tăng hiệu quả sản xuất lúa.** Nhiều tỉnh trồng lúa 3 vụ tại ĐBSCL đang đứng trước nguy cơ cây lúa chết non, chết đứng, bị sâu rầy tấn công do đất thiếu phù sa, dinh dưỡng. Sau khi dự hội thảo, biết được giá trị và lợi ích của phân bón hữu Con Voi Bình Dương, nhà nông đã áp dụng bón lót trước khi gieo sạ. Kết quả độ phì nhiêu của đất được phục hồi, sức khoẻ cây lúa tốt lên, năng suất tăng, chi phí giảm… Ông Nguyễn Văn Hồng, xã Gáo Giồng, huyện Tháp Mười, tỉnh Đồng Tháp cho biết: Do sản xuất liên vụ, đất bị nghèo kiệt dinh dưỡng, nông dân phải tăng cường sử dụng phân hoá học khiến mặt đất chai cứng, bộ rễ cây lúa không phát triển, phát sinh nhiều sâu bệnh. Từ khi sử dụng phân bón hữu cơ Con Voi Bình Dương để bón lót nhận thấy độ phì nhiêu của đất được phục hồi; bộ rễ phát triển mạnh, cây lúa hấp thu tốt chất dinh dưỡng, năng suất tăng, chi phí giảm 1 triệu đồng/ha. "Tôi tin vào phân bón hữu cơ Con Voi Bình Dương". Ông Hồng nói. (nguồn Đài Phát thanh và Truyền hình tỉnh Đồng Tháp https://www.youtube.com/watch?v=yQfGpp-HEW8). Phân bón Con Voi Bình Dương là sản phẩm của BIWASE đã được Cục Bảo vệ thực vật – Bộ Nông nghiệp và Phát triển nông thôn cấp phép lưu hành toàn quốc. Hiện tại phân bón Con Voi có 15 chủng loại phù hợp với tất cả các loại đất và cây trồng như: lúa, cây công nghiệp ngắn ngày và dài ngày, cây ăn trái đặc sản như sầu riêng, bưởi, xoài… Sử dụng phân bón Con Voi Bình Dương, nhiều vườn cây ăn trái tại Đồng Tháp, Long An, Đồng Nai đã hồi sinh, phát triển tốt, đủ tiêu chuẩn xuất khẩu. Sản phẩm được nhà nông ưa chuộng nhờ giá cạnh tranh lại được đội ngũ kỹ thuật theo sát hướng dẫn, giải đáp kịp thời các khó khăn, thắc mắc.
+
+**BIWELCO trở thành hội viên Hiệp hội Xây dựng và Vật liệu xây dựng Thành phố Hồ Chí Minh – SACA.** Là cánh tay nối dài của BIWASE với thế mạnh vể năng lượng xanh, năng lượng tái tạo và công nghệ tự động hoá. BIWELCO mong muốn góp phần nâng cao hiệu quả các lĩnh vực lắp đặt công nghệ hoàn chỉnh nhà máy nước sạch, nhà máy nước thải công suất lớn;Thi công đường ống cấp, thoát nước đường kính đến 2400mm; Thi công xây dựng nhà cao tầng, nhà công nghiệp, giao thông và thủy lợi; Thiết kế và thi công đường dây & trạm biến áp; Công nghiệp năng lượng: điện năng lượng mặt trời, điện rác, sinh khối... SACA là một trong những tổ chức xã hội nghề nghiệp hoạt động lâu đời nhất tại TP.HCM. Sau 32 năm hoạt động SACA quy tụ 400 doanh nghiệp, hội viên.
+
+**MeKong Furniture tiếp tục chọn BIWASE thực hiện dịch vụ xử lý chất thải nguy hại.** Chi nhánh Xử lý chất thải BIWASE là đối tác xử lý chất thải nguy hại cho Công ty Nội thất Mê Kông từ năm 2019 đến nay. Tiếp tục mục tiêu phát triển lấy bảo vệ môi trường và chất lượng sản phẩm làm nền tảng, đại diện Công ty Nội thất Mê Kông đã cử đoàn đến Chi nhánh xử lý chất thải Biwase kiểm tra quy trình, đánh giá chất lượng và tiếp tục tái ký hợp đồng hợp tác cho những năm tiếp theo, khẳng định sự hợp tác bền chặt và cam kết chung trong việc bảo vệ môi trường. Với hệ thống công nghệ tiên tiến và quy trình chặt chẽ từ khâu tiếp nhận, thu gom, vận chuyển đến xử lý đều bảo đảm an toàn và hiệu quả. Biwase được nhiều khách hàng có thương hiệu lớn như: Wanek Furniture, công ty VSIP , VNVC, Becamex IDC, tin cậy sử dụng dịch vụ.
+
+**HOẠT ĐỘNG KHÁC**
+
+**GIWACO miễn phí tiền nước cho gia đình chính sách, hộ nghèo:** Góp phần đền ơn đáp nghĩa, chia sẽ khó khăn với các gia đình chính sách trên địa bàn. Công ty cổ phần Cấp nước Gia Tân áp dụng chính sách miễn tiền sử dụng nước (4m3 /hộ/tháng) cho các hộ gia đình chính sách khó khăn, hộ nghèo.
+
+**Biwase tặng xe đạp, nhận đỡ đầu cháu bé mồ côi cả cha lẫn mẹ chỉ trong 1 tháng.** Cháu Lý Chí Ngoan, ấp 3, xã Nguyễn Phích, huyện U Minh tỉnh Cà Mau từ khi mới lọt lòng chưa tròn tháng đã bị bỏ rơi. Cháu lớn lên với mẹ nuôi. Trong cơn mưa đầu mùa ngày 29/5 mẹ nuôi trong lúc đi thăm lưới bắt cá không may bị sét đánh tử vong. Chưa đầy tháng cha em cũng qua đời. Trước nổi đau mất mát tột cùng, Ngoan đã nghĩ quẩn, nhưng được người thân phát hiện can ngăn kịp thời. Biết tin lãnh đạo Tổng công ty BIWASE đã cử đại diện đến địa phương gặp gia đình, tìm hiểu nguyện vọng để nhận nuôi dưỡng, đở đầu cháu Ngoan cho đến hết đại học. Ông Nguyễn Văn Xuân, Bí thư chi bộ, Trưởng ấp 3 cho biết: Chi bộ đã cử đảng viên theo dõi và phối hợp với nhà trường trong việc học tập của cháu Ngoan. Theo nguyện vọng của cháu Ngoan đại diện Biwase đã trao 10 triệu đồng tiền mặt và xe đạp mới giúp cháu có phương tiện đi học.
+
+**PHƯƠNG HƯỚNG SẢN XUẤT KINH DOANH THÁNG 7 NĂM 2024**
+
+- Tập trung triển khai 2 dự án đầu tư mở rộng hệ thống cấp nước ở Chơn Thành (công suất tăng lên 60.000m3 /ngày đêm) và Long An (công suất tăng lên 180.000m3 /ngày đêm).
+- Chuẩn bị hồ sơ khởi công nhà máy điện rác 13MW ở khu liên hợp xử lý rác Bình Dương.
+- Hoàn thiện công tác quản trị doanh nghiệp để nâng cao tín nhiệm với nhà đầu tư vào BIWASE.

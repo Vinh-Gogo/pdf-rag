@@ -1,0 +1,47 @@
+ CÔNG TY CP - TỔNG CÔNG TY NƯỚC - MÔI TRƯỜNG BÌNH DƯƠNG (BIWASE) BINH DUONG WATER - ENVIRONMENT CORPORATION - JOINT STOCK COMPANY
+
+**BẢN TIN BIWASE THÁNG 6 NĂM 2023** (Mã CK: BWE)
+
+**TỔNG HỢP KẾT QUẢ HOẠT ĐỘNG SẢN XUẤT KINH DOANH 6 THÁNG ĐẦU NĂM 2023 CỦA BIWASE**
+
+| STT | NỘI DUNG | ĐVT | 6 THÁNG ĐẦU NĂM 2023 | SO VỚI | | | |
+|-|-|-|-|-|-|-|-|
+| | | | | CÙNG KỲ NĂM 2022 | ĐẠT % | DỰ KIẾN KẾ HOẠCH NĂM 2023 | ĐẠT % |
+| 1 | Tổng Công suất (hiện có) | m³/ngđ | 822.000 | 760.000 | 108% | | |
+| 2 | Sản lượng nước tiêu thụ | m³ | 90.631.011 | 89.378.315 | 101% | 186.000.000 | 49% |
+| 3 | Tỷ lệ thất thoát nước | % | 5% | 5% | 100% | 5% | 100% |
+| 4 | Tổng doanh thu | Tỷ-VNĐ | 1.736 | 1.860 | 93% | 3.970 | 44% |
+| 5 | Lợi nhuận sau thuế | Tỷ-VNĐ | 332 | 347 | 96% | 720 | 46% |
+
+**6 tháng đầu năm 2023, công ty chưa ghi nhận doanh thu 88,7 tỷ đồng từ lĩnh vực xử lý rác thải*
+
+**HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
+
+• **Ngày 6/5 Forbes Việt Nam phát đi thông cáo báo chí thông báo kết quả xếp hạng "50 doanh nghiệp niêm yết tốt nhất Việt Nam năm 2023"**. Thông cáo nhấn mạnh: Năm 2023, cộng đồng doanh nghiệp đang ở giai đoạn khó khăn nhất trong khoảng 10 năm trở lại đây. Bên cạnh sự biến mất hoặc chỉ còn lại một nửa các nhóm ngành liên quan xuất nhập khẩu, thuỷ sản, bất động sản, vật liệu xây dựng. Thì nhóm ngành kinh tế Xanh, kinh tế Tuần Hoàn, mang lại giá trị lớn cho xã hội như cung cấp nước sạch và vệ sinh môi trường, năng lượng Xanh, năng lượng Tái tạo của BIWASE đang có xu hướng tăng trưởng mạnh và bền vững nhờ đã khẳng định vị trí trên thị trường. Tổng lợi nhuận sau thuế của 50 công ty trong danh sách đạt 228.096 tỉ đồng, tăng 18% so với năm 2022. Tổng doanh thu đạt 1.490.453 tỉ đồng, tăng 24,9%. Đây là năm thứ 4 liên tiếp BIWASE được FORBES vinh danh Top 50 Doanh nghiệp Niêm yết Tốt Nhất Việt Nam. Dự kiến lễ vinh danh sẽ diễn ra vào tháng 8/2023.
+
+• **Các Chi nhánh BIWASE được đào tạo An toàn Môi trường và Xã hội**. Sau 1 năm thành lập Ban An toàn Môi trường và Xã hội BIWASE đã kiện toàn tổ chức từ Tổng Công ty đến các chi nhánh trực thuộc nhằm triển khai thực hiện nhiệm vụ kế hoạch an toàn môi trường và xã hội cho toàn thể CB-CNV, người lao động trong toàn hệ thống theo quy định của Luật An toàn vệ sinh Công nghiệp số 84/2015/QH13; Ban đã ban hành 13 chính sách, quy chế, nội quy như: quy chế tuyển dụng lao động; quy chế quản lý cán bộ công nhân viên; quy chế thi đua khen thưởng; chính sách thu hút, trọng dụng nguồn nhân lực; bộ quy tắc đạo đức và ứng xử văn hóa doanh nghiệp; chính sách khiếu nại và giải quyết khiếu nại; chính sách không sử dụng lao động trẻ em, lao động cưỡng bức và nhân quyền trong doanh nghiệp…Bên cạnh đó Ban An toàn Môi trường và Xã hội còn tổ chức nhiều lớp đào tạo, tập huấn như: Diễn tập an toàn PCCC; an toàn hoá chất, an toàn lao động trên cao, diễn tập an toàn vệ sinh thực phẩm…Nhằm bảo đảm an toàn cho người lao động, nêu cao tính tuân thủ pháp luật của doanh nghiệp.
+
+• **BIWELCO nhận Chứng nhận ISO 9001: 2015 và ISO 45001: 2018**. Tổ chức Chứng nhận Hệ thống Quản lý Chất lượng Quốc tế UKAS có trụ sở chính tại London Vương Quốc Anh vừa công bố và trao bằng chứng nhận ISO 9001: 2015; ISO 45001:2018 công nhận BIWELCO đạt tiêu chuẩn quốc tế về hệ thống quản lý chất lượng (QMS) nằm trong bộ tiêu chuẩn ISO 9000 và ISO 9001. ISO 9001:2018 là bộ tiêu chuẩn duy nhất chứng tỏ khả năng cung cấp sản phẩm, dịch vụ đáp ứng thoả mãn khách hàng cùng các yêu cầu pháp lý được pháp luật quy định. Chứng nhận ISO 45001: 2018 công nhận BIWELCO đạt tiêu chuẩn quốc tế về Hệ thống quản lý An toàn và Sức khỏe nghề nghiệp. Bộ tiêu chuẩn ISO 45001:2018 được xây dựng trên nền tảng của tiêu chuẩn OHSAS 18001:2007 với nhiều cải tiến giúp tăng khả năng đồng bộ với các hệ thống quản lý khác như: ISO 9001:2015, ISO 14001:2015. Bộ tiêu chuẩn này sẽ giúp công ty hoàn thiện hệ thống quản lý chất lượng, giảm thiểu tối đa các nguy cơ gây mất an toàn khi triển khai công việc ở tất cả các vị trí. Phiên bản hiện tại của ISO 45001 là ISO 45001:2018.
+
+• **Hoàn tất mua lại nhóm các công ty nước Long An**: BIWASE nhanh chóng bắt tay vào đầu tư nâng công suất nhà máy kết hợp phát triển các tuyến ống trục, ống phân phối, nhằm kịp thời cung cấp nước sạch ngày càng đầy đủ hơn cho người dân và yêu cầu phát triển công nghiệp – đô thị của tỉnh đến năm 2030: Cụ thể BIWASE đã đầu tư xây dựng tuyến ống nước thô D1200 kết hợp nâng cấp gấp đôi công suất nhà máy nước Nhị Thành từ 60.000 m³/ngày đêm lên 120.000 m³/ngày đêm. Xây dựng các tuyến ống nước sạch D1200, D800, D 600. D450 đưa nước từ nhà máy Nhị Thành đến ngã tư Chợ Trạm, cảng Quốc tế Long An, khu công nghiệp Phước Đông và các huyện Bến Lức, Cần Đước, Cần Giuộc. Đồng thời đầu tư xây dựng các tuyến ống cấp II và Trạm bơm tăng áp Mỹ Lệ (xã Mỹ Lệ, huyện Cần Đước) tiếp nhận nguồn nước từ tuyến ống trục đưa về các khu dân cư, đô thị trên địa bàn phục vụ người dân. Bảo đảm nước sạch là một trong những yêu cầu quan trọng để Long An trở thành cửa ngỏ phát triển và dẫn đầu khu vực Đồng Bằng Sông Cửu Long đến năm 2025.
+
+• **Nhà máy phân Compost thứ tư, công suất 840 tấn sẽ hoàn thành vào tháng 9**: Đến nay nhà máy đã hoàn thành trên 80% khối lượng, công suất thiết kế 840 tấn/ngày đêm. Công trình do thạc sĩ Nguyễn Văn Thiền – Chủ tịch HĐQT Tổng Công ty BIWASE trực tiếp chỉ đạo đội ngũ khoa học kỹ thuật thiết kế, lắp đặt. Nhiều bộ phận kỹ thuật quan trọng trước đây phải nhập khẩu thì nay BIWASE đã tự lắp ráp, chế tạo hoặc sản xuất tại chỗ kể cả robot đảo trộn nguyên liệu điều khiển từ xa. Dự kiến ngày 7/7 nhà máy sẽ tiếp nhận nguyên liệu (chất thải sinh hoạt) để xử lý, chế biến thành phân Compost (phân bón hữu cơ Con Voi Bình Dương). Tháng 9 nhà máy hoàn thành, nâng công suất cả 4 nhà máy lên 1.680 tấn/ngày.
+
+• **Phân bón Con Voi Bình Dương dự Hội chợ trái cây và hàng nông sản tỉnh Bình Phước**: Từ ngày 22 đến 26/6 tại Bình Phước diễn ra Hội chợ trái cây và hàng nông sản lần thứ 6, quy tụ hơn 300 gian hàng đến từ các tỉnh thành Miền Nam. Nổi bậc là các sản phẩm OCOP đạt tiêu chuẩn VIETGAP. Nhiều loại trái cây, sản phẩm nông nghiệp tham gia hội chợ đến từ các tỉnh thành Miền Nam đã từng sử dụng phân bón hữu cơ Con Voi Bình Dương. Qua đó gian hàng Phân bón hữu cơ Con Voi Bình Dương luôn thu hút sự quan tâm chú ý của các đoàn khách tham quan.
+
+• **Ứng dụng công nghệ cao, tăng hiệu quả xử lý nước sạch:** Ống lắng Lamen, do Hoa Kỳ sản xuất, có tác dụng lắng và tách các hạt lơ lửng (cặn) ra khỏi nguồn nước, nhưng không bám dính vào tấm lắng. Mỗi ống lắng hoạt động như một bể lắng thu nhỏ giúp tăng hiệu quả xử lý lên từ 2 đến 5 lần so với kỹ thuật lắng lọc truyền thống. Nhờ đó công suất xử lý của các nhà máy cũng tăng lên tương ứng mà không phải đầu tư mở rộng. Ưu điểm của ống lắng Lamen là dễ lắp đặt, tiết kiệm chi phí và diện tích bể lắng, không sử dụng keo (hoá chất lắp đặt), không tích điện, không bị ăn mòn, độ bền trên 10 năm… Kỹ thuật này đang được áp dụng cho nhà máy nước lớn ở Bình Dương như Dĩ An, Khu Liên Hợp...
+
+• **Ban Tổ chức Chương trình Truyền thông Xây dựng và Phát triển Nền Kinh tế Xanh Quốc Gia năm 2023** do Hội Thông tin, tư vấn Kinh tế Thương mại Việt Nam (VICETA trực thuộc Bộ Công Thương) tổ chức vừa công bố danh sách các Doanh nghiệp Kinh tế Xanh Quốc Gia – Chìa khoá cho sự phát triển bền vững năm 2023. BIWASE được vinh danh với chuỗi các công trình thu gom xử lý nước thải, rác thải sinh hoạt theo hướng khép kín, tuần hoàn, được Bộ Tài Nguyên và Môi Trường đánh giá là hình mẫu của cả nước về thu gom xử lý nước thải, rác thải sinh hoạt. BIWASE là doanh nghiệp đi đầu ứng dụng khoa học công nghệ hiện đại nhằm giảm phát thải Carbon, hạn chế sử dụng tài nguyên thiên nhiên theo cam kết của chính phủ.
+
+**HOẠT ĐỘNG KHÁC**
+
+• **Bình Dương sẽ có khu lưu niệm văn hoá lịch sử:** Ông Nguyễn Văn Thiền – Chủ tịch Hội đồng quản trị Công ty cổ phần đầu tư xây dựng Chánh Phú Hoà – Chủ đầu tư Hoa viên Nghĩa trang Bình Dương cho biết: công ty đã dành một khu vực kiến trúc đặc biệt nhằm lưu giữ, bảo quản các di sản văn hoá nghệ thuật, cùng các hình ảnh, kỷ vật, tác phẩm, các công trình tiêu biểu gắn liền với cuộc đời và sự nghiệp, văn nghệ sĩ, chiến sĩ, anh hùng lực lượng vũ trang nhân dân, người nổi tiếng đang an nghỉ tại Hoa Viên Nghĩa trang Bình Dương như: Anh Hùng Lực Lượng Vũ Trang Nhân Dân – Thiếu tá tình báo Nguyễn Văn Thương. Tên tuổi ông gắn liền với lịch sử "9 lần bị địch dùng cưa củi cưa chân mà vẫn không khai"; khu lưu niệm giáo sư tiến sĩ nhạc sĩ Trần Văn Khê, Nhà văn Sơn Nam, cùng nhiều tên tuổi khác đang lưu giữ tại Hoa viên Nghĩa trang Bình Dương.
+
+• **BIWASE đồng hành và hỗ trợ trẻ em khó khăn tỉnh KonTum**. Ông Nguyễn Văn Thiền – Chủ tịch HĐQT dẫn đầu đoàn cán bộ Tổng Công ty BIWASE đến thăm, tặng quà phụ huynh có con và các cháu học sinh khó khăn tại trường mầm non Đăk Tơ Kan, huyện Tu Mơ Rông, tỉnh Kon Tum. Ngoài các phần quà dành tặng phụ huynh có hoàn cảnh khó khăn, đoàn công tác còn trực tiếp tặng nhà trường sân bóng, cỏ nhân tạo, giếng nước và hệ thống xử lý…giúp học sinh có nơi hoạt động thể chất và nước sạch sử dụng.
+
+**PHƯƠNG HƯỚNG SẢN XUẤT KINH DOANH THÁNG 7**
+
+- Đẩy mạnh giám sát, thúc đẩy thực hiện các mục tiêu đầu tư, sản xuất kinh doanh theo kế hoạch năm 2023.
+- Kết thúc chuyển giao các hợp đồng M&A khu vực Long An.
+- Chuẩn bị tốt các dự án dự kiến đầu tư sau năm 2023 để đón đầu cơ hội phát triển sau giai đoạn khó khăn. Tăng cường đào tạo dự nguồn cán bộ quản lý, nâng cao tay nghề và nhận thức người lao động.
+- Tôn chỉ: Sản xuất Xanh An Toàn Bền vững.

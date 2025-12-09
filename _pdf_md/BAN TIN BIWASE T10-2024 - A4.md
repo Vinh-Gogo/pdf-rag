@@ -1,0 +1,48 @@
+ CÔNG TY CP - TỔNG CÔNG TY NƯỚC - MÔI TRƯỜNG BÌNH DƯƠNG (BIWASE) BINH DUONG WATER - ENVIRONMENT CORPORATION - JOINT STOCK COMPANY
+
+ **BẢN TIN BIWASE THÁNG 10 NĂM 2024** (Mã CK: BWE)
+
+**TỔNG HỢP KẾT QUẢ HOẠT ĐỘNG SẢN XUẤT KINH DOANH 10 THÁNG NĂM 2024 CỦA BIWASE**
+
+| STT | NỘI DUNG | ĐVT | THỰC HIỆN 10 THÁNG NĂM 2024 | THỰC HIỆN 10 THÁNG NĂM 2023 | SO VỚI CÙNG KỲ NĂM 2023 | KẾ HOẠCH NĂM 2024 | SO VỚI KẾ HOẠCH NĂM 2024 |
+|-|-|-|-|-|-|-|-|
+| 1 | Tổng công suất cấp nước (hiện có) | m³/ngđ | 822.000 | | | 822.000 | 100% |
+| 2 | Sản lượng nước tiêu thụ | Triệu m³ | 165.589.132 | 152.215.011 | 109% | 192.700.000 | 85,9% |
+| 3 | Tỉ lệ thất thoát nước | % | 4,8% | 5% | 96% | 5% | 96% |
+| 4 | Tổng doanh thu | Tỉ-VNĐ | 3.258 | 2.945 | 111% | 4.100 | 79,5% |
+| 5 | Lợi nhuận sau thuế | Tỉ-VNĐ | 508 | 541 | 94% | 700 | 72,6% |
+
+* Đến tháng 10/2024, doanh thu chưa ghi nhận 243,89 tỉ đồng từ lĩnh vực xử lý chất thải và xử lý nước thải. Nếu cộng thực hiện, tổng doanh thu sẽ đạt 3.502 tỷ đồng, đạt 85% kế hoạch 2024 (4.100 tỷ đồng)*
+* Tổng công suất chưa tính các nhà máy nước ngoài tỉnh Bình Dương*
+
+ **HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
+
+**Ngày 29/10/2024 Bộ trưởng Bộ Nông nghiệp và Phát triển Nông thôn Lê Minh Hoan đã gửi thư cảm ơn Công ty TNHH MTV Liên hợp Khoa học Công nghệ - Môi trường BIWASE E.T.S** vì đã kịp thời chia sẻ, đóng góp tiền của, vật chất, tinh thần, góp phần khắc phục cơn bão số 3 (bão YaGi). Đây là cơn bão dị thường, không theo quy luật, có cường độ mạnh nhất xuất hiện trên Biển Đông trong 30 năm qua và mạnh nhất trên đất liền từ 70 năm qua. Bộ Nông nghiệp và Phát triển Nông thôn cam kết hợp tác chặt chẽ với các nhà tài trợ xây dựng nền nông nghiệp bền vững, nâng cao hiệu quả chống chịu trước thách thức từ thiên nhiên và biến đổi khí hậu, triển khai đồng bộ các giải pháp từ cơ chế chính sách đến công trình và phi công trình nhằm hạn chế rủi ro, khắc phục hậu quả thiên tai theo phương châm "Từ ứng phó đến hành động sớm, tăng cường chống chịu".
+
+
+**Ngày 23/10 tại TP. Cần Thơ, Công ty cổ phần Nước Sài Gòn - Cần Thơ tổ chức đại hội cổ đông bất thường** miễn nhiệm toàn bộ HĐQT (từ năm 2015 đến nay) và các chức danh liên quan. Thông qua các tờ trình, tăng vốn điều lệ, đổi tên công ty thành Công ty cổ phần Nước BIWASE Cần Thơ. Nhà máy nước Sài Gòn – Cần Thơ công suất 50.000 m3 /ngày đêm, đã được UBND thành phố Cần Thơ phê duyệt bởi quyết định chủ trương đầu tư số 1361/QĐ-UBND ngày 13/5/2016. Công trình đã triển khai được 50% thì dừng cho đến nay do ảnh hưởng đại dịch covid -19. Nhằm tiếp tục nhiệm vụ cấp nước, phục vụ yêu cầu phát triển kinh tế - xã hội tại địa phương, HĐQT (2024) tiến hành phiên họp đầu tiên và bỏ phiếu thống nhất với tỷ lệ tuyệt đối 100% phân công bà Trương Thu Dung giữ chức Chủ tịch HĐQT; ông Mai Song Hào giữ chức Phó Chủ tịch HĐQT – Tổng Giám đốc, đại diện pháp luật; ông Nguyễn Hiền Triết, thành viên HĐQT; ông Trần Đức Tiến giữ chức Phó Tổng Giám đốc và quyết định tăng vốn điều lệ từ 50 tỷ đồng lên 100 tỷ đồng, tương đương 10 triệu cổ phần.
+
+**Thương hiệu BIWASE được quan tâm tại Tuần lễ nước Việt Nam 2024.** Là sự kiện diễn ra thường niên là điểm nhấn quan trọng của ngành nước; nơi các chuyên gia đầu ngành cấp thoát nước trong nước và quốc tế bàn thảo và đưa ra các giải pháp ứng phó bền vững với biến đổi khí hậu; thời tiết cực đoan gây cạn kiệt nguồn nước và các vấn đề phát sinh khác. BIWASE được biết đến là doanh nghiệp hàng đầu ngành nước Việt Nam về hiệu quả sản xuất kinh doanh; quản trị doanh nghiệp; quản lý dự án; xử lý môi trường – đốt rác phát điện – năng lượng tái tạo và công nghệ tự động hóa. Dự kiến tại Tuần lễ nước Việt Nam 2024 đại diện Chính phủ và Hội nước Indonesia sẽ tiếp tục triển khai nhiều chương trình hợp tác về quản trị doanh nghiệp, vận dụng chính sách, chống thất thoát và cấp nước an toàn, hiệu quả mà trước đó BIWASE đã ký kết**.**
+
+
+**Xuất khẩu lô hàng phân bón hữu cơ Con Voi Bình Dương.** Chi nhánh thương mại Con Voi Bình Dương vừa xuất khẩu lô hàng 200 tấn phân bón hữu cơ sang tỉnh Chăm Pa Sắc (Lào) theo hợp đồng số 37- 2024/HĐMB-DTL ký ngày 20/08/2024 với Công ty TNHH MTV CPPT Cao su Dầu Tiếng Việt Lào. Phân bón hữu cơ Con Voi Bình Dương gồm 15 loại phù hợp với tất cả các loại cây trồng được Cục Trồng trọt – Bộ Nông nghiệp & Phát triển nông thôn cấp phép lưu hành toàn quốc. Lô hàng phân bón xuất khẩu đánh dấu bước phát triển, uy tín, hiệu quả của Phân bón Con Voi Bình Dương trong nền nông nghiệp hiện nay.
+
+**Ngày 11/10/2024 UBND tỉnh Bình Dương tổ chức họp mặt kỷ niệm 20 năm ngày Doanh Nhân Việt Nam (13/10/2004 – 13/10/2024) và tôn vinh doanh nghiệp, doanh nhân tiêu biểu năm 2024.** Trong bối cảnh kinh tế thế giới và trong nước còn nhiều khó khăn, thách thức, cộng đồng doanh nghiệp Bình Dương đã phát huy tinh thần năng động, sáng tạo, dám nghĩ, dám làm, vượt qua khó khăn, thử thách, đạt được nhiều kết quả tích cực, đóng góp quan trọng vào sự phát triển kinh tế - xã hội của tỉnh. Các doanh nghiệp đã chủ động đổi mới, sáng tạo, ứng dụng khoa học - công nghệ tiên tiến, nâng cao năng lực cạnh tranh, mở rộng thị trường, tạo ra nhiều sản phẩm, dịch vụ có chất lượng, đáp ứng nhu cầu ngày càng cao của người tiêu dùng. Bên cạnh đó, các doanh nghiệp cũng tích cực tham gia các hoạt động an sinh xã hội, góp phần xây dựng quê hương Bình Dương ngày càng giàu đẹp, văn minh. Ông Nguyễn Văn Thiền - Chủ tịch HĐQT – Công ty CP - Tổng công ty Nước - Môi trường Bình Dương; Ông Trần Chiến Công - Tổng giám đốc Công ty CP - Tổng công ty Nước - Môi trường Bình Dương và Công ty CP - Tổng công ty Nước - Môi trường Bình Dương (BIWASE) vinh dự được UBND tỉnh tặng bằng khen về thành tích trong hoạt động sản xuất kinh doanh.
+
+**Chi nhánh cấp nước Khu Liên Hợp lắp đồng hồ thông minh.** Hướng đến đô thị thông minh và chuyển đổi số doanh nghiệp, bảo đảm cấp nước an toàn, đo đếm chính xác, bao quát địa bàn rộng lớn. Chi nhánh cấp nước Khu Liên Hợp đang triển khai lắp đặt đồng hồ nước thông minh tại nhiều chung cư cao tầng, khu đô thị cao cấp tại Thành phố mới Bình Dương, thành phố Bến Cát, một phần huyện Dầu Tiếng, Phú Giáo…Đồng hồ nước thông minh đã mang lại nhiều tiện ích cho khách hàng, bảo đảm đo đếm chính xác, phòng chống thất thoát, tiện lợi trong chi trả. Hiện chi nhánh đã triển khai 18.000/70.000 khách hàng, chiếm tỷ lệ 20% khách hàng đã lắp đặt đồng hồ nước thông minh. Nhờ làm tốt công tác dịch vụ khách hàng, cấp nước an toàn liên tục, BIWASE được UBND tỉnh Bình Dương tặng bằng khen về thành tích sản xuất kinh doanh hiệu quả.
+
+**BIWASE Long An công bố chất lượng nước đạt và tốt hơn tiêu chuẩn.** Kết quả thử nghiệm nước sau xử lý tại Nhà máy nước mặt Nhị Thành, địa chỉ ấp 7, xã Nhị Thành, huyện Thủ Thừa, tỉnh Long An do Phòng Thí nghiệm - Công ty cổ phần Cấp Thoát Nước Long An chứng nhận. Kết quả 7 chỉ tiêu về màu sắc, mùi vị, độ đục, hàm lượng Clo dư… đều đạt và tốt hơn tiêu chuẩn cho phép (TCVN 1687-1:2019). Trong đó nhiều chỉ tiêu quan trọng như Coliform, Ecoli = 0, thấp hơn 1 đến 3 lần con số cho phép.
+
+ **HOẠT ĐỘNG KHÁC**
+
+**Với thành tích 4 huy chương vàng do 2 Cuaro nữ Đinh Thị Như Quỳnh và Bùi Thị Quỳnh đạt được**. Đội tuyển BIWASE giành tiếp 5 huy chương Bạc và 4 huy chương Đồng. Kết quả đội tuyển BIWASE xếp hạng Ba chung cuộc ở nội dung đua đường trường nữ Giải vô địch Xe đạp địa hình và Đường trường Quốc gia lần thứ 38 năm 2024 do Bộ Văn hóa Thể thao - Du lịch và UBND tỉnh Hòa Bình tổ chức (hạng nhất thuộc về đội An Giang và hạng nhì là đội TP.Hồ Chí Minh) diễn ra từ ngày 09 đến 20/10/2024. Tham dự giải có 200 vận động viên nam, nữ đến từ 13 đoàn của các tỉnh, thành, ngành: Hà Nội, Thanh Hóa, An Giang, Đồng Tháp, Bình Dương, Quân đội, Thành phố Hồ Chí Minh, Đồng Nai, Vĩnh Long, Hòa Bình…
+
+**Nhiều hoạt động chào mừng kỷ niệm ngày Phụ Nữ Việt Nam 20/10.** Kỷ niệm 94 năm ngày Thành lập Hội Liên hiệp Phụ Nữ Việt Nam (20/10/1930 – 20/10/2024) Công đoàn và Chi hội Phụ nữ cơ sở Tổng Công ty BIWASE cùng các công ty, chi nhánh trực thuộc đồng loạt tổ chức các hoạt động chào mừng, liên hoan, khen thưởng phụ nữ "Giỏi việc nước – Đảm việc nhà", hoàn thành xuất sắc nhiệm vụ công tác. Ngoài tiệc liên hoan, họp mặt, Chi nhánh cấp nước Khu Liên hợp còn tổ chức sinh hoạt về bình đẳng giới, vai trò của phụ nữ trong hoạt động sản xuất kinh doanh và tặng quà lưu niệm cho chị em nhân kỷ niệm 94 năm thành lập Hội Liên Hiệp Phụ Nữ Việt Nam.
+
+
+
+ **PHƯƠNG HƯỚNG SẢN XUẤT KINH DOANH THÁNG 11 NĂM 2024**
+
+- Mùa mưa sắp kết thúc, mùa nắng sẽ tới, các cơ sở sản xuất cung cấp nước tập trung chuẩn bị mọi mặt để phục vụ tốt nhu cầu sử dụng nước trong mùa khô.
+- Tập trung nhân lực thi công các công trình đã đủ điều kiện thực hiện như Long An, Bình Phước, Cần thơ, Gia Tân (Đồng Nai).
+- Tập trung thu hồi kinh phí các hợp đồng dịch vụ xử lý nước thải, rác thải.

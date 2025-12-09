@@ -42,6 +42,7 @@ src/data/cleaned_file_2.md
 src/data/cleaned_source.txt
 *.txt
 *.log
+*.chunks.jsonl
 
 src/data/markdown
 

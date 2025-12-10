@@ -1,4 +1,4 @@
-from src.models.halong_embedd import HalongEmbedding as QwenEmbedding
+from src.models.embedd import QwenEmbedding
 
 # Test CUDA configuration
 embedder = QwenEmbedding()

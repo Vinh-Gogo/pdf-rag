@@ -1,0 +1,749 @@
+{
+  "metrics": {
+    "total_queries": 123,
+    "accuracy@1": 0.3089430894308943,
+    "accuracy@3": 0.43089430894308944,
+    "accuracy@5": 0.4796747967479675,
+    "mrr": 0.3951175175964121
+  },
+  "details": [
+    {
+      "query": "Ngày nào được đề cập trong văn bản?",
+      "expected_file": "BAN TIN BIWASE T1-2025 -A4 V2.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Số liệu 6,969 km liên quan đến nội dung gì?",
+      "expected_file": "BAN TIN BIWASE T1-2025 -A4 V2.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Thông tin về BIWASE THÁNG 1 NĂM 2025** (Mã CK trong văn bản là gì?",
+      "expected_file": "BAN TIN BIWASE T1-2025 -A4 V2.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "BẢN TIN BIWASE THÁNG 1 NĂM 2025 là gì?",
+      "expected_file": "BAN TIN BIWASE T1-2025 -A4 V2.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Thông tin về \"- Mùa mưa sắp kết thúc, mùa nắng...\" là gì?",
+      "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Sự kiện này diễn ra vào thời gian nào?",
+      "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
+      "rank": 17,
+      "found": true
+    },
+    {
+      "query": "Thông tin về Công ty BIWASE cùng các công ty trong văn bản là gì?",
+      "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
+      "rank": 10,
+      "found": true
+    },
+    {
+      "query": "Thông tin chi tiết về Nhiều hoạt động chào mừng kỷ niệm ngày Phụ Nữ Việt Nam 20/10.?",
+      "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Kết quả đạt được là bao nhiêu?",
+      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
+      "rank": 7,
+      "found": true
+    },
+    {
+      "query": "BIWASE Long An phát hành thành công 700 tỷ đồng trái phiếu. là gì?",
+      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "BIWASE (mã cổ phiếu BWE) được Hội đồng bình chọn v đã thực hiện hoạt động gì?",
+      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Ngày nào được đề cập trong văn bản?",
+      "expected_file": "BAN TIN BIWASE T12-2023 - A4.md",
+      "rank": 6,
+      "found": true
+    },
+    {
+      "query": "Thông tin về BIWASE TOP 50 Doanh Nghiệp Niêm Yết Tốt Nhất Việt  trong văn bản là gì?",
+      "expected_file": "BAN TIN BIWASE T12-2023 - A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Thông tin về \"Thủ tướng Chính phủ tặng bằng khen cho...\" là gì?",
+      "expected_file": "BAN TIN BIWASE T12-2023 - A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Sự kiện này diễn ra vào thời gian nào?",
+      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Trái phiếu BIWASE được xếp hạng tín dụng AAA là gì?",
+      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Thông tin về Công ty BECAMEX - đơn vị quản lý vốn Nhà nước tại  trong văn bản là gì?",
+      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
+      "rank": 3,
+      "found": true
+    },
+    {
+      "query": "Thông tin về BIWASE THÁNG 2 NĂM 2024** (Mã CK trong văn bản là gì?",
+      "expected_file": "BAN TIN BIWASE T2-2024 - (2)A4.md",
+      "rank": 8,
+      "found": true
+    },
+    {
+      "query": "Thông tin chi tiết về BẢN TIN BIWASE THÁNG 2 NĂM 2024?",
+      "expected_file": "BAN TIN BIWASE T2-2024 - (2)A4.md",
+      "rank": 3,
+      "found": true
+    },
+    {
+      "query": "Nội dung liên quan đến BẢN TIN BIWASE THÁNG 2 NĂM 2024 là gì?",
+      "expected_file": "BAN TIN BIWASE T2-2024 - (2)A4.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "THÁNG 2 có sự kiện gì xảy ra?",
+      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
+      "rank": 15,
+      "found": true
+    },
+    {
+      "query": "BIWASE THÁNG 2 NĂM 2025** (Mã CK đã thực hiện hoạt động gì?",
+      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
+      "rank": 3,
+      "found": true
+    },
+    {
+      "query": "Thông tin chi tiết về BẢN TIN BIWASE THÁNG 2 NĂM 2025?",
+      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "THÁNG 2 có sự kiện gì xảy ra?",
+      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
+      "rank": 15,
+      "found": true
+    },
+    {
+      "query": "Số liệu 43% liên quan đến nội dung gì?",
+      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "BẢN TIN BIWASE THÁNG 2 NĂM 2025 là gì?",
+      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Ngày nào được đề cập trong văn bản?",
+      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Công ty cổ phần Đầu tư Xây dựng Chánh Phú Hòa đã l đã thực hiện hoạt động gì?",
+      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
+      "rank": 3,
+      "found": true
+    },
+    {
+      "query": "Sự kiện này diễn ra vào thời gian nào?",
+      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
+      "rank": 15,
+      "found": true
+    },
+    {
+      "query": "Nội dung liên quan đến Đoàn Thanh niên BIWASE đóng góp 240 đơn vị máu. là gì?",
+      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Thông tin về Chi nhánh thương mại Con Voi cử chuyên gia hướng d trong văn bản là gì?",
+      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Ngày nào được đề cập trong văn bản?",
+      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Số liệu 18% liên quan đến nội dung gì?",
+      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Thông tin về Chi nhánh cấp nước Chơn Thành tăng 18% sản lượng s trong văn bản là gì?",
+      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Ngày nào được đề cập trong văn bản?",
+      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
+      "rank": 3,
+      "found": true
+    },
+    {
+      "query": "Số liệu 1.878 tỷ liên quan đến nội dung gì?",
+      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
+      "rank": 7,
+      "found": true
+    },
+    {
+      "query": "Tổng công ty BIWASE (mã cổ phiếu BWE) đã có cuộc g có vai trò gì trong nội dung này?",
+      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Ngày nào được đề cập trong văn bản?",
+      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
+      "rank": 3,
+      "found": true
+    },
+    {
+      "query": "Số liệu 1 triệu liên quan đến nội dung gì?",
+      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
+      "rank": 12,
+      "found": true
+    },
+    {
+      "query": "Công ty Cổ phần - Tổng Công ty Nước - Môi trường B đã thực hiện hoạt động gì?",
+      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Thông tin chi tiết về Phân bón Con Voi Bình Dương tài trợ chương trình 1 triệu hecta lúa chất lượng ca?",
+      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Kết quả đạt được là bao nhiêu?",
+      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
+      "rank": 6,
+      "found": true
+    },
+    {
+      "query": "Thông tin chi tiết về HOẠT ĐỘNG SẢN XUẤT KINH DOANH?",
+      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Kết quả đạt được là bao nhiêu?",
+      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
+      "rank": 3,
+      "found": true
+    },
+    {
+      "query": "Công ty cổ phần Nước BIWASE Long An đã dành 40 phầ đã thực hiện hoạt động gì?",
+      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
+      "rank": 20,
+      "found": true
+    },
+    {
+      "query": "Đại diện Ngân hàng MayBank (Malaysia) và các đơn vị liên quan vừa có chuyến thăm là gì?",
+      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "An Giang, nông dân tự tin sử dụng phân bón hữu cơ Con Voi Bình Dương là gì?",
+      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Thông tin về \"**Năm 2025 báo cáo tài chính của BIWASE...\" là gì?",
+      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
+      "rank": 11,
+      "found": true
+    },
+    {
+      "query": "tháng 12 có sự kiện gì xảy ra?",
+      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
+      "rank": 6,
+      "found": true
+    },
+    {
+      "query": "Con số 20 triệu thể hiện điều gì?",
+      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
+      "rank": 14,
+      "found": true
+    },
+    {
+      "query": "Nội dung liên quan đến Truyền hơi ấm cho trẻ em bất hạnh. là gì?",
+      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Ngày nào được đề cập trong văn bản?",
+      "expected_file": "ban-tin-biwase-t1-2024-a4.md",
+      "rank": 12,
+      "found": true
+    },
+    {
+      "query": "Số liệu 5% liên quan đến nội dung gì?",
+      "expected_file": "ban-tin-biwase-t1-2024-a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "PHƢƠNG HƢỚNG SẢN XUẤT KINH DOANH ĐẦU NĂM MỚI là gì?",
+      "expected_file": "ban-tin-biwase-t1-2024-a4.md",
+      "rank": 5,
+      "found": true
+    },
+    {
+      "query": "Thông tin về \"CÔNG TY CP - TỔNG CÔNG TY NƯỚC...\" là gì?",
+      "expected_file": "ban-tin-biwase-t1-2024-a4.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "ông Nguyễn Văn Thiền có liên quan đến sự kiện nào?",
+      "expected_file": "ban-tin-biwase-t10-2023---a4-(1).md",
+      "rank": 9,
+      "found": true
+    },
+    {
+      "query": "25/10/2023 có sự kiện gì xảy ra?",
+      "expected_file": "ban-tin-biwase-t10-2023---a4-(1).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "bà Lê Thị Ngọc Yến đã phát biểu hoặc làm gì?",
+      "expected_file": "ban-tin-biwase-t10-2023---a4-(1).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nội dung liên quan đến Kết nối vùng tạo đầu ra bền vững cho nông sản: là gì?",
+      "expected_file": "ban-tin-biwase-t10-2023---a4-(1).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Ngày nào được đề cập trong văn bản?",
+      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
+      "rank": 18,
+      "found": true
+    },
+    {
+      "query": "Thông tin về \"- Chuẩn bị tốt nhất năng lực kinh...\" là gì?",
+      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Thông tin về BIWELCO động thổ xây dựng tuyến ống gang DN1600 trong văn bản là gì?",
+      "expected_file": "ban-tin-biwase-t11-2023---a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Thông tin chi tiết về Xe đạp nữ BIWASE đạt giải Nhất Hội thao Chào mừng Đại hội Chi hội Cấp Thoát nước?",
+      "expected_file": "ban-tin-biwase-t11-2023---a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Sự kiện này diễn ra vào thời gian nào?",
+      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Kết quả đạt được là bao nhiêu?",
+      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "BIWASE giành giải Nhất Đồng Đội Giải Xe Đạp Nữ Quố có vai trò gì trong nội dung này?",
+      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
+      "rank": 3,
+      "found": true
+    },
+    {
+      "query": "Sự kiện này diễn ra vào thời gian nào?",
+      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Kết quả đạt được là bao nhiêu?",
+      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Thông tin về BIWASE được đẩy mạnh trong văn bản là gì?",
+      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Số liệu 150 triệu liên quan đến nội dung gì?",
+      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Thông tin về Tổng công ty BIWASE đã phối hợp báo Sài Gòn Giải P trong văn bản là gì?",
+      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
+      "rank": 9,
+      "found": true
+    },
+    {
+      "query": "ông Nguyễn Văn Thủy đã phát biểu hoặc làm gì?",
+      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
+      "rank": 16,
+      "found": true
+    },
+    {
+      "query": "Ngày nào được đề cập trong văn bản?",
+      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Thông tin về Tổng công ty BIWASE luôn giữ vững quan điểm \"Cung  trong văn bản là gì?",
+      "expected_file": "ban-tin-biwase-t4-2025--a4.md",
+      "rank": 16,
+      "found": true
+    },
+    {
+      "query": "Lựa chọn khách hàng dịch vụ xử lý chất thải. là gì?",
+      "expected_file": "ban-tin-biwase-t4-2025--a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Sự kiện này diễn ra vào thời gian nào?",
+      "expected_file": "ban-tin-biwase-t4-2025--a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "THÁNG 5 có sự kiện gì xảy ra?",
+      "expected_file": "ban-tin-biwase-t5-2025--a4.md",
+      "rank": 10,
+      "found": true
+    },
+    {
+      "query": "Con số 100% thể hiện điều gì?",
+      "expected_file": "ban-tin-biwase-t5-2025--a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Thông tin về BIWASE) BINH DUONG WATER - ENVIRONMENT CORPORATION trong văn bản là gì?",
+      "expected_file": "ban-tin-biwase-t5-2025--a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Con số 40% thể hiện điều gì?",
+      "expected_file": "ban-tin-biwase-t5-2025--a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Công ty cổ phần Cấp nước Vĩnh Long (mã chứng khoán đã thực hiện hoạt động gì?",
+      "expected_file": "ban-tin-biwase-t5-2025--a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Sự kiện này diễn ra vào thời gian nào?",
+      "expected_file": "ban-tin-biwase-t6-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Con số 840 tấn thể hiện điều gì?",
+      "expected_file": "ban-tin-biwase-t6-2023---a4.md",
+      "rank": 11,
+      "found": true
+    },
+    {
+      "query": "Công ty BIWASE trực tiếp chỉ đạo đội ngũ khoa học  đã thực hiện hoạt động gì?",
+      "expected_file": "ban-tin-biwase-t6-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Thông tin về \"• **Ứng dụng công nghệ cao, tăng hiệu...\" là gì?",
+      "expected_file": "ban-tin-biwase-t6-2023---a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Thông tin về \"- Tập trung triển khai 2 dự án...\" là gì?",
+      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Số liệu 5% liên quan đến nội dung gì?",
+      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
+      "rank": 20,
+      "found": true
+    },
+    {
+      "query": "BIWASE đã giới thiệu quá trình làm chủ công nghệ đã thực hiện hoạt động gì?",
+      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Thông tin chi tiết về Bộ Nội vụ Cộng hoà Indonesia (MOHA) và chính quyền tỉnh Nam Sumatra đã mời lãnh ?",
+      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Thông tin về BIWASE tiếp quản (2021) điều hành đến nay trong văn bản là gì?",
+      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Số liệu 24MW liên quan đến nội dung gì?",
+      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Công ty cổ phần BIWELCO làm tổng thầu Nhà máy điện đã thực hiện hoạt động gì?",
+      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Nội dung liên quan đến Công ty cổ phần BIWELCO làm tổng thầu Nhà máy điện rác BIWASE công suất 24MW. là gì?",
+      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Thông tin về \"**Ngày 20/07 tại Hà Nội đã diễn ra...\" là gì?",
+      "expected_file": "ban-tin-biwase-t7-2023--(1)-a4.md",
+      "rank": 10,
+      "found": true
+    },
+    {
+      "query": "THÁNG 8 có sự kiện gì xảy ra?",
+      "expected_file": "ban-tin-biwase-t7-2023--(1)-a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Thông tin chi tiết về Chuẩn bị bàn giao công trình trường mầm non Dăk Tơ Kang, huyện Tu Mơ Rông, tỉnh ?",
+      "expected_file": "ban-tin-biwase-t7-2023--(1)-a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "năm 2020 có sự kiện gì xảy ra?",
+      "expected_file": "ban-tin-biwase-t7-2025--a4(3).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nội dung liên quan đến Đại diện Công ty Craft Vina tham quan, hợp tác xử lý chất thải tại BIWASE E.T.S. là gì?",
+      "expected_file": "ban-tin-biwase-t7-2025--a4(3).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Sự kiện này diễn ra vào thời gian nào?",
+      "expected_file": "ban-tin-biwase-t8-2023-.md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Tranh Cup Tứ Hùng chào mừng Quốc Khánh 2/9. là gì?",
+      "expected_file": "ban-tin-biwase-t8-2023-.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Con số 3% thể hiện điều gì?",
+      "expected_file": "ban-tin-biwase-t8-2023-.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "BIWASE phát triển ra bên ngoài vì mục đích phụng sự cộng đồng và bảo vệ môi trườ là gì?",
+      "expected_file": "ban-tin-biwase-t8-2023-.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Thông tin về BIWASE – XYLEM SOLUTION\" nổi bật với những sản phẩ trong văn bản là gì?",
+      "expected_file": "ban-tin-biwase-t8-2025--a4(2).md",
+      "rank": 19,
+      "found": true
+    },
+    {
+      "query": "Kết quả đạt được là bao nhiêu?",
+      "expected_file": "ban-tin-biwase-t8-2025--a4(2).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "BIWASE) BINH DUONG WATER - ENVIRONMENT CORPORATION đã thực hiện hoạt động gì?",
+      "expected_file": "ban-tin-biwase-t8-2025--a4(2).md",
+      "rank": 14,
+      "found": true
+    },
+    {
+      "query": "Công ty CP – Tổng Công ty Nước – Môi trường Bình Dương BIWASE là gì?",
+      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Ngày nào được đề cập trong văn bản?",
+      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Con số 5% thể hiện điều gì?",
+      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Thông tin về BIWASE hạng Nhất bóng đá trong văn bản là gì?",
+      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Sự kiện này diễn ra vào thời gian nào?",
+      "expected_file": "ban-tin-biwase-t9-2025--a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Sự kiện này diễn ra vào thời gian nào?",
+      "expected_file": "ban-tin-biwase-t9-2025--a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Ngày nào được đề cập trong văn bản?",
+      "expected_file": "ban_tin_biwase_t2_2023.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Thông tin chi tiết về Biwase đi đầu sử dụng năng lượng tái tạo so với các công ty cùng ngành:?",
+      "expected_file": "ban_tin_biwase_t2_2023.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Sự kiện này diễn ra vào thời gian nào?",
+      "expected_file": "ban_tin_biwase_t2_2023.md",
+      "rank": 11,
+      "found": true
+    },
+    {
+      "query": "Con số 189 tỷ thể hiện điều gì?",
+      "expected_file": "ban_tin_biwase_t2_2023.md",
+      "rank": 10,
+      "found": true
+    },
+    {
+      "query": "năm 2022 có sự kiện gì xảy ra?",
+      "expected_file": "ban_tin_biwase_t4_2023.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nội dung liên quan đến Ngày 14/4 đã diễn ra Đại hội Công đoàn cơ sở Công ty CP – Tổng công ty Nước - Mô là gì?",
+      "expected_file": "ban_tin_biwase_t4_2023.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Thông tin về \"• **Giám đốc Sở Nông nghiệp và Phát...\" là gì?",
+      "expected_file": "ban_tin_biwase_t4_2023.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "năm 2017 có sự kiện gì xảy ra?",
+      "expected_file": "ban_tin_biwase_t5_2023.md",
+      "rank": 10,
+      "found": true
+    },
+    {
+      "query": "Kết quả đạt được là bao nhiêu?",
+      "expected_file": "ban_tin_biwase_t5_2023.md",
+      "rank": 15,
+      "found": true
+    },
+    {
+      "query": "Chi nhánh Xử lý chất thải Bình Dương đã thực hiện hoạt động gì?",
+      "expected_file": "ban_tin_biwase_t5_2023.md",
+      "rank": 13,
+      "found": true
+    },
+    {
+      "query": "Thông tin về Chi nhánh Xử lý chất thải đã hoàn tất trong văn bản là gì?",
+      "expected_file": "ban_tin_biwase_t5_2023.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Thông tin chi tiết về Tổ hợp lò hơi - turbine – phát điện công suất 5MW thu hồi nhiệt từ lò đốt rác sắ?",
+      "expected_file": "ban_tin_biwase_t5_2023.md",
+      "rank": 1,
+      "found": true
+    }
+  ]
+}

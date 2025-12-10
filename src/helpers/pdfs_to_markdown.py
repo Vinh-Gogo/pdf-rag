@@ -15,64 +15,65 @@ from pathlib import Path
 import os
 from datetime import datetime
 
-def run_marker(pdf_path: Path, output_dir: Path, use_gpu: bool = False, gpu_id: int = 0) -> subprocess.CompletedProcess:
-    """Run marker_single on a single PDF and return the CompletedProcess.
-    Tries the executable first, then falls back to `python -m marker_single` if needed.
-    If use_gpu is True, sets common CUDA env hints (no CLI flags) and falls back to CPU if the executable is missing.
+def run_marker(pdf_path: Path, output_dir: Path, use_gpu: bool = False, gpu_id: int = 0):
+    """Run marker on a single PDF using the Python API.
+    Returns an object with returncode, stdout, stderr attributes.
     """
-    def device_env() -> dict[str, str] | None:
-        if not use_gpu:
-            return None
-        env = os.environ.copy()
-        env.setdefault("CUDA_VISIBLE_DEVICES", str(gpu_id))
-        return env
-
-    # We do not pass a --device flag; marker_single doesn't support it. Rely on CUDA_VISIBLE_DEVICES and library auto-detection.
-    # Optional: log basic GPU detection to stdout for user visibility.
-    if use_gpu:
-        try:
-            import torch  # type: ignore
-            print(f"[gpu] torch.cuda.is_available() = {torch.cuda.is_available()}")
-        except Exception:
-            print("[gpu] torch not available; proceeding to set CUDA_VISIBLE_DEVICES only.")
-
-    # 1) Try direct executable
-    exec_cmd = ["marker_single", str(pdf_path), "--output_dir", str(output_dir)]
     try:
-        proc = subprocess.run(
-            exec_cmd,
-            capture_output=True,
-            text=True,
-            check=False,
-            env=device_env(),
-        )
-        # If the executable isn't found or clearly not available, fall back to module
-        not_found_markers = ("not found", "not recognized", "No such file or directory")
-        if proc.returncode != 0 and (
-            any(m in (proc.stderr or "") for m in not_found_markers) or proc.returncode == 127
-        ):
-            raise FileNotFoundError("marker_single executable not available")
-        return proc
-    except FileNotFoundError:
-        # 2) Try as a module with current Python
-        module_cmd = [
-            sys.executable,
-            "-m",
-            "marker_single",
-            str(pdf_path),
-            "--output_dir",
-            str(output_dir),
-            "--force_ocr",
-            # "--use_gpu"
-        ]
-        proc2 = subprocess.run(
-            module_cmd,
-            capture_output=True,
-            text=True,
-            check=False,
-            env=device_env(),
-        )
-        return proc2
+        from marker.converters.pdf import PdfConverter
+        from marker.models import create_model_dict
+        from marker.output import text_from_rendered
+        
+        # Set GPU device if requested
+        if use_gpu:
+            os.environ["CUDA_VISIBLE_DEVICES"] = str(gpu_id)
+            try:
+                import torch
+                print(f"[gpu] torch.cuda.is_available() = {torch.cuda.is_available()}")
+            except Exception:
+                print("[gpu] torch not available")
+        
+        # Initialize converter with models
+        artifact_dict = create_model_dict()
+        converter = PdfConverter(artifact_dict=artifact_dict)
+        
+        # Convert PDF
+        rendered = converter(str(pdf_path))
+        
+        # Extract markdown text - rendered is a RenderedOutput object
+        if hasattr(rendered, 'markdown'):
+            markdown_text = rendered.markdown
+        elif hasattr(rendered, 'text'):
+            markdown_text = rendered.text
+        else:
+            # Try text_from_rendered helper
+            markdown_text = text_from_rendered(rendered)
+        
+        # Write output
+        output_file = output_dir / f"{pdf_path.stem}.md"
+        output_dir.mkdir(parents=True, exist_ok=True)
+        
+        with open(output_file, "w", encoding="utf-8") as f:
+            f.write(markdown_text)
+        
+        # Return success result compatible with old interface
+        class MockProc:
+            returncode = 0
+            stdout = f"Success: {output_file}"
+            stderr = ""
+        
+        return MockProc()
+        
+    except Exception as e:
+        import traceback
+        error_msg = f"{type(e).__name__}: {e}\n{traceback.format_exc()}"
+        
+        class MockProc:
+            returncode = 1
+            stdout = ""
+            stderr = error_msg
+        
+        return MockProc()
 
 def convert_batch(input_dir: Path, output_dir: Path, overwrite: bool, log_dir: Path, start_index: int = 1, use_gpu: bool = False, gpu_id: int = 0) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -135,8 +136,8 @@ def convert_batch(input_dir: Path, output_dir: Path, overwrite: bool, log_dir: P
 
 def parse_args(argv=None):
     p = argparse.ArgumentParser(description="Batch convert PDFs to Markdown using marker_single.")
-    p.add_argument("--input_dir", default="src/data/pdfs/inputs", help="Directory containing PDF files")
-    p.add_argument("--output_dir", default="src/data/pdfs/outputs", help="Directory to write markdown files")
+    p.add_argument("--input_dir", default="src/data/pdfs/inputs_new", help="Directory containing PDF files")
+    p.add_argument("--output_dir", default="src/data/pdfs/outputs_new", help="Directory to write markdown files")
     p.add_argument("--overwrite", help="Overwrite existing markdown files")
     p.add_argument("--log_dir", default="src/data/markdown/markdown_logs", help="Directory to write conversion logs")
     p.add_argument("--start_index", type=int, default=1, help="1-based index of the first file to process after sorting") # Default to 93 for resuming large batches

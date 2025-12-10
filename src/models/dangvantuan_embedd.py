@@ -180,42 +180,42 @@ class DangVanTuanEmbedding:
 if __name__ == "__main__":
     # Khởi tạo model
     embedding = DangVanTuanEmbedding()
-    
+
     print("=" * 70)
     print("Ví dụ 1: Tạo embeddings cho câu văn")
     print("=" * 70)
-    
+
     sentences = [
         "Hà Nội là thủ đô của Việt Nam",
         "Đà Nẵng là thành phố du lịch"
     ]
-    
+
     embeddings = embedding.get_embedding_array(sentences)
     print(f"\nĐã tạo embeddings cho {len(sentences)} câu:")
     for idx, (sentence, emb) in enumerate(zip(sentences, embeddings)):
         print(f"  [{idx}] '{sentence}'")
         print(f"      Shape: {emb.shape}, First 5 values: {emb[:5]}")
-    
+
     print("\n" + "=" * 70)
     print("Ví dụ 2: Tính similarity giữa các câu văn")
     print("=" * 70)
-    
+
     text1 = "Hà Nội là thủ đô của Việt Nam"
     text2 = "Thủ đô Việt Nam là Hà Nội"
     text3 = "Đà Nẵng là thành phố du lịch"
-    
+
     sim_12 = embedding.calculate_similarity(text1, text2)
     sim_13 = embedding.calculate_similarity(text1, text3)
     sim_23 = embedding.calculate_similarity(text2, text3)
-    
+
     print(f"\nSimilarity('{text1}', '{text2}'): {sim_12:.4f}")
     print(f"Similarity('{text1}', '{text3}'): {sim_13:.4f}")
     print(f"Similarity('{text2}', '{text3}'): {sim_23:.4f}")
-    
+
     print("\n" + "=" * 70)
     print("Ví dụ 3: Tìm documents liên quan đến query")
     print("=" * 70)
-    
+
     query = "Thủ đô Việt Nam"
     docs = [
         "Hà Nội là thủ đô của Việt Nam từ năm 1010",
@@ -224,26 +224,26 @@ if __name__ == "__main__":
         "Thăng Long là tên cũ của Hà Nội",
         "Sài Gòn là tên cũ của TP. Hồ Chí Minh"
     ]
-    
+
     print(f"Query: {query}\n")
-    
+
     # Tìm top-3 documents
     top_results = embedding.find_most_similar(query, docs, top_k=3)
-    
+
     for rank, (doc, score, idx) in enumerate(top_results, 1):
         print(f"\nTop {rank}:")
         print(f"  Index: {idx}")
         print(f"  Score: {score:.4f}")
         print(f"  Document: {doc}")
-    
+
     print("\n" + "=" * 70)
     print("Ví dụ 4: Xếp hạng tất cả documents")
     print("=" * 70)
-    
+
     query2 = "Thành phố du lịch"
     print(f"Query: {query2}\n")
-    
+
     sorted_docs, sorted_scores, sorted_indices = embedding.rank_documents(query2, docs)
-    
+
     for doc, score, idx in zip(sorted_docs, sorted_scores, sorted_indices):
         print(f"[{idx}] Score: {score:.4f} - {doc}")

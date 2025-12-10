@@ -20,10 +20,10 @@ timm>=0.9.0
 sentence_transformers
 
 # OCR & Vision
-# marker-pdf[full]
-# opencv-python-headless>=4.8.0
-# Pillow>=10.0.0
-# pycocotools>=2.0.6
+marker-pdf==1.9.2
+opencv-python-headless>=4.8.0
+Pillow>=10.0.0
+pycocotools>=2.0.6
 
 # PDF Processing
 PyMuPDF

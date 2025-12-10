@@ -1,6 +1,13 @@
-# filepath: d:\WETEC\ai_multi_agents\src\models\embedd.py
 import torch
+import sys
+import os
 from pathlib import Path
+
+# Fix for Windows Triton issue
+# Unconditionally mock triton on Windows because the installed version is broken/incompatible
+if os.name == 'nt':
+    sys.modules["triton"] = None
+
 from sentence_transformers import SentenceTransformer
 import numpy as np
 from src.models.helpers import cosine_similarity
@@ -9,14 +16,20 @@ class QwenEmbedding:
     """Lớp để tạo embeddings sử dụng Qwen/Qwen3-Embedding-0.6B multilingual model"""
     
     def __init__(self, model_name="Qwen/Qwen3-Embedding-0.6B"):
-        print(f"Đang tải {model_name} model...")
-        self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        print(f"Loading {model_name} model...")
+        if torch.cuda.is_available():
+            print(f"CUDA is available. Device count: {torch.cuda.device_count()}")
+            self.device = torch.device("cuda:0")
+            print(f"Setting device to: {self.device}")
+        else:
+            print("CUDA is NOT available. Using CPU.")
+            self.device = torch.device("cpu")
         self.model = SentenceTransformer(
             model_name,
             device=str(self.device),
-            model_kwargs={"torch_dtype": torch.bfloat16} if torch.cuda.is_available() else {}
+            model_kwargs={"torch_dtype": torch.bfloat16, "attn_implementation": "eager"} if torch.cuda.is_available() else {"attn_implementation": "eager"}
         )
-        print(f"✓ Model {model_name} đã tải xong trên {self.device} với bfloat16")
+        print(f"Model {model_name} loaded on {self.device} with bfloat16")
     
     def get_embedding(self, text):
         """Tạo embedding cho văn bản"""

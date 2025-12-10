@@ -63,12 +63,12 @@ def load_corpus(md_dir):
         # or splitting by paragraphs
         
         # Split by double newlines first
-        paragraphs = content.split('\n\n')
+        paragraphs = content.split('\n\n\n')
         current_chunk = ""
         
         for p in paragraphs:
             if len(current_chunk) + len(p) < 800:
-                current_chunk += "\n\n" + p
+                current_chunk += "\n\n\n" + p
             else:
                 if len(current_chunk.strip()) > 50:
                     chunks.append(current_chunk.strip())
@@ -89,7 +89,7 @@ def calculate_metrics(results):
     
     hits_at_1 = sum(1 for r in results if r['rank'] == 1)
     hits_at_3 = sum(1 for r in results if r['rank'] <= 3)
-    hits_at_5 = sum(1 for r in results if r['rank'] <= 5)
+    hits_at_10 = sum(1 for r in results if r['rank'] <= 10)
     
     mrr = sum(1.0/r['rank'] for r in results if r['rank'] > 0) / total
     
@@ -97,7 +97,7 @@ def calculate_metrics(results):
         'total_queries': total,
         'accuracy@1': hits_at_1 / total,
         'accuracy@3': hits_at_3 / total,
-        'accuracy@5': hits_at_5 / total,
+        'accuracy@10': hits_at_10 / total,
         'mrr': mrr
     }
 
@@ -175,8 +175,8 @@ def main():
         rank = -1
         found = False
         
-        # Check top 20
-        for i, idx in enumerate(sorted_indices[:20]):
+        # Check top 10
+        for i, idx in enumerate(sorted_indices[:10]):
             retrieved_file = metadatas[idx]['file']
             if retrieved_file == expected_file:
                 rank = i + 1
@@ -184,7 +184,7 @@ def main():
                 break
         
         if not found:
-            rank = 1000 # Not found in top 20
+            rank = 1000 # Not found in top 10
             
         results.append({
             'query': query,

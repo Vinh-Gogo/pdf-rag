@@ -182,7 +182,7 @@ def generate_smart_mock_questions(chunk):
         entity = bold_entities[0].strip()[:80]  # Limit length
         template = random.choice(templates_bold)
         questions.append(template.format(entity=entity))
-    
+
     # Always add at least one general question if no specific ones
     if not questions:
         # Extract first meaningful sentence
@@ -222,7 +222,7 @@ def main():
             
         # Split content into chunks (e.g., by headers or paragraphs)
         # Simple splitting by double newlines for now, grouping a few paragraphs
-        paragraphs = content.split('\n\n')
+        paragraphs = content.split('\n\n\n')
         chunks = []
         current_chunk = ""
         for p in paragraphs:
@@ -252,7 +252,7 @@ def main():
                 test_case = {
                     "question": q,
                     "expected_file": filename,
-                    "expected_text_snippet": chunk[:200]  # Store start of chunk for verification
+                    "expected_text_snippet": chunk
                 }
                 test_cases.append(test_case)
                 

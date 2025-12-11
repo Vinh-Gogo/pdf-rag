@@ -1,1649 +1,1343 @@
 {
   "metrics": {
-    "total_queries": 273,
-    "accuracy@1": 0.42124542124542125,
-    "accuracy@3": 0.6446886446886447,
-    "accuracy@10": 0.8937728937728938,
-    "mrr": 0.5608699342985057
+    "total_queries": 222,
+    "accuracy@1": 0.03153153153153153,
+    "accuracy@3": 0.08558558558558559,
+    "accuracy@10": 0.2882882882882883,
+    "mrr": 0.08835649935649935
   },
   "details": [
     {
-      "query": "Chi nhánh Xử lý chất thải Bình Dương đã thực hiện hoạt động gì?",
-      "expected_file": "ban_tin_biwase_t5_2023.md",
+      "query": "Khái niệm chính xác về dự án và nghĩa vụ của từng bên liên quan là gì?",
+      "expected_file": "BAN TIN BIWASE T1-2025 -A4 V2.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nguyên nhân dẫn tới sự khác biệt giữa quý I và quý II năm 2025 là gì?",
+      "expected_file": "BAN TIN BIWASE T1-2025 -A4 V2.md",
       "rank": 4,
       "found": true
     },
     {
-      "query": "Thông tin về Chi nhánh Xử lý chất thải đã hoàn tất trong văn bản là gì?",
-      "expected_file": "ban_tin_biwase_t5_2023.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Thông tin chi tiết về Tổ hợp lò hơi - turbine – phát điện công suất 5MW thu hồi nhiệt từ lò đốt rác sắ?",
-      "expected_file": "ban_tin_biwase_t5_2023.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tổng công suất cấp nước hiện có của BIWASE năm 2025 là bao nhiêu m³/ngđ?",
+      "query": "Các yếu tố ảnh hưởng trực tiếp đến mức độ đạt được mục tiêu là gì?",
       "expected_file": "BAN TIN BIWASE T1-2025 -A4 V2.md",
-      "rank": 1,
-      "found": true
+      "rank": 1000,
+      "found": false
     },
     {
-      "query": "Sản lượng nước tiêu thụ của BIWASE năm 2025 kế hoạch là bao nhiêu triệu m³?",
+      "query": "Khai niệm chính nghĩa của dự án là gì?",
       "expected_file": "BAN TIN BIWASE T1-2025 -A4 V2.md",
-      "rank": 1,
-      "found": true
+      "rank": 1000,
+      "found": false
     },
     {
-      "query": "Tỷ lệ thất thoát nước của BIWASE năm 2025 là bao nhiêu phần trăm?",
+      "query": "Mục đích, nguyên nhân để xây dựng dự án này là gì?",
       "expected_file": "BAN TIN BIWASE T1-2025 -A4 V2.md",
-      "rank": 2,
+      "rank": 5,
       "found": true
     },
     {
-      "query": "Các cơ sở sản xuất cung cấp nước tập trung chuẩn bị những mặt nào để phục vụ nhu cầu nước trong mùa khô?",
-      "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Các công trình đã đủ điều kiện thực hiện được tập trung thi công ở đâu?",
-      "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Các hợp đồng dịch vụ xử lý nước thải, rác thải được tập trung thu hồi kinh phí ở đâu?",
-      "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Tổng công suất cấp nước hiện có của BIWASE trong tháng 1 năm 2025 là bao nhiêu?",
+      "query": "Các yếu tố liên quan đến việc đánh giá hiệu suất dự án là gì?",
       "expected_file": "BAN TIN BIWASE T1-2025 -A4 V2.md",
-      "rank": 1,
-      "found": true
+      "rank": 1000,
+      "found": false
     },
     {
-      "query": "Sản lượng nước tiêu thụ của BIWASE trong tháng 1 năm 2025 so với cùng kỳ năm 2024 là bao nhiêu phần trăm?",
-      "expected_file": "BAN TIN BIWASE T1-2025 -A4 V2.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tỷ lệ thất thoát nước của BIWASE trong tháng 1 năm 2025 so với cùng kỳ năm 2024 là bao nhiêu phần trăm?",
-      "expected_file": "BAN TIN BIWASE T1-2025 -A4 V2.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Các cơ sở sản xuất cung cấp nước tập trung chuẩn bị những mặt nào để phục vụ nhu cầu nước trong mùa khô?",
+      "query": "Khái niệm gì là hệ thống truy xuất thông tin? Và ý nghĩa của nó là gì?",
       "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
-      "rank": 1,
-      "found": true
+      "rank": 1000,
+      "found": false
     },
     {
-      "query": "Các công trình nào được tập trung thi công trong tháng 11 năm 2024?",
+      "query": "Nguyên nhân dẫn tới việc cần thiết lập hệ thống truy xuất thông tin là gì?",
       "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
-      "rank": 1,
-      "found": true
+      "rank": 1000,
+      "found": false
     },
     {
-      "query": "Các hợp đồng dịch vụ xử lý nước thải, rác thải được tập trung thu hồi kinh phí ở đâu?",
+      "query": "Các yếu tố liên quan đến việc xây dựng và duy trì hệ thống truy xuất thông tin là gì?",
       "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
-      "rank": 2,
-      "found": true
+      "rank": 1000,
+      "found": false
     },
     {
-      "query": "Công ty cổ phần Nước Sài Gòn – Cần Thơ đã tổ chức đại hội cổ đông bất thường tại TP. Cần Thơ vào ngày 23/10, và có quyết định miễn nhiệm HĐQT từ năm 2015 đến nay. Làm rõ điều này?",
+      "query": "Khái niệm chính nghĩa là gì?",
       "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
-      "rank": 1,
-      "found": true
+      "rank": 1000,
+      "found": false
     },
     {
-      "query": "HĐQT (2024) đã quyết định phân công bà Trương Thu Dung giữ chức Chủ tịch HĐQT và ông Mai Song Hào giữ chức Phó Chủ tịch HĐQT – Tổng Giám đốc. Làm rõ vai trò và nhiệm vụ của họ?",
+      "query": "Ý nghĩa của việc áp dụng giải pháp này là gì?",
       "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
-      "rank": 1,
-      "found": true
+      "rank": 1000,
+      "found": false
     },
     {
-      "query": "Công ty cổ phần Nước BIWASE Cần Thơ được thành lập dựa trên các tờ trình nào và có sự thay đổi tên công ty như thế nào?",
+      "query": "Nguyên nhân và hậu quả của sự kiện này là gì?",
       "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
-      "rank": 1,
+      "rank": 10,
       "found": true
     },
     {
-      "query": "Giải Xe đạp nữ Quốc tế Bình Dương có tên gọi mới là gì?",
-      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
-      "rank": 1,
-      "found": true
+      "query": "Trọng tâm và ảnh hưởng của vấn đề này là gì?",
+      "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
+      "rank": 1000,
+      "found": false
     },
     {
-      "query": "Điều kiện gì cần đáp ứng để giải Xe đạp nữ Quốc tế Bình Dương được gia nhập hệ thống thi đấu tính điểm UCI?",
-      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
-      "rank": 1,
-      "found": true
+      "query": "Các yếu tố liên quan đến tình huống trên là gì?",
+      "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
+      "rank": 1000,
+      "found": false
     },
     {
-      "query": "Công ty TNHH MTV Liên hợp Khoa học – Công nghệ – Môi trường BIWASE (BIWASE E.T.S) đóng vai trò như thế nào trong thành công của giải Bóng đá Thiếu niên Nhi đồng tỉnh Bình Thuận – CUP BTV năm 2024?",
-      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tổng công suất cấp nước hiện có của BIWASE năm 2024 là bao nhiêu m³/ngđ?",
-      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
-      "rank": 8,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BIWASE năm 2024 so với cùng kỳ năm 2023 là bao nhiêu phần trăm?",
+      "query": "Khái niệm chính xác về hệ thống truy xuất thông tin là gì?",
       "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
       "rank": 1000,
       "found": false
     },
     {
-      "query": "Tổng doanh thu của BIWASE năm 2024 so với kế hoạch năm 2024 là bao nhiêu phần trăm?",
+      "query": "Ý nghĩa và mục đích của việc triển khai hệ thống này là gì?",
       "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Nguyên nhân dẫn tới hiệu suất và độ ổn định của hệ thống là gì?",
+      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan ảnh hưởng đến hiệu quả vận hành của hệ thống là gì?",
+      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm chính xác của dự án là gì? ",
+      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Ý nghĩa và mục đích của dự án là gì? ",
+      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Nguyên nhân và hậu quả của dự án là gì? ",
+      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Vai trò và tác động của dự án đối với nền kinh tế? ",
+      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan đến dự án là gì? ",
+      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Vị trí then chốt và ảnh hưởng của hệ thống xử lý nước thải đối với mục tiêu phát triển bền vững?",
+      "expected_file": "BAN TIN BIWASE T12-2023 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan trực tiếp đến hiệu suất và độ ổn định của hệ thống xử lý nước thải?",
+      "expected_file": "BAN TIN BIWASE T12-2023 - A4.md",
+      "rank": 5,
+      "found": true
+    },
+    {
+      "query": "Khái niệm chính xác của dự án và ý nghĩa của nó là gì?",
+      "expected_file": "BAN TIN BIWASE T12-2023 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan đến việc triển khai dự án là gì?",
+      "expected_file": "BAN TIN BIWASE T12-2023 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Kết luận hay đánh giá tổng thể về dự án là gì?",
+      "expected_file": "BAN TIN BIWASE T12-2023 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm chính thức về dự án này là gì?",
+      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Ý nghĩa và mục đích của việc thực hiện dự án?",
+      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nguyên nhân và hậu quả của việc thực hiện dự án đó?",
+      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan đến dự án có thể kể tên những cái gì?",
+      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Kết luận hay đánh giá tổng quát về dự án này?",
+      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Kết luận quan trọng từ dữ liệu là sự cải thiện đáng kể về hiệu quả vận hành và quản trị nội bộ",
+      "expected_file": "BAN TIN BIWASE T2-2024 - (2)A4.md",
+      "rank": 8,
+      "found": true
+    },
+    {
+      "query": "Khái niệm cuộc thi và ý nghĩa của nó là gì?",
+      "expected_file": "BAN TIN BIWASE T2-2024 - (2)A4.md",
+      "rank": 5,
+      "found": true
+    },
+    {
+      "query": "Nguyên nhân khiến cuộc thi đạt hiệu quả như vậy?",
+      "expected_file": "BAN TIN BIWASE T2-2024 - (2)A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan đến việc tổ chức cuộc thi?",
+      "expected_file": "BAN TIN BIWASE T2-2024 - (2)A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Mục đích của bảng này là gì?",
+      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Kết luận quan trọng từ dữ liệu?",
+      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm chính xác về dự án và ý nghĩa của nó là gì?",
+      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nguyên nhân dẫn tới việc thực hiện các biện pháp này là gì?",
+      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan đến hiệu quả và tiến độ của dự án là gì?",
+      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm chính xác về dự án và ý nghĩa của nó là gì?",
+      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Mục đích và nguyên nhân dẫn đến việc thực hiện dự án này là gì?",
+      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Mục đích của bảng này là gì?",
+      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Kết luận quan trọng từ dữ liệu?",
+      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm chính xác của dự án này là gì?",
+      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Ý nghĩa và mục đích của phương thức vận hành này là gì?",
+      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
+      "rank": 10,
+      "found": true
+    },
+    {
+      "query": "Nguyên nhân dẫn tới sự thành công của dự án là gì?",
+      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan đến hiệu quả và khả năng phát triển của dự án.",
+      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm chính, ý nghĩa của dự án",
+      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nguyên nhân - hiệu quả của giải pháp",
+      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan đến dự án",
+      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Khái niệm chính xác của dự án này là gì? Và ý nghĩa của nó là gì?",
+      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Mục đích và nguyên nhân để thực hiện dự án này là gì?",
+      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan đến quá trình thực hiện dự án là gì?",
+      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Kết luận hay đánh giá tổng thể về dự án này là gì?",
+      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm chính xác của dự án này là gì? ",
+      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Ý nghĩa và mục đích của việc thực hiện dự án này là gì? ",
+      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan đến dự án này có những đặc điểm gì? ",
+      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm chính xác về dự án và ý nghĩa của nó là gì?",
+      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Mục đích và nguyên nhân dẫn đến sự kiện này là gì?",
+      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nguyên nhân gây ra tình trạng này và hậu quả có thể xảy ra là gì?",
+      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Ý nghĩa và mục đích của chương trình này là gì?",
+      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nguyên nhân dẫn đến sự thành công hay thất bại của chương trình là gì?",
+      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Những nguyên nhân chủ yếu gây ra tình trạng thiếu hụt năng suất hay bất ổn kinh tế?",
+      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm chính xác về hệ thống truy xuất thông tin là gì?",
+      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Ý nghĩa và mục đích của việc xây dựng hệ thống truy xuất thông tin là gì?",
+      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nguyên nhân và hậu quả của việc thiết lập hệ thống truy xuất thông tin là gì?",
+      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan đến hệ thống truy xuất thông tin được đề cập ở đây là gì?",
+      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm chính xác về dự án là gì?",
+      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Ý nghĩa và mục đích của việc thực hiện dự án đó là gì?",
+      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nguyên nhân và hậu quả của việc áp dụng phương pháp này là gì?",
+      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố ảnh hưởng trực tiếp và gián tiếp đến hiệu quả dự án là gì?",
+      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm gì là Công Ty Cp - Tổng Công Ty Nước - Môi Trường Bình Dương?",
+      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
+      "rank": 3,
+      "found": true
+    },
+    {
+      "query": "Ý nghĩa của việc thành lập Công Ty Cp - Tổng Công Ty Nước - Môi Trường Bình Dương là gì?",
+      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
+      "rank": 7,
+      "found": true
+    },
+    {
+      "query": "Mục đích và nguyên nhân xây dựng Công Ty Cp - Tổng Công Ty Nước - Môi Trường Bình Dương là gì?",
+      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nguyên nhân và hiệu quả của các biện pháp mà Công Ty Cp - Tổng Công Ty Nước - Môi Trường Bình Dương thực hiện là gì?",
+      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm chính thức của hệ thống truy xuất thông tin là gì?",
+      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Ý nghĩa và mục đích của việc thực hiện truy xuất thông tin này là gì?",
+      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Xác định mối quan hệ giữa các yếu tố liên quan đến hệ thống truy xuất thông tin.",
+      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
+      "rank": 10,
+      "found": true
+    },
+    {
+      "query": "Các yếu tố liên quan đến dữ liệu và thiết lập hệ thống truy xuất thông tin là gì?",
+      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Kết luận hay đánh giá tổng thể về hiệu quả của hệ thống truy xuất thông tin.",
+      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
+      "rank": 8,
+      "found": true
+    },
+    {
+      "query": "Mục đích của bảng này là gì?",
+      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Xu hướng chính được thể hiện ở đâu?",
+      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm và ý nghĩa của hệ thống truy xuất dữ liệu?",
+      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Mục đích và nguyên nhân để xây dựng hệ thống này?",
+      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nguyên nhân và hiệu quả của việc thực hiện hệ thống này?",
+      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Vai trò và tác động của hệ thống truy xuất dữ liệu?",
+      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan đến hệ thống truy xuất dữ liệu?",
+      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
+      "rank": 5,
+      "found": true
+    },
+    {
+      "query": "Khái niệm chính xác của dự án là gì?",
+      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Ý nghĩa và mục đích của việc triển khai dự án này là gì?",
+      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan đến dữ liệu và cách trình bày bảng là gì?",
+      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
+      "rank": 7,
+      "found": true
+    },
+    {
+      "query": "Khái niệm chính, ý nghĩa của dự án?",
+      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
+      "rank": 8,
+      "found": true
+    },
+    {
+      "query": "Nguyên nhân - hậu quả của việc triển khai dự án?",
+      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Trọng điểm, ảnh hưởng của dự án?",
+      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan đến dự án?",
+      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khai niệm và ý nghĩa của dự án này là gì?",
+      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
+      "rank": 10,
+      "found": true
+    },
+    {
+      "query": "Nguyên nhân và hiệu quả của giải pháp này là gì?",
+      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Khái niệm chính nghĩa của dự án là gì?",
+      "expected_file": "ban-tin-biwase-t1-2024-a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nguyên nhân, hiệu quả của giải pháp được đưa ra là gì?",
+      "expected_file": "ban-tin-biwase-t1-2024-a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan đến dự án gồm những gì?",
+      "expected_file": "ban-tin-biwase-t1-2024-a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khai niệm và ý nghĩa của dự án? ",
+      "expected_file": "ban-tin-biwase-t1-2024-a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nguyên nhân và hiệu quả của giải pháp? ",
+      "expected_file": "ban-tin-biwase-t1-2024-a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Vai trò và ảnh hưởng của dự án? ",
+      "expected_file": "ban-tin-biwase-t1-2024-a4.md",
+      "rank": 9,
+      "found": true
+    },
+    {
+      "query": "Các yếu tố liên quan đến dự án? ",
+      "expected_file": "ban-tin-biwase-t1-2024-a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Xu hướng chính được thể hiện qua tăng trưởng về công suất, sản lượng nước tiêu thụ, lợi nhuận sau thuế",
+      "expected_file": "ban-tin-biwase-t10-2023---a4-(1).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Kết luận quan trọng từ dữ liệu là Biwase đang duy trì mức độ phát triển ổn định và có dấu hiệu cải thiện về tài chính",
+      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm và ý nghĩa của dự án?",
+      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Mục đích và nguyên nhân hình thành dự án?",
+      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nguyên nhân và hậu quả của dự án?",
+      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Vai trò và ảnh hưởng của dự án?",
+      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Các yếu tố liên quan đến dự án?",
+      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
+      "rank": 8,
+      "found": true
+    },
+    {
+      "query": "Khái niệm chính nghĩa là gì?",
+      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Ý nghĩa của mục tiêu này là gì?",
+      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
+      "rank": 10,
+      "found": true
+    },
+    {
+      "query": "Nguyên nhân và hậu quả của vấn đề này là gì?",
+      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
+      "rank": 8,
+      "found": true
+    },
+    {
+      "query": "Trọng tâm và ảnh hưởng của giải pháp này là gì?",
+      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan đến vấn đề này là gì?",
+      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Khái niệm chính xác là gì? ",
+      "expected_file": "ban-tin-biwase-t11-2023---a4.md",
+      "rank": 9,
+      "found": true
+    },
+    {
+      "query": "Ý nghĩa và mục đích của dự án này là gì? ",
+      "expected_file": "ban-tin-biwase-t11-2023---a4.md",
+      "rank": 5,
+      "found": true
+    },
+    {
+      "query": "Nguyên nhân và hậu quả của việc thực hiện dự án?",
+      "expected_file": "ban-tin-biwase-t11-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Vai trò và tác động của dự án đối với cộng đồng và kinh tế?",
+      "expected_file": "ban-tin-biwase-t11-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm chính xác về dự án và mục đích của nó là gì?",
+      "expected_file": "ban-tin-biwase-t11-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Mối quan hệ giữa việc sử dụng vật liệu tái chế và lợi ích kinh tế – môi trường?",
+      "expected_file": "ban-tin-biwase-t11-2023---a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Mục đích của bảng này là gì?",
+      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
+      "rank": 8,
+      "found": true
+    },
+    {
+      "query": "Kết luận quan trọng từ dữ liệu?",
+      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm chính nghĩa là gì? Yêu cầu và ý nghĩa của nó?",
+      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Mục đích, nguyên nhân, lợi ích của dự án này?",
+      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nguyên nhân – hậu quả của dự án?",
+      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan đến dự án?",
+      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Những nguyên nhân dẫn tới tình trạng này là gì?",
+      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Mục đích của việc áp dụng công nghệ này là gì?",
+      "expected_file": "ban-tin-biwase-t4-2025--a4.md",
+      "rank": 9,
+      "found": true
+    },
+    {
+      "query": "Nguyên nhân khiến công nghệ này trở nên hữu ích là gì?",
+      "expected_file": "ban-tin-biwase-t4-2025--a4.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Các yếu tố liên quan đến hiệu quả của công nghệ này là gì?",
+      "expected_file": "ban-tin-biwase-t4-2025--a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nguyên nhân dẫn tới kết quả hiện tại và hậu quả?",
+      "expected_file": "ban-tin-biwase-t4-2025--a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Các yếu tố liên quan đến dữ liệu biểu đồ và thông tin kỹ thuật?",
+      "expected_file": "ban-tin-biwase-t4-2025--a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm chính xác của dự án và ý nghĩa của nó là gì?",
+      "expected_file": "ban-tin-biwase-t5-2025--a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm chính xác của dự án và ý nghĩa của nó là gì?",
+      "expected_file": "ban-tin-biwase-t6-2023---a4.md",
+      "rank": 9,
+      "found": true
+    },
+    {
+      "query": "Mục đích và nguyên nhân dẫn tới việc thực hiện dự án này là gì?",
+      "expected_file": "ban-tin-biwase-t6-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nguyên nhân và hậu quả của dự án là gì?",
+      "expected_file": "ban-tin-biwase-t6-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Kết luận hay đánh giá tổng quát về dự án là gì?",
+      "expected_file": "ban-tin-biwase-t6-2023---a4.md",
+      "rank": 9,
+      "found": true
+    },
+    {
+      "query": "Mục đích của bảng này là gì?",
+      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Kết luận quan trọng từ dữ liệu?",
+      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm và ý nghĩa của dự án xử lý nước thải khu vực Bến Cát?",
+      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Nguyên nhân và hậu quả của sự khác biệt giữa quý I và quý II năm 2024?",
+      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
+      "rank": 5,
+      "found": true
+    },
+    {
+      "query": "Vị trí then chốt và tác động của dự án đến môi trường và phát triển công nghiệp ở Bình Dương?",
+      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Các yếu tố liên quan đến hiệu suất vận hành và quản lý tài chính của dự án?",
+      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm chính xác về dự án này là gì? Và ý nghĩa của nó là gì?",
+      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Xin hãy mô tả mối quan hệ giữa các yếu tố liên quan đến dự án như vậy?",
+      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
+      "rank": 8,
+      "found": true
+    },
+    {
+      "query": "Nguyên nhân khiến dự án có thể đạt được mức độ tiến bộ như trên là gì?",
+      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
+      "rank": 10,
+      "found": true
+    },
+    {
+      "query": "Kết luận quan trọng từ dữ liệu là sự tiến bộ về công suất cấp nước nhưng vẫn còn hạn chế ở mức tiêu thụ nước",
+      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm chính thức về dự án và ý nghĩa của nó là gì?",
+      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
+      "rank": 10,
+      "found": true
+    },
+    {
+      "query": "Mục đích và nguyên nhân hình thành dự án này là gì?",
+      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Vai trò và tác động của dự án đối với sự phát triển kinh tế-xã hội?",
+      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
       "rank": 6,
       "found": true
     },
     {
-      "query": "Công ty Biwase năm 2023 có tổng doanh thu bao nhiêu tỷ đồng?",
-      "expected_file": "BAN TIN BIWASE T12-2023 - A4.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Tỷ lệ thất thoát nước của Biwase năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "BAN TIN BIWASE T12-2023 - A4.md",
-      "rank": 3,
-      "found": true
-    },
-    {
-      "query": "Lợi nhuận sau thuế của Biwase năm 2023 so với năm 2022 giảm bao nhiêu phần trăm?",
-      "expected_file": "BAN TIN BIWASE T12-2023 - A4.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Công ty BiWase có tổng công suất cấp nước là bao nhiêu m³/ngđ?",
-      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
-      "rank": 10,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BiWase năm 2024 so với năm 2023 tăng bao nhiêu phần trăm?",
-      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
-      "rank": 3,
-      "found": true
-    },
-    {
-      "query": "Tỷ lệ thất thoát nước của BiWase năm 2024 so với năm 2023 tăng bao nhiêu phần trăm?",
-      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
-      "rank": 3,
-      "found": true
-    },
-    {
-      "query": "Công ty TNHH MTV Liên hợp Khoa học - Công nghệ - Môi trường BIWASE là công ty con nào được thành lập bởi BIWASE?",
-      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tổ hợp nhà máy đốt rác phát điện 5MW do BIWASE thiết kế và vận hành có công suất bao nhiêu tấn rác thải sinh hoạt mỗi ngày?",
-      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "BIWASE ION-GOLD đã giành giải thưởng Sao Vàng Đất Việt TOP 100 năm 2024, thương hiệu nào là thương hiệu được trao giải?",
-      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
-      "rank": 5,
-      "found": true
-    },
-    {
-      "query": "Công ty Biwase có tổng công suất hiện có là bao nhiêu m³/ngđ?",
-      "expected_file": "BAN TIN BIWASE T2-2024 - (2)A4.md",
-      "rank": 3,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của Biwase trong tháng 2 năm 2024 so với cùng kỳ năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "BAN TIN BIWASE T2-2024 - (2)A4.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Lợi nhuận sau thuế của Biwase trong tháng 2 năm 2024 so với cùng kỳ năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "BAN TIN BIWASE T2-2024 - (2)A4.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Bản tin BIWASE tháng 2 năm 2025 báo cáo tổng công suất hoạt động là bao nhiêu m³/ngđ?",
-      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BIWASE trong hai tháng năm 2025 là bao nhiêu m³?",
-      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Tỷ lệ thất thoát nước của BIWASE trong hai tháng năm 2025 là bao nhiêu phần trăm?",
-      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Đoàn Thanh niên BIWASE đã đóng góp bao nhiêu đơn vị máu trong Ngày hội hiến máu tình nguyện lần thứ 42?",
-      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Hội Chữ thập đỏ tỉnh Bình Dương đã tham gia hoạt động hiến máu tình nguyện cùng với những tổ chức nào?",
-      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Công tác cấp nước tốt nhất, đầy đủ cho khách hàng vào mùa khô hạn được BIWASE chỉ đạo như thế nào?",
-      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
+      "query": "Khái niệm chính nghĩa là gì? Yêu ý nghĩa của nó là gì?",
+      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
       "rank": 1000,
       "found": false
     },
     {
-      "query": "Công ty mẹ và các công ty con phải đạt tối thiểu bao nhiêu tỷ đồng về thuế?",
-      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tổng công suất cấp nước dự kiến là bao nhiêu m3/ngày?",
-      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tỷ lệ thất thoát nước toàn hệ thống được duy trì dưới hoặc bằng bao nhiêu phần trăm?",
-      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Chủ tịch HĐQT BIWASE Nguyễn Văn Thiền đã tổ chức đào tạo chuyên sâu cho bao nhiêu học viên?",
-      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Đào tạo chuyên sâu tại BIWASE tập trung vào những lĩnh vực nào?",
-      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Chi nhánh cấp nước Chơn Thành đạt sản lượng nước tiêu thụ bao nhiêu triệu m3 và tăng bao nhiêu phần trăm so với cùng kỳ năm trước?",
-      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
+      "query": "Nguyên nhân và hậu quả của việc áp dụng giải pháp này là gì?",
+      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
       "rank": 1000,
       "found": false
     },
     {
-      "query": "BIWASE đã nhận bằng khen của Chủ tịch UBND tỉnh về tiêu chuẩn an toàn an ninh trật tự năm nào?",
-      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Lãnh đạo nào của Bình Dương trao bằng khen cho BIWASE trong dịp ký kết Phong trào Toàn dân Bảo vệ An ninh Tổ quốc năm 2024?",
-      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Người nào tại BIWASE được Chủ tịch UBND tỉnh tặng bằng khen về thành tích xuất sắc trong phong trào năm 2023?",
-      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Công trình đường Chánh Phú Hòa 011 được tài trợ bởi tổ chức nào?",
-      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Ngày nào là ngày khánh thành tuyến đường Chánh Phú Hòa 011?",
-      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Đoàn thanh niên tổ chức chiến dịch tình nguyện nào tại tỉnh Bến Tre năm 2024?",
-      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
-      "rank": 5,
-      "found": true
-    },
-    {
-      "query": "Dự án nâng công suất nhà máy nước Nhị Thành giai đoạn III có tổng chiều dài của các tuyến ống gang là bao nhiêu?",
-      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Các hạng mục phụ trợ trong dự án nâng công suất nhà máy nước Nhị Thành bao gồm những gì?",
-      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Dự kiến khi nào sẽ hoàn thành dự án nâng công suất nhà máy nước Nhị Thành?",
-      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Các dự án nhà máy nước Chơn Thành, BIWASE Long An, lò đốt 500 tấn/ngày sẽ được hoàn thiện thủ tục xây dựng cơ bản khi nào?",
-      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Các nhà máy nước thải, xử lý rác thải sẽ được hoàn thiện thủ tục pháp lý vận hành khi nào để sớm được giải ngân nguồn vốn?",
-      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Mục tiêu nào sẽ được đạt được trong thời gian tới với sự nỗ lực của các bên?",
-      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
-      "rank": 3,
-      "found": true
-    },
-    {
-      "query": "Ông Mai Hùng Dũng, Phó chủ tịch Thường trực UBND tỉnh Bình Dương, đã ký Thỏa thuận hợp tác tài trợ vốn tín dụng đầu tư của nhà nước cho các dự án nước sạch và bảo vệ môi trường cùng ai?",
-      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tổng công ty BIWASE đã công bố và ra mắt Ban lãnh đạo 5 công ty con, trong đó có công ty nào có ông Phạm Thanh Hùng làm Chủ tịch HĐTV?",
-      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
+      "query": "Vai trò, ảnh hưởng của giải pháp này là gì?",
+      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
       "rank": 1000,
       "found": false
     },
     {
-      "query": "Số tiền mà VDB sẽ tài trợ cho các dự án bảo vệ môi trường do BIWASE và các doanh nghiệp trực thuộc hệ thống làm chủ đầu tư là bao nhiêu?",
-      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tổng công suất là gì trong bối cảnh không tính các nhà máy nước ngoài tỉnh Bình Dương?",
-      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Các nhà máy nước ngoài tỉnh Bình Dương có ảnh hưởng như thế nào đến tổng công suất theo thông tin trong đoạn văn?",
-      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Thông tin trong đoạn văn cho biết tổng công suất không tính các nhà máy nước ngoài tỉnh Bình Dương, điều này có ý nghĩa gì trong bối cảnh hoạt động sản xuất kinh doanh?",
-      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Đại diện MayBank (Malaysia) đã làm việc với Tổng Công ty BIWASE để tìm hiểu cơ hội hợp tác đầu tư. Những cơ hội nào đã được thảo luận?",
-      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "BIWASE Long An đã tặng 40 suất quà trị giá 20 triệu đồng cho học sinh khó khăn. Những suất quà đó được phân phối ở đâu?",
-      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Gia đình anh Lê Trọng Minh tại huyện Krông Pắc sử dụng phân bón Con Voi Bình Dương để sản xuất sầu riêng. Giải thưởng nào mà gia đình anh giành được?",
-      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Công ty CP - Tổng công ty Nước - Môi trường Bình Dương có bao nhiêu tỷ m³ nước tiêu thụ trong quý I năm 2024?",
-      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tỷ lệ thất thoát nước của BIWASE năm 2024 so với cùng kỳ năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
-      "rank": 5,
-      "found": true
-    },
-    {
-      "query": "Lợi nhuận sau thuế của BIWASE năm 2024 so với cùng kỳ năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
-      "rank": 4,
-      "found": true
-    },
-    {
-      "query": "Chủ tịch HĐQT Nguyễn Văn Thiền đã dặn dò cán bộ chủ chốt về mặt nào trong năm 2023?",
-      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tuyến ống nâng công suất cấp nước về huyện Dầu Tiếng có chiều dài bao nhiêu kilômét?",
-      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Vì sao Bình Dương không xảy ra cúp nước trong năm 2023?",
-      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Công ty Biwase đạt tổng doanh thu trong tháng 1 năm 2023 là bao nhiêu tỷ đồng?",
-      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
+      "query": "Các yếu tố liên quan đến dữ liệu là gì?",
+      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
       "rank": 1000,
       "found": false
     },
     {
-      "query": "Tỷ lệ thất thoát nước của Công ty Biwase trong tháng 1 năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
-      "rank": 10,
+      "query": "Khái niệm chính xác và ý nghĩa của hệ thống quản trị thông tin?",
+      "expected_file": "ban-tin-biwase-t7-2023--(1)-a4.md",
+      "rank": 8,
       "found": true
     },
     {
-      "query": "Công ty cổ phần cấp nước Gia Tân đã triển khai các hoạt động nào để phát triển hệ thống phân phối nước sạch?",
-      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Công ty CP - Tổng công ty Nước - Môi trường Bình Dương (BIWASE) có tổng công suất hiện có là bao nhiêu m³/ngđ?",
-      "expected_file": "ban-tin-biwase-t1-2024-a4.md",
-      "rank": 4,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BIWASE trong tháng 1 năm 2024 so với cùng kỳ năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t1-2024-a4.md",
-      "rank": 5,
-      "found": true
-    },
-    {
-      "query": "Lợi nhuận sau thuế của BIWASE trong tháng 1 năm 2024 so với cùng kỳ năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t1-2024-a4.md",
-      "rank": 7,
-      "found": true
-    },
-    {
-      "query": "Tổng công suất hiện có của BIWASE năm 10 tháng 2023 là bao nhiêu m³/ngđ?",
-      "expected_file": "ban-tin-biwase-t10-2023---a4-(1).md",
-      "rank": 5,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BIWASE năm 10 tháng 2023 đạt bao nhiêu m³, so với cùng kỳ năm 2022?",
-      "expected_file": "ban-tin-biwase-t10-2023---a4-(1).md",
-      "rank": 3,
-      "found": true
-    },
-    {
-      "query": "ADB đã dành bao nhiêu tỷ USD để đầu tư vào ngành nước theo hợp tác đã ký tại Nhân Tuần lễ Nước Việt Nam 2023?",
-      "expected_file": "ban-tin-biwase-t10-2023---a4-(1).md",
-      "rank": 5,
-      "found": true
-    },
-    {
-      "query": "Bản tin BIWASE tháng 10 năm 2025 cho biết công suất tổng của BIWASE là bao nhiêu?",
-      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BIWASE trong 10 tháng năm 2025 so với kế hoạch năm 2025 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
-      "rank": 3,
-      "found": true
-    },
-    {
-      "query": "Lợi nhuận sau thuế của BIWASE năm 2025 so với kế hoạch năm 2025 tăng bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Công ty Biwase đạt tổng công suất sản xuất vào tháng 11 năm 2023 là bao nhiêu m³/ngđ?",
-      "expected_file": "ban-tin-biwase-t11-2023---a4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tỷ lệ thất thoát nước của Công ty Biwase trong tháng 11 năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t11-2023---a4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Doanh thu của Công ty Biwase trong 11 tháng năm 2023 đạt bao nhiêu tỷ đồng, so với kế hoạch năm?",
-      "expected_file": "ban-tin-biwase-t11-2023---a4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Công ty Biwase đã đạt được công suất sản xuất 822.000 m³/ngđ trong 3 tháng đầu năm 2023 so với cùng kỳ năm 2022, tỷ lệ tăng bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của Biwase trong 3 tháng đầu năm 2023 là bao nhiêu m³, so với sản lượng cùng kỳ năm 2022 và đạt tỷ lệ bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tỷ lệ thất thoát nước của Biwase trong 3 tháng đầu năm 2023 là bao nhiêu phần trăm, so với cùng kỳ năm 2022 và đạt tỷ lệ bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Công ty Biwase có tổng công suất cấp nước hiện có là bao nhiêu m³/ngđ?",
-      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
-      "rank": 1000,
-      "found": false
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của Biwase trong tháng 4 năm 2024 so với cùng kỳ năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Lợi nhuận sau thuế của Biwase trong tháng 4 năm 2024 so với kế hoạch năm 2024 là bao nhiêu phần trăm?",
-      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
-      "rank": 5,
-      "found": true
-    },
-    {
-      "query": "Công ty CP - Tổng Công ty Nước - Môi trường Bình Dương (BIWASE) có mã cổ phiếu là gì?",
-      "expected_file": "ban-tin-biwase-t4-2025--a4.md",
-      "rank": 1000,
-      "found": false
-    },
-    {
-      "query": "Tổng công suất cấp nước hiện có của BIWASE trong 4 tháng năm 2025 là bao nhiêu?",
-      "expected_file": "ban-tin-biwase-t4-2025--a4.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BIWASE trong 4 tháng năm 2025 là bao nhiêu triệu m³?",
-      "expected_file": "ban-tin-biwase-t4-2025--a4.md",
-      "rank": 5,
-      "found": true
-    },
-    {
-      "query": "Công ty Biwase có tên gọi gì?",
-      "expected_file": "ban-tin-biwase-t5-2025--a4.md",
-      "rank": 1000,
-      "found": false
-    },
-    {
-      "query": "Tổng công suất cấp nước hiện có của Biwase là bao nhiêu m³/ngđ?",
-      "expected_file": "ban-tin-biwase-t5-2025--a4.md",
-      "rank": 4,
-      "found": true
-    },
-    {
-      "query": "Tỉ lệ thất thoát nước của Biwase trong 5 tháng năm 2025 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t5-2025--a4.md",
-      "rank": 3,
-      "found": true
-    },
-    {
-      "query": "Công ty BIWASE có tổng công suất hiện có là bao nhiêu m³/ngđ?",
-      "expected_file": "ban-tin-biwase-t6-2023---a4.md",
+      "query": "Các yếu tố liên quan đến hệ thống quản trị thông tin?",
+      "expected_file": "ban-tin-biwase-t7-2023--(1)-a4.md",
       "rank": 9,
       "found": true
     },
     {
-      "query": "Tỷ lệ thất thoát nước của BIWASE trong 6 tháng đầu năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t6-2023---a4.md",
-      "rank": 3,
-      "found": true
-    },
-    {
-      "query": "Tổng doanh thu của BIWASE trong 6 tháng đầu năm 2023 là bao nhiêu tỷ đồng?",
-      "expected_file": "ban-tin-biwase-t6-2023---a4.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Công ty Biwase có tổng công suất cấp nước hiện có là bao nhiêu m³/ngđ?",
-      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
+      "query": "Khái niệm chính thức của dự án là gì?",
+      "expected_file": "ban-tin-biwase-t7-2023--(1)-a4.md",
       "rank": 1000,
       "found": false
     },
     {
-      "query": "Sản lượng nước tiêu thụ của Biwase trong 6 tháng năm 2024 so với cùng kỳ năm 2023 là bao nhiêu?",
-      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
-      "rank": 7,
-      "found": true
-    },
-    {
-      "query": "Lợi nhuận sau thuế của Biwase trong 6 tháng năm 2024 so với cùng kỳ năm 2023 là bao nhiêu?",
-      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
+      "query": "Ý nghĩa và mục đích của việc thực hiện dự án này là gì?",
+      "expected_file": "ban-tin-biwase-t7-2023--(1)-a4.md",
       "rank": 1000,
       "found": false
     },
     {
-      "query": "Công ty CP Nước BIWASE Cần Thơ đã làm lễ phát nước và đưa vào vận hành Nhà máy nước Cần Thơ với công suất bao nhiêu m³/ngày đêm?",
-      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
-      "rank": 3,
-      "found": true
-    },
-    {
-      "query": "Tổng vốn đầu tư cho Nhà máy nước Cần Thơ của Công ty CP Nước BIWASE Cần Thơ là bao nhiêu?",
-      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Tổng công suất cấp nước hiện có của BIWASE là bao nhiêu m³/ngđ?",
-      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
-      "rank": 9,
-      "found": true
-    },
-    {
-      "query": "Công ty BIWASE đã đạt bao nhiêu tỷ đồng doanh thu trong 7 tháng đầu năm 2023?",
+      "query": "Nguyên nhân và hậu quả của sự kiện xảy ra là gì?",
       "expected_file": "ban-tin-biwase-t7-2023--(1)-a4.md",
-      "rank": 3,
-      "found": true
+      "rank": 1000,
+      "found": false
     },
     {
-      "query": "Tỷ lệ thất thoát nước của BIWASE trong 7 tháng đầu năm 2023 là bao nhiêu phần trăm?",
+      "query": "Các yếu tố liên quan đến dự án được đề cập ở đây là gì?",
       "expected_file": "ban-tin-biwase-t7-2023--(1)-a4.md",
-      "rank": 4,
-      "found": true
+      "rank": 1000,
+      "found": false
     },
     {
-      "query": "BIWASE đã nhận bao nhiêu giải thưởng trong các cuộc thi về môi trường đô thị và phát triển bền vững năm 2023?",
-      "expected_file": "ban-tin-biwase-t7-2023--(1)-a4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Công ty CP - Tổng Công ty Nước - Môi trường Bình Dương (BIWASE) có bao nhiêu tỷ USD được tài trợ từ ADB và JICA để nâng công suất Nhà máy nước Bàu Bàng?",
+      "query": "Khái niệm chính thức là gì? Y nghĩa của nó là gì?",
       "expected_file": "ban-tin-biwase-t7-2025--a4(3).md",
-      "rank": 1,
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nguyên nhân và hậu quả của việc thực hiện giải pháp này là gì?",
+      "expected_file": "ban-tin-biwase-t7-2025--a4(3).md",
+      "rank": 7,
       "found": true
     },
     {
-      "query": "Sản lượng nước tiêu thụ của BIWASE trong 7 tháng năm 2025 so với kế hoạch năm 2025 là bao nhiêu phần trăm?",
+      "query": "Khái niệm chính xác là gì? Là gì có ý nghĩa?",
+      "expected_file": "ban-tin-biwase-t7-2025--a4(3).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nguyên nhân – hiệu quả của giải pháp này là gì?",
       "expected_file": "ban-tin-biwase-t7-2025--a4(3).md",
       "rank": 8,
       "found": true
     },
     {
-      "query": "Lợi nhuận sau thuế của BIWASE trong 7 tháng năm 2025 so với kế hoạch năm 2025 là bao nhiêu phần trăm?",
+      "query": "Vai trò, ảnh hưởng của các yếu tố liên quan là gì?",
       "expected_file": "ban-tin-biwase-t7-2025--a4(3).md",
-      "rank": 9,
-      "found": true
+      "rank": 1000,
+      "found": false
     },
     {
-      "query": "Tổng sản lượng nước tiêu thụ trong 8 tháng đầu năm 2023 đạt bao nhiêu m³?",
+      "query": "Các yếu tố liên quan đến dữ liệu là gì?",
+      "expected_file": "ban-tin-biwase-t7-2025--a4(3).md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm chính xác của dự án và ý nghĩa của nó là gì?",
       "expected_file": "ban-tin-biwase-t8-2023-.md",
-      "rank": 3,
-      "found": true
+      "rank": 1000,
+      "found": false
     },
     {
-      "query": "Tỷ lệ thất thoát nước của BIWASE trong 8 tháng đầu năm 2023 là bao nhiêu phần trăm?",
+      "query": "Mục đích và nguyên nhân dẫn đến việc thực hiện dự án này là gì?",
       "expected_file": "ban-tin-biwase-t8-2023-.md",
-      "rank": 3,
-      "found": true
+      "rank": 1000,
+      "found": false
     },
     {
-      "query": "Tổng doanh thu của BIWASE trong 8 tháng đầu năm 2023 là bao nhiêu tỷ đồng?",
+      "query": "Nguyên nhân – hậu quả của dự án là gì?",
       "expected_file": "ban-tin-biwase-t8-2023-.md",
-      "rank": 1,
-      "found": true
+      "rank": 1000,
+      "found": false
     },
     {
-      "query": "Tổng công suất của BIWASE trong 8 tháng năm 2025 là bao nhiêu?",
-      "expected_file": "ban-tin-biwase-t8-2025--a4(2).md",
-      "rank": 3,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BIWASE trong 8 tháng năm 2025 so với kế hoạch năm 2025 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t8-2025--a4(2).md",
-      "rank": 5,
-      "found": true
-    },
-    {
-      "query": "Lợi nhuận sau thuế của BIWASE trong 8 tháng năm 2025 so với kế hoạch năm 2025 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t8-2025--a4(2).md",
-      "rank": 5,
-      "found": true
-    },
-    {
-      "query": "Công ty CP – Tổng Công ty Nước – Môi trường Bình Dương BIWASE đã đạt được bao nhiêu tỷ m³ sản lượng nước tiêu thụ trong 9 tháng đầu năm 2023 so với cùng kỳ năm 2022?",
-      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tỷ lệ thất thoát nước của BIWASE trong 9 tháng đầu năm 2023 là bao nhiêu phần trăm so với cùng kỳ năm 2022?",
-      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
-      "rank": 3,
-      "found": true
-    },
-    {
-      "query": "BIWASE đã đạt bao nhiêu tỷ VND doanh thu trong 9 tháng đầu năm 2023 so với dự kiến kế hoạch năm 2023?",
-      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
+      "query": "Vai trò và tác động của dự án đối với xã hội và môi trường là gì?",
+      "expected_file": "ban-tin-biwase-t8-2023-.md",
       "rank": 7,
       "found": true
     },
     {
-      "query": "Tổng công suất của BIWASE trong 9 tháng năm 2025 là bao nhiêu?",
-      "expected_file": "ban-tin-biwase-t9-2025--a4.md",
-      "rank": 9,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BIWASE trong 9 tháng năm 2025 so với kế hoạch năm 2025 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t9-2025--a4.md",
+      "query": "Kết luận hay đánh giá tổng thể về dự án này là gì?",
+      "expected_file": "ban-tin-biwase-t8-2023-.md",
       "rank": 1000,
       "found": false
     },
     {
-      "query": "BIWASE được vinh danh trong Top 50 Công ty Kinh doanh Hiệu quả nhất Việt Nam 2025, điều này thể hiện điều gì?",
-      "expected_file": "ban-tin-biwase-t9-2025--a4.md",
+      "query": "Khái niệm và ý nghĩa của dự án?",
+      "expected_file": "ban-tin-biwase-t8-2023-.md",
       "rank": 1000,
       "found": false
     },
     {
-      "query": "Tổng doanh thu ngành nước năm 2022 là bao nhiêu và so với năm 2021 như thế nào?",
-      "expected_file": "ban_tin_biwase_t2_2023.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Đấu nối khách hàng của BIWASE năm 2022 đạt bao nhiêu và tăng bao nhiêu so với cùng kỳ năm trước?",
-      "expected_file": "ban_tin_biwase_t2_2023.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Biwase đã làm gì để tối ưu hóa hiệu quả hoạt động và giảm chi phí trong năm 2022?",
-      "expected_file": "ban_tin_biwase_t2_2023.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Công ty Biwase có tổng công suất hiện có là bao nhiêu m³/ngđ?",
-      "expected_file": "ban_tin_biwase_t2_2023.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của Biwase trong tháng 2 năm 2023 so với cùng kỳ năm 2022 là bao nhiêu?",
-      "expected_file": "ban_tin_biwase_t2_2023.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tỷ lệ thất thoát nước của Biwase trong tháng 2 năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "ban_tin_biwase_t2_2023.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Công ty BIWASE đã đạt được bao nhiêu tỷ đồng doanh thu trong 4 tháng đầu năm 2023?",
-      "expected_file": "ban_tin_biwase_t4_2023.md",
-      "rank": 7,
-      "found": true
-    },
-    {
-      "query": "Tỷ lệ thất thoát nước của BIWASE trong 4 tháng đầu năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "ban_tin_biwase_t4_2023.md",
-      "rank": 4,
-      "found": true
-    },
-    {
-      "query": "BIWASE đang mở rộng đầu tư vào các tỉnh thành nào trong hệ sinh thái kinh tế môi trường?",
-      "expected_file": "ban_tin_biwase_t4_2023.md",
-      "rank": 1000,
-      "found": false
-    },
-    {
-      "query": "Công ty BIWASE đã đạt bao nhiêu m³ trong 5 tháng đầu năm 2023?",
-      "expected_file": "ban_tin_biwase_t5_2023.md",
-      "rank": 4,
-      "found": true
-    },
-    {
-      "query": "Tỷ lệ thất thoát nước của công ty trong 5 tháng đầu năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "ban_tin_biwase_t5_2023.md",
-      "rank": 3,
-      "found": true
-    },
-    {
-      "query": "Công ty BIWASE đã thực hiện các dự án nào để đáp ứng nhu cầu dùng nước đến năm 2030 của tỉnh Long An?",
-      "expected_file": "ban_tin_biwase_t5_2023.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Công tác lắp đặt và vận hành thử nghiệm cụm thiết bị lò hơi - turbine phát điện công suất 5MW tại Chi nhánh Xử lý chất thải đã hoàn tất?",
-      "expected_file": "ban_tin_biwase_t5_2023.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Các sản phẩm phân bón hữu cơ Con Voi Bình Dương mới ra mắt có tên gọi và công dụng gì?",
-      "expected_file": "ban_tin_biwase_t5_2023.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Đoàn viên thanh niên Chi nhánh Cấp nước Chơn Thành trồng cây Đời đời nhớ ơn Bác Hồ nhằm kỷ niệm bao lâu?",
-      "expected_file": "ban_tin_biwase_t5_2023.md",
-      "rank": 1000,
-      "found": false
-    },
-    {
-      "query": "Tổng công suất cấp nước hiện có của BIWASE là bao nhiêu m³/ngđ?",
-      "expected_file": "BAN TIN BIWASE T1-2025 -A4 V2.md",
-      "rank": 4,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ trong tháng 1 năm 2025 là bao nhiêu triệu m³?",
-      "expected_file": "BAN TIN BIWASE T1-2025 -A4 V2.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tỷ lệ thất thoát nước của BIWASE trong tháng 1 năm 2025 là bao nhiêu phần trăm?",
-      "expected_file": "BAN TIN BIWASE T1-2025 -A4 V2.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Công ty cổ phần Nước Sài Gòn - Cần Thơ đã tổ chức đại hội cổ đông bất thường nào vào ngày nào?",
-      "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Công ty cổ phần Nước BIWASE Cần Thơ được thành lập với tên gọi ban đầu là gì?",
-      "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Đại diện Chính phủ và Hội nước Indonesia sẽ tham gia Tuần lễ nước Việt Nam 2024 để triển khai các chương trình hợp tác nào?",
-      "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Công ty CP - Tổng Công ty Nước - Môi trường Bình Dương (BIWASE) có tổng công suất cấp nước hiện có là bao nhiêu m³/ngđ?",
-      "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
-      "rank": 1000,
-      "found": false
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BIWASE trong 10 tháng năm 2024 so với cùng kỳ năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
-      "rank": 3,
-      "found": true
-    },
-    {
-      "query": "Tổng doanh thu của BIWASE trong 10 tháng năm 2024 so với kế hoạch năm 2024 là bao nhiêu phần trăm?",
-      "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Hội nghị doanh nghiệp niêm yết năm 2024 được tổ chức tại đâu?",
-      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Hạng mục nào được chọn ra 44 doanh nghiệp xuất sắc nhất trong hội nghị doanh nghiệp niêm yết năm 2024?",
-      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Đơn vị nào được trao giải thưởng 'Tiến bộ vượt trội' hạng mục Quản trị doanh nghiệp?",
-      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tổng công suất cấp nước hiện có của BIWASE năm 2024 là bao nhiêu m³/ngđ?",
-      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
-      "rank": 8,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BIWASE năm 2024 so với cùng kỳ năm 2023 tăng bao nhiêu phần trăm?",
-      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
-      "rank": 10,
-      "found": true
-    },
-    {
-      "query": "Tổng doanh thu của BIWASE năm 2024 so với kế hoạch năm 2024 tăng bao nhiêu phần trăm?",
-      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
+      "query": "Nguyên nhân – hậu quả của giải pháp?",
+      "expected_file": "ban-tin-biwase-t8-2023-.md",
       "rank": 6,
       "found": true
     },
     {
-      "query": "Công ty Biwase năm 2023 đã đạt được bao nhiêu tỷ đồng doanh thu tổng hợp?",
-      "expected_file": "BAN TIN BIWASE T12-2023 - A4.md",
-      "rank": 3,
-      "found": true
-    },
-    {
-      "query": "Tỷ lệ thất thoát nước của Biwase năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "BAN TIN BIWASE T12-2023 - A4.md",
-      "rank": 3,
-      "found": true
-    },
-    {
-      "query": "Lợi nhuận sau thuế của Biwase năm 2023 giảm bao nhiêu so với năm 2022?",
-      "expected_file": "BAN TIN BIWASE T12-2023 - A4.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Công ty TNHH MTV Liên hợp Khoa học - Công nghệ - Môi trường BIWASE có tên gốc là gì?",
-      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tổ hợp nhà máy đốt rác phát điện 5MW do BIWASE thiết kế và vận hành có công suất bao nhiêu?",
-      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "BIWASE ION-GOLD được trao giải thưởng Sao Vàng Đất Việt TOP 100 vào năm nào?",
-      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
-      "rank": 5,
-      "found": true
-    },
-    {
-      "query": "Công ty Biwase có tổng công suất cấp nước là bao nhiêu m³/ngđ?",
-      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
-      "rank": 1000,
-      "found": false
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của Biwase năm 2024 tăng bao nhiêu phần trăm so với năm 2023?",
-      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
-      "rank": 4,
-      "found": true
-    },
-    {
-      "query": "Tỷ lệ thất thoát nước của Biwase năm 2024 là bao nhiêu phần trăm?",
-      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
-      "rank": 4,
-      "found": true
-    },
-    {
-      "query": "Công ty BiWase có tổng công suất sản xuất là bao nhiêu m³/ngđ trong tháng 2 năm 2024?",
-      "expected_file": "BAN TIN BIWASE T2-2024 - (2)A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BiWase trong tháng 2 năm 2024 so với cùng kỳ năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "BAN TIN BIWASE T2-2024 - (2)A4.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Lợi nhuận sau thuế của BiWase trong tháng 2 năm 2024 so với cùng kỳ năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "BAN TIN BIWASE T2-2024 - (2)A4.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Tổng công suất của BIWASE năm 2025 là bao nhiêu? ",
-      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BIWASE trong hai tháng năm 2025 là bao nhiêu? ",
-      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Lợi nhuận sau thuế của BIWASE năm 2025 so với kế hoạch năm 2025 là bao nhiêu? ",
-      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Đoàn Thanh niên BIWASE đã đóng góp bao nhiêu đơn vị máu trong Ngày hội hiến máu tình nguyện lần thứ 42?",
-      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Hội Chữ thập đỏ tỉnh Bình Dương đã đồng tổ chức Ngày hội hiến máu tình nguyện lần thứ 42 cùng với những tổ chức nào?",
-      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "BIWASE có kế hoạch triển khai các công trình xây dựng nào trong tháng 4 năm 2025 nhằm đáp ứng nhu cầu cấp nước cho khách hàng?",
-      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
-      "rank": 9,
-      "found": true
-    },
-    {
-      "query": "Ông Quảng Văn Viết Cương nhấn mạnh điều gì về lợi thế của BIWASE?",
-      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Các dự án khu công nghiệp nào được Chính phủ cấp phép tại 5 tỉnh thành và do những đơn vị nào làm chủ đầu tư?",
-      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Việc sử dụng vốn và giá trị cổ phiếu BWE có thể giúp BIWASE tham gia vào những dự án nào?",
-      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Công ty BIWASE đạt được bao nhiêu tỷ m³ sản lượng nước tiêu thụ trong tháng 5 năm 2024 so với cùng kỳ năm 2023?",
-      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tỷ lệ thất thoát nước của BIWASE trong tháng 5 năm 2024 là bao nhiêu phần trăm?",
-      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "BIWASE đã ký kết hợp tác với Tổng lãnh sự quán Mỹ để phát triển năng lượng tái tạo, và người dẫn đầu đoàn công tác là ai?",
-      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Chủ tịch HĐQT BIWASE Nguyễn Văn Thiền đã tổ chức những lớp tập huấn chuyên sâu nào trong chuyên đề 'Đầu tư cho tương lai'?",
-      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tổng công ty BIWASE đã tổ chức bao nhiêu lớp tập huấn chuyên sâu về ứng dụng AI trong phát hiện rò rỉ nước?",
-      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Chi nhánh cấp nước Chơn Thành đã tăng bao nhiêu phần trăm sản lượng nước tiêu thụ so với cùng kỳ năm 2023?",
-      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
-      "rank": 10,
-      "found": true
-    },
-    {
-      "query": "Công ty CP - Tổng công ty nước - Môi trường Bình Dương (BIWASE) có tổng công suất cấp nước hiện có là bao nhiêu m³/ngđ?",
-      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
-      "rank": 1000,
-      "found": false
-    },
-    {
-      "query": "Tổng doanh thu của BIWASE trong 7 tháng năm 2024 là bao nhiêu tỷ-VNĐ?",
-      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Dự án Xa lộ nước Long Thành có công suất thiết kế bao nhiêu m³/ngày đêm?",
-      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Công trình đường Chánh Phú Hòa 011 được tài trợ bởi tổ chức nào?",
-      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tổng kinh phí cho công trình đường Chánh Phú Hòa 011 là bao nhiêu?",
-      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Đội ngũ tham dự lễ khánh thành đường Chánh Phú Hòa 011 bao gồm những người nào?",
-      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Ông Mai Hùng Dũng, Phó chủ tịch Thường trực UBND tỉnh Bình Dương, đã có mặt tại buổi ký kết Thỏa thuận hợp tác tài trợ vốn tín dụng đầu tư của nhà nước cho các dự án nước sạch và bảo vệ môi trường. Người nào là người chứng kiến buổi ký kết này?",
-      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "VDB sẽ tài trợ từ 10.000 tỉ đồng đến không quá 16.000 tỉ đồng cho các dự án bảo vệ môi trường. Lãi suất ưu đãi được áp dụng cho loại hình nào?",
-      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Ban lãnh đạo 5 công ty con của BIWASE được công bố và ra mắt tại ngày 6/9. Ai là Chủ tịch HĐTV của Công ty TNHH MTV Liên hợp Khoa học – Công nghệ – Môi trường BIWASE?",
-      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
-      "rank": 1000,
-      "found": false
-    },
-    {
-      "query": "Đội BIWASE xếp hạng thứ mấy trong giải vô địch xe đạp địa hình trẻ quốc gia năm 2024?",
-      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Công đoàn Tổng công ty Biwase được tặng bằng khen bởi tổ chức nào?",
-      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Đội nào xếp hạng I trong giải vô địch xe đạp địa hình trẻ quốc gia năm 2024?",
-      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tổng Công ty BIWASE đã ủng hộ từng tỉnh miền Bắc bão số 3 bao nhiêu triệu đồng?",
-      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "UBMTTQ Việt Nam tỉnh Bình Dương đã chuyển tiền ủng hộ bao nhiêu triệu đồng cho nạn nhân bão số 3?",
-      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Các công ty cấp thoát nước – xây dựng 10 tỉnh, thành phố bị ảnh hưởng bão số 3 đã gửi thư cảm ơn Tổng Công ty BIWASE bao nhiêu lần?",
-      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Công ty CP - Tổng Công ty Nước - Môi trường Bình Dương (BIWASE) có tên gọi đầy đủ là gì?",
-      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
-      "rank": 1000,
-      "found": false
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BIWASE trong 9 tháng năm 2024 là bao nhiêu triệu m³?",
-      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tổng doanh thu của BIWASE trong 9 tháng năm 2024 là bao nhiêu tỉ đồng?",
-      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Công ty Biwase có tổng công suất cấp nước là bao nhiêu trong quý I năm 2024?",
-      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
-      "rank": 4,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của Biwase trong quý I năm 2024 tăng bao nhiêu so với quý I năm 2023?",
-      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
-      "rank": 8,
-      "found": true
-    },
-    {
-      "query": "Lợi nhuận sau thuế của Biwase trong quý I năm 2024 tăng bao nhiêu so với quý I năm 2023?",
-      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
-      "rank": 4,
-      "found": true
-    },
-    {
-      "query": "Chủ tịch HĐQT Nguyễn Văn Thiền đã chúc tết và giao nhiệm vụ cho cán bộ chủ chốt tại buổi họp mặt nào?",
-      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tuyến ống nâng công suất cấp nước về huyện Dầu Tiếng có chiều dài bao nhiêu kilometer?",
-      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Vì sao Bình Dương không xảy ra cúp nước tại các nhà máy công nghiệp?",
-      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
-      "rank": 1000,
-      "found": false
-    },
-    {
-      "query": "Công ty CP - Tổng công ty nước - Môi trường Bình Dương (BIWASE) đã đạt được công suất tổng là bao nhiêu m³/ngđ trong tháng 1 năm 2023?",
-      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
-      "rank": 1000,
-      "found": false
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BIWASE trong tháng 1 năm 2023 đạt bao nhiêu m³, so với cùng kỳ năm 2022?",
-      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
-      "rank": 1000,
-      "found": false
-    },
-    {
-      "query": "Tỷ lệ thất thoát nước của BIWASE trong tháng 1 năm 2023 là bao nhiêu phần trăm, so với cùng kỳ năm 2022?",
-      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
-      "rank": 10,
-      "found": true
-    },
-    {
-      "query": "Công ty CP - Tổng công ty Nước - Môi trường Bình Dương (BIWASE) có tổng công suất hiện có là bao nhiêu m³/ngđ?",
-      "expected_file": "ban-tin-biwase-t1-2024-a4.md",
-      "rank": 4,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BIWASE trong tháng 1 năm 2024 so với cùng kỳ năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t1-2024-a4.md",
-      "rank": 5,
-      "found": true
-    },
-    {
-      "query": "Lợi nhuận sau thuế của BIWASE trong tháng 1 năm 2024 so với cùng kỳ năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t1-2024-a4.md",
-      "rank": 7,
-      "found": true
-    },
-    {
-      "query": "Tổng công suất hiện có của BIWASE trong 10 tháng năm 2023 là bao nhiêu m³/ngđ?",
-      "expected_file": "ban-tin-biwase-t10-2023---a4-(1).md",
-      "rank": 3,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BIWASE trong 10 tháng năm 2023 đạt bao nhiêu m³, so với cùng kỳ năm 2022?",
-      "expected_file": "ban-tin-biwase-t10-2023---a4-(1).md",
-      "rank": 3,
-      "found": true
-    },
-    {
-      "query": "Tỷ lệ thất thoát nước của BIWASE trong 10 tháng năm 2023 là bao nhiêu phần trăm, so với cùng kỳ năm 2022?",
-      "expected_file": "ban-tin-biwase-t10-2023---a4-(1).md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Công ty BIWASE đạt công suất tổng cộng bao nhiêu m³/ngđ vào tháng 10 năm 2025?",
-      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BIWASE năm 2025 so với kế hoạch năm 2025 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
-      "rank": 3,
-      "found": true
-    },
-    {
-      "query": "Lợi nhuận sau thuế của BIWASE năm 2025 so với kế hoạch năm 2025 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Công ty Biwase đạt tổng công suất sản xuất vào tháng 11 năm 2023 là bao nhiêu m³/ngđ?",
-      "expected_file": "ban-tin-biwase-t11-2023---a4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tỷ lệ thất thoát nước của Công ty Biwase vào tháng 11 năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t11-2023---a4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Doanh thu của Công ty Biwase trong năm 2023 đạt bao nhiêu tỷ đồng, so với kế hoạch năm?",
-      "expected_file": "ban-tin-biwase-t11-2023---a4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Công ty BIWASE đạt bao nhiêu tỷ m³ sản lượng nước tiêu thụ trong 3 tháng đầu năm 2023 so với cùng kỳ năm 2022?",
-      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tỷ lệ thất thoát nước của BIWASE trong 3 tháng đầu năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Cổ tức của BIWASE được đề xuất là bằng hay cao hơn năm trước, và ngày nào tổ chức Đại hội cổ đông thường niên?",
-      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
-      "rank": 1000,
-      "found": false
-    },
-    {
-      "query": "Công ty CP - Tổng công ty Nước - Môi trường Bình Dương (BIWASE) có bao nhiêu đơn vị tiêu biểu được mời dự Hội nghị thượng đỉnh về An ninh nguồn nước và phát triển bền vững?",
-      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Tổng công suất cấp nước của BIWASE trong tháng 4 năm 2024 là bao nhiêu m³/ngđ?",
-      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Lợi nhuận sau thuế của BIWASE trong tháng 4 năm 2024 so với cùng kỳ năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
-      "rank": 6,
-      "found": true
-    },
-    {
-      "query": "Công ty CP - Tổng công ty Nước - Môi trường Bình Dương (BIWASE) có tên gọi đầy đủ là gì?",
-      "expected_file": "ban-tin-biwase-t4-2025--a4.md",
-      "rank": 1000,
-      "found": false
-    },
-    {
-      "query": "Tổng công suất cấp nước hiện có của BIWASE trong 4 tháng năm 2025 là bao nhiêu?",
-      "expected_file": "ban-tin-biwase-t4-2025--a4.md",
-      "rank": 2,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BIWASE trong 4 tháng năm 2025 so với kế hoạch năm 2025 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t4-2025--a4.md",
-      "rank": 4,
-      "found": true
-    },
-    {
-      "query": "Tổng công suất cấp nước của BIWASE năm 2025 là bao nhiêu?",
-      "expected_file": "ban-tin-biwase-t5-2025--a4.md",
-      "rank": 6,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BIWASE năm 2025 so với kế hoạch năm 2025 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t5-2025--a4.md",
-      "rank": 7,
-      "found": true
-    },
-    {
-      "query": "Lợi nhuận sau thuế của BIWASE năm 2025 so với kế hoạch năm 2025 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t5-2025--a4.md",
-      "rank": 8,
-      "found": true
-    },
-    {
-      "query": "Công ty Biwase có tổng công suất hiện có là bao nhiêu m³/ngđ?",
-      "expected_file": "ban-tin-biwase-t6-2023---a4.md",
-      "rank": 7,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ trong 6 tháng đầu năm 2023 đạt bao nhiêu m³?",
-      "expected_file": "ban-tin-biwase-t6-2023---a4.md",
-      "rank": 3,
-      "found": true
-    },
-    {
-      "query": "Lợi nhuận sau thuế của Biwase năm 2023 đạt bao nhiêu tỷ-VNĐ?",
-      "expected_file": "ban-tin-biwase-t6-2023---a4.md",
-      "rank": 5,
-      "found": true
-    },
-    {
-      "query": "Tổng công suất cấp nước hiện có của BIWASE năm 2024 là bao nhiêu m³/ngđ?",
-      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
-      "rank": 10,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BIWASE năm 2024 so với cùng kỳ năm 2023 tăng bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
-      "rank": 1000,
-      "found": false
-    },
-    {
-      "query": "Lợi nhuận sau thuế của BIWASE năm 2024 so với cùng kỳ năm 2023 tăng bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
-      "rank": 1000,
-      "found": false
-    },
-    {
-      "query": "Tổng công suất cấp nước hiện có của BIWASE là bao nhiêu m³/ngđ?",
-      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
-      "rank": 9,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BIWASE trong 6 tháng năm 2025 đạt bao nhiêu m³?",
-      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
-      "rank": 8,
-      "found": true
-    },
-    {
-      "query": "Lợi nhuận sau thuế của BIWASE năm 2025 là bao nhiêu Tỉ-VNĐ?",
-      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
-      "rank": 1000,
-      "found": false
-    },
-    {
-      "query": "Công ty Biwase đạt bao nhiêu tỷ đồng doanh thu trong 7 tháng đầu năm 2023?",
-      "expected_file": "ban-tin-biwase-t7-2023--(1)-a4.md",
-      "rank": 5,
-      "found": true
-    },
-    {
-      "query": "Tỷ lệ thất thoát nước của Biwase trong 7 tháng đầu năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t7-2023--(1)-a4.md",
-      "rank": 7,
-      "found": true
-    },
-    {
-      "query": "BIWASE nhận được bao nhiêu giải thưởng trong các cuộc thi về môi trường đô thị và phát triển bền vững năm 2023?",
-      "expected_file": "ban-tin-biwase-t7-2023--(1)-a4.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Công ty CP - Tổng Công ty Nước - Môi trường Bình Dương (BIWASE) có tên gọi đầy đủ là gì?",
-      "expected_file": "ban-tin-biwase-t7-2025--a4(3).md",
-      "rank": 1000,
-      "found": false
-    },
-    {
-      "query": "Tổng công suất cấp nước hiện có của BIWASE năm 2025 là bao nhiêu m³/ngđ?",
-      "expected_file": "ban-tin-biwase-t7-2025--a4(3).md",
-      "rank": 5,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BIWASE năm 2025 so với kế hoạch năm 2025 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t7-2025--a4(3).md",
-      "rank": 8,
-      "found": true
-    },
-    {
-      "query": "Tổng sản lượng nước tiêu thụ trong 8 tháng đầu năm 2023 đạt bao nhiêu m³?",
+      "query": "Trọng tâm, ảnh hưởng của dự án?",
       "expected_file": "ban-tin-biwase-t8-2023-.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan đến dự án?",
+      "expected_file": "ban-tin-biwase-t8-2023-.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khai niệm và ý nghĩa của dự án?",
+      "expected_file": "ban-tin-biwase-t8-2025--a4(2).md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Nguyên nhân và hậu quả của dự án?",
+      "expected_file": "ban-tin-biwase-t8-2025--a4(2).md",
       "rank": 3,
       "found": true
     },
     {
-      "query": "Tỷ lệ thất thoát nước của BIWASE năm 2023 là bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t8-2023-.md",
-      "rank": 5,
-      "found": true
-    },
-    {
-      "query": "Tổng doanh thu của BIWASE trong 8 tháng đầu năm 2023 là bao nhiêu tỷ đồng?",
-      "expected_file": "ban-tin-biwase-t8-2023-.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Số lượng sản lượng nước tiêu thụ của BIWASE trong 8 tháng năm 2025 là bao nhiêu?",
+      "query": "Vai trò và ảnh hưởng của dự án?",
       "expected_file": "ban-tin-biwase-t8-2025--a4(2).md",
-      "rank": 4,
+      "rank": 2,
       "found": true
     },
     {
-      "query": "Tỷ lệ tăng trưởng doanh thu sau thuế của BIWASE năm 2025 so với kế hoạch năm 2025 là bao nhiêu?",
+      "query": "Các yếu tố liên quan đến dự án?",
       "expected_file": "ban-tin-biwase-t8-2025--a4(2).md",
-      "rank": 6,
-      "found": true
-    },
-    {
-      "query": "BIWASE có được vinh danh trong 'Top 50 Công ty niêm yết tốt nhất Việt Nam' năm 2025 không?",
-      "expected_file": "ban-tin-biwase-t8-2025--a4(2).md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Tổng công suất hiện có của BIWASE năm 9 tháng đầu năm 2023 là bao nhiêu m³/ngđ?",
-      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
-      "rank": 4,
-      "found": true
-    },
-    {
-      "query": "Sản lượng nước tiêu thụ của BIWASE năm 9 tháng đầu năm 2023 so với cùng kỳ năm 2022 đạt bao nhiêu phần trăm?",
-      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
-      "rank": 3,
-      "found": true
-    },
-    {
-      "query": "Lợi nhuận sau thuế của BIWASE năm 9 tháng đầu năm 2023 đạt bao nhiêu tỷ-VNĐ?",
-      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
       "rank": 7,
       "found": true
     },
     {
-      "query": "Công ty CP – Tổng Công ty Nước – Môi trường Bình Dương (BIWASE) được chọn thi công hai dự án hạ tầng phục vụ Tuần lễ Cấp cao APEC 2027 tại Phú Quốc. Công ty đã triển khai hai dự án nào?",
+      "query": "Khái niệm chính xác về dự án và ý nghĩa của nó là gì?",
+      "expected_file": "ban-tin-biwase-t8-2025--a4(2).md",
+      "rank": 3,
+      "found": true
+    },
+    {
+      "query": "Mục đích của bảng này là gì?",
+      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Kết luận quan trọng từ dữ liệu?",
+      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm chính trị, ý nghĩa của dự án?",
+      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nguyên nhân, hậu quả của dự án?",
+      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Trọng tâm, ảnh hưởng của dự án?",
+      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan đến dự án?",
+      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm chính xác của dự án là gì?",
+      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Ý nghĩa và mục đích của việc thực hiện dự án này là gì?",
+      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm chính xác về dự án và mục tiêu của nó là gì?",
       "expected_file": "ban-tin-biwase-t9-2025--a4.md",
       "rank": 1,
       "found": true
     },
     {
-      "query": "Tổng công suất của BIWASE trong 9 tháng năm 2025 là bao nhiêu và so với kế hoạch năm 2025?",
+      "query": "Nhân nhiên dẫn tới sự thành công của dự án và kết quả đạt được là gì?",
       "expected_file": "ban-tin-biwase-t9-2025--a4.md",
-      "rank": 9,
+      "rank": 2,
       "found": true
     },
     {
-      "query": "Lợi nhuận sau thuế của BIWASE trong 9 tháng năm 2025 so với kế hoạch năm 2025 là bao nhiêu phần trăm?",
+      "query": "Khái niệm và ý nghĩa của dự án Biwase?",
       "expected_file": "ban-tin-biwase-t9-2025--a4.md",
       "rank": 1000,
       "found": false
     },
     {
-      "query": "Tổng doanh thu ngành nước năm 2022 là bao nhiêu và so với cùng kỳ năm 2021?",
+      "query": "Nguyên nhân và hậu quả của dự án?",
+      "expected_file": "ban-tin-biwase-t9-2025--a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Vai trò và tác động của dự án?",
+      "expected_file": "ban-tin-biwase-t9-2025--a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Các yếu tố liên quan đến dự án?",
+      "expected_file": "ban-tin-biwase-t9-2025--a4.md",
+      "rank": 5,
+      "found": true
+    },
+    {
+      "query": "Xu hướng chính được thể hiện qua sự tăng trưởng về số lượng đấu nối khách hàng và sản lượng nước tiêu thụ",
+      "expected_file": "ban_tin_biwase_t2_2023.md",
+      "rank": 7,
+      "found": true
+    },
+    {
+      "query": "Khái niệm chính xác về lĩnh vực xử lý chất thải và tác động của nó.",
+      "expected_file": "ban_tin_biwase_t2_2023.md",
+      "rank": 8,
+      "found": true
+    },
+    {
+      "query": "Vai trò quan trọng của các yếu tố liên quan như số lượng khách hàng, công suất nhà máy, và quản trị tài chính.",
       "expected_file": "ban_tin_biwase_t2_2023.md",
       "rank": 1,
       "found": true
     },
     {
-      "query": "Đấu nối khách hàng năm 2022 tăng bao nhiêu so với cùng kỳ năm 2021?",
+      "query": "Khái niệm và ý nghĩa của chương trình phát triển hệ thống quản trị thông tin?",
       "expected_file": "ban_tin_biwase_t2_2023.md",
-      "rank": 1,
-      "found": true
+      "rank": 1000,
+      "found": false
     },
     {
-      "query": "Biwase đã làm gì để tối ưu hóa hiệu quả hoạt động trong năm 2022?",
+      "query": "Nguyên nhân và hiệu quả của chương trình phát triển hệ thống quản trị thông tin?",
       "expected_file": "ban_tin_biwase_t2_2023.md",
-      "rank": 1,
-      "found": true
+      "rank": 1000,
+      "found": false
     },
     {
-      "query": "Số lượng đường ống cấp nước phát triển của Chi nhánh Cấp nước Khu Liên Hợp năm 2022 là bao nhiêu?",
+      "query": "Vai trò, ảnh hưởng, và tầm quan trọng của chương trình phát triển hệ thống quản trị thông tin?",
       "expected_file": "ban_tin_biwase_t2_2023.md",
-      "rank": 1,
-      "found": true
+      "rank": 1000,
+      "found": false
     },
     {
-      "query": "Tổng số lượng đường ống cấp nước phát triển trong năm 2022 của Biwase là bao nhiêu?",
+      "query": "Các yếu tố liên quan đến chương trình phát triển hệ thống quản trị thông tin?",
       "expected_file": "ban_tin_biwase_t2_2023.md",
-      "rank": 1,
-      "found": true
+      "rank": 1000,
+      "found": false
     },
     {
-      "query": "Doanh thu xử lý rác thải năm 2022 tăng bao nhiêu phần trăm so với năm 2021?",
-      "expected_file": "ban_tin_biwase_t2_2023.md",
-      "rank": 1,
-      "found": true
-    },
-    {
-      "query": "Công ty BIWASE đạt tổng công suất sản xuất vào cuối năm 2023 là bao nhiêu m³/ngđ?",
+      "query": "Mục đích của bảng này là gì?",
       "expected_file": "ban_tin_biwase_t4_2023.md",
-      "rank": 10,
-      "found": true
+      "rank": 1000,
+      "found": false
     },
     {
-      "query": "Tỷ lệ thất thoát nước của công ty trong 4 tháng đầu năm 2023 là bao nhiêu phần trăm?",
+      "query": "Kết luận quan trọng từ dữ liệu?",
       "expected_file": "ban_tin_biwase_t4_2023.md",
-      "rank": 4,
-      "found": true
+      "rank": 1000,
+      "found": false
     },
     {
-      "query": "Doanh thu của công ty trong 4 tháng đầu năm 2023 đạt bao nhiêu tỷ đồng?",
+      "query": "Khai niệm và ý nghĩa của dự án này là gì?",
       "expected_file": "ban_tin_biwase_t4_2023.md",
-      "rank": 3,
-      "found": true
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan ảnh hưởng đến hiệu suất và tính khả thi của dự án?",
+      "expected_file": "ban_tin_biwase_t4_2023.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khai niệm chính nghĩa và ý nghĩa của dự án?",
+      "expected_file": "ban_tin_biwase_t4_2023.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nguyên nhân - hậu quả của dự án?",
+      "expected_file": "ban_tin_biwase_t4_2023.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Vai trò, ảnh hưởng của dự án?",
+      "expected_file": "ban_tin_biwase_t4_2023.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan đến dự án?",
+      "expected_file": "ban_tin_biwase_t4_2023.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khai niệm chính nghĩa, ý nghĩa của dự án?",
+      "expected_file": "ban_tin_biwase_t5_2023.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nguyên nhân - hiệu quả của giải pháp?",
+      "expected_file": "ban_tin_biwase_t5_2023.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Trọng yếu, tác động của dự án?",
+      "expected_file": "ban_tin_biwase_t5_2023.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan đến dự án?",
+      "expected_file": "ban_tin_biwase_t5_2023.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Khái niệm chính nghĩa là gì?",
+      "expected_file": "ban_tin_biwase_t5_2023.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Ý nghĩa của chương trình này là gì?",
+      "expected_file": "ban_tin_biwase_t5_2023.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Nguyên nhân và hậu quả của chương trình là gì?",
+      "expected_file": "ban_tin_biwase_t5_2023.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Vai trò, tác động của chương trình là gì?",
+      "expected_file": "ban_tin_biwase_t5_2023.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Các yếu tố liên quan đến chương trình là gì?",
+      "expected_file": "ban_tin_biwase_t5_2023.md",
+      "rank": 1000,
+      "found": false
     }
   ]
 }

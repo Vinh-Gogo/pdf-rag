@@ -51,7 +51,57 @@ class Helper:
 
         return seq_for_benchmark
 
-help = Helper()
+# help = Helper()
 
-path = r'src\data\push\pages\pages_data.json'
-data = help.get_data_for_benchmark(path, debug=True)
+# path = r'src\data\push\pages\pages_data.json'
+# data = help.get_data_for_benchmark(path, debug=True)
+
+import json
+from pathlib import Path
+
+
+def process_md_to_jsonl(input_file: str, output_file: str = None) -> list[dict]:
+    """
+    Process a markdown file by splitting on "\n\n\n" and convert to JSONL format.
+    
+    Args:
+        input_file: Path to the input markdown file
+        output_file: Path to the output JSONL file (optional, defaults to input_file.jsonl)
+    
+    Returns:
+        List of dictionaries with page and content keys
+    """
+    input_path = Path(input_file)
+    
+    if output_file is None:
+        output_file = input_path.with_suffix('.jsonl')
+    
+    output_path = Path(output_file)
+    
+    # Read the markdown file
+    with open(input_path, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # Split by "\n\n\n" delimiter
+    chunks = content.split("\n\n\n")
+    
+    # Create list of dictionaries
+    results = []
+    for i, chunk in enumerate(chunks, start=1):
+        # Skip empty chunks
+        chunk = chunk.strip()
+        if chunk:
+            results.append({
+                "page": i,
+                "content": chunk
+            })
+    
+    # Write to JSONL file
+    with open(output_path, 'w', encoding='utf-8') as f:
+        for item in results:
+            f.write(json.dumps(item, ensure_ascii=False) + '\n')
+    
+    print(f"Processed {len(results)} chunks from '{input_path}'")
+    print(f"Output saved to '{output_path}'")
+    
+    return results

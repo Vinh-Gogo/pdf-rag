@@ -62,13 +62,18 @@ def load_corpus(md_dir):
         # Using 500 chars overlap 50 for simplicity in this test script
         # or splitting by paragraphs
         
+        # Làm sạch markdown nếu cần thiết ở đây
+        content = content.replace('\r\n', '\n').replace('\r', '\n')
+        print(f"Processing file: {filename}, length: {len(content)} characters")
+        print(f"Sample content start: {content[:100]}...\n")
+        
         # Split by double newlines first
-        paragraphs = content.split('\n\n\n')
+        paragraphs = content.split('\n\n')
         current_chunk = ""
         
         for p in paragraphs:
             if len(current_chunk) + len(p) < 800:
-                current_chunk += "\n\n\n" + p
+                current_chunk += "\n\n" + p
             else:
                 if len(current_chunk.strip()) > 50:
                     chunks.append(current_chunk.strip())

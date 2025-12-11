@@ -1,79 +1,69 @@
  CÔNG TY CP - TỔNG CÔNG TY NƯỚC - MÔI TRƯỜNG BÌNH DƯƠNG (BIWASE) BINH DUONG WATER - ENVIRONMENT CORPORATION - JOINT STOCK COMPANY
-
 **BẢN TIN BIWASE THÁNG 9 NĂM 2025** (Mã CK: BWE)
-
 TỔNG HỢP KẾT QUẢ HOẠT ĐỘNG SẢN XUẤT KINH DOANH 09 THÁNG NĂM 2025 CỦA BIWASE
-
 | STT | NỘI DUNG | ÐVT | THỰC HIỆN 9 THÁNG NĂM 2025 | KÉ HOẠCH NĂM 2025 | SO VỚI KÉ HOẠCH NĂM 2025 |
 |-|-|-|-|-|-|
 | 1 | Tổng Công suất BIWASE | m³/ngđ | 792.000 | 792.000 | 100% |
 | 2 | Sản lượng nước tiêu thụ | m³ | 142.808.955 | 203.000.000 | 70,3% |
 | 3 | Tổng doanh thu BIWASE (gồm DT nội bộ) | Ti-VNĐ | 2.630 | 2.920 | 90,1% |
 | 4 | Lợi nhuận sau thuế | Tỉ-VNĐ | 626 | 520 | 120,4% |
-
 *Tổng công suất chưa tính các nhà máy nước ngoài tỉnh Bình Dương*
 
+**BẢN TIN BIWASE THÁNG 9 NĂM 2025** (Mã CK: BWE)
 **HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
-
 **BIWASE được chọn thi công hai dự án hạ tầng phục vụ Tuần lễ Cấp cao APEC 2027 tại Phú Quốc.**
-
 Ngày 24/9/2025, tại đặc khu kinh tế Phú Quốc, UBND tỉnh An Giang đã khởi công loạt công trình hạ tầng phục vụ Tuần lễ Cấp cao APEC 2027. Trong đó, Công ty CP – Tổng Công ty Nước – Môi trường Bình Dương (BIWASE) được lựa chọn thực hiện hai dự án trọng điểm.
-
 - **Dự án Nhà máy nước Hồ Cửa Cạn (công suất cấp nước 50.000m³/ngày đêm)** cung cấp nguồn nước sạch, an toàn cho người dân, du khách và hoạt động kinh tế – dịch vụ, góp phần đảm bảo phát triển bền vững.
 - **Dự án Khu xử lý rác Bãi Bổn (công suất 250 tấn/ngày)** sẽ xử lý rác thải theo hướng hiện đại, văn minh, tạo dựng môi trường sống xanh – sạch – đẹp, phù hợp với định hướng phát triển đô thị du lịch sinh thái.
-
 Hai công trình không chỉ phục vụ APEC 2027 mà còn đặt nền móng lâu dài để Phú Quốc trở thành trung tâm du lịch tầm vóc quốc tế. Việc đồng thời được giao triển khai hai dự án chiến lược thể hiện sự tin tưởng của UBND tỉnh An Giang vào năng lực và uy tín của BIWASE trong lĩnh vực cấp nước – môi trường, khẳng định vai trò tiên phong của doanh nghiệp trong các dự án hạ tầng trọng điểm quốc gia.
 
+**BẢN TIN BIWASE THÁNG 9 NĂM 2025** (Mã CK: BWE)
+**HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
 **BIWASE được vinh danh trong TOP50 Công ty Kinh doanh Hiệu quả nhất Việt Nam 2025.**
-
 Ngày 27/9/2025, tại Hội nghị Quản trị Doanh nghiệp do Nhịp Cầu Đầu Tư tổ chức, Công ty CP – Tổng Công ty Nước – Môi trường Bình Dương (BIWASE) vinh dự được vinh danh trong TOP50 Công ty Kinh doanh Hiệu quả nhất Việt Nam 2025.
-
 Danh sách được xây dựng dựa trên dữ liệu giai đoạn 2021–2024, với các tiêu chí: tăng trưởng doanh thu, lợi nhuận, ROE, hiệu suất cổ phiếu và vốn hóa thị trường. Thành tích này khẳng định năng lực quản trị hiệu quả, uy tín và sức cạnh tranh bền vững của BIWASE.
-
 Với định hướng phát triển gắn liền trách nhiệm xã hội, BIWASE luôn chú trọng đổi mới công nghệ, đầu tư dự án xanh, cung cấp nguồn nước sạch và dịch vụ chất lượng, hướng tới giá trị lâu dài cho cổ đông, khách hàng và cộng đồng.
 
+**BẢN TIN BIWASE THÁNG 9 NĂM 2025** (Mã CK: BWE)
+**HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
 **BIWASE tham gia cùng đoàn công tác của UBND TP Hồ Chí Minh tại Nhật Bản.**
-
 Trong khuôn khổ chuyến công tác tại Nhật Bản do Phó Chủ tịch UBND TPHCM Bùi Minh Thạnh dẫn đầu, ông Nguyễn Văn Thiền – Chủ tịch HĐQT Công ty CP - Tổng Công ty Nước – Môi trường Bình Dương (BIWASE) đã tham gia cùng đoàn nhằm trao đổi, học hỏi kinh nghiệm trong lĩnh vực quản lý tài nguyên nước và xử lý nước thải.
-
 Ngày 26-9, đoàn đã đến thăm Trung tâm Môi trường Ohmi và Nhà máy xử lý nước thải Konan-Chubu (công suất 290.000m3 /ngày đêm) tại tỉnh Shiga, nơi vận hành hệ thống xử lý nước đô thị theo hướng tuần hoàn, tiết kiệm và thân thiện môi trường. Tại buổi làm việc, lãnh đạo TPHCM đề nghị phía Nhật Bản hỗ trợ chuyển giao công nghệ, chia sẻ kinh nghiệm quản lý chất lượng nước và bảo tồn nguồn tài nguyên nước.
-
 Ngoài ra, đoàn cũng làm việc với Trường Cao đẳng Nông nghiệp tỉnh Shiga, tìm hiểu mô hình đào tạo nhân lực trẻ và hợp tác trong lĩnh vực sản xuất nông sản sạch, phục vụ định hướng phát triển nông nghiệp công nghệ cao.
-
 Với vai trò doanh nghiệp dày dặn kinh nghiệm trong ngành, BIWASE kỳ vọng hợp tác quốc tế sẽ mở ra cơ hội tiếp cận công nghệ tiên tiến của Nhật Bản để đóng góp vào phát triển hạ tầng môi trường, đáp ứng yêu cầu đô thị hóa nhanh của TPHCM và cả nước.
 
+**BẢN TIN BIWASE THÁNG 9 NĂM 2025** (Mã CK: BWE)
+**HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
 **BIWELCO khẳng định vị thế trong lĩnh vực thi công cấp thoát nước.**
-
 Với nhiều năm kinh nghiệm trong xây lắp điện, hạ tầng kỹ thuật và đặc biệt là các công trình cấp thoát nước, Công ty CP Xây Lắp – Điện (BIWELCO) đang khẳng định vị thế là đơn vị thi công uy tín tại khu vực phía Nam.
-
 BIWELCO từng thực hiện nhiều công trình quy mô lớn, điển hình là tuyến ống gang D2400mm thuộc Dự án Hệ thống Cấp nước Bàu Bàng (Bình Dương) – một trong những loại ống có kích thước lớn nhất Việt Nam, thi công trên nền đất yếu nhưng vẫn đảm bảo tiến độ và chất lượng. Đặc biệt, công ty tiên phong ứng dụng kỹ thuật khoan ngầm ống HDPE D1200mm vượt sông Vàm Cỏ Đông và Vàm Cỏ Tây trong Dự án Nhà máy Nước Nhị Thành – Giai đoạn 3, được xem là tuyến ống khoan ngầm lớn nhất tại khu vực.
-
 Vượt qua nhiều thách thức về địa chất, hạ tầng ngầm và yêu cầu an toàn khắt khe, BIWELCO luôn hoàn thành công trình đúng hạn, an toàn và hiệu quả. Với định hướng đầu tư công nghệ hiện đại và nâng cao nguồn nhân lực, BIWELCO tiếp tục khẳng định vai trò đối tác chiến lược cho các dự án hạ tầng trọng điểm trong tương lai.
 
+**BẢN TIN BIWASE THÁNG 9 NĂM 2025** (Mã CK: BWE)
+**HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
 **Hàng ngàn người tham gia Đại lễ Vu Lan Báo Hiếu tại Hoa viên Nghĩa trang Bình Dương.**
-
 Năm nay, đại lễ Vu lan lần thứ 16 được Ban Trị sự Giáo hội Phật giáo Việt Nam TP.HCM phối hợp Công ty CP đầu tư xây dựng Chánh Phú Hòa long trọng tổ chức tại Linh Hoa Tuệ Đàn trong khuôn viên Hoa viên Nghĩa trang Bình Dương (Phường Chánh Phú Hòa, Tp.HCM).
-
 Đến dự buổi lễ có đại diện lãnh đạo MTTQVN TP.HCM, Sở Dân tộc & Tôn Giáo TP.HCM, đại diện Giáo hội Phật giáo T.Ư và Tp.HCM, Chính quyền địa phương, các bậc lão thành cách mạng, Mẹ Việt Nam Anh Hùng, phật tử và hơn 4.000 thân nhân có người thân yên nghỉ tại Hoa Viên.
-
 Trong không khí trang nghiêm và ấm áp nghĩa tình, chư tôn đức hướng dẫn đại chúng thực hiện nghi thức dâng hương, dâng hoa; nghe pháp thoại về truyền thống hiếu đạo, các giá trị nhân văn và ý nghĩa thiêng liêng của mùa Vu Lan.
-
 Sau 16 kỳ tổ chức, đại lễ Vu lan tại Hoa viên Nghĩa trang Bình Dương đã trở thành một nét đẹp văn hóa tâm linh thường niên, góp phần gìn giữ và lan tỏa đạo hiếu, nền tảng đạo đức thiêng liêng trong đời sống tinh thần người Việt.
 
+**BẢN TIN BIWASE THÁNG 9 NĂM 2025** (Mã CK: BWE)
+**HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
 **GIWACO triển khai lắp đặt tuyến ống nước sạch trên địa bàn ấp Suối Dzui, xã La Ngà, tỉnh Đồng Nai.**
-
 Sau nhiều năm mong đợi, hàng trăm hộ dân ấp 94 và ấp Suối Dzui (xã La Ngà) đã chính thức được tiếp cận nguồn nước sạch đạt chuẩn Bộ Y tế nhờ dự án đầu tư hệ thống cấp nước sạch của Công ty CP Cấp nước Gia Tân. Công trình khởi công đầu tháng 9/2025, với tuyến ống dài 5,3 km, tổng vốn ước 3,5 tỷ đồng và dự kiến hoàn thành trong 20 ngày. Đây là bước ngoặt quan trọng giúp người dân thoát cảnh phụ thuộc vào giếng khoan hay mua nước với giá cao, đồng thời nâng cao chất lượng đời sống. Bên cạnh đó, công trình còn góp phần đồng hành cùng Công ty CP Năng lượng Môi trường Đồng Nai trong việc bảo vệ môi trường, đảm bảo hoạt động của Nhà máy điện rác Định Quán – giai đoạn 1, khi doanh nghiệp chuyển sang sử dụng nguồn nước sạch tập trung của GIWACO thay vì khai thác nước ngầm.
 
+**BẢN TIN BIWASE THÁNG 9 NĂM 2025** (Mã CK: BWE)
+**HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
 • **Gạch BIWASE – Con Voi Bình Dương tự hào là đơn vị cung cấp vật liệu xây dựng tái chế cho nhiều công trình chỉnh trang đô thị trên địa bàn tỉnh Bình Dương (cũ)**, góp phần xây dựng môi trường sống xanh – sạch – bền vững, khẳng định vị thế là đơn vị tiên phong và có quy mô lớn trong lĩnh vực sản xuất, cung ứng gạch tái chế. Dự kiến trong thời gian tới, giai đoạn 1 gần 80.000 m² gạch Chữ nhật 6P M350 sẽ được sử dụng cho các tuyến đường quan trọng tại phường Thủ Dầu Một như: Cách Mạng Tháng Tám, Nguyễn Tri Phương, Võ Minh Đức, Nguyễn Văn Trỗi. Khối lượng đã cung cấp: 57.382 m² (đạt 71,7%).
 Việc Gạch BIWASE – Con Voi Bình Dương được tin tưởng lựa chọn cho những công trình chỉnh trang quy mô lớn không chỉ khẳng định chất lượng sản phẩm mà còn cho thấy vai trò tiên phong của doanh nghiệp trong thực hiện kinh tế tuần hoàn, giảm thiểu rác thải xây dựng và thúc đẩy phát triển đô thị xanh, bền vững. Đây là bước tiến quan trọng trong hành trình đưa sản phẩm tái chế BIWASE tham gia sâu vào thị trường.
 
+**BẢN TIN BIWASE THÁNG 9 NĂM 2025** (Mã CK: BWE)
 **HOẠT ĐỘNG KHÁC**
 
 **Đoàn thanh niên BIWASE đóng góp 180 đơn vị máu.**
-
 Ngày 26/09/2025, Đoàn Thanh niên Công ty CP – Tổng công ty Nước – Môi trường Bình Dương phối hợp với Trung tâm Truyền máu Bệnh viện Chợ Rẫy và Hội Chữ thập đỏ tỉnh Bình Dương tổ chức Ngày hội hiến máu tình nguyện lần thứ 43 với thông điệp "Giọt máu cho đi – Một cuộc đời ở lại". Đây là hoạt động nhân đạo có ý nghĩa, được Đoàn Thanh niên BIWASE duy trì đều đặn 2 lần mỗi năm. Kết quả, các đoàn viên thanh niên của Tổng công ty đã hiến tặng 180 đơn vị máu, góp phần lan tỏa tinh thần nhân văn và trách nhiệm đối với cộng đồng.
 
+**BẢN TIN BIWASE THÁNG 9 NĂM 2025** (Mã CK: BWE)
 **PHƯƠNG HƯỚNG SẢN XUẤT KINH DOANH THÁNG 10 NĂM 2025**
-
 - Quý IV là quý quyết liệt thực hiện các nhiệm vụ để đạt mục tiêu nghị quyết đề ra, nhiều triển vọng vượt nghị quyết.
 - Nhanh chóng đưa các công trình đã xây dựng xong vào sản xuất, tăng thu nhập, nâng cao hiệu quả đầu tư

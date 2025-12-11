@@ -25,11 +25,9 @@ Dịp này ông Nguyễn Văn Thiền, Phó Chủ tịch Hội Cấp Thoát nư�
 **HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
 **Nước sạch về các xã nông thôn mới huyện Phú Giáo, Dầu Tiếng.** Tổng công ty BIWASE giao Chi nhánh cấp nước Khu Liên Hợp đầu tư phát triển 8,5 km ống trục HDPE D350 và D160 đưa nước sạch từ nhà máy nước Phước Vĩnh theo 2 tuyến dọc hai bên đường DT 741 thông mạng vượt cầu Sông Bé đến KCN Tân Bình và tỏa ra các xã nông thôn mới Hưng Hòa, Phước Hòa, Tân Bình, mỗi xã có trên 1.600 hộ dân. Có nước sạch sử dụng người dân vô cùng phấn khởi vì bảo đảm sức khoẻ, tiết kiệm chi tiêu. Hiện nước sạch đã về đến thị trấn Dầu Tiếng, góp phần cùng các địa phương đẩy mạnh phát triển công nghiệp, đô thị.
 
-
 **BẢN TIN BIWASE THÁNG 10 NĂM 2023** (Mã CK: BWE)
 **HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
 - **Công ty cổ phần cấp nước Gia Tân công bố 91 chỉ tiêu nước sạch đạt chuẩn loại A Bộ Y tế.** Dựa trên kết quả kiểm nghiệm của Công ty TNHH Khoa học TSL về 91 chỉ tiêu hoá lý tại nhà máy và các trạm bơm thuộc Công ty cổ phần cấp nước Gia Tân (GIWACO) đều đạt tiêu chuẩn loại A. QCVN 01-1:2018/BYT của Bộ y tế. Hàng tháng, Tổng giám đốc Công ty cổ phần cấp nước Gia Tân đều ký quyết định công bố chất lượng nước thành phẩm và chịu trách nhiệm về kết quả công bố, khẳng định tính an toàn, chất lượng nước cung ứng đến khách hàng.
-
 
 **BẢN TIN BIWASE THÁNG 10 NĂM 2023** (Mã CK: BWE)
 **HOẠT ĐỘNG SẢN XUẤT KINH DOANH**

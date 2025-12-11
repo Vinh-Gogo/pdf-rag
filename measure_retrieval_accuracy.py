@@ -62,11 +62,6 @@ def load_corpus(md_dir):
         # Using 500 chars overlap 50 for simplicity in this test script
         # or splitting by paragraphs
         
-        # Làm sạch markdown nếu cần thiết ở đây
-        content = content.replace('\r\n', '\n').replace('\r', '\n')
-        print(f"Processing file: {filename}, length: {len(content)} characters")
-        print(f"Sample content start: {content[:100]}...\n")
-        
         # Split by double newlines first
         paragraphs = content.split('\n\n')
         current_chunk = ""
@@ -94,7 +89,7 @@ def calculate_metrics(results):
     
     hits_at_1 = sum(1 for r in results if r['rank'] == 1)
     hits_at_3 = sum(1 for r in results if r['rank'] <= 3)
-    hits_at_10 = sum(1 for r in results if r['rank'] <= 10)
+    hits_at_5 = sum(1 for r in results if r['rank'] <= 5)
     
     mrr = sum(1.0/r['rank'] for r in results if r['rank'] > 0) / total
     
@@ -102,7 +97,7 @@ def calculate_metrics(results):
         'total_queries': total,
         'accuracy@1': hits_at_1 / total,
         'accuracy@3': hits_at_3 / total,
-        'accuracy@10': hits_at_10 / total,
+        'accuracy@5': hits_at_5 / total,
         'mrr': mrr
     }
 
@@ -180,8 +175,8 @@ def main():
         rank = -1
         found = False
         
-        # Check top 10
-        for i, idx in enumerate(sorted_indices[:10]):
+        # Check top 20
+        for i, idx in enumerate(sorted_indices[:20]):
             retrieved_file = metadatas[idx]['file']
             if retrieved_file == expected_file:
                 rank = i + 1
@@ -189,7 +184,7 @@ def main():
                 break
         
         if not found:
-            rank = 1000 # Not found in top 10
+            rank = 1000 # Not found in top 20
             
         results.append({
             'query': query,
@@ -208,12 +203,12 @@ def main():
     print("="*50)
     
     # Save detailed results
-    with open("tests/data/evaluation_results.json", "w", encoding='utf-8') as f:
+    with open("tests/data/qwen_evaluation_results.json", "w", encoding='utf-8') as f:
         json.dump({
             'metrics': metrics,
             'details': results
         }, f, indent=2, ensure_ascii=False)
-    print("Detailed results saved to tests/data/evaluation_results.json")
+    print("Detailed results saved to tests/data/qwen_evaluation_results.json")
 
 if __name__ == "__main__":
     main()

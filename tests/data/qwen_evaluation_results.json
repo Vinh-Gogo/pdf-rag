@@ -1,0 +1,1235 @@
+{
+  "metrics": {
+    "total_queries": 204,
+    "accuracy@1": 0.6176470588235294,
+    "accuracy@3": 0.7696078431372549,
+    "accuracy@5": 0.8676470588235294,
+    "mrr": 0.7199419947830756
+  },
+  "details": [
+    {
+      "query": "Công ty CP - Tổng Công ty Nước - Môi trường Bình Dương (BIWASE) có mã chứng khoán là gì?",
+      "expected_file": "BAN TIN BIWASE T1-2025 -A4 V2.md",
+      "rank": 5,
+      "found": true
+    },
+    {
+      "query": "Sản lượng nước tiêu thụ của BIWASE trong tháng 1 năm 2025 là bao nhiêu triệu m³?",
+      "expected_file": "BAN TIN BIWASE T1-2025 -A4 V2.md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Sản lượng nước tiêu thụ kế hoạch năm 2025 tại tỉnh Bình Phước là bao nhiêu m³?",
+      "expected_file": "BAN TIN BIWASE T1-2025 -A4 V2.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Bản tin BIWASE tháng 1 năm 2025 có đề cập đến việc biến bùn thải thành nguyên liệu gì?",
+      "expected_file": "BAN TIN BIWASE T1-2025 -A4 V2.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Thực hiện quy trình sản xuất tuần hoàn, BIWASE đã tận dụng bùn thải làm nguyên liệu sản xuất gì?",
+      "expected_file": "BAN TIN BIWASE T1-2025 -A4 V2.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Đề tài khoa học 'Biến bùn thải thành nguyên liệu có giá trị' được thực hiện bởi ai?",
+      "expected_file": "BAN TIN BIWASE T1-2025 -A4 V2.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Bản tin BIWASE tháng 10 năm 2024 có đề cập đến chất lượng nước tại đâu?",
+      "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Các chỉ tiêu nào được kiểm tra và đạt tiêu chuẩn tại Nhà máy nước mặt Nhị Thành?",
+      "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Số lượng Coliform và Ecoli tại Nhà máy nước mặt Nhị Thành là bao nhiêu và so sánh với tiêu chuẩn cho phép?",
+      "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "BIWASE được biết đến là doanh nghiệp hàng đầu ngành nước Việt Nam về lĩnh vực nào?",
+      "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Đại diện Chính phủ và Hội nước Indonesia sẽ triển khai những chương trình hợp tác nào tại Tuần lễ nước Việt Nam 2024?",
+      "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "BIWASE đã ký kết những chương trình hợp tác nào trước đó nhằm nâng cao hiệu quả sản xuất kinh doanh?",
+      "expected_file": "BAN TIN BIWASE T10-2024 - A4.md",
+      "rank": 17,
+      "found": true
+    },
+    {
+      "query": "Bài báo nói gì về sự kiện diễn đàn M&A Việt Nam lần thứ 16 năm 2024?",
+      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "BIWASE đã tiếp quản vai trò quản lý điều hành công ty nào sau khi thực hiện M&A?",
+      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
+      "rank": 5,
+      "found": true
+    },
+    {
+      "query": "Mục đích của M&A tại BIWASE là gì?",
+      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
+      "rank": 5,
+      "found": true
+    },
+    {
+      "query": "Bản tin BIWASE tháng 11 năm 2024 trao giải thưởng 'Dòng Xanh Nước Việt' 2024 cho đơn vị nào?",
+      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Hội Cấp Thoát Nước Việt Nam (VWSA) tổ chức trao giải thưởng 'Dòng Xanh Nước Việt' 2024 tại đâu và khi nào?",
+      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Giải thưởng 'Dòng Xanh Nước Việt' 2024 được trao cho BIWASE như thế nào?",
+      "expected_file": "BAN TIN BIWASE T11-2024 - A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "BIWASE đã đầu tư bao nhiêu đồng vào 05 công ty con trong năm 2023?",
+      "expected_file": "BAN TIN BIWASE T12-2023 - A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Lợi thế thương mại phát sinh từ hợp nhất của BIWASE năm 2023 là bao nhiêu tỷ đồng?",
+      "expected_file": "BAN TIN BIWASE T12-2023 - A4.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Diễn giả nào tại Diễn đàn M&A Việt Nam 2023 đã đưa ra quan điểm mới về M&A?",
+      "expected_file": "BAN TIN BIWASE T12-2023 - A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Thủ tướng Chính phủ đã tặng bằng khen cho bao nhiêu công đoàn viên xuất sắc trong nhiệm kỳ 2023-2028?",
+      "expected_file": "BAN TIN BIWASE T12-2023 - A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Công đoàn cơ sở Công ty Cổ phần nước - Môi trường Bình Dương (Biwase) đã nhận cờ đơn vị xuất sắc năm 2022 từ đâu?",
+      "expected_file": "BAN TIN BIWASE T12-2023 - A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Các phong trào thi đua lao động giỏi và sáng tạo đã đóng góp như thế nào vào hiệu quả hoạt động sản xuất kinh doanh tại Biwase?",
+      "expected_file": "BAN TIN BIWASE T12-2023 - A4.md",
+      "rank": 5,
+      "found": true
+    },
+    {
+      "query": "Công ty Biwase có tên gọi đầy đủ là gì?",
+      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Sản lượng nước tiêu thụ năm 2024 so với năm 2023 là bao nhiêu phần trăm?",
+      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Tỷ lệ thất thoát nước năm 2024 so với cùng kỳ năm 2023 là bao nhiêu?",
+      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Công ty CP - Tổng Công ty Nước - Môi trường Bình Dương (BIWASE) đã khánh thành tổ hợp nhà máy đốt rác phát điện công suất bao nhiêu MW?",
+      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Tổ hợp nhà máy đốt rác phát điện công suất 5 MW do BIWASE thiết kế và vận hành có dây chuyền nào để xử lý rác thải sinh hoạt?",
+      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Tổ hợp nhà máy đốt rác phát điện công suất 5 MW được khánh thành vào ngày nào?",
+      "expected_file": "BAN TIN BIWASE T12-2024 - A4 (1).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Chi nhánh cấp nước Chơn Thành đạt doanh thu bao nhiêu tỷ đồng năm 2023?",
+      "expected_file": "BAN TIN BIWASE T2-2024 - (2)A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Số lượng khách hàng đấu nối tại Chi nhánh cấp nước Chơn Thành tăng bao nhiêu so với năm 2022?",
+      "expected_file": "BAN TIN BIWASE T2-2024 - (2)A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Nhà máy nước KCN Minh Hưng III tăng bao nhiêu phần trăm sản lượng sau khi đầu tư hệ thống ống dẫn nước?",
+      "expected_file": "BAN TIN BIWASE T2-2024 - (2)A4.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Bản tin BIWASE tháng 2 năm 2024 được trình bày như thế nào?",
+      "expected_file": "BAN TIN BIWASE T2-2024 - (2)A4.md",
+      "rank": 3,
+      "found": true
+    },
+    {
+      "query": "Chi nhánh Dịch vụ đô thị BIWASE đã tặng gì cho du khách tại Lễ hội 0 Đồng?",
+      "expected_file": "BAN TIN BIWASE T2-2024 - (2)A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Lễ hội 0 Đồng có tên gọi khác là gì và được tổ chức ở đâu?",
+      "expected_file": "BAN TIN BIWASE T2-2024 - (2)A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Bản tin BIWASE tháng 2 năm 2025 báo cáo số lượng rác tiếp nhận trong năm 2024 là bao nhiêu?",
+      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "BIWASE đang nghiên cứu đầu tư xây dựng lò đốt rác công suất 500 tấn/ngày, công suất phát điện là bao nhiêu?",
+      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Số lượng sản phẩm tái chế được bán và sử dụng nội bộ tại BIWASE trong năm 2024 là bao nhiêu?",
+      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Tổng công suất của BIWASE trong hai tháng năm 2025 là bao nhiêu?",
+      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
+      "rank": 5,
+      "found": true
+    },
+    {
+      "query": "Sản lượng nước tiêu thụ của BIWASE trong hai tháng năm 2025 là bao nhiêu?",
+      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Tỉ lệ thất thoát nước của BIWASE trong hai tháng năm 2025 là bao nhiêu?",
+      "expected_file": "BAN TIN BIWASE T2-2025 -A4 (fixed3).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Bản tin BIWASE tháng 3 năm 2025 tập trung vào hướng dẫn gì cho công tác cấp nước trong mùa khô hạn?",
+      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "BIWASE đã chỉ đạo triển khai các công trình nào để đảm bảo cung cấp nước đầy đủ cho khách hàng vào mùa khô hạn?",
+      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Mục tiêu chính của việc thực hiện công tác cấp nước tốt nhất trong mùa khô hạn theo BẢN TIN BIWASE tháng 3 năm 2025 là gì?",
+      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Bài báo nói gì về mục tiêu lợi nhuận của BIWASE năm 2025?",
+      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
+      "rank": 3,
+      "found": true
+    },
+    {
+      "query": "Tỷ lệ thất thoát nước của BIWASE năm 2024 là bao nhiêu?",
+      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Công ty mẹ của BIWASE đạt tổng doanh thu tối thiểu bao nhiêu trong năm 2025?",
+      "expected_file": "BAN TIN BIWASE T3-2025 -A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "BIWASE đã nhận bằng khen của Chủ tịch UBND tỉnh Bình Dương về tiêu chuẩn an toàn an ninh trật tự năm 2023. Ai là người trao bằng khen này?",
+      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Lãnh đạo nào của BIWASE đã ký kết Phong trào Toàn dân Bảo vệ An ninh Tổ quốc năm 2024?",
+      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Công ty CP – Tổng công ty Nước – Môi trường Bình Dương (BIWASE) đạt tiêu chuẩn nào năm 2023?",
+      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Bản tin BIWASE tháng 5 năm 2024 đề cập đến việc gì về sản xuất kinh doanh?",
+      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
+      "rank": 12,
+      "found": true
+    },
+    {
+      "query": "Các dự án được đầu tư trong kế hoạch sản xuất kinh doanh 2024 là gì?",
+      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Công ty nào được đề cập đến việc hoàn thiện hồ sơ thủ tục ra đời?",
+      "expected_file": "BAN TIN BIWASE T5-2024 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Tuyến đường Chánh Phú Hòa 011 được khánh thành vào ngày nào?",
+      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Tổng kinh phí để xây dựng tuyến đường Chánh Phú Hòa 011 là bao nhiêu?",
+      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "BIWASE đóng vai trò gì trong việc xây dựng và thi công tuyến đường Chánh Phú Hòa 011?",
+      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Chiến dịch 'Kỳ nghỉ hồng' và 'Mùa hè xanh' năm 2024 được tổ chức ở đâu?",
+      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Đoàn khối các Cơ quan tỉnh và Đoàn khối Doanh nghiệp tỉnh Bình Dương đã thực hiện hành trình nào?",
+      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Đoàn Cơ sở Tổng Công ty Biwase đã trao tặng gì cho các hộ nông dân và thanh niên tại xã Lương Hòa, huyện Giồng Trôm?",
+      "expected_file": "BAN TIN BIWASE T7-2024 - A4 - fixed.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Công ty CP – Tổng công ty Nước – Môi trường Bình Dương (BIWASE) đã ký Thỏa thuận hợp tác tài trợ vốn tín dụng đầu tư của nhà nước cho các dự án nước sạch và bảo vệ môi trường với ngân hàng nào?",
+      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Tổng số tiền tài trợ từ VDB cho các dự án nước sạch và bảo vệ môi trường do BIWASE và các doanh nghiệp trực thuộc hệ thống làm chủ đầu tư là bao nhiêu?",
+      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Ông Mai Hùng Dũng, Phó chủ tịch Thường trực UBND tỉnh Bình Dương, đã nhấn mạnh điều gì về vị thế của BIWASE trong việc triển khai các dự án nước sạch và vệ sinh môi trường?",
+      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Ban lãnh đạo 5 công ty con của Tổng công ty BIWASE được bổ nhiệm là ai?",
+      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Tổng công ty BIWASE giao tổng tài sản cho những công ty nào trong số 5 công ty con?",
+      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Ông Trần Hoàng Duy có vai trò gì trong việc bổ nhiệm ban lãnh đạo của Tổng công ty BIWASE?",
+      "expected_file": "BAN TIN BIWASE T8-2024 - A4 (1).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Ngân hàng MayBank (Malaysia) đã giới thiệu những nguồn vốn nào để BIWASE lựa chọn và hợp tác?",
+      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Đoàn làm việc đã thăm quan thực tế hoạt động tại những nhà máy nào của Công ty CP Nước BIWASE Long An?",
+      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
+      "rank": 17,
+      "found": true
+    },
+    {
+      "query": "Tại sao BIWASE được đánh giá là có thế mạnh về tài chính và các lĩnh vực liên quan?",
+      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Bà Bùi Thị Thơm và ông Đỗ Ngọc Huy đã tiếp và giới thiệu những tiến bộ trong công nghệ xử lý chất thải tại Khu Liên hợp Xử lý chất thải Bình Dương. Công nghệ nào được giới thiệu là tiên phong trong lĩnh vực này?",
+      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Đại biểu đã đánh giá cao nỗ lực của BIWASE trong việc giảm thiểu ô nhiễm môi trường. Công nghệ nào được cho là hiệu quả nhất trong việc xử lý chất thải tại khu liên hợp?",
+      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Công ty BIWASE đã giới thiệu những sản phẩm tái chế hữu ích. Sản phẩm nào được đề cập đến trong văn bản?",
+      "expected_file": "BAN TIN BIWASE T9-2024 - A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Công ty liên kết nào được nghiên cứu để phối hợp công tác điều hành hiệu quả?",
+      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Tập trung công tác cấp nước mùa nắng nhằm phục vụ mục đích nào?",
+      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
+      "rank": 5,
+      "found": true
+    },
+    {
+      "query": "Theo quy định nào để lập các hồ sơ đầu tư trong dự án?",
+      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Đội công tác của Chính phủ Indonesia đã đến thăm, làm việc và học tập kinh nghiệm tại Tổng công ty BIWASE khi nào?",
+      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Ông Nguyễn Văn Thiền – Chủ tịch HĐQT Tổng công ty BIWASE đã chia sẻ về những yếu tố nào giúp BIWASE trở thành doanh nghiệp top đầu ngành cấp thoát nước Việt Nam?",
+      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Tiến sĩ H. Yudia Ramli đã cho biết điều gì về việc mời BIWASE và các đối tác đến INDONESIA để chia sẻ kinh nghiệm?",
+      "expected_file": "ban-tin-biwase-q1-2024---a4-(fixed).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Đơn vị nào đã tổ chức chuyến thăm hỏi trẻ em bệnh ung bướu tại Bệnh viện Ung Bướu TP. Hồ Chí Minh?",
+      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Các bệnh nhi được điều trị tại bệnh viện có được quà tết từ đoàn công tác của Công ty CP ĐT-XD Chánh Phú Hoà không?",
+      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Tiền mặt nào được sử dụng để mua quà tết cho các bệnh nhi tại bệnh viện?",
+      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Bình Dương đã thực hiện các biện pháp gì để biến rác thải thành 'tài nguyên'?",
+      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Khoản vay từ Ngân hàng Phát triển châu Á (ADB) trị giá bao nhiêu USD?",
+      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
+      "rank": 13,
+      "found": true
+    },
+    {
+      "query": "Dự án xử lý rác tại Bình Dương sẽ giúp giảm bao nhiêu tấn rác thải sinh hoạt/ngày?",
+      "expected_file": "ban-tin-biwase-t1-2023-a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Các đơn vị thành viên nào đã đón tiếp đoàn công tác của lãnh đạo địa phương tại Chi nhánh BIWASE Chơn Thành?",
+      "expected_file": "ban-tin-biwase-t1-2024-a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Ngày nào và nơi nào đã diễn ra hoạt động thăm, chúc tết tại Chi nhánh BIWASE Chơn Thành?",
+      "expected_file": "ban-tin-biwase-t1-2024-a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Ông Hà Duy Đạt là ai và chức vụ của ông tại thời điểm hoạt động thăm, chúc tết?",
+      "expected_file": "ban-tin-biwase-t1-2024-a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Các công ty con của BIWASE đã sinh lãi bằng nguồn vốn đầu tư nào?",
+      "expected_file": "ban-tin-biwase-t1-2024-a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Chi nhánh BIWASE Chơn Thành đạt doanh thu bao nhiêu và tỷ lệ hoàn thành kế hoạch là bao nhiêu?",
+      "expected_file": "ban-tin-biwase-t1-2024-a4.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Nguyên nhân nào giúp các đơn vị sinh lãi sớm sau M&A?",
+      "expected_file": "ban-tin-biwase-t1-2024-a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Đoàn công tác Hội Nông dân tỉnh Tây Ninh đã tham quan nhà máy sản xuất phân bón hữu cơ ở đâu?",
+      "expected_file": "ban-tin-biwase-t10-2023---a4-(1).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Bà Lê Thị Ngọc Yến đã chia sẻ điều gì từ chuyến tham quan và học tập kinh nghiệm?",
+      "expected_file": "ban-tin-biwase-t10-2023---a4-(1).md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Chuyến tham quan có thể giúp hình thành chuỗi liên kết nào theo hướng phát triển bền vững?",
+      "expected_file": "ban-tin-biwase-t10-2023---a4-(1).md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Các tập đoàn, nhà thầu nào đã chọn BIWELCO làm đối tác hợp tác phát triển tại thị trường Việt Nam?",
+      "expected_file": "ban-tin-biwase-t10-2023---a4-(1).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "BIWASE đã hợp tác với những nhà thầu nào để hiện đại hóa năng lực ngành cấp thoát nước, môi trường?",
+      "expected_file": "ban-tin-biwase-t10-2023---a4-(1).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Tại sao BIWASE chọn hợp tác với BIWELCO để phát triển bền vững?",
+      "expected_file": "ban-tin-biwase-t10-2023---a4-(1).md",
+      "rank": 3,
+      "found": true
+    },
+    {
+      "query": "Các bước chuẩn bị nào được đề cập đến trong bản tin BIWASE tháng 10 năm 2025?",
+      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Mùa Tết truyền thống Bính Ngọ 2026 được đề cập đến trong bản tin BIWASE tháng 10 năm 2025 là gì?",
+      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Các thông tin nào được nêu rõ trong bản tin BIWASE tháng 10 năm 2025 liên quan đến kiểm toán và Đại hội cổ đông thường niên?",
+      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Ngày hội Trung thu BIWASE 2025 được tổ chức khi nào?",
+      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Đoàn TNCS Tổng Công ty BIWASE trao bao nhiêu phần quà đến các em nhỏ tại ngày hội?",
+      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Thông qua ngày hội, BIWASE thể hiện cam kết gì về môi trường làm việc nhân văn?",
+      "expected_file": "ban-tin-biwase-t10-2025--a4-fix.md",
+      "rank": 11,
+      "found": true
+    },
+    {
+      "query": "Bản tin BIWASE tháng 11 năm 2023 được công bố với mã CK là gì?",
+      "expected_file": "ban-tin-biwase-t11-2023---a4.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Đoàn công tác của HĐND tỉnh Bình Dương đã khảo sát tại đâu để đánh giá hoạt động sản xuất kinh doanh của BIWASE?",
+      "expected_file": "ban-tin-biwase-t11-2023---a4.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Các sản phẩm tái chế của BIWASE đạt tiêu chuẩn gì trong nước và quốc tế?",
+      "expected_file": "ban-tin-biwase-t11-2023---a4.md",
+      "rank": 6,
+      "found": true
+    },
+    {
+      "query": "Bản tin BIWASE tháng 11 năm 2023 cho biết các công trình sử dụng vật liệu tái chế nào?",
+      "expected_file": "ban-tin-biwase-t11-2023---a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Chứng nhận chất lượng của sản phẩm tái chế BIWASE được cấp bởi tổ chức nào?",
+      "expected_file": "ban-tin-biwase-t11-2023---a4.md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Vật liệu tái chế BIWASE được sử dụng ở các công trình nào trong thành phố Thủ Dầu Một và các xã hội khác?",
+      "expected_file": "ban-tin-biwase-t11-2023---a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Các nhà máy cấp nước ở Bình Dương luôn mới, đẹp vì lý do nào?",
+      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Chủ tịch Hội đồng quản trị Nguyễn Văn Thiền nhấn mạnh điều gì về phong cách và hình ảnh của BIWASE?",
+      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
+      "rank": 3,
+      "found": true
+    },
+    {
+      "query": "BIWASE có sứ mệnh gì trong việc cung cấp nước sạch và bảo vệ cộng đồng?",
+      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Công ty BIWASE đã thông qua kế hoạch tăng trưởng doanh thu bao nhiêu phần trăm trong năm sau?",
+      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
+      "rank": 7,
+      "found": true
+    },
+    {
+      "query": "Cổ tức mà BIWASE sẽ phân phối năm sau là bao nhiêu phần trăm?",
+      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Đấu nối nước sạch đã tăng bao nhiêu khách hàng trong tháng 3 năm 2023?",
+      "expected_file": "ban-tin-biwase-t3-2023---a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Bản tin BIWASE tháng 4 năm 2024 nói gì về cam kết của doanh nghiệp trong phát triển bền vững?",
+      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "BIWASE đã đạt được những thành tựu nào trong việc chống thất thoát nước và xử lý chất thải tại Việt Nam và khu vực Đông Nam Á?",
+      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Báo cáo phát triển bền vững của BIWASE đề cập đến những chuẩn mực quốc tế nào trong quản trị doanh nghiệp?",
+      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Công ty Cấp thoát nước Cần Thơ (CanThoWassco - CTW) đã tổ chức Đại hội đồng cổ đông thường niên năm 2024 vào ngày nào?",
+      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Tỷ lệ thất thoát của Công ty Cấp thoát nước Cần Thơ năm 2023 là bao nhiêu?",
+      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Phương án sản xuất kinh doanh và Nghị quyết đại hội đã được thông qua với mục tiêu nào?",
+      "expected_file": "BAN-TIN-BIWASE-T4-2024-A4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Ông Nguyễn Văn Thiền cho biết tại sao chi phí xử lý nước thải chậm thanh toán?",
+      "expected_file": "ban-tin-biwase-t4-2025--a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Liệu có rủi ro nào không được đề cập trong bản tin BIWASE tháng 4 năm 2025?",
+      "expected_file": "ban-tin-biwase-t4-2025--a4.md",
+      "rank": 10,
+      "found": true
+    },
+    {
+      "query": "Bình Dương có gì đặc biệt về mặt tài chính so với các tỉnh khác?",
+      "expected_file": "ban-tin-biwase-t4-2025--a4.md",
+      "rank": 15,
+      "found": true
+    },
+    {
+      "query": "Công ty đang giai đoạn nào trong năm 2025 để đảm bảo cung cấp nước tốt nhất phục vụ sinh hoạt và sản xuất?",
+      "expected_file": "ban-tin-biwase-t4-2025--a4.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Nhà máy nước Cần Thơ có công suất bao nhiêu m³/ngày đêm và dự kiến đưa vào sử dụng vào tháng nào?",
+      "expected_file": "ban-tin-biwase-t4-2025--a4.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Nhà máy nước Long An có công suất bao nhiêu m³/ngày đêm và dự kiến đưa vào sử dụng vào tháng nào?",
+      "expected_file": "ban-tin-biwase-t4-2025--a4.md",
+      "rank": 3,
+      "found": true
+    },
+    {
+      "query": "Phân bón Hữu cơ Con Voi Bình Dương có nguồn gốc từ đâu?",
+      "expected_file": "ban-tin-biwase-t5-2025--a4.md",
+      "rank": 7,
+      "found": true
+    },
+    {
+      "query": "Ngân hàng Thế giới có cam kết gì về việc hỗ trợ đề án một triệu hecta lúa chất lượng cao?",
+      "expected_file": "ban-tin-biwase-t5-2025--a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Bà Shobha Shetty đánh giá như thế nào về mô hình canh tác lúa giảm phát thải tại tỉnh Trà Vinh?",
+      "expected_file": "ban-tin-biwase-t5-2025--a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Bản tin BIWASE tháng 5 năm 2025 có đề cập đến việc tài trợ vốn cho dự án thoát nước và xử lý nước thải tại những thành phố nào?",
+      "expected_file": "ban-tin-biwase-t5-2025--a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Chính phủ Hà Lan sẽ hỗ trợ giai đoạn II của dự án thoát nước và xử lý nước thải tại 3 thành phố nào?",
+      "expected_file": "ban-tin-biwase-t5-2025--a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Dự án giai đoạn II của dự án thoát nước và xử lý nước thải tại 3 thành phố sẽ được thực hiện từ năm nào đến năm nào, và dự kiến đưa vào vận hành vào năm nào?",
+      "expected_file": "ban-tin-biwase-t5-2025--a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Công nghệ ống lắng Lamen có đặc điểm gì để tăng hiệu quả xử lý nước sạch?",
+      "expected_file": "ban-tin-biwase-t6-2023---a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Ưu điểm nào của ống lắng Lamen được nêu rõ trong bản tin BIWASE tháng 6 năm 2023?",
+      "expected_file": "ban-tin-biwase-t6-2023---a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Công suất xử lý của các nhà máy nước được cải thiện như thế nào nhờ ứng dụng công nghệ ống lắng Lamen?",
+      "expected_file": "ban-tin-biwase-t6-2023---a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Bản tin BIWASE tháng 6 năm 2023 đề cập đến các mục tiêu gì trong việc phát triển sản xuất kinh doanh tháng 7?",
+      "expected_file": "ban-tin-biwase-t6-2023---a4.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Các hợp đồng M&A khu vực Long An đã được chuyển giao như thế nào trong tháng 7 năm 2023?",
+      "expected_file": "ban-tin-biwase-t6-2023---a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Công ty cần làm gì để chuẩn bị tốt các dự án đầu tư sau năm 2023 theo bản tin BIWASE?",
+      "expected_file": "ban-tin-biwase-t6-2023---a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Công ty Cấp nước Gia Tân áp dụng chính sách miễn tiền sử dụng nước cho những hộ gia đình nào?",
+      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Chính sách miễn tiền nước cho các hộ gia đình chính sách khó khăn được áp dụng như thế nào?",
+      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Giai đoạn nào trong năm 2024 được công ty Cấp nước Gia Tân hỗ trợ các hộ gia đình chính sách?",
+      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Ông Võ Văn Phi là ai và ông đã làm việc với ai tại Khu liên hợp xử lý chất thải Bình Dương?",
+      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "BIWASE có quy trình công nghệ nào hiện đại nhất Việt Nam và nó có thể xử lý loại rác thải nào?",
+      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "UBND tỉnh Đồng Nai có mong muốn BIWASE thực hiện dự án nào để hỗ trợ phát triển môi trường đô thị?",
+      "expected_file": "ban-tin-biwase-t6-2024---a4-(fixed).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Lớp tập huấn 'An ninh nước và khủng bố hệ thống cấp nước' do đâu tổ chức?",
+      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Các nội dung nào được cung cấp trong lớp tập huấn?",
+      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Phòng An ninh Kinh tế (PA04) Công an tỉnh Bình Dương phối hợp với tổ chức nào để tổ chức lớp tập huấn?",
+      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Công ty CP - Tổng công ty Nước – Môi trường Bình Dương (BIWASE) được tuyên dương vì điều gì trong tháng 6 năm 2025?",
+      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Nền kinh tế chịu tác động kép từ suy thoái kéo dài và đại dịch Covid-19 đã ảnh hưởng như thế nào đến hoạt động sản xuất kinh doanh của BIWASE?",
+      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
+      "rank": 19,
+      "found": true
+    },
+    {
+      "query": "BIWASE đã đóng góp gì vào ngân sách nhà nước năm 2023 thông qua các hoạt động nào?",
+      "expected_file": "ban-tin-biwase-t6-2025--a4.md",
+      "rank": 10,
+      "found": true
+    },
+    {
+      "query": "Công ty CP - Tổng công ty Nước - Môi trường Bình Dương (BIWASE) đã nhận bao nhiêu giải thưởng lớn về chất lượng môi trường đô thị trong Lễ Trao giải thưởng Quy hoạch đô thị Quốc gia lần thứ III (VUPA 2022)?",
+      "expected_file": "ban-tin-biwase-t7-2023--(1)-a4.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Danh hiệu nào được nhận bởi Nhà máy Xử lý nước thải sinh hoạt Thành phố Thuận An trong Lễ Trao giải thưởng Quy hoạch đô thị Quốc gia lần thứ III (VUPA 2022)?",
+      "expected_file": "ban-tin-biwase-t7-2023--(1)-a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Liên đoàn Thương mại Công nghiệp Việt Nam (VCCI) có vai trò gì trong Lễ Trao giải thưởng Quy hoạch đô thị Quốc gia lần thứ III (VUPA 2022)?",
+      "expected_file": "ban-tin-biwase-t7-2023--(1)-a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Công ty Biwase có tổng công suất hiện có là bao nhiêu m³/ngđ?",
+      "expected_file": "ban-tin-biwase-t7-2023--(1)-a4.md",
+      "rank": 16,
+      "found": true
+    },
+    {
+      "query": "Sản lượng nước tiêu thụ của Biwase trong 7 tháng đầu năm 2023 là bao nhiêu m³?",
+      "expected_file": "ban-tin-biwase-t7-2023--(1)-a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Tỷ lệ thất thoát nước của Biwase trong 7 tháng đầu năm 2023 là bao nhiêu phần trăm?",
+      "expected_file": "ban-tin-biwase-t7-2023--(1)-a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "BIWASE kiến nghị Quốc hội và cơ quan chức năng ban hành đơn giá xử lý chất thải và định mức tiêu hao, điều này sẽ giúp doanh nghiệp xử lý rác thải tái chế có lợi nhuận?",
+      "expected_file": "ban-tin-biwase-t7-2025--a4(3).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Điều gì xảy ra với doanh nghiệp khi chi phí sản xuất sản phẩm tái chế cao hơn sản phẩm cùng loại sản xuất từ tài nguyên khai thác trong thiên nhiên?",
+      "expected_file": "ban-tin-biwase-t7-2025--a4(3).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Phó Chủ tịch Quốc hội Lê Minh Hoan đã ghi nhận ý kiến của BIWASE và hứa sẽ chuyển đến cơ quan chức năng để làm gì?",
+      "expected_file": "ban-tin-biwase-t7-2025--a4(3).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Ngày nào là ngày khai mạc Giải đua xe đạp đường trường và địa hình quốc gia lần thứ 39?",
+      "expected_file": "ban-tin-biwase-t7-2025--a4(3).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Có bao nhiêu tỉnh thành tham dự Giải đua xe đạp đường trường và địa hình quốc gia lần thứ 39?",
+      "expected_file": "ban-tin-biwase-t7-2025--a4(3).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Đội xe đạp nữ BIWASE đã mang về bao nhiêu huy chương vàng từ các giải đấu này?",
+      "expected_file": "ban-tin-biwase-t7-2025--a4(3).md",
+      "rank": 14,
+      "found": true
+    },
+    {
+      "query": "Bản tin BIWASE tháng 8 năm 2023 cho biết tổng số tiền đầu tư phát triển là bao nhiêu?",
+      "expected_file": "ban-tin-biwase-t8-2023-.md",
+      "rank": 6,
+      "found": true
+    },
+    {
+      "query": "Các huyện Dầu Tiếng, Phú Giáo, và thành phố Tân Uyên được đầu tư phát triển bao nhiêu km ống mạng?",
+      "expected_file": "ban-tin-biwase-t8-2023-.md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Việc đưa nước sạch về các vùng lõi và phủ kín địa bàn giúp đạt mục tiêu gì?",
+      "expected_file": "ban-tin-biwase-t8-2023-.md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Hàng ngàn khách thập phương đã đến dự Đại lễ Vu Lan Báo Hiếu tại Hoa viên Bình Dương khi nào?",
+      "expected_file": "ban-tin-biwase-t8-2023-.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Hoà thượng Thích Huệ Thông là ai và ông đã nói gì về Đại lễ Vu Lan Báo Hiếu?",
+      "expected_file": "ban-tin-biwase-t8-2023-.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Lễ Vu Lan Báo Hiếu tại Hoa viên Bình Dương được coi là gì trong văn hóa người Việt?",
+      "expected_file": "ban-tin-biwase-t8-2023-.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "BẢN TIN BIWASE THÁNG 8 NĂM 2025 (Mã CK: BWE) - Công ty nào được FORBES Việt Nam vinh danh trong 'Top 50 Công ty niêm yết tốt nhất Việt Nam' năm thứ sáu liên tiếp?",
+      "expected_file": "ban-tin-biwase-t8-2025--a4(2).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "BIWASE có bao nhiêu năm liên tiếp được vinh danh trong bảng xếp hạng 'Top 50 Công ty niêm yết tốt nhất Việt Nam'?",
+      "expected_file": "ban-tin-biwase-t8-2025--a4(2).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Điều gì khiến BIWASE được vinh danh trong 'Top 50 Công ty niêm yết tốt nhất Việt Nam' năm 2025?",
+      "expected_file": "ban-tin-biwase-t8-2025--a4(2).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Công ty CP Nước Gia Tân (GIWACO) đã giao dự án mương dẫn nước và hố thu cho nhà thầu nào?",
+      "expected_file": "ban-tin-biwase-t8-2025--a4(2).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Hệ thống mương dẫn nước và hố thu sẽ được đưa vào hoạt động khi nào?",
+      "expected_file": "ban-tin-biwase-t8-2025--a4(2).md",
+      "rank": 6,
+      "found": true
+    },
+    {
+      "query": "Sau khi hoàn tất dự án, công suất phát nước của Nhà máy Gia Tân sẽ được nâng lên bao nhiêu m³/ngày đêm?",
+      "expected_file": "ban-tin-biwase-t8-2025--a4(2).md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Người viết thư tay nổi tiếng Sài Sòn là ai?",
+      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Ban lãnh đạo Hoa Viên Bình Dương đã làm gì để giúp chú Dương Văn Ngộ an nghỉ?",
+      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Tại sao chú Dương Văn Ngộ được tạo điều kiện an nghỉ?",
+      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Công ty CP - Tổng công ty Nước - Môi trường Bình Dương đã công bố nhận diện thương hiệu BIWASE sau bao lâu?",
+      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Ông Nguyễn Văn Thiền – Chủ tịch HĐQT BIWASE đã phát biểu tri ân những tổ chức nào?",
+      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "BIWASE lấy nền tảng phát triển nào để hướng đến phát triển bền vững?",
+      "expected_file": "ban-tin-biwase-t9-2023---a4.md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Bài báo nói gì về hoạt động sản xuất kinh doanh tại Công ty CP đầu tư xây dựng Chánh Phú Hòa?",
+      "expected_file": "ban-tin-biwase-t9-2025--a4.md",
+      "rank": 17,
+      "found": true
+    },
+    {
+      "query": "Đại lễ Vu Lan năm 2025 được tổ chức ở đâu và có bao nhiêu người tham gia?",
+      "expected_file": "ban-tin-biwase-t9-2025--a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Nghi thức dâng hương và pháp thoại trong Đại lễ Vu Lan được hướng dẫn bởi ai?",
+      "expected_file": "ban-tin-biwase-t9-2025--a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "BIWASE được vinh danh trong TOP50 Công ty Kinh doanh Hiệu quả nhất Việt Nam 2025. Công ty này được đánh giá như thế nào dựa trên các tiêu chí cụ thể?",
+      "expected_file": "ban-tin-biwase-t9-2025--a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Danh sách TOP50 Công ty Kinh doanh Hiệu quả nhất Việt Nam 2025 được xây dựng dựa trên dữ liệu giai đoạn nào?",
+      "expected_file": "ban-tin-biwase-t9-2025--a4.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "BIWASE chú trọng những yếu tố nào trong hoạt động kinh doanh để đảm bảo sự bền vững và giá trị lâu dài cho cổ đông, khách hàng và cộng đồng?",
+      "expected_file": "ban-tin-biwase-t9-2025--a4.md",
+      "rank": 12,
+      "found": true
+    },
+    {
+      "query": "Chi nhánh Cấp nước Khu Liên Hợp đã phát triển bao nhiêu đường ống cấp nước trong tháng 2 năm 2023?",
+      "expected_file": "ban_tin_biwase_t2_2023.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Tổng số đường ống cấp nước được phát triển trong năm 2022 bởi Biwase là bao nhiêu?",
+      "expected_file": "ban_tin_biwase_t2_2023.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Công trình ống trục D300-D600 đã được xây dựng và đưa vào hoạt động với số lượng bao nhiêu mét?",
+      "expected_file": "ban_tin_biwase_t2_2023.md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Biwase đã triển khai mô hình sử dụng năng lượng tái tạo nào để đạt được mục tiêu giảm phát thải carbon bằng 0 vào năm 2050?",
+      "expected_file": "ban_tin_biwase_t2_2023.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Công ty Biwase đã lắp đặt tổ hợp lò hơi - Turbine nào để phát điện thu hồi nhiệt từ lò đốt rác?",
+      "expected_file": "ban_tin_biwase_t2_2023.md",
+      "rank": 3,
+      "found": true
+    },
+    {
+      "query": "Ông Mai Hùng Dũng - Phó Chủ tịch Thường trực UBND tỉnh đã nhấn mạnh điều gì về việc phát triển bền vững và bảo vệ môi trường tại Bình Dương?",
+      "expected_file": "ban_tin_biwase_t2_2023.md",
+      "rank": 1000,
+      "found": false
+    },
+    {
+      "query": "Bản tin BIWASE tháng 4 năm 2023 đề cập đến yếu tố nào ảnh hưởng đến nhu cầu sử dụng nước?",
+      "expected_file": "ban_tin_biwase_t4_2023.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Mục tiêu tăng trưởng mà BIWASE đề ra trong năm 2023 là bao nhiêu?",
+      "expected_file": "ban_tin_biwase_t4_2023.md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Các dự án đầu tư được đẩy nhanh tiến độ nhằm mục đích gì?",
+      "expected_file": "ban_tin_biwase_t4_2023.md",
+      "rank": 13,
+      "found": true
+    },
+    {
+      "query": "Liên Minh Hợp tác xã tỉnh Bình Dương đã ký kết hợp tác với tổ chức nào để hỗ trợ sản xuất nông sản?",
+      "expected_file": "ban_tin_biwase_t4_2023.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Mô hình nông nghiệp nào được giới thiệu để hướng đến xuất khẩu và phát triển kinh tế tập thể?",
+      "expected_file": "ban_tin_biwase_t4_2023.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Phân bón nào được sử dụng cho cây trồng trong sản xuất nông nghiệp theo hướng hữu cơ thân thiện môi trường?",
+      "expected_file": "ban_tin_biwase_t4_2023.md",
+      "rank": 2,
+      "found": true
+    },
+    {
+      "query": "Công ty BIWASE – Long An đã phê duyệt giá nước mới cho công ty nhằm mục đích gì?",
+      "expected_file": "ban_tin_biwase_t5_2023.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Tuyến ống nước thô D1200 được xây dựng để phục vụ mục đích gì?",
+      "expected_file": "ban_tin_biwase_t5_2023.md",
+      "rank": 4,
+      "found": true
+    },
+    {
+      "query": "Sản lượng nước được vận chuyển từ NMN Nhị Thành đến cảng Quốc tế Long An là bao nhiêu m³/ngày đêm?",
+      "expected_file": "ban_tin_biwase_t5_2023.md",
+      "rank": 3,
+      "found": true
+    },
+    {
+      "query": "Công ty Biwase đạt tổng công suất hiện có bao nhiêu m³/ngđ trong 5 tháng đầu năm 2023?",
+      "expected_file": "ban_tin_biwase_t5_2023.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Sản lượng nước tiêu thụ của Biwase trong 5 tháng đầu năm 2023 đạt bao nhiêu m³, so với cùng kỳ năm 2022 và dự kiến năm 2023?",
+      "expected_file": "ban_tin_biwase_t5_2023.md",
+      "rank": 1,
+      "found": true
+    },
+    {
+      "query": "Tỷ lệ thất thoát nước của Biwase trong 5 tháng đầu năm 2023 là bao nhiêu phần trăm, so với cùng kỳ năm 2022 và tỷ lệ dự kiến năm 2023?",
+      "expected_file": "ban_tin_biwase_t5_2023.md",
+      "rank": 1,
+      "found": true
+    }
+  ]
+}

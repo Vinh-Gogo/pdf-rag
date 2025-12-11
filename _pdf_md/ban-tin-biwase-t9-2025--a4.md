@@ -59,7 +59,6 @@ Việc Gạch BIWASE – Con Voi Bình Dương được tin tưởng lựa chọ
 
 **BẢN TIN BIWASE THÁNG 9 NĂM 2025** (Mã CK: BWE)
 **HOẠT ĐỘNG KHÁC**
-
 **Đoàn thanh niên BIWASE đóng góp 180 đơn vị máu.**
 Ngày 26/09/2025, Đoàn Thanh niên Công ty CP – Tổng công ty Nước – Môi trường Bình Dương phối hợp với Trung tâm Truyền máu Bệnh viện Chợ Rẫy và Hội Chữ thập đỏ tỉnh Bình Dương tổ chức Ngày hội hiến máu tình nguyện lần thứ 43 với thông điệp "Giọt máu cho đi – Một cuộc đời ở lại". Đây là hoạt động nhân đạo có ý nghĩa, được Đoàn Thanh niên BIWASE duy trì đều đặn 2 lần mỗi năm. Kết quả, các đoàn viên thanh niên của Tổng công ty đã hiến tặng 180 đơn vị máu, góp phần lan tỏa tinh thần nhân văn và trách nhiệm đối với cộng đồng.
 

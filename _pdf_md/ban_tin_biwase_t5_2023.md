@@ -27,7 +27,6 @@
 **BẢN TIN BIWASE THÁNG 5 NĂM 2023** (Mã CK: BWE)
 **HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
 • **Phân bón hữu cơ Con Voi Bình Dương ra mắt 7 sản phẩm mới:** Ngày 20/5 Chi nhánh thương mại Con Voi, nhãn hàng phân bón hữu cơ Con Voi Bình Dương đã làm lễ ra mắt 7 sản phẩm phân bón hữu cơ với bao bì, tên gọi, công dụng khác nhau phù hợp với tất cả các loại cây trồng. Sản phẩm được Cục Bảo vệ Thực vật – Bộ Nông nghiệp và Phát triển nông thôn cấp phép lưu hành toàn quốc. Cụ thể gồm:
-
 1. Phân bón hữu cơ Con Voi OrgFer Base.
 2. Phân bón hữu cơ Con Voi OrgFer 411.
 3. Phân bón hữu cơ Con Voi OrgFer 313.
@@ -60,7 +59,6 @@ Hoạt động thu gom xử lý rác thải tại Bình Dương được Bộ T�
 
 **BẢN TIN BIWASE THÁNG 5 NĂM 2023** (Mã CK: BWE)
 **PHƯƠNG HƯỚNG SẢN XUẤT KINH DOANH THÁNG 6**
-
 - Thúc đẩy hoàn thiện các công trình ống dẫn nước để sớm đưa vào sử dụng phục vụ cho người dân.
 - Hoàn thiện hạ tầng, bộ máy, xây dựng chiến lược kinh doanh các công ty mới M&A. Cải thiện dịch vụ cấp nước ở địa phương và góp phần tăng trưởng BIWASE.
 - Đào tạo thêm cán bộ quản lý trẻ năng động sáng tạo và khoa học.

@@ -67,6 +67,10 @@ def load_corpus(md_dir):
         current_chunk = ""
         
         for p in paragraphs:
+            print()
+            p = p.replace("**", "").replace('-|', '').replace(' | ', ', ').strip()
+            print(p)
+            print()
             if len(current_chunk) + len(p) < 800:
                 current_chunk += "\n\n" + p
             else:

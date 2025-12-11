@@ -7,11 +7,15 @@
 2. ✅ **Updated question generation** to produce 7 questions/chunk instead of 3
 3. ✅ **Modified evaluation metrics** from accuracy@1,3,5 to accuracy@1,3,10
 4. ✅ **Generated 273 test questions** (~8 per file average)
-5. ✅ **Evaluated retrieval accuracy** with baseline metrics:
-   - Accuracy@1: 42.1%
-   - Accuracy@3: 64.5%
-   - Accuracy@10: 89.4%
-   - MRR: 0.561
+5. ✅ **Evaluated retrieval accuracy** with baseline
+
+```
+"total_queries": 204,
+"accuracy@1": 0.6176470588235294,
+"accuracy@3": 0.7696078431372549,
+"accuracy@5": 0.8676470588235294,
+"mrr": 0.7199419947830756
+```
 
 ### Recent Changes (This Session)
 1. **measure_retrieval_accuracy.py**: Updated metrics from @5 to @10

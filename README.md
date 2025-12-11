@@ -2,10 +2,14 @@
 
 A complete pipeline for extracting text from PDF files, splitting into pages and sequences, and storing in Qdrant vector database for semantic search and retrieval.
 
-## 📢 *New Features*
+**📢 *New Features***
+_____
 
 - *(Future)* Support Neo4j vector store
 - *(Future)* vLLM integration for advanced text generation tasks
+
+_____
+
 - *(Done)* UI with Next.js and Tailwind CSS
 - *(Done)* RAG system. Retrieval from both **pages** and **sequences** collections
 - *(Done)* **Equals** between embedding models for benchmarking
@@ -19,6 +23,8 @@ A complete pipeline for extracting text from PDF files, splitting into pages and
   - *Paraphrasing*
   - *Q&A*
 - *(Done)* PDF to Markdown
+
+_____
 
 ## .env config
 

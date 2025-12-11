@@ -1,6 +1,6 @@
  CÔNG TY CP - TỔNG CÔNG TY NƯỚC - MÔI TRƯỜNG BÌNH DƯƠNG (BIWASE) BINH DUONG WATER - ENVIRONMENT CORPORATION - JOINT STOCK COMPANY
- **BẢN TIN BIWASE THÁNG 2 NĂM 2025** (Mã CK: BWE)
- **TỔNG HỢP KẾT QUẢ HOẠT ĐỘNG SẢN XUẤT KINH DOANH 02 THÁNG NĂM 2025 CỦA BIWASE**
+**BẢN TIN BIWASE THÁNG 2 NĂM 2025** (Mã CK: BWE)
+**TỔNG HỢP KẾT QUẢ HOẠT ĐỘNG SẢN XUẤT KINH DOANH 02 THÁNG NĂM 2025 CỦA BIWASE**
 | STT | NỘI DUNG | ĐVT | THỰC HIỆN 2 THÁNG NĂM 2025 | KẾ HOẠCH NĂM 2025 | SO VỚI KẾ HOẠCH NĂM 2025 |
 |-|-|-|-|-|-|
 | 1 | Tổng công suất BIWASE | m³/ngđ | 792.000 | 792.000 | 100% |
@@ -19,29 +19,29 @@ Tổng công suất chưa tính các nhà máy nước ngoài tỉnh Bình Dươ
 **HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
 **Năm 2025 BIWASE bảo đảm tăng trưởng "2 con số":** Là khẳng định của Chủ tịch HĐQT Nguyễn Văn Thiền tại buổi gặp mặt nhà đầu tư giới thiệu triển vọng kinh tế năm 2025. BIWASE đặt kế hoạch tổng doanh thu đạt tối thiểu 4.760 tỷ đồng, biên độ tăng trưởng từ 8,5% đến 12%. Lợi nhuận sau thuế của công ty mẹ và các công ty con tối thiểu 640 tỷ đồng. Để đạt mục tiêu trên, BIWASE dự kiến tổng công suất cấp nước 979.000 m3 /ngày, tỷ lệ thất thoát nước toàn công ty duy trì dưới hoặc bằng 4,8%, nước thương phẩm tối thiểu 220 triệu m3 . Đấu nối mới tăng tối thiểu 20.000 khách hàng. Chủ tịch Nguyễn Văn Thiền dẫn chứng: "Là nhà cung cấp nước sạch và vệ sinh môi trường chính của tỉnh Bình Dương. Nhiều năm qua BIWASE được Chính phủ, các bộ ngành trung ương và tỉnh Bình Dương khen ngợi là hình mẫu của cả nước. Năm 2025 tỉnh Bình Dương đặt mục tiêu thu hút 2 tỷ USD vốn FDI, tăng trưởng GRDP "2 con số"; tỷ lệ tăng dân số đạt 1,12 lần so với giai đoạn 2021-2025 và cao nhất cả nước. Điều này thúc đẩy tăng trưởng sản xuất, tiêu thụ nước sạch, bảo đảm cho BIWASE tăng trưởng và phát triển tương ứng "2 con số".
 
- **BẢN TIN BIWASE THÁNG 2 NĂM 2025** (Mã CK: BWE)
- **HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
+**BẢN TIN BIWASE THÁNG 2 NĂM 2025** (Mã CK: BWE)
+**HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
 **Tình hình khô hạn, xâm nhập mặn đang diễn ra gay gắt khiến nhiều địa phương thiếu nước sạch.** Sự vươn mình của BIWASE đến các tỉnh đã góp phần giải cơn khát nước ngọt cho người dân, doanh nghiệp và tiếp tục cùng các địa phương bảo đảm cấp nước an toàn, bền vững. Trong năm 2025 BIWASE mở rộng đầu tư, tăng công suất nhà máy nước Nhị Thành (Long An) thêm 60.000 m3 /ngày đêm, nâng tổng công suất dự kiến 120.000 m3 /ngày đêm. Đồng thời đặt quyết tâm đưa công trình vào hoạt động trong quý III/2025; mở rộng phạm vi dịch vụ cấp nước đến các huyện Cần Giuộc, Cần Đước tỉnh Long An.
 Tiếp tục đầu tư, tăng công suất giai đoạn 3 Nhà máy nước Chơn Thành từ 30.000 đến 60.000 m3 /ngày đêm; xây dựng Nhà máy nước Cần Thơ 3 công suất dự kiến 50.000 m3 /ngày đêm, Công trình sẽ đưa vào sử dụng vào quý II/2025. Giai đoạn 2025-2030 tiếp tục nâng công suất nhà máy BIWASE Quảng Bình lên 30.000 m3 /ngày đêm, phát triển và mở rộng hệ thống cấp nước cung cấp cho toàn bộ huyện Quảng Trạch và các vùng lân cận. Tiếp tục hoàn thiện và trình duyệt các phương án giá nước sạch mới.
 
- **BẢN TIN BIWASE THÁNG 2 NĂM 2025** (Mã CK: BWE)
- **HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
+**BẢN TIN BIWASE THÁNG 2 NĂM 2025** (Mã CK: BWE)
+**HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
 **Đầu tư tái chế sâu rác thải.** Khối lượng rác tiếp nhận trong năm 2024 là 970.656 tấn, trung bình tiếp nhận và xử lý khoảng 2.659 tấn/ngày, tăng 4% so với cùng kỳ năm 2023 (2.554 tấn/ngày). BIWASE đang nghiên cứu đầu tư mở rộng thị trường ở những nơi có tính chiến lược, kết hợp nghiên cứu các giải pháp xử lý rác ngày càng sâu hơn, hiện đại hơn như: Xây dựng lò đốt rác mới công suất 500 tấn/ngày, kết hợp phát điện với công suất 12MW. Nâng tổng công suất của nhà máy xử lý chất thải thành năng lượng lên 17MW. Trong đó bán khoảng 7 MW và sử dụng 10 MW cho mục đích nội bộ. Tiếp tục nghiên cứu tìm giải pháp đầu ra cho sản phẩm tái chế, nhất là phân bón Con Voi Bình Dương; hoàn thiện và trình duyệt phương án giá rác thải mới.
 
- **BẢN TIN BIWASE THÁNG 2 NĂM 2025** (Mã CK: BWE)
- **HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
+**BẢN TIN BIWASE THÁNG 2 NĂM 2025** (Mã CK: BWE)
+**HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
 - **BIWASE đã nhận được chi phí xử lý nước thải 6 tháng cuối năm 2023 và năm 2024.** Số tiền giải ngân đợt I trị giá 76,439 tỷ đồng do Ban quản lý dự án Chuyên ngành Nước Thải tỉnh Bình Dương chi trả. Đây là một phần trong tổng số 157,875 tỷ đồng doanh thu của năm 2024 từ hoạt động xử lý nước thải 6 tháng cuối năm 2023 và năm 2024. Số tiền đã giải ngân lần này và giá trị còn lại 81,436 tỷ đồng dự kiến giải ngân theo kế hoạch phân bổ vốn năm 2025 của Bình Dương sẽ được BIWASE ghi nhận cho doanh thu năm 2025. Điều này giúp Công ty sớm hoàn thành chỉ tiêu kế hoạch năm 2025, đóng góp đáng kể vào tăng trưởng lợi nhuận cho BIWASE trong thời gian tới.
 
- **BẢN TIN BIWASE THÁNG 2 NĂM 2025** (Mã CK: BWE)
- **HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
+**BẢN TIN BIWASE THÁNG 2 NĂM 2025** (Mã CK: BWE)
+**HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
 - **Hoạt động mua bán - sáp nhập (M&A).** Lãnh đạo Tổng công ty BIWASE cho biết: Nếu có cơ hội tốt, ở lĩnh vực cấp nước và rác thải tại những nơi có tiềm năng hiệu quả, trong phạm vi tài chính ổn định, vững mạnh, công ty sẽ tiếp tục đầu tư vào ngành nghề cốt lõi nhằm vừa mở rộng thị trường vừa hỗ trợ các địa phương nâng cao năng lực cấp nước, xử lý môi trường theo mô hình sản xuất xanh - kinh tế tuần hoàn hướng đến phát triển bền vững. Tại Diễn đàn M&A Việt Nam lần thứ 16 năm 2024 diễn ra vào ngày 27/11/2024 do Báo Đầu tư tổ chức dưới sự chỉ đạo và bảo trợ của Bộ Kế hoạch và Đầu tư, Công ty CP - Tổng Công ty Nước - Môi trường Bình Dương (BIWASE) vinh dự được nhận giải thưởng "Doanh nghiệp có thương vụ M&A tiêu biểu năm 2023 - 2024". Đây là lần thứ 2 liên tiếp BIWASE được vinh danh ở hạng mục này.
 
- **BẢN TIN BIWASE THÁNG 2 NĂM 2025** (Mã CK: BWE)
- **HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
+**BẢN TIN BIWASE THÁNG 2 NĂM 2025** (Mã CK: BWE)
+**HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
 **BIWASE tiếp nhận điều hành Nhà máy nước Tân Hiệp (Hóc Môn, Tp. Hồ Chí Minh).** Đây là thành công sau thương vụ mua lại cổ phần tại CTCP Đầu Tư Nước Tân Hiệp với tỷ lệ sở hữu 43%. BIWASE đã cử nhân sự cấp cao tham gia điều hành Nhà máy nước Tân Hiệp gồm: 3 thành viên HĐQT, 1 thành viên Ban kiểm soát và Tổng giám đốc là người đại diện pháp luật. Nhà máy nước Tân Hiệp đang cung cấp nguồn nước sạch đạt chất lượng an toàn, liên tục cho người dân phía Tây TPHCM gồm các huyện Hóc Môn, Bình Chánh và quận Tân Bình, Bình Tân, Tân Phú cùng một phần quận 8 và quận 12. Công suất nhà máy đạt 300.000m3 /ngày đêm.
 
- **BẢN TIN BIWASE THÁNG 2 NĂM 2025** (Mã CK: BWE)
- **HOẠT ĐỘNG KHÁC**
+**BẢN TIN BIWASE THÁNG 2 NĂM 2025** (Mã CK: BWE)
+**HOẠT ĐỘNG KHÁC**
 **Ngày 7/3/2025 tỉnh Bình Dương đã khai mạc Giải xe đạp nữ quốc tế "BIWASE Tour of VietNam 2025",** đường đua dài 520 km qua các tỉnh Bình Dương – Bình Phước, Đồng Nai – Lâm Đồng; thu hút 20 đội gồm 6 đội mạnh trong nước, 14 đội nước ngoài có truyền thống và thành tích cao trên trường quốc tế như: Pháp, Iran, Uzbekistan, Singapore, Thái Lan, Philippin, Malaysia, Indonesia, Mông Cổ, Đài Loan (Trung Quốc). Đây là giải đấu thể thao đầu tiên tại Việt Nam được Liên đoàn Xe đạp Quốc tế đưa vào hệ thống thi đấu, tính điểm theo tiêu chuẩn quốc tế UCI.
 "BIWASE Tour of VietNam 2025" nằm trong khuôn khổ Giải xe đạp nữ quốc tế Bình Dương tranh cúp BIWASE. Thành tích duy trì và phát triển giải qua 15 lần đã chứng minh vai trò của nhà tổ chức, tiềm lực của nhà tài trợ, tính minh bạch của giải là các tiêu chí cơ bản để Liên đoàn Xe đạp Quốc tế chọn và đưa "BIWASE Tour of VietNam 2025" vào hệ thống thi đấu quốc tế.
 Phát biểu khai mạc giải, ông Bùi Minh Thạnh, Phó chủ tịch UBND tỉnh Bình Dương nhấn mạnh: "Qua 15 lần tổ chức, Giải xe đạp nữ quốc tế Bình Dương do BIWASE tài trợ đã không ngừng lớn mạnh trong khu vực và quốc tế. Giải "BIWASE Tour of VietNam 2025" lần đầu tiên được Liên đoàn Xe đạp Quốc tế đưa vào hệ thống thi đấu đã nâng cao vị thế của xe đạp nữ Việt Nam trên trường quốc tế. Giải đấu thể hiện sự thành công của Ban tổ chức, các nhà tài trợ trong công tác xã hội hóa thể thao".
@@ -50,8 +50,8 @@ Phát biểu khai mạc giải, ông Bùi Minh Thạnh, Phó chủ tịch UBND t
 **HOẠT ĐỘNG KHÁC**
 **Hoa hậu quốc gia Việt Nam 2024 Nguyễn Ngọc Kiều Duy được chọn làm đại sứ hình ảnh của giải.** Phát biểu nhận nhiệm vụ Nguyễn Ngọc Kiều Duy cho biết: Giải xe đạp nữ Quốc tế Bình Dương tranh cúp BIWASE đã phát triển đến lần thứ XV, tạo dựng nên hình ảnh Bình Dương – BIWASE phát triển năng động đi đôi với bảo vệ môi trường. Giải "BIWASE Tour of VietNam 2025" là bước tiến mới mang tầm quốc tế. Với vai trò đại sứ hình ảnh Nguyễn Ngọc Kiều Duy không chỉ quảng bá hình ảnh Bình Dương – BIWASE và giải "BIWASE Tour of VietNam 2025" đến với công chúng trong nước và quốc tế, mà còn góp phần vận động giới trẻ đi xe đạp để rèn luyện sức khỏe, bảo vệ môi trường.
 
- **BẢN TIN BIWASE THÁNG 2 NĂM 2025** (Mã CK: BWE)
- **PHƯƠNG HƯỚNG SẢN XUẤT KINH DOANH THÁNG 03 NĂM 2025**
+**BẢN TIN BIWASE THÁNG 2 NĂM 2025** (Mã CK: BWE)
+**PHƯƠNG HƯỚNG SẢN XUẤT KINH DOANH THÁNG 03 NĂM 2025**
 - Đẩy mạnh công tác sản xuất nước phục vụ đủ và an toàn trong mùa khô hạn. Đây là cơ hội để công ty tăng tốc phát triển sản lượng và doanh thu.
 - Tăng nhịp độ xây dựng các nhà máy đang mở rộng nâng công suất vào mùa nắng. Đây là thời gian xây dựng đạt hiệu quả.
 - Tổ chức Đại hội cổ đông thường niên công ty mẹ và các công ty con đúng kế hoạch, đúng quy định.

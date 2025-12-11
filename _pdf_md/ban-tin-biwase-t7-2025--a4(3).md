@@ -50,7 +50,6 @@
 • **Ngày 28/7/2025 tại Trung tâm Huấn luyện và Thi đấu Thể thao Bình Dương diễn ra lễ khai mạc Giải đua xe đạp đường trường và địa hình quốc gia lần thứ 39 do Cục Thể dục Thể thao Việt Nam – Liên đoàn xe đạp – Mô tô thể thao Việt Nam - Sở Văn hóa và Thể thao TP. Hồ Chí Minh phối hợp tổ chức.** Tham dự giải có 12 tỉnh thành cả nước với 250 vận động viên thi đấu ở 14 nội dung 40 Km tính điểm cá nhân, 40 Km tính giờ cá nhân, 70 Km tính giờ đồng đội, băng đồng tiếp sức…Các vận động viên thành tích cao của đội xe đạp nữ BIWASE mang về nhiều huy chương vàng cho đất nước trưởng thành từ các giải đấu này.
 
 **BẢN TIN BIWASE THÁNG 7 NĂM 2025** (Mã CK: BWE)
-**HOẠT ĐỘNG KHÁC**
 **PHƯƠNG HƯỚNG SẢN XUẤT KINH DOANH THÁNG 8 NĂM 2025**
 - BIWASE Cần Thơ hoàn thiện ký hợp đồng cung cấp nước sỉ cho Công ty Cổ phần Cấp thoát nước Cần Thơ và Công ty Cổ phần Cấp nước Cần Thơ 2.
 - Đưa vào vận hành Nhà máy nước Nhị Thành giai đoạn 3 nâng công suất lên 120.000m3 /ngày đêm, giá trị đầu tư hơn 1.000 tỷ đồng.

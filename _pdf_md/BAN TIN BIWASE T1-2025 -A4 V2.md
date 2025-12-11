@@ -1,5 +1,5 @@
  CÔNG TY CP - TỔNG CÔNG TY NƯỚC - MÔI TRƯỜNG BÌNH DƯƠNG (BIWASE) BINH DUONG WATER - ENVIRONMENT CORPORATION - JOINT STOCK COMPANY
- **BẢN TIN BIWASE THÁNG 1 NĂM 2025** (Mã CK: BWE)
+**BẢN TIN BIWASE THÁNG 1 NĂM 2025** (Mã CK: BWE)
 TỔNG HỢP KẾT QUẢ HOẠT ĐỘNG SẢN XUẤT KINH DOANH 01 THÁNG NĂM 2025 CỦA BIWASE
 | STT | NỘI DUNG | ÐVT | THỰC HIỆN 1 THÁNG NĂM 2025 | THỰC HIỆN 1 THÁNG NĂM 2024 | SO VỚI CÙNG KỲ NAM 2024 | KÉ HOẠCH NĂM 2025 | SO VỚI KÉ HOẠCH NĂM 2025 |
 |-|-|-|-|-|-|-|-|
@@ -11,8 +11,8 @@ TỔNG HỢP KẾT QUẢ HOẠT ĐỘNG SẢN XUẤT KINH DOANH 01 THÁNG NĂM 2
 * Đến tháng 1/2025 ước doanh thu chưa xuất hóa đơn tại lĩnh vực xử lý nước thải là 154,77 tỷ đồng.
 * Sản lượng nước tiêu thụ kế hoạch năm 2025 tại tỉnh Bình Dương và Bình Phước: **220,000,000** m³, trong đó tại tỉnh Bình Phước 17,000,000 m³
 
- **BẢN TIN BIWASE THÁNG 1 NĂM 2025** (Mã CK: BWE)
- **HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
+**BẢN TIN BIWASE THÁNG 1 NĂM 2025** (Mã CK: BWE)
+**HOẠT ĐỘNG SẢN XUẤT KINH DOANH**
 **Gặp gỡ nhà đầu tư, giới thiệu triển vọng năm 2025.** Ngày 10/02/2025 Lãnh đạo Công ty CP – Tổng công ty Nước – Môi trường Bình Dương (BIWASE) đã có buổi gặp mặt nhà đầu tư, các cơ quan báo chí, giới thiệu kết quả sản xuất kinh doanh năm 2024, triển vọng năm 2025 và chiến lược dài hạn. Trong tỉnh Bình Dương, BIWASE hiện quản lý, vận hành 9 nhà máy nước cùng hệ thống phân phối 6,969 km, 1 khu liên hợp xử lý rác, 4 nhà máy xử lý nước thải. Ngoài tỉnh, BIWASE quản lý vận hành 17 nhà máy nước trải dài từ TP. Hồ Chí Minh, Long An, Vĩnh Long, Cần Thơ, Bình Phước, Đồng Nai, Quảng Bình… Do tập trung kéo giảm tỷ lệ thất thoát nước dưới 5%, tổng doanh thu năm 2024 của BIWASE vượt lên 4.387 tỷ đồng, tăng 10% so với năm 2023. Cổ tức dự kiến được chia bằng tiền mặt, lợi nhuận 13%/cổ phiếu. Năm 2025 là năm nhiều triển vọng tăng trưởng đi liền với không ít thách thức khi tỉnh Bình Dương đặt mục tiêu vượt qua "bẫy" thu nhập trung bình, đạt tăng trưởng GRDP 2 con số. Nhờ bám sát nhiệm vụ sản xuất – kinh doanh, chủ động "đi tắt đón đầu" đà tăng trưởng, phát triển của tỉnh, BIWASE sẵn sàng đáp ứng nhu cầu nước sạch chất lượng cao cho sinh hoạt, công nghiệp, đô thị của tỉnh Bình Dương và các địa phương khác có yêu cầu.
 
 **BẢN TIN BIWASE THÁNG 1 NĂM 2025** (Mã CK: BWE)

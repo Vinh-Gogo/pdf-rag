@@ -1,20 +1,28 @@
-# PDF-RAG
+# **PDF-RAG**
 
 A complete pipeline for extracting text from PDF files, splitting into pages and sequences, and storing in Qdrant vector database for semantic search and retrieval.
 
-## 🎯 Features
+## 📢 *New Features*
 
-- **PDF Scan**: Extract text from PDF files with high accuracy
-- **Dual-Level Indexing**:
-  - **Pages**: Store entire page content for broad context
-  - **Sequences**: Store individual paragraphs for precise retrieval
-- **Vector Store**: Powered by Qdrant for fast semantic search
-- **Embeddings**: Using local Qwen3-Embedding-0.6B model
-- **Retrieval System**: Search across both pages and sequences simultaneously
+- *(Future)* Support Neo4j vector store
+- *(Future)* vLLM integration for advanced text generation tasks
+- *(Done)* UI with Next.js and Tailwind CSS
+- *(Done)* RAG system. Retrieval from both **pages** and **sequences** collections
+- *(Done)* **Equals** between embedding models for benchmarking
+- *(Done)* **Benchmark** with embedding models
+- *(Done)* **Upload** data to **Qdrant/Neo4j** vector store
+- *(Done)* **Retrieval** from **pages/sequences** collections
+- *(Done)* **Split** Markdown into pages and sequences
+- *(Done)* Models HF support text generation for tasks:
+  - *Text correction*
+  - *Summarization*
+  - *Paraphrasing*
+  - *Q&A*
+- *(Done)* PDF to Markdown
 
 ## .env config
 
-```
+```text
 # Hugging Face Token
 HF_TOKEN=your_huggingface_token_here
 

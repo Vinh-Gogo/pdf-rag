@@ -92,16 +92,16 @@ def calculate_metrics(results):
         return {}
     
     hits_at_1 = sum(1 for r in results if r['rank'] == 1)
-    hits_at_3 = sum(1 for r in results if r['rank'] <= 3)
     hits_at_5 = sum(1 for r in results if r['rank'] <= 5)
+    hits_at_10 = sum(1 for r in results if r['rank'] <= 10)
     
     mrr = sum(1.0/r['rank'] for r in results if r['rank'] > 0) / total
     
     return {
         'total_queries': total,
-        'accuracy@1': hits_at_1 / total,
-        'accuracy@3': hits_at_3 / total,
-        'accuracy@5': hits_at_5 / total,
+        'hit@1': hits_at_1 / total,
+        'hit@5': hits_at_5 / total,
+        'hit@10': hits_at_10 / total,
         'mrr': mrr
     }
 
@@ -185,6 +185,7 @@ def main():
             if retrieved_file == expected_file:
                 rank = i + 1
                 found = True
+                answer = '. '.join(metadatas[idx]['text'].split('\n')[2:])
                 break
         
         if not found:
@@ -192,6 +193,7 @@ def main():
             
         results.append({
             'query': query,
+            'answer': answer,
             'expected_file': expected_file,
             'rank': rank,
             'found': found

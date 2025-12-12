@@ -40,17 +40,18 @@ def generate_questions(text_chunk, model, tokenizer):
     if not model:
         return []
 
-    prompt = f"""Based on the following text, generate 3 specific questions Vietnamese that can be answered using the information in the text.
-    Format the output as a JSON list of strings.
+    prompt = f"""Based on the following text, generate **11 specific questions Vietnamese** that can be answered using the information in the text.
+    Each question should must **under** 5 words.
+    Format the output as a JSON list of strings. 
     
     Text:
-    "{text_chunk[:2000]}"
+    "{text_chunk}"
     
     Output JSON:
     """
     
     messages = [
-        {"role": "system", "content": "You are a helpful assistant that generates questions for retrieval testing. Output strictly valid JSON."},
+        {"role": "system", "content": "You are a helpful assistant that generates questions for retrieval testing. Each question should must **under** 5 words. Output strictly valid JSON. "},
         {"role": "user", "content": prompt}
     ]
     
@@ -58,24 +59,27 @@ def generate_questions(text_chunk, model, tokenizer):
         messages,
         tokenize=False,
         add_generation_prompt=True,
-        enable_thinking=False
+        enable_thinking=True
     )
     
     model_inputs = tokenizer([text], return_tensors="pt").to(model.device)
     
     with torch.no_grad():
         generated_ids = model.generate(
-            model_inputs.input_ids,
-            max_new_tokens=1024,
+            **model_inputs,
+            max_new_tokens=4096,
+            temperature=0.01,
+            top_p=0.9,
             do_sample=True,
-            temperature=0.7
+            eos_token_id=tokenizer.eos_token_id,
+            pad_token_id=tokenizer.eos_token_id,
         )
         
     generated_ids = [
         output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
     ]
     
-    response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
+    response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0].split('<think>')[2].strip()
     
     # Try to parse JSON
     try:
@@ -105,13 +109,13 @@ def generate_smart_mock_questions(chunk):
     dates = re.findall(r'(?:ngày\s+)?\d{1,2}/\d{1,2}/\d{4}|\btháng\s+\d{1,2}(?:/\d{4})?|\bnăm\s+\d{4}', chunk, re.IGNORECASE)
     
     # Numbers with units (revenue, percentage, etc.)
-    numbers = re.findall(r'\d+(?:[.,]\d+)?\s*(?:tỷ|triệu|%|m³|MW|km|tấn|đồng|USD|EUR)', chunk, re.IGNORECASE)
+    numbers = re.findall(r'\d+(?:[.,]\d+)?\s*(?:tỷ|triệu|%|m³|MW|km|tấn|đồng|USD|VNĐ|VND)', chunk, re.IGNORECASE)
     
     # Bold text (often important entities) - markdown format
     bold_entities = re.findall(r'\*\*([^*]+)\*\*', chunk)
     
     # Company/Organization names (patterns like "Công ty", "BIWASE", etc.)
-    companies = re.findall(r'(?:Công ty|Tổng công ty|Chi nhánh|BIWASE|BIWELCO|GIWACO)[^,.;:]*', chunk)
+    companies = re.findall(r'(?:Công ty|Tổng công ty|Chi nhánh|BIWASE)[^,.;:]*', chunk)
     
     # Person names with titles
     persons = re.findall(r'(?:ông|bà|Chủ tịch|Giám đốc|Phó)\s+[A-ZĐÀÁẢÃẠĂẰẮẲẴẶÂẦẤẨẪẬÈÉẺẼẸÊỀẾỂỄỆÌÍỈĨỊÒÓỎÕỌÔỒỐỔỖỘƠỜỚỞỠỢÙÚỦŨỤƯỪỨỬỮỰỲÝỶỸỴ][a-zđàáảãạăằắẳẵặâầấẩẫậèéẻẽẹêềếểễệìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵ]+(?:\s+[A-ZĐÀÁẢÃẠĂẰẮẲẴẶÂẦẤẨẪẬÈÉẺẼẸÊỀẾỂỄỆÌÍỈĨỊÒÓỎÕỌÔỒỐỔỖỘƠỜỚỞỠỢÙÚỦŨỤƯỪỨỬỮỰỲÝỶỸỴ][a-zđàáảãạăằắẳẵặâầấẩẫậèéẻẽẹêềếểễệìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵ]*)*', chunk)
@@ -124,21 +128,17 @@ def generate_smart_mock_questions(chunk):
     ]
     
     templates_number = [
-        "Số liệu {number} liên quan đến nội dung gì?",
         "Kết quả đạt được là bao nhiêu?",
-        "Con số {number} thể hiện điều gì?",
     ]
     
     templates_company = [
-        "{company} đã thực hiện hoạt động gì?",
-        "Thông tin về {company} trong văn bản là gì?",
-        "{company} có vai trò gì trong nội dung này?",
+        "Các hoạt động của {company} trong văn bản là gì?",
     ]
     
     templates_person = [
-        "{person} đã phát biểu hoặc làm gì?",
+        "{person} phát biểu hoặc làm gì?",
+        "{person} cam kết việc đó ?",
         "Vai trò của {person} là gì?",
-        "{person} có liên quan đến sự kiện nào?",
     ]
     
     templates_bold = [
@@ -148,9 +148,13 @@ def generate_smart_mock_questions(chunk):
     ]
     
     templates_general = [
-        "Nội dung chính của đoạn văn này là gì?",
+        "Việc đó được cam kết bởi ai ?",
+        "Hoạt động gì ?",
+        "Hoạt động kinh doanh này diễn ra ở đâu?",
+        "Hoạt động kinh doanh này diễn ra thời gian nào?",
         "Thông tin quan trọng nào được đề cập?",
-        "Văn bản này nói về chủ đề gì?",
+        "Chứng nhận nào được nhắc đến trong văn bản?",
+        "Mục đích của Hoạt động kinh doanh này là gì?",
     ]
     
     # Generate questions based on extracted entities
@@ -252,7 +256,7 @@ def main():
                 test_case = {
                     "question": q,
                     "expected_file": filename,
-                    "expected_text_snippet": chunk[:200]  # Store start of chunk for verification
+                    "expected_text_snippet": '. '.join(chunk.strip().split('\n')[2:])  # First 30 words as snippet
                 }
                 test_cases.append(test_case)
                 

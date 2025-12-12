@@ -15,7 +15,7 @@ from src.models.helpers import cosine_similarity
 class HalongEmbedding:
     """Lớp để tạo embeddings sử dụng hiieu/halong_embedding model cho tiếng Việt"""
     
-    def __init__(self, model_name="dangvantuan/vietnamese-embedding"):
+    def __init__(self, model_name="hiieu/halong_embedding"):
         print(f"Đang tải {model_name} model...")
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.model = SentenceTransformer(

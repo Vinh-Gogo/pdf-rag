@@ -28,6 +28,7 @@ class MockEmbedding:
 
 try:
     from src.models.embedd import QwenEmbedding
+    # from src.models.halong_embedd import HalongEmbedding as QwenEmbedding
 except Exception as e:
     print(f"Failed to import Embedding model: {e}")
     QwenEmbedding = MockEmbedding
@@ -67,11 +68,11 @@ def load_corpus(md_dir):
         current_chunk = ""
         
         for p in paragraphs:
-            print()
+            # print()
             p = p.replace("**", "").replace('-|', '').replace(' | ', ', ').strip()
-            print(p)
+            # print(p)
             print()
-            if len(current_chunk) + len(p) < 800:
+            if len(current_chunk) + len(p) < 1024:
                 current_chunk += "\n\n" + p
             else:
                 if len(current_chunk.strip()) > 50:
@@ -92,16 +93,24 @@ def calculate_metrics(results):
         return {}
     
     hits_at_1 = sum(1 for r in results if r['rank'] == 1)
+    hits_at_2 = sum(1 for r in results if r['rank'] <= 2)
+    hits_at_3 = sum(1 for r in results if r['rank'] <= 3)
+    hits_at_4 = sum(1 for r in results if r['rank'] <= 4)
     hits_at_5 = sum(1 for r in results if r['rank'] <= 5)
     hits_at_10 = sum(1 for r in results if r['rank'] <= 10)
+    hits_at_50 = sum(1 for r in results if r['rank'] <= 50)
     
     mrr = sum(1.0/r['rank'] for r in results if r['rank'] > 0) / total
     
     return {
         'total_queries': total,
         'hit@1': hits_at_1 / total,
+        'hit@2': hits_at_2 / total,
+        'hit@3': hits_at_3 / total,
+        'hit@4': hits_at_4 / total,
         'hit@5': hits_at_5 / total,
         'hit@10': hits_at_10 / total,
+        'hit@50': hits_at_50 / total,
         'mrr': mrr
     }
 
@@ -185,7 +194,7 @@ def main():
             if retrieved_file == expected_file:
                 rank = i + 1
                 found = True
-                answer = '. '.join(metadatas[idx]['text'].split('\n')[2:])
+                answer = metadatas[idx]['text']
                 break
         
         if not found:
@@ -193,7 +202,7 @@ def main():
             
         results.append({
             'query': query,
-            'answer': answer,
+            'answer': answer if found else "",
             'expected_file': expected_file,
             'rank': rank,
             'found': found
